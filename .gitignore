@@ -10,6 +10,8 @@
 /github.properties
 /apikeys.properties
 /scripts/release/app-release.jks
+*.jks
+*.keystore
 /scripts/distribution/anytype-debug-service-account-key.json
 /analytics/gradle.properties
 .DS_Store

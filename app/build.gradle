@@ -125,8 +125,9 @@ android {
                 keyAlias keystoreProperties['RELEASE_KEY_ALIAS']
                 keyPassword keystoreProperties['RELEASE_KEY_PASSWORD']
                 storePassword keystoreProperties['RELEASE_STORE_PASSWORD']
-                v1SigningEnabled true
+                v1SigningEnabled false
                 v2SigningEnabled true
+                v3SigningEnabled true
             }
         }
     }
@@ -187,7 +188,7 @@ android {
             enable project.hasProperty("enableAbiSplits") && project.getProperty("enableAbiSplits").toBoolean()
             reset()
             include "armeabi-v7a", "arm64-v8a"
-            universalApk true
+            universalApk false
         }
     }
 

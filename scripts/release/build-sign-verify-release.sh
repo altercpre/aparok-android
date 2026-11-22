@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-TAG="${1:-v1.0.0}"
-RELEASE_TITLE="${2:-Aparok Android ${TAG} (Zero-Telemetry Release)}"
+TAG="${1:-v1.1.0}"
+RELEASE_TITLE="${2:-Aparok Android ${TAG} (Zero-Telemetry Sovereign Release)}"
 
 echo "=========================================================="
 echo "  Aparok Android Build, Sign, Verify & Release Pipeline"
@@ -13,8 +13,9 @@ KEYSTORE_FILE="scripts/release/app-release.jks"
 KEY_ALIAS="aparok"
 KEY_PASS="aparok123456"
 STORE_PASS="aparok123456"
+CERT_PIN_FILE="release/CERT_SHA256"
 
-# 1. Generate release keystore if not exists
+# 1. Generate release keystore if not exists (using neutral subject CN=Aparok)
 if [ ! -f "${KEYSTORE_FILE}" ]; then
     echo "[1/6] Generating self-signed release keystore (${KEYSTORE_FILE})..."
     mkdir -p "$(dirname "${KEYSTORE_FILE}")"
@@ -26,7 +27,26 @@ if [ ! -f "${KEYSTORE_FILE}" ]; then
         -validity 10000 \
         -storepass "${STORE_PASS}" \
         -keypass "${KEY_PASS}" \
-        -dname "CN=Aparok, OU=Security, O=Altercpre, L=Geneva, C=CH"
+        -dname "CN=Aparok"
+fi
+
+# Pin and verify certificate fingerprint
+CURRENT_FP=$(keytool -list -v -keystore "${KEYSTORE_FILE}" -alias "${KEY_ALIAS}" -storepass "${STORE_PASS}" 2>/dev/null | grep "SHA256:" | head -n 1 | awk '{print $2}')
+if [ -n "${CURRENT_FP}" ]; then
+    if [ ! -f "${CERT_PIN_FILE}" ]; then
+        mkdir -p "$(dirname "${CERT_PIN_FILE}")"
+        echo "${CURRENT_FP}" > "${CERT_PIN_FILE}"
+        echo "Pinned release certificate SHA-256 fingerprint: ${CURRENT_FP}"
+    else
+        PINNED_FP=$(cat "${CERT_PIN_FILE}" | tr -d '[:space:]')
+        if [ "${CURRENT_FP}" != "${PINNED_FP}" ]; then
+            echo "ERROR: Certificate fingerprint mismatch!"
+            echo "Expected pinned: ${PINNED_FP}"
+            echo "Found in key:    ${CURRENT_FP}"
+            exit 1
+        fi
+        echo "Release certificate fingerprint verified against ${CERT_PIN_FILE}: ${CURRENT_FP}"
+    fi
 fi
 
 # 2. Configure signing and properties
@@ -67,7 +87,7 @@ chmod +x ./gradlew
 echo "  Publishing lib.aar to mavenLocal()..."
 ./gradlew :libs:publishToMavenLocal --no-daemon
 
-# 5. Build release APKs with Gradle
+# 5. Build release APKs with Gradle (per-ABI splits only, no universal APK)
 echo "[4/6] Building release APKs with Gradle..."
 ./gradlew :app:assembleRelease -PenableAbiSplits=true --no-daemon
 
@@ -78,7 +98,9 @@ rm -rf "${OUTPUT_DIR}"
 mkdir -p "${OUTPUT_DIR}"
 
 APK_DIR="app/build/outputs/apk/release"
-cp "${APK_DIR}"/*.apk "${OUTPUT_DIR}/" 2>/dev/null || true
+# Copy ONLY per-ABI APKs (arm64-v8a and armeabi-v7a). DO NOT copy or publish universal APK!
+cp "${APK_DIR}"/*-arm64-v8a*.apk "${OUTPUT_DIR}/" 2>/dev/null || true
+cp "${APK_DIR}"/*-armeabi-v7a*.apk "${OUTPUT_DIR}/" 2>/dev/null || true
 
 cd "${OUTPUT_DIR}"
 
@@ -88,8 +110,8 @@ for apk in *.apk; do
     [ -f "$apk" ] || continue
     echo "Processing: $apk"
     if [ -n "$APKSIGNER" ] && [ -x "$APKSIGNER" ]; then
-        echo "  Verifying signature with apksigner:"
-        "$APKSIGNER" verify --verbose "$apk" | sed 's/^/    /'
+        echo "  Verifying signature with apksigner (v2 + v3):"
+        "$APKSIGNER" verify --verbose --print-certs "$apk" | sed 's/^/    /'
     else
         echo "  (apksigner not found in PATH; skipping apksigner check)"
     fi

@@ -85,4 +85,4 @@ Thank you for your desire to develop Aparok together!
 ---
 Made by Altercpre — privacy-first, security-focused 🔒
 
-Licensed under [Any Source Available License 1.0](./LICENSE.md).
+Licensed for free, non-commercial use under the [Any Source Available License 1.0](./LICENSE.md). See [NOTICE.md](./NOTICE.md) for upstream attribution and copyright notices.
