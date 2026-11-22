@@ -53,13 +53,26 @@ if [ -f "scripts/release/apk.sh" ]; then
     bash scripts/release/apk.sh
 fi
 
-# 4. Build release APKs with Gradle
-echo "[3/6] Building release APKs with Gradle..."
+# 4. Prepare Core Middleware (lib.aar) & publish to mavenLocal
+echo "[3/6] Ensuring core middleware (lib.aar) is available in mavenLocal..."
+if [ ! -f "libs/lib.aar" ]; then
+    echo "  Downloading pre-compiled anytype-heart-android v0.51.6 middleware..."
+    mkdir -p libs
+    curl -fsSL "https://github.com/anyproto/anytype-heart/releases/download/v0.51.6/android_lib_v0.51.6.tar.gz" -o libs/android_lib.tar.gz
+    tar -xzf libs/android_lib.tar.gz -C libs/
+    rm -f libs/android_lib.tar.gz
+fi
+
 chmod +x ./gradlew
+echo "  Publishing lib.aar to mavenLocal()..."
+./gradlew :libs:publishToMavenLocal --no-daemon
+
+# 5. Build release APKs with Gradle
+echo "[4/6] Building release APKs with Gradle..."
 ./gradlew :app:assembleRelease -PenableAbiSplits=true --no-daemon
 
-# 5. Gather and verify APKs
-echo "[4/6] Verifying APK signatures and calculating checksums..."
+# 6. Gather and verify APKs
+echo "[5/6] Verifying APK signatures and calculating checksums..."
 OUTPUT_DIR="build/release-artefacts"
 rm -rf "${OUTPUT_DIR}"
 mkdir -p "${OUTPUT_DIR}"
@@ -69,7 +82,7 @@ cp "${APK_DIR}"/*.apk "${OUTPUT_DIR}/" 2>/dev/null || true
 
 cd "${OUTPUT_DIR}"
 
-APKSIGNER=$(which apksigner 2>/dev/null || find /opt/android-sdk -name apksigner 2>/dev/null | head -n 1 || find "$ANDROID_HOME" -name apksigner 2>/dev/null | head -n 1 || echo "")
+APKSIGNER=$(which apksigner 2>/dev/null || find /usr/local/lib/android -name apksigner 2>/dev/null | head -n 1 || find "$ANDROID_HOME" -name apksigner 2>/dev/null | head -n 1 || echo "")
 
 for apk in *.apk; do
     [ -f "$apk" ] || continue
@@ -82,16 +95,15 @@ for apk in *.apk; do
     fi
 done
 
-echo "[5/6] Generating SHA256 checksums..."
+echo "Generating SHA256 checksums..."
 sha256sum *.apk > SHA256SUMS.txt
 cat SHA256SUMS.txt
 
 cd - > /dev/null
 
-# 6. Publish GitHub Release if GitHub CLI / token is available
-echo "[6/6] Publishing release to GitHub..."
-if command -v gh >/dev/null 2>&1 && [ -n "${GITHUB_TOKEN}" ]; then
-    echo "Creating GitHub Release ${TAG}..."
+# 7. Publish GitHub Release if GitHub CLI / token is available (outside CI)
+if [ -z "${CI}" ] && command -v gh >/dev/null 2>&1 && [ -n "${GITHUB_TOKEN}" ]; then
+    echo "[6/6] Publishing release to GitHub via gh CLI..."
     gh release create "${TAG}" "${OUTPUT_DIR}"/* \
         --title "${RELEASE_TITLE}" \
         --notes "### Aparok Android ${TAG}
@@ -100,6 +112,7 @@ Official release of Aparok for Android.
 - **Zero-Telemetry**: No tracking, analytics, or third-party monitoring.
 - **End-to-End Encrypted**: Sovereign peer-to-peer sync protocol.
 - **Local-First**: Complete functionality offline and on local networks.
+- **Permissionless**: Unlocked lifetime access, no paywalls or memberships.
 
 #### Checksums
 \`\`\`
@@ -107,7 +120,8 @@ $(cat ${OUTPUT_DIR}/SHA256SUMS.txt)
 \`\`\`
 " || echo "Release creation completed or already exists."
 else
-    echo "GitHub CLI not configured or GITHUB_TOKEN not exported. Release artefacts ready in ${OUTPUT_DIR}."
+    echo "[6/6] Release artefacts ready in ${OUTPUT_DIR}:"
+    ls -lh "${OUTPUT_DIR}"
 fi
 
 echo "=== Pipeline Finished Successfully ==="

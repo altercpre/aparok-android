@@ -162,7 +162,7 @@ android {
         applicationVariants.configureEach { variant ->
             if (variant.buildType.name == 'release') {
                 variant.outputs.configureEach { output ->
-                    def appName = 'anytype'
+                    def appName = 'aparok'
                     def versionName = variant.versionName
                     def originalOutputFileName = outputFileName
                     outputFileName = originalOutputFileName

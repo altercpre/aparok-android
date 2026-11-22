@@ -37,13 +37,11 @@ jobs:
       - name: Setup Gradle Cache
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Setup Android SDK & NDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install NDK and Build Tools
+      - name: Install NDK and Android Build Tools
         run: |
-          yes | sdkmanager --licenses > /dev/null 2>&1 || true
-          sdkmanager "platforms;android-36" "build-tools;34.0.0" "ndk;28.1.13356709" "cmake;3.22.1" > /dev/null 2>&1
+          SDKMANAGER=$(which sdkmanager 2>/dev/null || echo "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager")
+          yes | "$SDKMANAGER" --licenses > /dev/null 2>&1 || true
+          "$SDKMANAGER" --install "platforms;android-36" "build-tools;34.0.0" "ndk;28.1.13356709" "cmake;3.22.1" > /dev/null 2>&1
 
       - name: Build, Sign and Verify Release APKs
         run: |
@@ -60,6 +58,14 @@ jobs:
           tag_name: ${{ github.event.inputs.tag_name || github.ref_name }}
           name: ${{ github.event.inputs.release_name || format('Aparok Android {0}', github.event.inputs.tag_name || github.ref_name) }}
           files: build/release-artefacts/*
-          generate_release_notes: true
+          generate_release_notes: false
+          body: |
+            ### Aparok Android ${{ github.event.inputs.tag_name || github.ref_name }}
+            Official sovereign release of Aparok for Android.
+
+            - **Zero-Telemetry**: No tracking, analytics, or third-party monitoring.
+            - **End-to-End Encrypted**: Sovereign peer-to-peer sync protocol.
+            - **Local-First**: Complete functionality offline and on local networks.
+            - **Permissionless**: Unlocked lifetime access, no paywalls or memberships.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
