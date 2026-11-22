@@ -167,7 +167,7 @@ fun ProfileSettingsScreen(
         item {
             Divider(paddingStart = 16.dp, paddingEnd = 16.dp)
         }
-        if (showMembership?.isShowing == true) {
+        if (false /* membership stripped */) {
             item {
                 OptionMembership(
                     image = R.drawable.ic_settings_membership,

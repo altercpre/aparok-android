@@ -1,17 +1,15 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="60dp"
-    android:height="60dp"
-    android:viewportWidth="60"
-    android:viewportHeight="60">
-  <group>
-    <clip-path
-        android:pathData="M0,0h60v60h-60z"/>
-    <path
-        android:pathData="M4,0V4H0V56H4V60H56V56H60V4H56V0H4Z"
-        android:fillColor="@color/glyph_button"/>
-    <path
-        android:pathData="M22,16H24V22H22V16ZM12,29.998H14V35.998H12V29.998ZM16,39.998H14V35.998H16V39.998ZM18,41.998H16V39.998H18V41.998ZM18,41.998H20V43.998H18V41.998ZM38,16H36V22H38V16ZM24,44V46H20V44H24ZM46.004,29.998H48.004V35.998H46.004V29.998ZM44.004,39.998V35.998H46.004V39.998H44.004ZM42.004,41.998V39.998H44.004V41.998H42.004ZM42.004,41.998V43.998H40.004V41.998H42.004ZM40.004,44H36.004V46H40.004V44ZM36.001,46H24.001V48H36.001V46Z"
-        android:fillColor="@color/shape_primary"
-        android:fillType="evenOdd"/>
-  </group>
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+  <path
+      android:pathData="M24,4 L42,12 L42,26 C42,35 34,42 24,44 C14,42 6,35 6,26 L6,12 Z"
+      android:fillColor="#0D9488"/>
+  <path
+      android:pathData="M24,7 L39,13.7 L39,25.5 C39,33.5 32,39.5 24,41.5 C16,39.5 9,33.5 9,25.5 L9,13.7 Z"
+      android:fillColor="#0F172A"/>
+  <path
+      android:pathData="M24,14 L32,34 L27.5,34 L25.5,28.5 L22.5,28.5 L20.5,34 L16,34 Z M24,19.5 L23,25 L25,25 Z"
+      android:fillColor="#FFFFFF"/>
 </vector>

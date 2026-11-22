@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="48dp"
     android:height="48dp"
     android:viewportWidth="48"
     android:viewportHeight="48">
-    <!-- Anytype logo: circle + vertical bar + horizontal bar -->
-    <!-- Circle -->
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M18,22C21.87,22 25,25.13 25,29C25,32.87 21.87,36 18,36C14.13,36 11,32.87 11,29C11,25.13 14.13,22 18,22Z"/>
-    <!-- Vertical bar -->
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M31.5,18.5C32.33,18.5 33,19.17 33,20V34C33,34.83 32.33,35.5 31.5,35.5H28.5C27.67,35.5 27,34.83 27,34V20C27,19.17 27.67,18.5 28.5,18.5H31.5Z"/>
-    <!-- Horizontal bar -->
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M26,12.5C26.83,12.5 27.5,13.17 27.5,14V17C27.5,17.83 26.83,18.5 26,18.5H15C14.17,18.5 13.5,17.83 13.5,17V14C13.5,13.17 14.17,12.5 15,12.5H26Z"/>
+  <path
+      android:pathData="M24,4 L42,12 L42,26 C42,35 34,42 24,44 C14,42 6,35 6,26 L6,12 Z"
+      android:fillColor="#0D9488"/>
+  <path
+      android:pathData="M24,7 L39,13.7 L39,25.5 C39,33.5 32,39.5 24,41.5 C16,39.5 9,33.5 9,25.5 L9,13.7 Z"
+      android:fillColor="#0F172A"/>
+  <path
+      android:pathData="M24,14 L32,34 L27.5,34 L25.5,28.5 L22.5,28.5 L20.5,34 L16,34 Z M24,19.5 L23,25 L25,25 Z"
+      android:fillColor="#FFFFFF"/>
 </vector>

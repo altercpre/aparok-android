@@ -53,15 +53,7 @@ interface MembershipProvider {
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)
-        override fun activeTier(): Flow<TierId> {
-            return awaitAccountStartManager.state().flatMapLatest { state ->
-                when (state) {
-                    AwaitAccountStartManager.State.Started -> buildActiveTierFlow(
-                        initial = proceedWithGettingMembership()
-                    )
-                    AwaitAccountStartManager.State.Init -> emptyFlow()
-                    AwaitAccountStartManager.State.Stopped -> emptyFlow()
-                }
+        override fun activeTier(): Flow<TierId> = kotlinx.coroutines.flow.flowOf(TierId(5))
             }.catch { e -> Timber.e(e) }
                 .flowOn(dispatchers.io)
         }

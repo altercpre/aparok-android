@@ -115,11 +115,7 @@ class ProfileSettingsViewModel(
         viewModelScope.launch {
             getNetworkMode.async(Unit).fold(
                 onSuccess = { result ->
-                    showMembershipState.value = when (result.networkMode) {
-                        NetworkMode.DEFAULT -> ShowMembership(true)
-                        NetworkMode.LOCAL -> ShowMembership(false)
-                        NetworkMode.CUSTOM -> ShowMembership(true)
-                    }
+                    showMembershipState.value = ShowMembership(false)
                 },
                 onFailure = { Timber.e(it, "Error while getting network mode") }
             )

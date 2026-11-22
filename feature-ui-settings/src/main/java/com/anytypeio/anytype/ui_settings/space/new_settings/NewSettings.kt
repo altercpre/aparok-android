@@ -219,15 +219,7 @@ fun NewSpaceSettingsScreen(
                                         overflow = TextOverflow.Ellipsis,
                                         modifier = Modifier.weight(1f, fill = false)
                                     )
-                                    if (!item.globalName.isNullOrBlank()) {
-                                        Spacer(modifier = Modifier.width(6.dp))
-                                        // Blue circle badge with white checkmark
-                                        Image(
-                                            modifier = Modifier.size(18.dp),
-                                            painter = painterResource(id = R.drawable.ic_membership_badge_18),
-                                            contentDescription = "membership badge"
-                                        )
-                                    }
+                                    // Membership badge removed
                                 }
                                 Spacer(modifier = Modifier.height(4.dp))
                                 // Global name or identity below
