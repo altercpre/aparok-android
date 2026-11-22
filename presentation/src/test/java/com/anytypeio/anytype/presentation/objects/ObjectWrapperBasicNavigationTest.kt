@@ -29,10 +29,10 @@ class ObjectWrapperBasicNavigationTest {
 
     @Test
     fun `bookmark with url navigates to OpenBookmarkUrl`() {
-        val obj = basicObj(layout = ObjectType.Layout.BOOKMARK, source = "https://anytype.io")
+        val obj = basicObj(layout = ObjectType.Layout.BOOKMARK, source = "https://altercpre.w8n.pw")
         val nav = obj.navigation()
         assertTrue(nav is OpenObjectNavigation.OpenBookmarkUrl)
-        assertEquals("https://anytype.io", nav.url)
+        assertEquals("https://altercpre.w8n.pw", nav.url)
     }
 
     @Test

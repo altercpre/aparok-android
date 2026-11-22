@@ -40,7 +40,7 @@
     <string name="you_will_need_to_sign_in">Je hebt het nodig om toegang te krijgen tot je kluis. Bewaar het op een veilige plek. Als je het verliest, kun je je kluis niet meer openen.</string>
     <string name="about_help_and_community">Help &amp; Community</string>
     <string name="about_what_is_new">Wat is er nieuw</string>
-    <string name="about_anytype_community">Anytype Community</string>
+    <string name="about_anytype_community">Aparok Community</string>
     <string name="about_help_and_tutorials">Help &amp; Tutorials</string>
     <string name="about_legal">Juridisch</string>
     <string name="about_terms_of_use">Gebruikersvoorwaarden</string>
@@ -83,7 +83,7 @@
     <string name="section_bin">Prullenmand</string>
     <string name="error_loading_sections">Error loading sections</string>
     <string name="data_management">Gegevensbeheer</string>
-    <string name="deleted_account_danger_zone_msg">Zodra je een verzoek hebt ingediend om jouw kluis te verwijderen, heb je 30 dagen om dit verzoek te annuleren. Na 30 dagen worden jouw versleutelde kluisgegevens permanent verwijderd uit de back-up node, je kunt dan niet meer inloggen in Anytype op nieuwe apparaten.</string>
+    <string name="deleted_account_danger_zone_msg">Zodra je een verzoek hebt ingediend om jouw kluis te verwijderen, heb je 30 dagen om dit verzoek te annuleren. Na 30 dagen worden jouw versleutelde kluisgegevens permanent verwijderd uit de back-up node, je kunt dan niet meer inloggen in Aparok op nieuwe apparaten.</string>
     <string name="danger_zone">Gevarenzone</string>
     <string name="snackbar_template_add">Nieuw sjabloon is toegevoegd aan het type</string>
     <string name="template_name_prefill_title">Pre-fill name</string>
@@ -293,14 +293,14 @@
     <string name="sync_status_synced">Gesynchroniseerd</string>
     <string name="sync_status_failed">Niet gesynchroniseerd</string>
     <string name="sync_status_toast_unknown">Synchronisatie wordt opgestart</string>
-    <string name="sync_status_toast_offline">Anytype node is niet verbonden</string>
+    <string name="sync_status_toast_offline">Aparok node is niet verbonden</string>
     <string name="sync_status_toast_syncing">Gegevens downloaden of uploaden naar een node</string>
-    <string name="sync_status_toast_synced">Back-up gemaakt op Anytype netwerk</string>
-    <string name="sync_status_toast_synced_staging">Back-up gemaakt op Anytype staging</string>
+    <string name="sync_status_toast_synced">Back-up gemaakt op Aparok netwerk</string>
+    <string name="sync_status_toast_synced_staging">Back-up gemaakt op Aparok staging</string>
     <string name="sync_status_toast_synced_local">Alleen lokaal</string>
     <string name="sync_status_toast_synced_self_hosted">Geback-upt op zelfgehost netwerk</string>
     <string name="sync_status_toast_failed">Synchroniseren mislukt, opnieuw aan het proberen…</string>
-    <string name="sync_status_toast_incompatible">Versie verouderd. Update Anytype alsjeblieft</string>
+    <string name="sync_status_toast_incompatible">Versie verouderd. Update Aparok alsjeblieft</string>
     <string name="relation_format_description">Beschrijving</string>
     <string name="relation_format_title">Titel</string>
     <string name="relation_format_number">Nummer</string>
@@ -525,7 +525,7 @@
     <string name="block_data_view_content_description_no_source">De gealigneerde opdracht heeft geen bron</string>
     <string name="block_data_view_content_description_no_data">De bron van de gealigneerde opdracht heeft geen type</string>
     <string name="object_search_recently_opened_section_title">Onlangs geopend</string>
-    <string name="widget_source_anytype_library">Anytype bibliotheek</string>
+    <string name="widget_source_anytype_library">Aparok bibliotheek</string>
     <string name="widget_source_default_lists">Standaardlijsten</string>
     <string name="widget_source_system">Systeem</string>
     <string name="your_favorite_objects">Jouw favoriete objecten</string>
@@ -589,8 +589,8 @@
     <string name="confirm">Bevestigen</string>
     <string name="code_empty">Uitnodigingscode mag niet leeg zijn</string>
     <string name="enter_invitation_hint">Uitnodigingscode</string>
-    <string name="enter_invitation_text">Als je er geen hebt, ga dan naar anytype.io en schrijf je in op de wachtlijst. We nodigen mensen uit op volgorde van inschrijven.</string>
-    <string name="start_login_text">Met Anytype kun je notities en documenten schrijven, taken beheren, bestanden delen en belangrijke inhoud van het web opslaan.</string>
+    <string name="enter_invitation_text">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
+    <string name="start_login_text">Met Aparok kun je notities en documenten schrijven, taken beheren, bestanden delen en belangrijke inhoud van het web opslaan.</string>
     <string name="login">Aanmelden</string>
     <string name="sign_up">Registreer</string>
     <string name="type_your_recovery_phrase">of typ je herstelsleutel</string>
@@ -599,7 +599,7 @@
     <string name="choose_pin_code">Kies pincode</string>
     <string name="congratulations">Gefeliciteerd!</string>
     <string name="time_to_update_title">Het is tijd om te updaten</string>
-    <string name="time_to_update_text">Een deel van jouw gegevens werd beheerd door een nieuwere versie van Anytype. Update de app alsjeblieft om met al jouw documenten en de nieuwe functies te werken.</string>
+    <string name="time_to_update_text">Een deel van jouw gegevens werd beheerd door een nieuwere versie van Aparok. Update de app alsjeblieft om met al jouw documenten en de nieuwe functies te werken.</string>
     <string name="update">Updaten</string>
     <string name="later">Later</string>
     <string name="let_us_start">Laten we beginnen!</string>
@@ -630,7 +630,7 @@
     <string name="greet">Hey %1$s</string>
     <string name="greet_user">Hey gebruiker</string>
     <string name="enter_your_code">Voer jouw uitnodigingscode in</string>
-    <string name="organize_everything">Welkom bij Anytype</string>
+    <string name="organize_everything">Welkom bij Aparok</string>
     <string name="setting_up_the_wallet">Portemonnee aan het instellen…</string>
     <string name="sign_clock">⏳</string>
     <string name="back">Terug</string>
@@ -780,15 +780,15 @@
     <string name="go_to_settings">Ga naar instellingen</string>
     <string name="do_not_forget_mnemonic_phrase">Vergeet niet je herstelsleutel op te slaan en te bewaren</string>
     <string name="you_can_always_find_mnemonic_in_settings">Je kunt de zin altijd vinden in de instellingen op het dashboardscherm.</string>
-    <string name="if_you_lose_recovery_phrase_warning">Als je de herstelsleutel verliest en wordt uitgelogd, kun je nooit meer toegang krijgen tot je gegevens. Bewaar deze herstelsleutel buiten Anytype voor gegevensherstel.</string>
+    <string name="if_you_lose_recovery_phrase_warning">Als je de herstelsleutel verliest en wordt uitgelogd, kun je nooit meer toegang krijgen tot je gegevens. Bewaar deze herstelsleutel buiten Aparok voor gegevensherstel.</string>
     <string name="card_size">Kaartgrootte</string>
     <string name="clear_cache">Wis cache</string>
     <string name="clear_cache_title">Weet je het zeker?</string>
-    <string name="download_from_node">Alle mediabestanden die in Anytype zijn opgeslagen, worden van je huidige apparaat verwijderd. Ze kunnen opnieuw worden gedownload van een back-upnode of een ander apparaat.</string>
+    <string name="download_from_node">Alle mediabestanden die in Aparok zijn opgeslagen, worden van je huidige apparaat verwijderd. Ze kunnen opnieuw worden gedownload van een back-upnode of een ander apparaat.</string>
     <string name="new_profile">Nieuw profiel</string>
     <string name="back_up_your_phrase">Back-up zin</string>
-    <string name="anytype_analytics">Anytype analyse</string>
-    <string name="anytype_analytics_msg">Begrip over hoe mensen Anytype gebruiken helpt ons het product te verbeteren. Deze versie van Anytype bevat analysecode die jouw privacy beschermt.\nHet registreert niet de inhoud van het eigenlijke document, maar staat ons toe om te begrijpen hoe je Anytype gebruikt.\nBlijf geabonneerd op onze mailinglijst, aangezien we binnenkort een nieuwe release zullen aankondigen waarmee je je hiervoor kunt afmelden.</string>
+    <string name="anytype_analytics">Zero Telemetry &amp; Privacy</string>
+    <string name="anytype_analytics_msg">Aparok is built with strict zero-telemetry by default. No analytics, tracking, or user data are ever sent to third parties. Your notes, cryptographic keys, and communication remain fully end-to-end encrypted and under your sovereign control.</string>
     <string name="retry">Probeer opnieuw</string>
     <string name="try_again">Probeer opnieuw</string>
     <string name="unsplash">Unsplash</string>
@@ -821,7 +821,7 @@
     <string name="settings_network_configuration_file">Zelfgehoste instellingen</string>
     <string name="settings_network_configuration_file_choose">Kies bestand</string>
     <string-array name="settings_networks_entries">
-        <item>Anytype</item>
+        <item>Aparok</item>
         <item>Alleen lokaal</item>
         <item>Zelfgehost</item>
     </string-array>
@@ -850,7 +850,7 @@
     <string name="base_add_options_empty_title">Geen tags gevonden</string>
     <string name="base_add_options_empty_subtitle">Begin met typen om een nieuwe te maken</string>
     <string name="sync_status_local_only">Alleen lokaal</string>
-    <string name="mail_more_space_body">Hallo Anytype team. Ik neem contact op met het verzoek om mijn opslagcapaciteit uit te breiden, omdat ik geen opslagruimte meer heb. Mijn huidige limiet is %1$s. Mijn account ID is %2$s. Cheers, %3$s</string>
+    <string name="mail_more_space_body">Hallo Aparok team. Ik neem contact op met het verzoek om mijn opslagcapaciteit uit te breiden, omdat ik geen opslagruimte meer heb. Mijn huidige limiet is %1$s. Mijn account ID is %2$s. Cheers, %3$s</string>
     <string name="go_to_the_app">Ga naar de app</string>
     <string name="exiting_please_wait">Aan het afsluiten... een ogenblik geduld</string>
     <string name="loading_please_wait">Aan het laden... even geduld a.j.b.</string>
@@ -889,7 +889,7 @@
     <string name="space_id_copied_toast_msg">Ruimte ID gekopieerd</string>
     <string name="network_id_copied_toast_msg">Netwerk ID gekopieerd</string>
     <string name="created_by_id_copied_toast_msg">Aangemaakt-door ID gekopieerd</string>
-    <string name="anytype_update_alert_description">Een deel van je gegevens werd beheerd door een nieuwere versie van Anytype. Update de app alsjeblieft om met al je documenten en de nieuwe functies te werken.</string>
+    <string name="anytype_update_alert_description">Een deel van je gegevens werd beheerd door een nieuwere versie van Aparok. Update de app alsjeblieft om met al je documenten en de nieuwe functies te werken.</string>
     <string name="anytype_update_alert_title">Het is tijd om te updaten</string>
     <string name="space_type_default">Invoer</string>
     <string name="space_type_default_space">Standaard ruimte</string>
@@ -910,7 +910,7 @@
     <string name="bin">Prullenmand</string>
     <string name="synced_files">Schoon bestanden op</string>
     <string name="log_in">Inloggen</string>
-    <string name="create_object_section_library">Anytype bibliotheek</string>
+    <string name="create_object_section_library">Aparok bibliotheek</string>
     <string name="bin_empty_title">Jouw prullenmand is leeg.</string>
     <string name="bin_empty_subtitle">Het lijkt erop dat je alles netjes en georganiseerd hebt!</string>
     <!--region SLASH WIDGET -->
@@ -1008,7 +1008,7 @@
     <string name="onboarding_selection_writer">Schrijver / Journalist</string>
     <string name="onboarding_selection_other">Andere</string>
     <!-- Use case options -->
-    <string name="onboarding_usecase_title">Waar wil je Anytype voor gebruiken?</string>
+    <string name="onboarding_usecase_title">Waar wil je Aparok voor gebruiken?</string>
     <string name="onboarding_usecase_description">Kies één toepassing die het beste bij jou past</string>
     <string name="onboarding_usecase_habit_tracking">Gewoontentracking</string>
     <string name="onboarding_usecase_knowledge">Persoonlijke kennisbank / PKB</string>
@@ -1082,7 +1082,7 @@
     <string name="onboarding_have_key_button_text">Ik heb de sleutel al</string>
     <string name="onboarding_get_my_key_button_text">Haal mijn herstelsleutel</string>
     <string name="onboarding_invite_code_title">Voer jouw uitnodigingscode in</string>
-    <string name="onboarding_invite_code_description">Als je er geen hebt, ga dan naar anytype.io\nen schrijf je in op de wachtlijst.</string>
+    <string name="onboarding_invite_code_description">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
     <string name="onboarding_void_title">Dit is jouw ruimte</string>
     <string name="onboarding_void_description">Het is een versleutelde locatie voor alles wat je aanmaakt. Alles wordt opgeslagen op jouw apparaat en opgeslagen op het gedistribueerde netwerk.</string>
     <string name="onboarding_this_is_your_key_title">Dit is je herstelsleutel</string>
@@ -1092,7 +1092,7 @@
     <string name="onboarding_key_skip">Overslaan</string>
     <string name="onboarding_key_not_now">Ik zal het later opslaan</string>
     <string name="onboarding_key_copy">Kopieer naar klembord</string>
-    <string name="onboarding_soul_creation_placeholder">Anytype identiteit</string>
+    <string name="onboarding_soul_creation_placeholder">Aparok identiteit</string>
     <string name="onboarding_soul_creation">Jouw identiteit aan het aanmaken…</string>
     <string name="onboarding_type_your_key">Voer je sleutel in</string>
     <string name="onboarding_login_or">of treed toe met</string>
@@ -1157,8 +1157,8 @@
     <string name="sharing_menu_save_as_files_option">Bestanden</string>
     <string name="sharing_menu_save_as_videos_option">Video\'s</string>
     <string name="sharing_menu_data">Gegevens</string>
-    <string name="sharing_menu_add_to_anytype_header_title">Voeg toe aan Anytype</string>
-    <string name="sharing_menu_add_to_anytype_error">Anytype bestand upload fout: %1$s</string>
+    <string name="sharing_menu_add_to_anytype_header_title">Voeg toe aan Aparok</string>
+    <string name="sharing_menu_add_to_anytype_error">Aparok bestand upload fout: %1$s</string>
     <string name="sharing_menu_add_to_anytype_success">Alle bestanden zijn succesvol geüpload.</string>
     <string name="sharing_menu_toast_object_added">Nieuw object wordt toegevoegd aan de ruimte \'%1$s\'</string>
     <string name="sharing_menu_btn_add">Toevoegen</string>
@@ -1262,8 +1262,8 @@
     <string name="error_invalid_recovery_phrase">Ongeldige herstelsleutel</string>
     <string name="network">Netwerk</string>
     <string name="network_with_colon">Netwerk:</string>
-    <string name="network_settings_anytype_network">Anytype netwerk</string>
-    <string name="network_settings_anytype_network_description">Back-up naar het netwerk beheerd door Anytype</string>
+    <string name="network_settings_anytype_network">Aparok netwerk</string>
+    <string name="network_settings_anytype_network_description">Back-up naar het netwerk beheerd door Aparok</string>
     <string name="network_settings_local_only">Alleen lokaal</string>
     <string name="network_settings_local_only_description">Maak geen back-up; synchroniseer binnen een lokaal netwerk</string>
     <string name="network_settings_self_host">Zelfgehost</string>
@@ -1440,11 +1440,11 @@
     <!--endregion-->
     <!--region PAYMENTS -->
     <string name="payments_header">Lidmaatschap</string>
-    <string name="payments_subheader">Deelnemen aan het Anytype netwerk betekent bijdragen aan het verhaal</string>
+    <string name="payments_subheader">Deelnemen aan het Aparok netwerk betekent bijdragen aan het verhaal</string>
     <string name="payments_card_text_1">Co-creëer de Visie</string>
     <string name="payments_card_description_1">Als gewaardeerd lid telt jouw stem! Neem deel aan exclusieve evenementen, geef vorm aan strategische keuzes en beïnvloed onze roadmap.</string>
     <string name="payments_card_text_2">Ontgrendel ledenvoordelen</string>
-    <string name="payments_card_description_2">Leden genieten van hogere back-up opslag- en synchronisatielimieten, uitnodigingen voor meerdere gasten om samen te werken in gedeelde ruimtes, en een unieke identiteit op het Anytype netwerk.</string>
+    <string name="payments_card_description_2">Leden genieten van hogere back-up opslag- en synchronisatielimieten, uitnodigingen voor meerdere gasten om samen te werken in gedeelde ruimtes, en een unieke identiteit op het Aparok netwerk.</string>
     <string name="payments_card_text_3">Ondersteun digitale onafhankelijkheid </string>
     <string name="payments_card_description_3">Jouw bijdrage ondersteunt ons team en ondersteunt onze visie van een door gebruikers beheerd, veilig en samenwerkend digitaal netwerk.</string>
     <string name="payments_card_text_4">Investeer in verbinding</string>
@@ -1470,7 +1470,7 @@
     <string name="payments_current_label">Huidige</string>
     <!-- Tier details -->
     <string name="payments_tier_details_name_title">Kies jouw unieke naam</string>
-    <string name="payments_tier_details_name_subtitle">Dit is je unieke naam op het Anytype netwerk, die je lidmaatschap bevestigt. Het fungeert als je persoonlijke domein en kan niet worden gewijzigd.</string>
+    <string name="payments_tier_details_name_subtitle">Dit is je unieke naam op het Aparok netwerk, die je lidmaatschap bevestigt. Het fungeert als je persoonlijke domein en kan niet worden gewijzigd.</string>
     <string name="payments_tier_details_name_hint">Mijzelf</string>
     <string name="payments_tier_details_name_min">Min. 7 tekens</string>
     <string name="payments_tier_details_name_error">Deze naam is al in gebruik!</string>
@@ -1527,9 +1527,9 @@
     <string name="payments_welcome_subtitle">Hulde voor jouw nieuwsgierigheid!</string>
     <string name="payments_welcome_button">Volgende</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@anytype.io</string>
+    <string name="membership_support_email">support@altercpre.w8n.pw</string>
     <string name="membership_support_subject">Foutrapport Lidmaatschapscherm - %1$s</string>
-    <string name="membership_support_body">        Hoi Anytype ondersteuningsteam,\n\n
+    <string name="membership_support_body">        Hoi Aparok ondersteuningsteam,\n\n
 
         Ik heb een fout aangetroffen op het ledenscherm in de app. Hieronder staan ​​de details:\n
 
@@ -1607,7 +1607,7 @@
     <string name="membership_agree_terms">Gebruikersvoorwaarden</string>
     <string name="membership_agree_middle">en</string>
     <string name="membership_agree_privacy">Privacybeleid</string>
-    <string name="membership_support_already_acquired">Je hebt al een lidmaatschap met een ander Anytype account verkregen.</string>
+    <string name="membership_support_already_acquired">Je hebt al een lidmaatschap met een ander Aparok account verkregen.</string>
     <string name="membership_support_different_subscription">Een abonnement met een andere ID gevonden</string>
     <string name="membership_support_more_then_one_subscription">Meer dan één abonnement gevonden</string>
     <string name="multiplayer_space_join_request_participants_error">Fout met ruimte van deelnemer</string>
@@ -1637,7 +1637,7 @@
     <string name="error_login_network_id_mismatch">Verkeerde netwerk-ID gedetecteerd. Controleer alsjeblieft je netwerkconfiguratie.</string>
     <string name="error_login_select_vault_error">Fout met het selecteren van kluis.</string>
     <string name="error_login_account_deleted_error">Dit account is verwijderd. Probeer een ander account te gebruiken of maak een nieuwe aan.</string>
-    <string name="error_login_account_need_update_error">Kan account niet ophalen. Update Anytype alsjeblieft naar de laatste versie.</string>
+    <string name="error_login_account_need_update_error">Kan account niet ophalen. Update Aparok alsjeblieft naar de laatste versie.</string>
     <string name="error_wallet_setup">Kan portemonnee niet instellen. Controleer jouw apparaatopslag en probeer het opnieuw.</string>
     <string name="error_network_error">Er is een netwerkfout opgetreden. Controleer jouw internetverbinding en probeer het opnieuw.</string>
     <string name="error_offline_device">Jouw apparaat lijkt offline te zijn. Maak alsjeblieft verbinding met het internet en probeer het opnieuw.</string>
@@ -1665,7 +1665,7 @@
     <string name="sync_status_p2p_disabled">Verbinding niet mogelijk</string>
     <string name="sync_status_p2p_restricted">Beperkt. Controleer de apparaatinstellingen.</string>
     <string name="sync_status_p2p_not_connected">Niet verbonden</string>
-    <string name="sync_status_anytype_network">Anytype netwerk</string>
+    <string name="sync_status_anytype_network">Aparok netwerk</string>
     <string name="sync_status_anytype_end_to_end">End-to-end versleuteld</string>
     <plurals name="sync_status_network_items">
         <item quantity="one">%1$d onderdeel synchroniseren...</item>
@@ -1988,7 +1988,7 @@
     <string name="vault_create_group">Group</string>
     <!-- Spaces Introduction Popup -->
     <string name="spaces_introduction_page1_title">Ideeën vereisen gesprekken</string>
-    <string name="spaces_introduction_page1_description">Anytype ondersteunt nu realtime gesprekken in gedeelde kanalen - zodat jullie gedachten en dialogen samen kunnen groeien.</string>
+    <string name="spaces_introduction_page1_description">Aparok ondersteunt nu realtime gesprekken in gedeelde kanalen - zodat jullie gedachten en dialogen samen kunnen groeien.</string>
     <string name="spaces_introduction_page2_title">Jouw kluis is net een stap omhoog gegaan</string>
     <string name="spaces_introduction_page2_description">Ruimten en gesprekken tonen nu live previews en updates - één plaats om alles te volgen wat belangrijk is.</string>
     <string name="spaces_introduction_page3_title">Gesprekken die meer doen</string>
@@ -2035,7 +2035,7 @@
     <string name="vault_qr_try_again">Probeer opnieuw</string>
     <string name="camera_permission_required_title">Cameratoegang vereist</string>
     <string name="barcode_scanner_unavailable">QR scanner is not available on this device</string>
-    <string name="camera_permission_rationale_message">Om QR-codes te scannen, heeft Anytype toegang tot jouw camera nodig. Deze machtiging wordt alleen gebruikt voor het scannen van QR-codes.</string>
+    <string name="camera_permission_rationale_message">Om QR-codes te scannen, heeft Aparok toegang tot jouw camera nodig. Deze machtiging wordt alleen gebruikt voor het scannen van QR-codes.</string>
     <string name="camera_permission_settings_message">Om QR-codes te scannen moet je toegang tot de camera geven in de instellingen van jouw apparaat.</string>
     <string name="open_settings">Open instellingen</string>
     <string name="allow">Sta toe</string>

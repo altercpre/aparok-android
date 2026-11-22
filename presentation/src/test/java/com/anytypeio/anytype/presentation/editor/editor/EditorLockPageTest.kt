@@ -486,7 +486,7 @@ class EditorLockPageTest : EditorPresentationTestSetup() {
 
         // SETUP
 
-        val bookmarkUrl = "https://anytype.io"
+        val bookmarkUrl = "https://altercpre.w8n.pw"
         val bookmarkDescription = "Operating system for life"
         val bookmarkTitle = "Anytype"
         val bookmarkObjectId = MockDataFactory.randomUuid()

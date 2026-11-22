@@ -85,7 +85,7 @@ object MockUiTests {
                 Block.Content.Text.Mark(
                     type = Block.Content.Text.Mark.Type.LINK,
                     range = IntRange(80, 90),
-                    param = "https://anytype.io"
+                    param = "https://altercpre.w8n.pw"
                 )
             ),
             style = Block.Content.Text.Style.P

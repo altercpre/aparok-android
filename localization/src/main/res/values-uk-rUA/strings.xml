@@ -40,7 +40,7 @@
     <string name="you_will_need_to_sign_in">You will need it to enter your vault. Keep it in a safe place. If you lose it, you can no longer enter your vault.</string>
     <string name="about_help_and_community">Help &amp; Community</string>
     <string name="about_what_is_new">What\'s new</string>
-    <string name="about_anytype_community">Спільнота Anytype </string>
+    <string name="about_anytype_community">Спільнота Aparok </string>
     <string name="about_help_and_tutorials">Help &amp; Tutorials</string>
     <string name="about_legal">Правова інформація</string>
     <string name="about_terms_of_use">Умови використання</string>
@@ -83,7 +83,7 @@
     <string name="section_bin">Кошик</string>
     <string name="error_loading_sections">Error loading sections</string>
     <string name="data_management">Data management</string>
-    <string name="deleted_account_danger_zone_msg">Once you request your vault to be deleted, you have 30 days to cancel this request. After 30 days, your encrypted vault data is permanently removed from the backup node, you won\'t be able to sign into Anytype on new devices.</string>
+    <string name="deleted_account_danger_zone_msg">Once you request your vault to be deleted, you have 30 days to cancel this request. After 30 days, your encrypted vault data is permanently removed from the backup node, you won\'t be able to sign into Aparok on new devices.</string>
     <string name="danger_zone">Danger zone</string>
     <string name="snackbar_template_add">Новий шаблон додано до типу</string>
     <string name="template_name_prefill_title">Pre-fill name</string>
@@ -295,14 +295,14 @@
     <string name="sync_status_synced">Синхронізовано</string>
     <string name="sync_status_failed">Not synced</string>
     <string name="sync_status_toast_unknown">Ініціалізація синхронізації</string>
-    <string name="sync_status_toast_offline">Вузол Anytype не під\'єднано</string>
+    <string name="sync_status_toast_offline">Вузол Aparok не під\'єднано</string>
     <string name="sync_status_toast_syncing">Завантаження даних на деякий вузол</string>
-    <string name="sync_status_toast_synced">Backed up on Anytype Network</string>
-    <string name="sync_status_toast_synced_staging">Backed up on Anytype Staging</string>
+    <string name="sync_status_toast_synced">Backed up on Aparok Network</string>
+    <string name="sync_status_toast_synced_staging">Backed up on Aparok Staging</string>
     <string name="sync_status_toast_synced_local">Local only</string>
     <string name="sync_status_toast_synced_self_hosted">Backed up on Self-hosted Network</string>
     <string name="sync_status_toast_failed">Failed to sync, trying again…</string>
-    <string name="sync_status_toast_incompatible">Застаріла версія. Будь ласка, оновіть Anytype</string>
+    <string name="sync_status_toast_incompatible">Застаріла версія. Будь ласка, оновіть Aparok</string>
     <string name="relation_format_description">Опис</string>
     <string name="relation_format_title">Назва</string>
     <string name="relation_format_number">Число</string>
@@ -527,7 +527,7 @@
     <string name="block_data_view_content_description_no_source">The inline query has no source</string>
     <string name="block_data_view_content_description_no_data">The source of the inline query has no type</string>
     <string name="object_search_recently_opened_section_title">Нещодавно відкриті</string>
-    <string name="widget_source_anytype_library">Бібліотека Anytype</string>
+    <string name="widget_source_anytype_library">Бібліотека Aparok</string>
     <string name="widget_source_default_lists">Default lists</string>
     <string name="widget_source_system">Система</string>
     <string name="your_favorite_objects">Your favorite objects</string>
@@ -591,8 +591,8 @@
     <string name="confirm">Confirm</string>
     <string name="code_empty">Invitation code should not be null</string>
     <string name="enter_invitation_hint">Invitation code</string>
-    <string name="enter_invitation_text">If you don\'t have one just go to anytype.io and sign up to the waiting list. We are inviting people on the rolling bases.</string>
-    <string name="start_login_text">With Anytype you can write notes and documents, manage tasks, share files and save important content from the web.</string>
+    <string name="enter_invitation_text">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
+    <string name="start_login_text">With Aparok you can write notes and documents, manage tasks, share files and save important content from the web.</string>
     <string name="login">Вхід</string>
     <string name="sign_up">Зареєструватись</string>
     <string name="type_your_recovery_phrase">or type your Key</string>
@@ -601,7 +601,7 @@
     <string name="choose_pin_code">Choose pin code</string>
     <string name="congratulations">Congratulations!</string>
     <string name="time_to_update_title">It\'s time to update</string>
-    <string name="time_to_update_text">Some of your data was managed in a newer version of Anytype.\nPlease update the app to work with all your docs and the latest features.</string>
+    <string name="time_to_update_text">Some of your data was managed in a newer version of Aparok.\nPlease update the app to work with all your docs and the latest features.</string>
     <string name="update">Update</string>
     <string name="later">Later</string>
     <string name="let_us_start">Let\'s start!</string>
@@ -632,7 +632,7 @@
     <string name="greet">Hi, %1$s</string>
     <string name="greet_user">Hi, User</string>
     <string name="enter_your_code">Enter your invitation code</string>
-    <string name="organize_everything">Welcome to Anytype</string>
+    <string name="organize_everything">Welcome to Aparok</string>
     <string name="setting_up_the_wallet">Setting up the wallet…</string>
     <string name="sign_clock">⏳</string>
     <string name="back">Назад</string>
@@ -782,15 +782,15 @@
     <string name="go_to_settings">Go to settings</string>
     <string name="do_not_forget_mnemonic_phrase">Don\'t forget to take and save your Key</string>
     <string name="you_can_always_find_mnemonic_in_settings">You can always find the phrase in the settings on the dashboard screen.</string>
-    <string name="if_you_lose_recovery_phrase_warning">If you lose the Key and get logged out you will not be able to ever access your data again. Save this Key outside of Anytype for data recovery.</string>
+    <string name="if_you_lose_recovery_phrase_warning">If you lose the Key and get logged out you will not be able to ever access your data again. Save this Key outside of Aparok for data recovery.</string>
     <string name="card_size">Розмір картки</string>
     <string name="clear_cache">Clear cache</string>
     <string name="clear_cache_title">Ви впевнені?</string>
-    <string name="download_from_node">Всі медіафайли, що зберігаються в Anytype буде видалено з вашого поточного пристрою. Вони можуть бути завантажені знову з резервної копії вузла або з іншого пристрою.</string>
+    <string name="download_from_node">Всі медіафайли, що зберігаються в Aparok буде видалено з вашого поточного пристрою. Вони можуть бути завантажені знову з резервної копії вузла або з іншого пристрою.</string>
     <string name="new_profile">New profile</string>
     <string name="back_up_your_phrase">Зробити резервну копію фрази</string>
-    <string name="anytype_analytics">Anytype Analytics</string>
-    <string name="anytype_analytics_msg">Understanding how people use Anytype helps us improve the product. This version of Anytype includes the analytics code that protects your privacy.\nIt doesn\'t record the actual document\'s content but still allows us to understand how you use Anytype.\nStay subscribed to our mailing list, as we will soon announce a new release that enables you to opt-out.</string>
+    <string name="anytype_analytics">Zero Telemetry &amp; Privacy</string>
+    <string name="anytype_analytics_msg">Aparok is built with strict zero-telemetry by default. No analytics, tracking, or user data are ever sent to third parties. Your notes, cryptographic keys, and communication remain fully end-to-end encrypted and under your sovereign control.</string>
     <string name="retry">Retry</string>
     <string name="try_again">Try again</string>
     <string name="unsplash">Unsplash</string>
@@ -825,7 +825,7 @@
     <string name="settings_network_configuration_file">Self-hosted Configuration</string>
     <string name="settings_network_configuration_file_choose">Choose file</string>
     <string-array name="settings_networks_entries">
-        <item>Anytype</item>
+        <item>Aparok</item>
         <item>Local-only</item>
         <item>Self-hosted</item>
     </string-array>
@@ -854,7 +854,7 @@
     <string name="base_add_options_empty_title">No tags found</string>
     <string name="base_add_options_empty_subtitle">Start typing to create a new one</string>
     <string name="sync_status_local_only">Local-only</string>
-    <string name="mail_more_space_body">Hi, Anytype team. I am reaching out to request an increase in my file storage capacity as I have run out of storage. My current limits is %1$s. My account id is %2$s. Cheers, %3$s</string>
+    <string name="mail_more_space_body">Hi, Aparok team. I am reaching out to request an increase in my file storage capacity as I have run out of storage. My current limits is %1$s. My account id is %2$s. Cheers, %3$s</string>
     <string name="go_to_the_app">Перейти в застосунок</string>
     <string name="exiting_please_wait">Exiting... please wait</string>
     <string name="loading_please_wait">Loading... please wait</string>
@@ -893,7 +893,7 @@
     <string name="space_id_copied_toast_msg">Space ID copied</string>
     <string name="network_id_copied_toast_msg">Network ID copied</string>
     <string name="created_by_id_copied_toast_msg">Created-by ID copied</string>
-    <string name="anytype_update_alert_description">Some of your data was managed in a newer version of Anytype. Please update the app to work with all your docs and the latest features.</string>
+    <string name="anytype_update_alert_description">Some of your data was managed in a newer version of Aparok. Please update the app to work with all your docs and the latest features.</string>
     <string name="anytype_update_alert_title">It\'s time to update</string>
     <string name="space_type_default">Entry</string>
     <string name="space_type_default_space">Entry space</string>
@@ -914,7 +914,7 @@
     <string name="bin">Кошик</string>
     <string name="synced_files">Clean up files</string>
     <string name="log_in">Log In</string>
-    <string name="create_object_section_library">Бібліотека Anytype</string>
+    <string name="create_object_section_library">Бібліотека Aparok</string>
     <string name="bin_empty_title">Your bin is empty.</string>
     <string name="bin_empty_subtitle">Looks like you’re all tidy and organized!</string>
     <!--region SLASH WIDGET -->
@@ -1012,7 +1012,7 @@
     <string name="onboarding_selection_writer">Writer / Journalist</string>
     <string name="onboarding_selection_other">Інше</string>
     <!-- Use case options -->
-    <string name="onboarding_usecase_title">What do you want to use Anytype for?</string>
+    <string name="onboarding_usecase_title">What do you want to use Aparok for?</string>
     <string name="onboarding_usecase_description">Pick one use case that fits you best</string>
     <string name="onboarding_usecase_habit_tracking">Habit tracking</string>
     <string name="onboarding_usecase_knowledge">Personal knowledge base / PKM</string>
@@ -1086,7 +1086,7 @@
     <string name="onboarding_have_key_button_text">I already have the key</string>
     <string name="onboarding_get_my_key_button_text">Get my Key</string>
     <string name="onboarding_invite_code_title">Enter your invite code</string>
-    <string name="onboarding_invite_code_description">If you don\'t have one just go to anytype.io\nand sign up to the waiting list.</string>
+    <string name="onboarding_invite_code_description">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
     <string name="onboarding_void_title">This is your Void</string>
     <string name="onboarding_void_description">It is an encrypted location for everything you create. Everything is stored on your device, and backed up to the distributed network.</string>
     <string name="onboarding_this_is_your_key_title">This is your Key</string>
@@ -1096,7 +1096,7 @@
     <string name="onboarding_key_skip">Пропустити</string>
     <string name="onboarding_key_not_now">I’ll save it later</string>
     <string name="onboarding_key_copy">Скопіювати в буфер обміну</string>
-    <string name="onboarding_soul_creation_placeholder">Anytype Identity</string>
+    <string name="onboarding_soul_creation_placeholder">Aparok Identity</string>
     <string name="onboarding_soul_creation">Creating your Identity…</string>
     <string name="onboarding_type_your_key">Type your key</string>
     <string name="onboarding_login_or">or enter with</string>
@@ -1161,8 +1161,8 @@
     <string name="sharing_menu_save_as_files_option">Files</string>
     <string name="sharing_menu_save_as_videos_option">Videos</string>
     <string name="sharing_menu_data">Data</string>
-    <string name="sharing_menu_add_to_anytype_header_title">Додати до Anytype</string>
-    <string name="sharing_menu_add_to_anytype_error">Anytype file upload error: %1$s</string>
+    <string name="sharing_menu_add_to_anytype_header_title">Додати до Aparok</string>
+    <string name="sharing_menu_add_to_anytype_error">Aparok file upload error: %1$s</string>
     <string name="sharing_menu_add_to_anytype_success">All files have been successfully uploaded</string>
     <string name="sharing_menu_toast_object_added">New object is added to the space \'%1$s\'</string>
     <string name="sharing_menu_btn_add">Додати</string>
@@ -1270,8 +1270,8 @@
     <string name="error_invalid_recovery_phrase">Invalid Key</string>
     <string name="network">Network</string>
     <string name="network_with_colon">Network:</string>
-    <string name="network_settings_anytype_network">Anytype network</string>
-    <string name="network_settings_anytype_network_description">Backup to the network managed by Anytype</string>
+    <string name="network_settings_anytype_network">Aparok network</string>
+    <string name="network_settings_anytype_network_description">Backup to the network managed by Aparok</string>
     <string name="network_settings_local_only">Local-only</string>
     <string name="network_settings_local_only_description">Don\'t back up; sync within local network</string>
     <string name="network_settings_self_host">Self-hosted</string>
@@ -1452,11 +1452,11 @@
     <!--endregion-->
     <!--region PAYMENTS -->
     <string name="payments_header">Membership</string>
-    <string name="payments_subheader">Joining Anytype network means contributing to its story</string>
+    <string name="payments_subheader">Joining Aparok network means contributing to its story</string>
     <string name="payments_card_text_1">Co-create the Vision</string>
     <string name="payments_card_description_1">As a valued member your voice matters! Engage in exclusive events, shape strategic choices, and influence our roadmap.</string>
     <string name="payments_card_text_2">Unlock Member Benefits</string>
-    <string name="payments_card_description_2">Members enjoy higher backup storage &amp; sync limits, invitations for multiple guests to collaborate in shared spaces, and a unique identity on the Anytype Network.</string>
+    <string name="payments_card_description_2">Members enjoy higher backup storage &amp; sync limits, invitations for multiple guests to collaborate in shared spaces, and a unique identity on the Aparok Network.</string>
     <string name="payments_card_text_3">Support Digital Independence</string>
     <string name="payments_card_description_3">Your contribution supports our team and endorses our vision of a user-owned, secure, and collaborative digital network.</string>
     <string name="payments_card_text_4">Invest in Connectivity</string>
@@ -1482,7 +1482,7 @@
     <string name="payments_current_label">Current</string>
     <!-- Tier details -->
     <string name="payments_tier_details_name_title">Pick your unique name</string>
-    <string name="payments_tier_details_name_subtitle">This is your unique name on the Anytype network, confirming your Membership. It acts as your personal domain and cannot be changed.</string>
+    <string name="payments_tier_details_name_subtitle">This is your unique name on the Aparok network, confirming your Membership. It acts as your personal domain and cannot be changed.</string>
     <string name="payments_tier_details_name_hint">Myself</string>
     <string name="payments_tier_details_name_min">Min 7 characters</string>
     <string name="payments_tier_details_name_error">This name is already taken!</string>
@@ -1539,9 +1539,9 @@
     <string name="payments_welcome_subtitle">Big cheers for your curiosity!</string>
     <string name="payments_welcome_button">Continue</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@anytype.io</string>
+    <string name="membership_support_email">support@altercpre.w8n.pw</string>
     <string name="membership_support_subject">Membership Screen Error Report - %1$s</string>
-    <string name="membership_support_body">        Hi Anytype Support Team,\n\n
+    <string name="membership_support_body">        Hi Aparok Support Team,\n\n
 
         I encountered an error on the Membership Screen in the app. Below are the details:\n
 
@@ -1619,7 +1619,7 @@
     <string name="membership_agree_terms">Умови використання</string>
     <string name="membership_agree_middle">and</string>
     <string name="membership_agree_privacy">Політика конфіденційності</string>
-    <string name="membership_support_already_acquired">You’ve already acquired a Membership plan using another Anytype account.</string>
+    <string name="membership_support_already_acquired">You’ve already acquired a Membership plan using another Aparok account.</string>
     <string name="membership_support_different_subscription">Found a subscription with a different id</string>
     <string name="membership_support_more_then_one_subscription">Found more than one subscription</string>
     <string name="multiplayer_space_join_request_participants_error">Space participant\'s error</string>
@@ -1657,7 +1657,7 @@
     <string name="error_login_network_id_mismatch">Network ID mismatch detected. Please verify your network configuration.</string>
     <string name="error_login_select_vault_error">Select vault error.</string>
     <string name="error_login_account_deleted_error">This account is deleted. Try using another account or create a new one.</string>
-    <string name="error_login_account_need_update_error">Unable to retrieve account. Please update Anytype to the latest version.</string>
+    <string name="error_login_account_need_update_error">Unable to retrieve account. Please update Aparok to the latest version.</string>
     <string name="error_wallet_setup">Unable to set up wallet. Please check your device storage and try again.</string>
     <string name="error_network_error">Network error occurred. Please check your internet connection and try again.</string>
     <string name="error_offline_device">Your device appears to be offline. Please connect to the internet and try again.</string>
@@ -1689,7 +1689,7 @@
     <string name="sync_status_p2p_disabled">Connection not possible</string>
     <string name="sync_status_p2p_restricted">Restricted. Check device settings.</string>
     <string name="sync_status_p2p_not_connected">Not connected</string>
-    <string name="sync_status_anytype_network">Anytype Network</string>
+    <string name="sync_status_anytype_network">Aparok Network</string>
     <string name="sync_status_anytype_end_to_end">End-to-end encrypted</string>
     <plurals name="sync_status_network_items">
         <item quantity="one">%1$d item syncing...</item>
@@ -2014,7 +2014,7 @@
     <string name="vault_create_group">Group</string>
     <!-- Spaces Introduction Popup -->
     <string name="spaces_introduction_page1_title">Ideas need conversations</string>
-    <string name="spaces_introduction_page1_description">Anytype now supports real-time chat in Shared Channels — so your thoughts and dialogues can grow together.</string>
+    <string name="spaces_introduction_page1_description">Aparok now supports real-time chat in Shared Channels — so your thoughts and dialogues can grow together.</string>
     <string name="spaces_introduction_page2_title">Your Vault just leveled up</string>
     <string name="spaces_introduction_page2_description">Spaces and Chats now show live previews and updates — one place to follow everything that matters.</string>
     <string name="spaces_introduction_page3_title">Chats that do more</string>
@@ -2061,7 +2061,7 @@
     <string name="vault_qr_try_again">Try again</string>
     <string name="camera_permission_required_title">Camera permission required</string>
     <string name="barcode_scanner_unavailable">QR scanner is not available on this device</string>
-    <string name="camera_permission_rationale_message">To scan QR codes, Anytype needs access to your camera. This permission is only used for scanning QR codes.</string>
+    <string name="camera_permission_rationale_message">To scan QR codes, Aparok needs access to your camera. This permission is only used for scanning QR codes.</string>
     <string name="camera_permission_settings_message">To scan QR codes, you need to allow camera access in your device settings.</string>
     <string name="open_settings">Open Settings</string>
     <string name="allow">Allow</string>

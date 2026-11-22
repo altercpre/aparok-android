@@ -12,7 +12,7 @@ object DummyMessageGenerator {
         "Hey there!",
         "Just finished the task.",
         "Let's meet at 10am tomorrow.",
-        "Check this out: https://anytype.io",
+        "Check this out: https://altercpre.w8n.pw",
         "This looks awesome! 🎉",
         "Can you review this file?",
         "I'll push the update in an hour."

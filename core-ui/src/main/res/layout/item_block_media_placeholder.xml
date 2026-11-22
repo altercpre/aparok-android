@@ -50,7 +50,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/progressBar"
                 app:layout_constraintStart_toEndOf="@+id/fileIcon"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="https://github.com/anyproto/anytype-kotlin"/>
+                tools:text="https://github.com/altercpre/aparok-android"/>
 
             <com.google.android.material.progressindicator.CircularProgressIndicator
                 android:id="@+id/progressBar"

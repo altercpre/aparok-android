@@ -51,7 +51,7 @@ class ObjectWrapperExtensionsKtTest {
 
     lateinit var fieldParser: FieldParser
 
-    val URL = "anytype.io/"
+    val URL = "altercpre.w8n.pw/"
 
     @Before
     fun before() {

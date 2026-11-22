@@ -40,7 +40,7 @@
     <string name="you_will_need_to_sign_in">Ён спатрэбіцца вам для ўваходу ў сховішча. Захоўвайце яго ў надзейным месцы. Калі вы страціце яго, вы больш не зможаце ўвайсці ў сховішча.</string>
     <string name="about_help_and_community">Дапамога &amp; Супольнасць</string>
     <string name="about_what_is_new">Што новага</string>
-    <string name="about_anytype_community">Супольнасць Anytype</string>
+    <string name="about_anytype_community">Супольнасць Aparok</string>
     <string name="about_help_and_tutorials">Даведка &amp; Інструкцыі</string>
     <string name="about_legal">Юрыдычная інфармацыя</string>
     <string name="about_terms_of_use">Умовы выкарыстання</string>
@@ -83,7 +83,7 @@
     <string name="section_bin">Сметніца</string>
     <string name="error_loading_sections">Error loading sections</string>
     <string name="data_management">Кіраванне данымі</string>
-    <string name="deleted_account_danger_zone_msg">Пасля запыту на выдаленне сховішча ў вас ёсць 30 дзён, каб адмяніць яго. Па заканчэнні 30 дзён вашыя зашыфраваныя даныя сховішча будуць назаўжды выдалены з вузла рэзервовага капіравання, і вы не зможаце ўвайсці ў Anytype на новых прыладах.</string>
+    <string name="deleted_account_danger_zone_msg">Пасля запыту на выдаленне сховішча ў вас ёсць 30 дзён, каб адмяніць яго. Па заканчэнні 30 дзён вашыя зашыфраваныя даныя сховішча будуць назаўжды выдалены з вузла рэзервовага капіравання, і вы не зможаце ўвайсці ў Aparok на новых прыладах.</string>
     <string name="danger_zone">Небяспечная зона</string>
     <string name="snackbar_template_add">Новы шаблон быў дададзены да тыпу</string>
     <string name="template_name_prefill_title">Pre-fill name</string>
@@ -295,14 +295,14 @@
     <string name="sync_status_synced">Сінхранізавана</string>
     <string name="sync_status_failed">Не сінхранізавана</string>
     <string name="sync_status_toast_unknown">Ініцыялізацыя сінхранізацыі</string>
-    <string name="sync_status_toast_offline">Вузел Anytype не падключаны</string>
+    <string name="sync_status_toast_offline">Вузел Aparok не падключаны</string>
     <string name="sync_status_toast_syncing">Загрузка ці выгрузка даных у вузел</string>
-    <string name="sync_status_toast_synced">Рэзервовае капіраванне ў сетцы Anytype</string>
-    <string name="sync_status_toast_synced_staging">Рэзервовае капіраванне на Anytype Staging</string>
+    <string name="sync_status_toast_synced">Рэзервовае капіраванне ў сетцы Aparok</string>
+    <string name="sync_status_toast_synced_staging">Рэзервовае капіраванне на Aparok Staging</string>
     <string name="sync_status_toast_synced_local">Толькі лакальна</string>
     <string name="sync_status_toast_synced_self_hosted">Рэзервовае капіраванне ў вашай сетцы</string>
     <string name="sync_status_toast_failed">Не ўдалося сінхранізаваць, спрабую яшчэ раз…</string>
-    <string name="sync_status_toast_incompatible">Версія ўстарэлая. Абнавіце Anytype</string>
+    <string name="sync_status_toast_incompatible">Версія ўстарэлая. Абнавіце Aparok</string>
     <string name="relation_format_description">Апісанне</string>
     <string name="relation_format_title">Назва</string>
     <string name="relation_format_number">Нумар</string>
@@ -527,7 +527,7 @@
     <string name="block_data_view_content_description_no_source">The inline query has no source</string>
     <string name="block_data_view_content_description_no_data">The source of the inline query has no type</string>
     <string name="object_search_recently_opened_section_title">Нядаўна адкрытыя</string>
-    <string name="widget_source_anytype_library">Бібліятэка Anytype</string>
+    <string name="widget_source_anytype_library">Бібліятэка Aparok</string>
     <string name="widget_source_default_lists">Прадвызначаны спіс</string>
     <string name="widget_source_system">Сістэма</string>
     <string name="your_favorite_objects">Вашы абраныя аб\'екты</string>
@@ -591,8 +591,8 @@
     <string name="confirm">Пацвердзіць</string>
     <string name="code_empty">Код запрашэння не павінен быць пустым</string>
     <string name="enter_invitation_hint">Код запрашэння</string>
-    <string name="enter_invitation_text">Калі ў вас яго няма, проста перайдзіце на anytype.io і запішыцеся ў спіс чакання. Запрашаем людзей на рухомыя базы.</string>
-    <string name="start_login_text">З дапамогай Anytype вы можаце пісаць нататкі і дакументы, кіраваць задачамі, дзяліцца файламі і захоўваць важны кантэнт з Інтэрнэту.</string>
+    <string name="enter_invitation_text">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
+    <string name="start_login_text">З дапамогай Aparok вы можаце пісаць нататкі і дакументы, кіраваць задачамі, дзяліцца файламі і захоўваць важны кантэнт з Інтэрнэту.</string>
     <string name="login">Увайсці</string>
     <string name="sign_up">Зарэгістравацца</string>
     <string name="type_your_recovery_phrase">або ўвядзіце ключ</string>
@@ -601,7 +601,7 @@
     <string name="choose_pin_code">Выберыце пін-код</string>
     <string name="congratulations">Віншуем!</string>
     <string name="time_to_update_title">Надышоў час абнаўляцца</string>
-    <string name="time_to_update_text">Некаторыя з вашых даных былі адрэдагаваныя ў навейшай версіі Anytype.\nКалі ласка, абновіце праграму, каб яна працавала з усімі вашымі дакументамі і апошнімі функцыямі.</string>
+    <string name="time_to_update_text">Некаторыя з вашых даных былі адрэдагаваныя ў навейшай версіі Aparok.\nКалі ласка, абновіце праграму, каб яна працавала з усімі вашымі дакументамі і апошнімі функцыямі.</string>
     <string name="update">Абнавіць</string>
     <string name="later">Пазней</string>
     <string name="let_us_start">Давайце пачнём!</string>
@@ -632,7 +632,7 @@
     <string name="greet">Вітаем, %1$s</string>
     <string name="greet_user">Вітаем, карыстальнік</string>
     <string name="enter_your_code">Увядзіце код запрашэння</string>
-    <string name="organize_everything">Сардэчна запрашаем у Anytype</string>
+    <string name="organize_everything">Сардэчна запрашаем у Aparok</string>
     <string name="setting_up_the_wallet">Наладжванне кашалька…</string>
     <string name="sign_clock">⏳</string>
     <string name="back">Назад</string>
@@ -782,15 +782,15 @@
     <string name="go_to_settings">Перайдзіце ў налады</string>
     <string name="do_not_forget_mnemonic_phrase">Не забудзьце ўзяць і захаваць свой ключ</string>
     <string name="you_can_always_find_mnemonic_in_settings">Фразу заўсёды можна знайсці ў наладах на працоўным стале.</string>
-    <string name="if_you_lose_recovery_phrase_warning">Калі вы страціце ключ і выйдзеце з сістэмы, вы больш не зможаце атрымаць доступ да сваіх даных. Захавайце гэты ключ за межамі Anytype для аднаўлення даных.</string>
+    <string name="if_you_lose_recovery_phrase_warning">Калі вы страціце ключ і выйдзеце з сістэмы, вы больш не зможаце атрымаць доступ да сваіх даных. Захавайце гэты ключ за межамі Aparok для аднаўлення даных.</string>
     <string name="card_size">Памеры карткі</string>
     <string name="clear_cache">Ачысціць кэш</string>
     <string name="clear_cache_title">Вы ўпэўнены?</string>
-    <string name="download_from_node">Усе медыяфайлы, захаваныя ў Anytype, будуць выдаленыя з вашай бягучай прылады. Іх можна будзе зноў загрузіць з вузла рэзервовага капіравання ці іншай прылады.</string>
+    <string name="download_from_node">Усе медыяфайлы, захаваныя ў Aparok, будуць выдаленыя з вашай бягучай прылады. Іх можна будзе зноў загрузіць з вузла рэзервовага капіравання ці іншай прылады.</string>
     <string name="new_profile">Новы профiль</string>
     <string name="back_up_your_phrase">Рэзервовая фраза</string>
-    <string name="anytype_analytics">Аналітыка Anytype</string>
-    <string name="anytype_analytics_msg">Разуменне таго, як людзі выкарыстоўваюць Anytype дапамагае нам палепшыць прадукт. Гэтая версія Anytype уключае ў сябе код аналітыкі, які абараняе вашу канфідэнцыяльнасць.\nЁн не запісвае фактычнае змесціва дакумента, але дазваляе нам разумець, як вы выкарыстоўваеце Anytype.\nПадпішыцеся на нашу рассылку, бо мы хутка аб\'явім аб новай версіі, якая дазволіць вам адмовіцца ад аналітыкі.</string>
+    <string name="anytype_analytics">Zero Telemetry &amp; Privacy</string>
+    <string name="anytype_analytics_msg">Aparok is built with strict zero-telemetry by default. No analytics, tracking, or user data are ever sent to third parties. Your notes, cryptographic keys, and communication remain fully end-to-end encrypted and under your sovereign control.</string>
     <string name="retry">Паўтарыць</string>
     <string name="try_again">Паспрабуйце яшчэ раз</string>
     <string name="unsplash">Unsplash</string>
@@ -825,7 +825,7 @@
     <string name="settings_network_configuration_file">Канфігурацыя ўласнага хостынгу</string>
     <string name="settings_network_configuration_file_choose">Выбраць файл</string>
     <string-array name="settings_networks_entries">
-        <item>Anytype</item>
+        <item>Aparok</item>
         <item>Толькі лакальна</item>
         <item>Уласнае размяшчэнне</item>
     </string-array>
@@ -854,7 +854,7 @@
     <string name="base_add_options_empty_title">Не знойдзена тэгаў</string>
     <string name="base_add_options_empty_subtitle">Пачніце ўводзіць, каб стварыць новы</string>
     <string name="sync_status_local_only">Толькі лакальна</string>
-    <string name="mail_more_space_body">Добры дзень, каманда Anytype. Я звяртаюся да вас з просьбай павялічыць аб\'ём майго файлавага сховішча, бо я вычарпаў яго. Мой бягучы ліміт складае %1$s. Мой ідэнтыфікатар уліковага запісу - %2$s. З павагай, %3$s.</string>
+    <string name="mail_more_space_body">Добры дзень, каманда Aparok. Я звяртаюся да вас з просьбай павялічыць аб\'ём майго файлавага сховішча, бо я вычарпаў яго. Мой бягучы ліміт складае %1$s. Мой ідэнтыфікатар уліковага запісу - %2$s. З павагай, %3$s.</string>
     <string name="go_to_the_app">Перайсці ў праграму</string>
     <string name="exiting_please_wait">Выхад... пачакайце</string>
     <string name="loading_please_wait">Загрузка... калі ласка пачакайце</string>
@@ -893,7 +893,7 @@
     <string name="space_id_copied_toast_msg">ID прасторы скапіраваны</string>
     <string name="network_id_copied_toast_msg">ID сеткі скапіраваны</string>
     <string name="created_by_id_copied_toast_msg">ID аўтара скапіраваны</string>
-    <string name="anytype_update_alert_description">Некаторыя з вашых даных былі адрэдагаваныя ў навейшай версіі Anytype. Калі ласка, абновіце праграму, каб яна працавала з усімі вашымі дакументамі і апошнімі функцыямі.</string>
+    <string name="anytype_update_alert_description">Некаторыя з вашых даных былі адрэдагаваныя ў навейшай версіі Aparok. Калі ласка, абновіце праграму, каб яна працавала з усімі вашымі дакументамі і апошнімі функцыямі.</string>
     <string name="anytype_update_alert_title">Надышоў час абнаўляцца</string>
     <string name="space_type_default">Запіс</string>
     <string name="space_type_default_space">Ваша прастора</string>
@@ -914,7 +914,7 @@
     <string name="bin">Сметніца</string>
     <string name="synced_files">Clean up files</string>
     <string name="log_in">Увайсці</string>
-    <string name="create_object_section_library">Бібліятэка Anytype</string>
+    <string name="create_object_section_library">Бібліятэка Aparok</string>
     <string name="bin_empty_title">Your bin is empty.</string>
     <string name="bin_empty_subtitle">Looks like you’re all tidy and organized!</string>
     <!--region SLASH WIDGET -->
@@ -1012,7 +1012,7 @@
     <string name="onboarding_selection_writer">Writer / Journalist</string>
     <string name="onboarding_selection_other">Іншае</string>
     <!-- Use case options -->
-    <string name="onboarding_usecase_title">What do you want to use Anytype for?</string>
+    <string name="onboarding_usecase_title">What do you want to use Aparok for?</string>
     <string name="onboarding_usecase_description">Pick one use case that fits you best</string>
     <string name="onboarding_usecase_habit_tracking">Habit tracking</string>
     <string name="onboarding_usecase_knowledge">Personal knowledge base / PKM</string>
@@ -1086,7 +1086,7 @@
     <string name="onboarding_have_key_button_text">I already have the key</string>
     <string name="onboarding_get_my_key_button_text">Атрымаць мой ключ</string>
     <string name="onboarding_invite_code_title">Увядзіце запрашальны код</string>
-    <string name="onboarding_invite_code_description">Калі ў вас яго няма, проста перайдзіце на anytype.io\nі запішыцеся ў спіс чакання.</string>
+    <string name="onboarding_invite_code_description">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
     <string name="onboarding_void_title">This is your Void</string>
     <string name="onboarding_void_description">Гэта зашыфраванае месца для ўсяго, што вы ствараеце. Усё захоўваецца на вашай прыладзе і захоўваецца ў размеркаванай сетцы.</string>
     <string name="onboarding_this_is_your_key_title">Гэта ваш Ключ</string>
@@ -1096,7 +1096,7 @@
     <string name="onboarding_key_skip">Прапусціць</string>
     <string name="onboarding_key_not_now">I’ll save it later</string>
     <string name="onboarding_key_copy">Капіяваць у буфер абмену</string>
-    <string name="onboarding_soul_creation_placeholder">Ідэнтыфікатар Anytype</string>
+    <string name="onboarding_soul_creation_placeholder">Ідэнтыфікатар Aparok</string>
     <string name="onboarding_soul_creation">Стварэнне вашай ідэнтычнасці…</string>
     <string name="onboarding_type_your_key">Увядзіце ключ</string>
     <string name="onboarding_login_or">or enter with</string>
@@ -1161,8 +1161,8 @@
     <string name="sharing_menu_save_as_files_option">Файлы</string>
     <string name="sharing_menu_save_as_videos_option">Відэа</string>
     <string name="sharing_menu_data">Даныя</string>
-    <string name="sharing_menu_add_to_anytype_header_title">Дадаць у Anytype</string>
-    <string name="sharing_menu_add_to_anytype_error">Памылка загрузкі файла Anytype: %1$s</string>
+    <string name="sharing_menu_add_to_anytype_header_title">Дадаць у Aparok</string>
+    <string name="sharing_menu_add_to_anytype_error">Памылка загрузкі файла Aparok: %1$s</string>
     <string name="sharing_menu_add_to_anytype_success">Усе файлы паспяхова загружаны</string>
     <string name="sharing_menu_toast_object_added">Новы аб\'ект дададзены ў прастору \'%1$s\'</string>
     <string name="sharing_menu_btn_add">Дадаць</string>
@@ -1270,8 +1270,8 @@
     <string name="error_invalid_recovery_phrase">Няправільны ключ</string>
     <string name="network">Сетка</string>
     <string name="network_with_colon">Сетка:</string>
-    <string name="network_settings_anytype_network">Сетка Anytype</string>
-    <string name="network_settings_anytype_network_description">Рэзервовае капіраванне ў сетку, якая кіруецца Anytype</string>
+    <string name="network_settings_anytype_network">Сетка Aparok</string>
+    <string name="network_settings_anytype_network_description">Рэзервовае капіраванне ў сетку, якая кіруецца Aparok</string>
     <string name="network_settings_local_only">Толькі лакальна</string>
     <string name="network_settings_local_only_description">Не стварайце рэзервовыя копіі; сінхранізуйце ў лакальнай сетцы</string>
     <string name="network_settings_self_host">Уласнае размяшчэнне</string>
@@ -1452,11 +1452,11 @@
     <!--endregion-->
     <!--region PAYMENTS -->
     <string name="payments_header">Членства</string>
-    <string name="payments_subheader">Далучыцца да сеткі Anytype - значыць зрабіць свой унёсак у яе гісторыю</string>
+    <string name="payments_subheader">Далучыцца да сеткі Aparok - значыць зрабіць свой унёсак у яе гісторыю</string>
     <string name="payments_card_text_1">Сумеснае стварэнне бачання</string>
     <string name="payments_card_description_1">Ваш голас важны як шаноўнага ўдзельніка! Удзельнічайце ў эксклюзіўных мерапрыемствах, вызначайце стратэгічныя рашэнні і ўплывайце на нашу дарожную карту.</string>
     <string name="payments_card_text_2">Разблакіруйце Перавагі для Ўдзельнікаў</string>
-    <string name="payments_card_description_2">Карыстальнікам прадастаўляюцца больш высокія ліміты для рэзервовага капіравання і сінхранізацыі, запрашэнні для працы ў агульных прасторах і ўнікальныя ідэнтыфікатары ў сетцы Anytype.</string>
+    <string name="payments_card_description_2">Карыстальнікам прадастаўляюцца больш высокія ліміты для рэзервовага капіравання і сінхранізацыі, запрашэнні для працы ў агульных прасторах і ўнікальныя ідэнтыфікатары ў сетцы Aparok.</string>
     <string name="payments_card_text_3">Падтрымка Лічбавай Незалежнасці</string>
     <string name="payments_card_description_3">Ваш уклад падтрымлівае нашу каманду і пацвярджае наша бачанне бяспечнай і сумеснай лічбавай сеткі, якая належыць карыстальнікам.</string>
     <string name="payments_card_text_4">Інвесціруйце ў Падключэнне</string>
@@ -1482,7 +1482,7 @@
     <string name="payments_current_label">Бягучы</string>
     <!-- Tier details -->
     <string name="payments_tier_details_name_title">Выберыце сваё ўнікальнае імя</string>
-    <string name="payments_tier_details_name_subtitle">Гэта ваша ўнікальнае імя ў сетцы Anytype, якое пацвярджае ваша членства. Яно дзейнічае як ваш асабісты дамен і не можа быць зменены.</string>
+    <string name="payments_tier_details_name_subtitle">Гэта ваша ўнікальнае імя ў сетцы Aparok, якое пацвярджае ваша членства. Яно дзейнічае як ваш асабісты дамен і не можа быць зменены.</string>
     <string name="payments_tier_details_name_hint">Сябе</string>
     <string name="payments_tier_details_name_min">Мінімум 7 сімвалаў</string>
     <string name="payments_tier_details_name_error">Назва ўжо выкарыстоўваецца!</string>
@@ -1539,9 +1539,9 @@
     <string name="payments_welcome_subtitle">Вялікі дзякуй за вашу цікаўнасць!</string>
     <string name="payments_welcome_button">Працягнуць</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@anytype.io</string>
+    <string name="membership_support_email">support@altercpre.w8n.pw</string>
     <string name="membership_support_subject">Справаздача аб памылцы на экране членства - %1$s</string>
-    <string name="membership_support_body">        Прывітанне, служба падтрымкі Anytype,\n\n
+    <string name="membership_support_body">        Прывітанне, служба падтрымкі Aparok,\n\n
 
         Я сутыкнуўся з памылкай на экране членства ў праграме. Ніжэй падрабязнасці:\n
 
@@ -1619,7 +1619,7 @@
     <string name="membership_agree_terms">Умовы выкарыстання</string>
     <string name="membership_agree_middle">і</string>
     <string name="membership_agree_privacy">Палітыка прыватнасці</string>
-    <string name="membership_support_already_acquired">Вы ўжо набылі членства, выкарыстоўваючы іншы ўліковы запіс Anytype.</string>
+    <string name="membership_support_already_acquired">Вы ўжо набылі членства, выкарыстоўваючы іншы ўліковы запіс Aparok.</string>
     <string name="membership_support_different_subscription">Знойдзена падпіска з іншым ідэнтыфікатарам</string>
     <string name="membership_support_more_then_one_subscription">Знойдзена больш чым адна падпіска</string>
     <string name="multiplayer_space_join_request_participants_error">Памылка ўдзельніка прасторы</string>
@@ -1657,7 +1657,7 @@
     <string name="error_login_network_id_mismatch">Выяўлена несупадзенне ідэнтыфікатара сеткі. Праверце канфігурацыю сеткі.</string>
     <string name="error_login_select_vault_error">Памылка выбару сховішча.</string>
     <string name="error_login_account_deleted_error">This account is deleted. Try using another account or create a new one.</string>
-    <string name="error_login_account_need_update_error">Unable to retrieve account. Please update Anytype to the latest version.</string>
+    <string name="error_login_account_need_update_error">Unable to retrieve account. Please update Aparok to the latest version.</string>
     <string name="error_wallet_setup">Unable to set up wallet. Please check your device storage and try again.</string>
     <string name="error_network_error">Network error occurred. Please check your internet connection and try again.</string>
     <string name="error_offline_device">Your device appears to be offline. Please connect to the internet and try again.</string>
@@ -1689,7 +1689,7 @@
     <string name="sync_status_p2p_disabled">Падключэнне немагчыма</string>
     <string name="sync_status_p2p_restricted">Абмежаваны. Праверце налады прылады.</string>
     <string name="sync_status_p2p_not_connected">Падлучэнне адсутнічае</string>
-    <string name="sync_status_anytype_network">Сетка Anytype</string>
+    <string name="sync_status_anytype_network">Сетка Aparok</string>
     <string name="sync_status_anytype_end_to_end">Зашыфравана скразным метадам</string>
     <plurals name="sync_status_network_items">
         <item quantity="one">%1$d элемент сінхранізуецца...</item>
@@ -2014,7 +2014,7 @@
     <string name="vault_create_group">Group</string>
     <!-- Spaces Introduction Popup -->
     <string name="spaces_introduction_page1_title">Ideas need conversations</string>
-    <string name="spaces_introduction_page1_description">Anytype now supports real-time chat in Shared Channels — so your thoughts and dialogues can grow together.</string>
+    <string name="spaces_introduction_page1_description">Aparok now supports real-time chat in Shared Channels — so your thoughts and dialogues can grow together.</string>
     <string name="spaces_introduction_page2_title">Your Vault just leveled up</string>
     <string name="spaces_introduction_page2_description">Spaces and Chats now show live previews and updates — one place to follow everything that matters.</string>
     <string name="spaces_introduction_page3_title">Chats that do more</string>
@@ -2061,7 +2061,7 @@
     <string name="vault_qr_try_again">Паспрабуйце яшчэ раз</string>
     <string name="camera_permission_required_title">Camera permission required</string>
     <string name="barcode_scanner_unavailable">QR scanner is not available on this device</string>
-    <string name="camera_permission_rationale_message">To scan QR codes, Anytype needs access to your camera. This permission is only used for scanning QR codes.</string>
+    <string name="camera_permission_rationale_message">To scan QR codes, Aparok needs access to your camera. This permission is only used for scanning QR codes.</string>
     <string name="camera_permission_settings_message">To scan QR codes, you need to allow camera access in your device settings.</string>
     <string name="open_settings">Open Settings</string>
     <string name="allow">Дазволіць</string>

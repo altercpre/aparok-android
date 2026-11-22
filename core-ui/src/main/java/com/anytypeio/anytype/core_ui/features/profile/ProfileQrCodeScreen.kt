@@ -205,7 +205,7 @@ private fun QrCodeWithCircularText(
 @Composable
 private fun PreviewProfileQrCodeContent() {
     ProfileQrCodeContent(
-        link = "https://anytype.io/profile/johndoe",
+        link = "https://altercpre.w8n.pw/profile/johndoe",
         globalName = "",
         onShare = {},
         onCopyLink = {},

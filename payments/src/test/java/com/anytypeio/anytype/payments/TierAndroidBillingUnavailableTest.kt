@@ -49,7 +49,7 @@ class TierAndroidBillingUnavailableTest : MembershipTestsSetup() {
                 periodValue = 1,
                 periodType = MembershipPeriodType.PERIOD_TYPE_YEARS,
                 priceStripeUsdCents = 9901,
-                androidManageUrl = "https://anytype.io/pricing"
+                androidManageUrl = "https://altercpre.w8n.pw/pricing"
             ),
             StubMembershipTierData(
                 id = MembershipConstants.CO_CREATOR_ID,
@@ -118,7 +118,7 @@ class TierAndroidBillingUnavailableTest : MembershipTestsSetup() {
                     expectedFeatures = features,
                     expectedConditionInfo = conditionInfo,
                     expectedAnyName = TierAnyName.Hidden,
-                    expectedButtonState = TierButton.Info.Enabled("https://anytype.io/pricing"),
+                    expectedButtonState = TierButton.Info.Enabled("https://altercpre.w8n.pw/pricing"),
                     expectedId = MembershipConstants.BUILDER_ID,
                     expectedActive = false,
                     expectedEmailState = TierEmail.Hidden
@@ -174,7 +174,7 @@ class TierAndroidBillingUnavailableTest : MembershipTestsSetup() {
                     expectedFeatures = features,
                     expectedConditionInfo = conditionInfo,
                     expectedAnyName = TierAnyName.Hidden,
-                    expectedButtonState = TierButton.Info.Enabled("https://anytype.io/pricing"),
+                    expectedButtonState = TierButton.Info.Enabled("https://altercpre.w8n.pw/pricing"),
                     expectedId = MembershipConstants.BUILDER_ID,
                     expectedActive = false,
                     expectedEmailState = TierEmail.Hidden

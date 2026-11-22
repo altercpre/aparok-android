@@ -2,7 +2,7 @@
 
 ---
 
-- [ ] I understand that contributing to this repository will require me to agree with the [CLA](https://github.com/anyproto/open/blob/main/templates/CLA.md)
+- [ ] I understand that contributing to this repository will require me to agree with the [CLA](https://github.com/altercpre/open/blob/main/templates/CLA.md)
 
 <!-- The bot will prompt you to accept the CLA by replying with a pre-composed message in the comments. If you have already accepted the CLA, you won't need to do it again. -->
 
@@ -45,7 +45,7 @@ Please provide links to issues, community forum posts, or other sources
 ### Added to documentation?
 
 - [ ] 📜 README.md
-- [ ] 📓 [tech-docs](https://github.com/anyproto/tech-docs)
+- [ ] 📓 [tech-docs](https://github.com/altercpre/tech-docs)
 - [ ] 🙅 no documentation needed
 
 ### [optional] Are there any post-deployment tasks we need to perform?

@@ -834,7 +834,7 @@ class BlockAdapterMovementMethodTest : BlockAdapterTestSetup() {
                 Markup.Mark.Link(
                     from = 10,
                     to = 15,
-                    param = "anytype.io"
+                    param = "altercpre.w8n.pw"
                 )
             )
         )
@@ -867,7 +867,7 @@ class BlockAdapterMovementMethodTest : BlockAdapterTestSetup() {
                 Markup.Mark.Link(
                     from = 10,
                     to = 15,
-                    param = "www.anytype.io"
+                    param = "www.altercpre.w8n.pw"
                 )
             ),
             id = MockDataFactory.randomUuid(),

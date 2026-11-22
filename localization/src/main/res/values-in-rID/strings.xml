@@ -40,7 +40,7 @@
     <string name="you_will_need_to_sign_in">Anda membutuhkannya untuk masuk. Simplanlah dalam tempat yang aman. Jika hilang, kamu tidak akan bisa mengakses brankasmu.</string>
     <string name="about_help_and_community">Bantuan &amp; Komunitas</string>
     <string name="about_what_is_new">Yang Baru</string>
-    <string name="about_anytype_community">Komunitas Anytype</string>
+    <string name="about_anytype_community">Komunitas Aparok</string>
     <string name="about_help_and_tutorials">Bantuan dan Tutorial</string>
     <string name="about_legal">Legal</string>
     <string name="about_terms_of_use">Ketentuan Penggunaan</string>
@@ -83,7 +83,7 @@
     <string name="section_bin">Bak Sampah</string>
     <string name="error_loading_sections">Error loading sections</string>
     <string name="data_management">Manajemen data</string>
-    <string name="deleted_account_danger_zone_msg">Begitu kamu meminta brankasmu dihapus, kamu punya waktu 30 hari untuk membatalkan permintaan ini. Setelah 30 hari, data brankas terenkripsimu akan dihapus secara permanen dari simpul cadangan, dan kamu tidak akan bisa masuk ke Anytype di perangkat baru.</string>
+    <string name="deleted_account_danger_zone_msg">Begitu kamu meminta brankasmu dihapus, kamu punya waktu 30 hari untuk membatalkan permintaan ini. Setelah 30 hari, data brankas terenkripsimu akan dihapus secara permanen dari simpul cadangan, dan kamu tidak akan bisa masuk ke Aparok di perangkat baru.</string>
     <string name="danger_zone">Hapus akun (Hati-hati!)</string>
     <string name="snackbar_template_add">Templat baru ditambahkan ke tipe ini</string>
     <string name="template_name_prefill_title">Pre-fill name</string>
@@ -292,10 +292,10 @@
     <string name="sync_status_synced">Tersinkron</string>
     <string name="sync_status_failed">Not synced</string>
     <string name="sync_status_toast_unknown">Memulai sinkron</string>
-    <string name="sync_status_toast_offline">Simpul Anytype tidak terhubung</string>
+    <string name="sync_status_toast_offline">Simpul Aparok tidak terhubung</string>
     <string name="sync_status_toast_syncing">Mengunduh atau mengunggah data ke simpul</string>
-    <string name="sync_status_toast_synced">Tercadangkan ke Jaringan Anytype</string>
-    <string name="sync_status_toast_synced_staging">Tercadangkan ke Anytype Staging</string>
+    <string name="sync_status_toast_synced">Tercadangkan ke Jaringan Aparok</string>
+    <string name="sync_status_toast_synced_staging">Tercadangkan ke Aparok Staging</string>
     <string name="sync_status_toast_synced_local">Hanya lokal</string>
     <string name="sync_status_toast_synced_self_hosted">Tercadangkan ke Jaringan Swaladen</string>
     <string name="sync_status_toast_failed">Failed to sync, trying again…</string>
@@ -524,7 +524,7 @@
     <string name="block_data_view_content_description_no_source">Kueri dalam baris ini tak bersumber</string>
     <string name="block_data_view_content_description_no_data">Sumber kueri dalam baris ini tak bertipe</string>
     <string name="object_search_recently_opened_section_title">Baru saja dibuka</string>
-    <string name="widget_source_anytype_library">Pustaka Anytype</string>
+    <string name="widget_source_anytype_library">Pustaka Aparok</string>
     <string name="widget_source_default_lists">Daftar bawaan</string>
     <string name="widget_source_system">Sistem</string>
     <string name="your_favorite_objects">Objek-objek favoritmu</string>
@@ -588,8 +588,8 @@
     <string name="confirm">Konfirmasi</string>
     <string name="code_empty">Kode undangan tidak boleh kosong</string>
     <string name="enter_invitation_hint">Kode undangan</string>
-    <string name="enter_invitation_text">Jika kamu tidak punya kode undangan, buka anytype.io dan daftarkan diri ke daftar tunggu. Kami mengundang orang secara berkala.</string>
-    <string name="start_login_text">Dengan Anytype, kamu bisa menulis catatan dan dokumen, mengatur tugas, membagikan berkas, serta menyimpan konten penting dari web.</string>
+    <string name="enter_invitation_text">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
+    <string name="start_login_text">Dengan Aparok, kamu bisa menulis catatan dan dokumen, mengatur tugas, membagikan berkas, serta menyimpan konten penting dari web.</string>
     <string name="login">Masuk</string>
     <string name="sign_up">Daftar</string>
     <string name="type_your_recovery_phrase">atau masukkan Kuncimu</string>
@@ -598,7 +598,7 @@
     <string name="choose_pin_code">Pilih kode pin</string>
     <string name="congratulations">Selamat!</string>
     <string name="time_to_update_title">Waktunya memperbarui</string>
-    <string name="time_to_update_text">Sebagian datamu dibuat dengan versi Anytype yang lebih baru.\nSilakan perbarui aplikasimu untuk dapat mengakses dokumenmu dan juga fitur-fitur terbaru.</string>
+    <string name="time_to_update_text">Sebagian datamu dibuat dengan versi Aparok yang lebih baru.\nSilakan perbarui aplikasimu untuk dapat mengakses dokumenmu dan juga fitur-fitur terbaru.</string>
     <string name="update">Perbarui</string>
     <string name="later">Nanti</string>
     <string name="let_us_start">Mari mulai!</string>
@@ -629,7 +629,7 @@
     <string name="greet">Hi, %1$s</string>
     <string name="greet_user">Hi, User</string>
     <string name="enter_your_code">Masukkan kode undanganmu</string>
-    <string name="organize_everything">Selamat datang di Anytype</string>
+    <string name="organize_everything">Selamat datang di Aparok</string>
     <string name="setting_up_the_wallet">Setting up the wallet…</string>
     <string name="sign_clock">⏳</string>
     <string name="back">Kembali</string>
@@ -779,15 +779,15 @@
     <string name="go_to_settings">Go to settings</string>
     <string name="do_not_forget_mnemonic_phrase">Jangan lupa menyimpan kuncimu</string>
     <string name="you_can_always_find_mnemonic_in_settings">You can always find the phrase in the settings on the dashboard screen.</string>
-    <string name="if_you_lose_recovery_phrase_warning">Jika kamu kehilangan Kunci lalu keluar log, kamu tidak akan bisa mengakses datamu lagi. Simpanlah Kunci ini di luar Anytype untuk pemulihan data.</string>
+    <string name="if_you_lose_recovery_phrase_warning">Jika kamu kehilangan Kunci lalu keluar log, kamu tidak akan bisa mengakses datamu lagi. Simpanlah Kunci ini di luar Aparok untuk pemulihan data.</string>
     <string name="card_size">Ukuran kartu</string>
     <string name="clear_cache">Clear cache</string>
     <string name="clear_cache_title">Apakah kamu yakin?</string>
-    <string name="download_from_node">Semua berkas media yang tersimpan di Anytype akan dihapus dari perangkatmu saat ini. Berkas - berkas ini dapat di unduh kembali dari sebuah simpul cadangan atau perangkat yang lain.</string>
+    <string name="download_from_node">Semua berkas media yang tersimpan di Aparok akan dihapus dari perangkatmu saat ini. Berkas - berkas ini dapat di unduh kembali dari sebuah simpul cadangan atau perangkat yang lain.</string>
     <string name="new_profile">New profile</string>
     <string name="back_up_your_phrase">Tahap cadangkan</string>
-    <string name="anytype_analytics">Anytype Analytics</string>
-    <string name="anytype_analytics_msg">Understanding how people use Anytype helps us improve the product. This version of Anytype includes the analytics code that protects your privacy.\nIt doesn\'t record the actual document\'s content but still allows us to understand how you use Anytype.\nStay subscribed to our mailing list, as we will soon announce a new release that enables you to opt-out.</string>
+    <string name="anytype_analytics">Zero Telemetry &amp; Privacy</string>
+    <string name="anytype_analytics_msg">Aparok is built with strict zero-telemetry by default. No analytics, tracking, or user data are ever sent to third parties. Your notes, cryptographic keys, and communication remain fully end-to-end encrypted and under your sovereign control.</string>
     <string name="retry">Coba lagi</string>
     <string name="try_again">Coba lagi</string>
     <string name="unsplash">Unsplash</string>
@@ -819,7 +819,7 @@
     <string name="settings_network_configuration_file">Konfigurasi Swaladen (Self-Hosted)</string>
     <string name="settings_network_configuration_file_choose">Pilih berkas</string>
     <string-array name="settings_networks_entries">
-        <item>Anytype</item>
+        <item>Aparok</item>
         <item>Hanya Lokal</item>
         <item>Swaladen</item>
     </string-array>
@@ -848,7 +848,7 @@
     <string name="base_add_options_empty_title">No tags found</string>
     <string name="base_add_options_empty_subtitle">Start typing to create a new one</string>
     <string name="sync_status_local_only">Hanya Lokal</string>
-    <string name="mail_more_space_body">Hi, Anytype team. I am reaching out to request an increase in my file storage capacity as I have run out of storage. My current limits is %1$s. My account id is %2$s. Cheers, %3$s</string>
+    <string name="mail_more_space_body">Hi, Aparok team. I am reaching out to request an increase in my file storage capacity as I have run out of storage. My current limits is %1$s. My account id is %2$s. Cheers, %3$s</string>
     <string name="go_to_the_app">Ke aplikasi</string>
     <string name="exiting_please_wait">Exiting... please wait</string>
     <string name="loading_please_wait">Loading... please wait</string>
@@ -887,7 +887,7 @@
     <string name="space_id_copied_toast_msg">Space ID copied</string>
     <string name="network_id_copied_toast_msg">Network ID copied</string>
     <string name="created_by_id_copied_toast_msg">Created-by ID copied</string>
-    <string name="anytype_update_alert_description">Some of your data was managed in a newer version of Anytype. Please update the app to work with all your docs and the latest features.</string>
+    <string name="anytype_update_alert_description">Some of your data was managed in a newer version of Aparok. Please update the app to work with all your docs and the latest features.</string>
     <string name="anytype_update_alert_title">Waktunya memperbarui</string>
     <string name="space_type_default">Entri</string>
     <string name="space_type_default_space">Ruang bawaan</string>
@@ -908,7 +908,7 @@
     <string name="bin">Bak Sampah</string>
     <string name="synced_files">Bersihkan berkas</string>
     <string name="log_in">Masuk</string>
-    <string name="create_object_section_library">Pustaka Anytype</string>
+    <string name="create_object_section_library">Pustaka Aparok</string>
     <string name="bin_empty_title">Bak sampah kosong.</string>
     <string name="bin_empty_subtitle">Kamu orangnya rapi dan tertata, ya?</string>
     <!--region SLASH WIDGET -->
@@ -1006,7 +1006,7 @@
     <string name="onboarding_selection_writer">Penulis/Wartawan</string>
     <string name="onboarding_selection_other">Lainnya</string>
     <!-- Use case options -->
-    <string name="onboarding_usecase_title">Untuk apa kamu ingin menggunakan Anytype?</string>
+    <string name="onboarding_usecase_title">Untuk apa kamu ingin menggunakan Aparok?</string>
     <string name="onboarding_usecase_description">Pilih satu penerapan yang paling cocok denganmu</string>
     <string name="onboarding_usecase_habit_tracking">Mencatat kebiasaan</string>
     <string name="onboarding_usecase_knowledge">Basis pengetahuan pribadi/PKM</string>
@@ -1080,7 +1080,7 @@
     <string name="onboarding_have_key_button_text">Aku sudah punya kunci</string>
     <string name="onboarding_get_my_key_button_text">Ambil Kunciku</string>
     <string name="onboarding_invite_code_title">Enter your invite code</string>
-    <string name="onboarding_invite_code_description">If you don\'t have one just go to anytype.io\nand sign up to the waiting list.</string>
+    <string name="onboarding_invite_code_description">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
     <string name="onboarding_void_title">This is your Void</string>
     <string name="onboarding_void_description">It is an encrypted location for everything you create. Everything is stored on your device, and backed up to the distributed network.</string>
     <string name="onboarding_this_is_your_key_title">Ini Kuncimu</string>
@@ -1090,7 +1090,7 @@
     <string name="onboarding_key_skip">Lewati</string>
     <string name="onboarding_key_not_now">Kusimpan nanti</string>
     <string name="onboarding_key_copy">Salin ke papan klip</string>
-    <string name="onboarding_soul_creation_placeholder">Anytype Identity</string>
+    <string name="onboarding_soul_creation_placeholder">Aparok Identity</string>
     <string name="onboarding_soul_creation">Creating your Identity…</string>
     <string name="onboarding_type_your_key">Masukkan kuncimu</string>
     <string name="onboarding_login_or">atau masuk dengan</string>
@@ -1155,8 +1155,8 @@
     <string name="sharing_menu_save_as_files_option">Berkas</string>
     <string name="sharing_menu_save_as_videos_option">Video</string>
     <string name="sharing_menu_data">Data</string>
-    <string name="sharing_menu_add_to_anytype_header_title">Tambah ke Anytype</string>
-    <string name="sharing_menu_add_to_anytype_error">Galat mengunggah berkas Anytype: %1$s</string>
+    <string name="sharing_menu_add_to_anytype_header_title">Tambah ke Aparok</string>
+    <string name="sharing_menu_add_to_anytype_error">Galat mengunggah berkas Aparok: %1$s</string>
     <string name="sharing_menu_add_to_anytype_success">Semua berkas berhasil diunggah</string>
     <string name="sharing_menu_toast_object_added">Objek baru ditambahkan ke ruang \'%1$s\'</string>
     <string name="sharing_menu_btn_add">Tambah</string>
@@ -1258,8 +1258,8 @@
     <string name="error_invalid_recovery_phrase">Kunci tidak valid</string>
     <string name="network">Jaringan</string>
     <string name="network_with_colon">Jaringan:</string>
-    <string name="network_settings_anytype_network">Jaringan Anytype</string>
-    <string name="network_settings_anytype_network_description">Cadangkan ke jaringan yang diatur oleh Anytype</string>
+    <string name="network_settings_anytype_network">Jaringan Aparok</string>
+    <string name="network_settings_anytype_network_description">Cadangkan ke jaringan yang diatur oleh Aparok</string>
     <string name="network_settings_local_only">Hanya Lokal</string>
     <string name="network_settings_local_only_description">Tidak mencadangkan; hanya menyinkron dalam jaringan lokal</string>
     <string name="network_settings_self_host">Swaladen</string>
@@ -1434,11 +1434,11 @@
     <!--endregion-->
     <!--region PAYMENTS -->
     <string name="payments_header">Langganan</string>
-    <string name="payments_subheader">Bergabung dengan jaringan Anytype berarti turut berkontribusi pada kisahnya</string>
+    <string name="payments_subheader">Bergabung dengan jaringan Aparok berarti turut berkontribusi pada kisahnya</string>
     <string name="payments_card_text_1">Bersama Menciptakan Visi</string>
     <string name="payments_card_description_1">Sebagai pelanggan terhormat, suara Anda sangat berarti! Terlibat dalam acara eksklusif, menentukan pilihan strategis, dan memengaruhi peta jalan kami.</string>
     <string name="payments_card_text_2">Dapatkan Keuntungan sebagai Anggota</string>
-    <string name="payments_card_description_2">Pelanggan dapat menikmati penyimpanan cadangan &amp; batas sinkronisasi yang lebih tinggi, undangan bagi banyak pengguna untuk berkolaborasi di ruang bersama, dan identitas unik di Jaringan Anytype.</string>
+    <string name="payments_card_description_2">Pelanggan dapat menikmati penyimpanan cadangan &amp; batas sinkronisasi yang lebih tinggi, undangan bagi banyak pengguna untuk berkolaborasi di ruang bersama, dan identitas unik di Jaringan Aparok.</string>
     <string name="payments_card_text_3">Dukung Kemerdekaan Digital</string>
     <string name="payments_card_description_3">Kontribusi Anda mendukung tim kami dan mendukung visi kami atas jaringan digital yang sepenuhnya dimiliki pengguna, aman, dan kolaboratif.</string>
     <string name="payments_card_text_4">Berinvestasilah pada Konektivitas</string>
@@ -1464,7 +1464,7 @@
     <string name="payments_current_label">Saat ini</string>
     <!-- Tier details -->
     <string name="payments_tier_details_name_title">Pilih nama unikmu</string>
-    <string name="payments_tier_details_name_subtitle">Ini adalah nama unik Anda di jaringan Anytype, yang mengonfirmasi Keanggotaan Anda. Nama ini berfungsi sebagai domain pribadi Anda dan tidak dapat diubah.</string>
+    <string name="payments_tier_details_name_subtitle">Ini adalah nama unik Anda di jaringan Aparok, yang mengonfirmasi Keanggotaan Anda. Nama ini berfungsi sebagai domain pribadi Anda dan tidak dapat diubah.</string>
     <string name="payments_tier_details_name_hint">Aku sendiri</string>
     <string name="payments_tier_details_name_min">Minimal 7 karakter</string>
     <string name="payments_tier_details_name_error">Nama ini sudah dipakai!</string>
@@ -1521,9 +1521,9 @@
     <string name="payments_welcome_subtitle">Tepuk tangan yang meriah untuk rasa ingin tahu Anda!</string>
     <string name="payments_welcome_button">Lanjutkan</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@anytype.io</string>
+    <string name="membership_support_email">support@altercpre.w8n.pw</string>
     <string name="membership_support_subject">Laporan Gangguan Tampilan Keanggotaan - %1$s</string>
-    <string name="membership_support_body">        Hi Anytype Support Team,\n\n
+    <string name="membership_support_body">        Hi Aparok Support Team,\n\n
 
         I encountered an error on the Membership Screen in the app. Below are the details:\n
 
@@ -1601,7 +1601,7 @@
     <string name="membership_agree_terms">Ketentuan Penggunaan</string>
     <string name="membership_agree_middle">dan</string>
     <string name="membership_agree_privacy">Kebijakan Privasi</string>
-    <string name="membership_support_already_acquired">Anda telah memperoleh paket Berlangganan menggunakan akun Anytype lain.</string>
+    <string name="membership_support_already_acquired">Anda telah memperoleh paket Berlangganan menggunakan akun Aparok lain.</string>
     <string name="membership_support_different_subscription">Ditemukan berlangganan dengan id yang berbeda</string>
     <string name="membership_support_more_then_one_subscription">Ditemukan lebih dari satu berlangganan</string>
     <string name="multiplayer_space_join_request_participants_error">Gangguan pada peserta ruang</string>
@@ -1627,7 +1627,7 @@
     <string name="error_login_network_id_mismatch">Ketidakcocokan ID jaringan terdeteksi. Harap verifikasi konfigurasi jaringan Anda.</string>
     <string name="error_login_select_vault_error">Memilih akun salah.</string>
     <string name="error_login_account_deleted_error">Akun ini sudah dihapus. Coba gunakan akun lain atau buat yang baru.</string>
-    <string name="error_login_account_need_update_error">Tidak dapat mengambil data akun. Silakan perbarui Anytype ke versi terbaru.</string>
+    <string name="error_login_account_need_update_error">Tidak dapat mengambil data akun. Silakan perbarui Aparok ke versi terbaru.</string>
     <string name="error_wallet_setup">Tidak dapat menyiapkan dompet. Silakan periksa penyimpanan perangkat Anda dan coba lagi.</string>
     <string name="error_network_error">Galat jaringan. Silakan cek sambungan internetmu lalu coba lagi.</string>
     <string name="error_offline_device">Perangkatmu sepertinya di luar jaringan. Silakan sambung ulang kembali ke internet lalu coba lagi.</string>
@@ -1653,7 +1653,7 @@
     <string name="sync_status_p2p_disabled">Koneksi tidak memungkinkan</string>
     <string name="sync_status_p2p_restricted">Dibatasi. Periksa pengaturan perangkat.</string>
     <string name="sync_status_p2p_not_connected">Tidak terhubung</string>
-    <string name="sync_status_anytype_network">Jaringan Anytype</string>
+    <string name="sync_status_anytype_network">Jaringan Aparok</string>
     <string name="sync_status_anytype_end_to_end">Terenkripsi end-to-end</string>
     <plurals name="sync_status_network_items">
         <item quantity="other">%1$d menyinkronkan item</item>
@@ -1975,7 +1975,7 @@
     <string name="vault_create_group">Grup</string>
     <!-- Spaces Introduction Popup -->
     <string name="spaces_introduction_page1_title">Ide perlu konversasi</string>
-    <string name="spaces_introduction_page1_description">Anytype kini mendukung obrolan langsung di Saluran Bersama — sehingga pemikiran dan percakapan Anda dapat berkembang bersama.</string>
+    <string name="spaces_introduction_page1_description">Aparok kini mendukung obrolan langsung di Saluran Bersama — sehingga pemikiran dan percakapan Anda dapat berkembang bersama.</string>
     <string name="spaces_introduction_page2_title">Brankasmu naik tingkat</string>
     <string name="spaces_introduction_page2_description">Ruang dan Obrolan sekarang menampilkan pratinjau dan pembaruan langsung—satu tempat untuk mengikuti semua hal yang penting.</string>
     <string name="spaces_introduction_page3_title">Lebih dari sekadar obrolan</string>
@@ -2022,7 +2022,7 @@
     <string name="vault_qr_try_again">Coba lagi</string>
     <string name="camera_permission_required_title">Izin kamera diperlukan</string>
     <string name="barcode_scanner_unavailable">Pemindai QR tidak tersedia di perangkat ini</string>
-    <string name="camera_permission_rationale_message">Untuk memindai kode QR, Anytype memerlukan akses kameramu. Izin ini hanya digunakan untuk memindai kode QR.</string>
+    <string name="camera_permission_rationale_message">Untuk memindai kode QR, Aparok memerlukan akses kameramu. Izin ini hanya digunakan untuk memindai kode QR.</string>
     <string name="camera_permission_settings_message">Untuk memindai kode QR, kamu harus mengizinkan akses kamera di setelan perangkatmu.</string>
     <string name="open_settings">Buka Setelan</string>
     <string name="allow">Izinkan</string>

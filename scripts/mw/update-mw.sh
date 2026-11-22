@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPO="anyproto/anytype-heart"
+REPO="altercpre/aparok-core"
 FILE="lib.tar.gz"
 GITHUB="api.github.com"
 

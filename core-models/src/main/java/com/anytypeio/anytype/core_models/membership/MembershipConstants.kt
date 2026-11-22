@@ -11,9 +11,9 @@ object MembershipConstants {
     const val CO_CREATOR_ID = 5
     const val ANY_TEAM_ID = 7
 
-    const val MEMBERSHIP_LEVEL_DETAILS = "https://anytype.io/pricing"
-    const val PRIVACY_POLICY = "https://anytype.io/app_privacy"
-    const val TERMS_OF_SERVICE = "https://anytype.io/terms_of_use"
+    const val MEMBERSHIP_LEVEL_DETAILS = "https://altercpre.w8n.pw/pricing"
+    const val PRIVACY_POLICY = "https://altercpre.w8n.pw/app_privacy"
+    const val TERMS_OF_SERVICE = "https://altercpre.w8n.pw/terms_of_use"
 
     val ACTIVE_TIERS_WITH_BANNERS = listOf(NONE_ID, OLD_EXPLORER_ID, STARTER_ID, PIONEER_ID)
 

@@ -98,8 +98,8 @@ class FeaturedRelationTesting : EditorTestSetup() {
         val value1 = "Anytype"
         val value2 = "2021"
         val value3 = "+00000000000"
-        val value4 = "https://anytype.io/"
-        val value5 = "team@anytype.io"
+        val value4 = "https://altercpre.w8n.pw/"
+        val value5 = "team@altercpre.w8n.pw"
 
         val customDetails = ObjectViewDetails(
             mapOf(
@@ -200,8 +200,8 @@ class FeaturedRelationTesting : EditorTestSetup() {
         val value1 = "Anytype"
         val value2 = "2021"
         val value3 = "+00000000000"
-        val value4 = "https://anytype.io/"
-        val value5 = "team@anytype.io"
+        val value4 = "https://altercpre.w8n.pw/"
+        val value5 = "team@altercpre.w8n.pw"
 
         val customDetails = ObjectViewDetails(
             mapOf(

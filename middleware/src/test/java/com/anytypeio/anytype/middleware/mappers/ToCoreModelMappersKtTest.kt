@@ -35,7 +35,7 @@ class ToCoreModelMappersKtTest {
     @Test
     fun `should set param as string when param_ is empty`() {
 
-        val param = "anytype.io"
+        val param = "altercpre.w8n.pw"
 
         val mark = MBMark(
             type = MBMarkType.Mention,

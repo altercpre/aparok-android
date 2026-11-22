@@ -37,7 +37,7 @@ licensee {
     }
 
     // Allow specific dependencies
-    allowDependency("com.github.anyproto", "any-crypto-kotlin", "1.0.2") {
+    allowDependency("com.github.altercpre", "any-crypto-kotlin", "1.0.2") {
         because("any-crypto-kotlin is MIT-licensed (verified in repository)")
     }
     allowDependency("com.github.komputing", "KBase58", "0.4") {
@@ -47,8 +47,8 @@ licensee {
         because("PhotoView is Apache-2.0 licensed (verified in repository); JitPack metadata may be missing")
     }
 
-    // Internal Anytype middleware library
-    allowDependency("io.anyproto", "anytype-heart-android", libs.versions.middlewareVersion.get()) {
+    // Internal Aparok core library
+    allowDependency("io.altercpre", "anytype-heart-android", libs.versions.middlewareVersion.get()) {
         because("Internal Anytype library")
     }
 }

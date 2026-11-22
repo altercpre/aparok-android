@@ -40,7 +40,7 @@
     <string name="you_will_need_to_sign_in">您需要使用它进入库。请将其妥善保存。一旦丢失，您将无法再进入您的库。</string>
     <string name="about_help_and_community">帮助与社区</string>
     <string name="about_what_is_new">更新内容</string>
-    <string name="about_anytype_community">Anytype 社区</string>
+    <string name="about_anytype_community">Aparok 社区</string>
     <string name="about_help_and_tutorials">帮助与教程</string>
     <string name="about_legal">法律</string>
     <string name="about_terms_of_use">使用条款</string>
@@ -83,7 +83,7 @@
     <string name="section_bin">回收站</string>
     <string name="error_loading_sections">加载分区时出错</string>
     <string name="data_management">数据管理</string>
-    <string name="deleted_account_danger_zone_msg">一旦将删除此库的请求发出，您将有 30 天的时间取消此请求。在 30 天后，您的加密库数据将会被永久性地从备份节点移除，您将无法在新设备上登录 Anytype。</string>
+    <string name="deleted_account_danger_zone_msg">一旦将删除此库的请求发出，您将有 30 天的时间取消此请求。在 30 天后，您的加密库数据将会被永久性地从备份节点移除，您将无法在新设备上登录 Aparok。</string>
     <string name="danger_zone">危险操作区域</string>
     <string name="snackbar_template_add">新模板已添加到类型</string>
     <string name="template_name_prefill_title">预填名称</string>
@@ -292,14 +292,14 @@
     <string name="sync_status_synced">已同步</string>
     <string name="sync_status_failed">未同步</string>
     <string name="sync_status_toast_unknown">初始化同步中</string>
-    <string name="sync_status_toast_offline">Anytype 节点未连接</string>
+    <string name="sync_status_toast_offline">Aparok 节点未连接</string>
     <string name="sync_status_toast_syncing">向某个节点下载或上传数据</string>
-    <string name="sync_status_toast_synced">已备份到 Anytype 网络</string>
-    <string name="sync_status_toast_synced_staging">已在 Anytype Staging 备份</string>
+    <string name="sync_status_toast_synced">已备份到 Aparok 网络</string>
+    <string name="sync_status_toast_synced_staging">已在 Aparok Staging 备份</string>
     <string name="sync_status_toast_synced_local">仅本地</string>
     <string name="sync_status_toast_synced_self_hosted">已备份到自托管网络</string>
     <string name="sync_status_toast_failed">同步失败，正在重试...</string>
-    <string name="sync_status_toast_incompatible">版本已过时。请更新 Anytype</string>
+    <string name="sync_status_toast_incompatible">版本已过时。请更新 Aparok</string>
     <string name="relation_format_description">描述</string>
     <string name="relation_format_title">大标题</string>
     <string name="relation_format_number">数目</string>
@@ -524,7 +524,7 @@
     <string name="block_data_view_content_description_no_source">该行内查询没有源</string>
     <string name="block_data_view_content_description_no_data">该行内查询的源没有类型</string>
     <string name="object_search_recently_opened_section_title">最近打开的文档</string>
-    <string name="widget_source_anytype_library">Anytype 库</string>
+    <string name="widget_source_anytype_library">Aparok 库</string>
     <string name="widget_source_default_lists">默认列表</string>
     <string name="widget_source_system">跟随系统</string>
     <string name="your_favorite_objects">您最喜欢的对象</string>
@@ -588,8 +588,8 @@
     <string name="confirm">确认</string>
     <string name="code_empty">邀请码不能为空</string>
     <string name="enter_invitation_hint">邀请码</string>
-    <string name="enter_invitation_text">如果您没有，只需前往 anytype.io 并注册等候名单。我们正在邀请滚动在基础上的人。</string>
-    <string name="start_login_text">使用Anytype，您可以写便笺和文档，管理任务，分享文件或从网络上保存重要内容。</string>
+    <string name="enter_invitation_text">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
+    <string name="start_login_text">使用Aparok，您可以写便笺和文档，管理任务，分享文件或从网络上保存重要内容。</string>
     <string name="login">登录</string>
     <string name="sign_up">注册</string>
     <string name="type_your_recovery_phrase">或输入您的密钥</string>
@@ -598,7 +598,7 @@
     <string name="choose_pin_code">选择 PIN 码</string>
     <string name="congratulations">恭喜您！</string>
     <string name="time_to_update_title">是时候更新了</string>
-    <string name="time_to_update_text">您的某些数据是在 Anytype 的较新版本中管理的。\n请更新应用程序，以便使用您的所有文档和最新功能。</string>
+    <string name="time_to_update_text">您的某些数据是在 Aparok 的较新版本中管理的。\n请更新应用程序，以便使用您的所有文档和最新功能。</string>
     <string name="update">更新</string>
     <string name="later">稍后</string>
     <string name="let_us_start">让我们开始吧！</string>
@@ -629,7 +629,7 @@
     <string name="greet">你好，%1$s</string>
     <string name="greet_user">你好，用户</string>
     <string name="enter_your_code">输入你的邀请码</string>
-    <string name="organize_everything">欢迎使用 Anytype</string>
+    <string name="organize_everything">欢迎使用 Aparok</string>
     <string name="setting_up_the_wallet">设置钱包…</string>
     <string name="sign_clock">⏳</string>
     <string name="back">返回</string>
@@ -779,15 +779,15 @@
     <string name="go_to_settings">前往设置</string>
     <string name="do_not_forget_mnemonic_phrase">不要忘记保存您的密钥</string>
     <string name="you_can_always_find_mnemonic_in_settings">您总是可以在仪表盘屏幕上的设置中找到恢复短语。</string>
-    <string name="if_you_lose_recovery_phrase_warning">如果您丢失密钥并退出登录，您将永远不能再访问您的数据。 请务必将密钥保存在 Anytype 之外以便完成数据恢复。</string>
+    <string name="if_you_lose_recovery_phrase_warning">如果您丢失密钥并退出登录，您将永远不能再访问您的数据。 请务必将密钥保存在 Aparok 之外以便完成数据恢复。</string>
     <string name="card_size">卡片尺寸</string>
     <string name="clear_cache">清除缓存</string>
     <string name="clear_cache_title">是否确定?</string>
-    <string name="download_from_node">存储在 Anytype 中的所有媒体文件将从您当前的设备中删除。可以从备份节点或其他设备再次下载它们。</string>
+    <string name="download_from_node">存储在 Aparok 中的所有媒体文件将从您当前的设备中删除。可以从备份节点或其他设备再次下载它们。</string>
     <string name="new_profile">新建个人资料</string>
     <string name="back_up_your_phrase">备份短语</string>
-    <string name="anytype_analytics">Anytype分析</string>
-    <string name="anytype_analytics_msg">了解人们如何使用Anytype有助于我们改进产品。此版本的Anytype包含保护您隐私的分析代码。\n它不会记录实际文档的内容，但仍然可以让我们了解您如何使用Anytype。\n请继续订阅我们的邮件列表，因为我们很快将发布一个新版本，让您可以选择退出。</string>
+    <string name="anytype_analytics">Zero Telemetry &amp; Privacy</string>
+    <string name="anytype_analytics_msg">Aparok is built with strict zero-telemetry by default. No analytics, tracking, or user data are ever sent to third parties. Your notes, cryptographic keys, and communication remain fully end-to-end encrypted and under your sovereign control.</string>
     <string name="retry">重试</string>
     <string name="try_again">请再试一次</string>
     <string name="unsplash">Unsplash 图库</string>
@@ -819,7 +819,7 @@
     <string name="settings_network_configuration_file">自托管设置</string>
     <string name="settings_network_configuration_file_choose">选择文件</string>
     <string-array name="settings_networks_entries">
-        <item>Anytype</item>
+        <item>Aparok</item>
         <item>仅本地</item>
         <item>自托管</item>
     </string-array>
@@ -848,7 +848,7 @@
     <string name="base_add_options_empty_title">没有找到标签</string>
     <string name="base_add_options_empty_subtitle">开始输入创建一个新的</string>
     <string name="sync_status_local_only">仅本地</string>
-    <string name="mail_more_space_body">Hi, Anytype team. I am reaching out to request an increase in my file storage capacity as I have run out of storage. My current limits is %1$s. My account id is %2$s. Cheers, %3$s</string>
+    <string name="mail_more_space_body">Hi, Aparok team. I am reaching out to request an increase in my file storage capacity as I have run out of storage. My current limits is %1$s. My account id is %2$s. Cheers, %3$s</string>
     <string name="go_to_the_app">进入应用</string>
     <string name="exiting_please_wait">正在退出... 请稍等</string>
     <string name="loading_please_wait">正在加载……请稍等</string>
@@ -887,7 +887,7 @@
     <string name="space_id_copied_toast_msg">已复制空间 ID</string>
     <string name="network_id_copied_toast_msg">已复制网络 ID</string>
     <string name="created_by_id_copied_toast_msg">创建者ID 已复制</string>
-    <string name="anytype_update_alert_description">您的某些数据是在 Anytype 的较新版本中管理的。请更新应用程序，以便使用您的所有文档和最新功能。</string>
+    <string name="anytype_update_alert_description">您的某些数据是在 Aparok 的较新版本中管理的。请更新应用程序，以便使用您的所有文档和最新功能。</string>
     <string name="anytype_update_alert_title">是时候更新了</string>
     <string name="space_type_default">默认</string>
     <string name="space_type_default_space">默认空间</string>
@@ -908,7 +908,7 @@
     <string name="bin">回收站</string>
     <string name="synced_files">清理文件</string>
     <string name="log_in">登录</string>
-    <string name="create_object_section_library">Anytype 库</string>
+    <string name="create_object_section_library">Aparok 库</string>
     <string name="bin_empty_title">您的回收站是空的。</string>
     <string name="bin_empty_subtitle">看起来您已经整理得井井有条了！</string>
     <!--region SLASH WIDGET -->
@@ -1006,7 +1006,7 @@
     <string name="onboarding_selection_writer">作家 / 记者</string>
     <string name="onboarding_selection_other">其他</string>
     <!-- Use case options -->
-    <string name="onboarding_usecase_title">您想用 Anytype 做什么？</string>
+    <string name="onboarding_usecase_title">您想用 Aparok 做什么？</string>
     <string name="onboarding_usecase_description">挑选一个最适合你的使用场景</string>
     <string name="onboarding_usecase_habit_tracking">习惯跟踪</string>
     <string name="onboarding_usecase_knowledge">个人知识库 / PKM</string>
@@ -1080,7 +1080,7 @@
     <string name="onboarding_have_key_button_text">我有密钥</string>
     <string name="onboarding_get_my_key_button_text">获得我的密钥</string>
     <string name="onboarding_invite_code_title">填写邀请码</string>
-    <string name="onboarding_invite_code_description">如果你没有，只需要打开anytype.io并注册到等候列表。</string>
+    <string name="onboarding_invite_code_description">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
     <string name="onboarding_void_title">这是您的 Void</string>
     <string name="onboarding_void_description">这是您创建的所有内容的加密位置。所有内容都存储在您的设备上，并备份到分布式网络。</string>
     <string name="onboarding_this_is_your_key_title">这是您的密钥</string>
@@ -1090,7 +1090,7 @@
     <string name="onboarding_key_skip">跳过</string>
     <string name="onboarding_key_not_now">我稍后再保存</string>
     <string name="onboarding_key_copy">复制到剪贴板</string>
-    <string name="onboarding_soul_creation_placeholder">Anytype 身份标识</string>
+    <string name="onboarding_soul_creation_placeholder">Aparok 身份标识</string>
     <string name="onboarding_soul_creation">创建您的身份…</string>
     <string name="onboarding_type_your_key">输入您的密钥</string>
     <string name="onboarding_login_or">或者输入</string>
@@ -1155,8 +1155,8 @@
     <string name="sharing_menu_save_as_files_option">文件</string>
     <string name="sharing_menu_save_as_videos_option">视频</string>
     <string name="sharing_menu_data">数据</string>
-    <string name="sharing_menu_add_to_anytype_header_title">添加至 Anytype</string>
-    <string name="sharing_menu_add_to_anytype_error">Anytype 上传文件错误：%1$s</string>
+    <string name="sharing_menu_add_to_anytype_header_title">添加至 Aparok</string>
+    <string name="sharing_menu_add_to_anytype_error">Aparok 上传文件错误：%1$s</string>
     <string name="sharing_menu_add_to_anytype_success">所有文件都已经成功上传</string>
     <string name="sharing_menu_toast_object_added">新对象已添加到空间 ”%1$s“</string>
     <string name="sharing_menu_btn_add">添加</string>
@@ -1258,8 +1258,8 @@
     <string name="error_invalid_recovery_phrase">无效密钥</string>
     <string name="network">网络</string>
     <string name="network_with_colon">网络:</string>
-    <string name="network_settings_anytype_network">Anytype 网络</string>
-    <string name="network_settings_anytype_network_description">备份到由 Anytype 管理的网络</string>
+    <string name="network_settings_anytype_network">Aparok 网络</string>
+    <string name="network_settings_anytype_network_description">备份到由 Aparok 管理的网络</string>
     <string name="network_settings_local_only">仅本地</string>
     <string name="network_settings_local_only_description">不要备份；在本地网络内同步</string>
     <string name="network_settings_self_host">自托管</string>
@@ -1434,11 +1434,11 @@
     <!--endregion-->
     <!--region PAYMENTS -->
     <string name="payments_header">会员</string>
-    <string name="payments_subheader">加入 Anytype 网络，书写它的故事</string>
+    <string name="payments_subheader">加入 Aparok 网络，书写它的故事</string>
     <string name="payments_card_text_1">共创愿景</string>
     <string name="payments_card_description_1">作为尊贵的会员，你的声音很重要！参与独家活动，制定战略选择，并影响我们的路线图。</string>
     <string name="payments_card_text_2">解锁会员福利</string>
-    <string name="payments_card_description_2">会员可以享受更高的备份存储和同步空间，可以邀请多位访客协作共享空间，并拥有 Anytype 网络上的独特身份。</string>
+    <string name="payments_card_description_2">会员可以享受更高的备份存储和同步空间，可以邀请多位访客协作共享空间，并拥有 Aparok 网络上的独特身份。</string>
     <string name="payments_card_text_3">支持数字独立性</string>
     <string name="payments_card_description_3">感谢您的贡献。这不仅是对团队的支持，更是对我们“构建安全、协作、由用户所有之数字网络”愿景的同行与认可。</string>
     <string name="payments_card_text_4">对连接的投资</string>
@@ -1464,7 +1464,7 @@
     <string name="payments_current_label">当前</string>
     <!-- Tier details -->
     <string name="payments_tier_details_name_title">选择您独有的名字</string>
-    <string name="payments_tier_details_name_subtitle">这是您在 Anytype 网络上的独特名称，用于确认您的会员身份。它是您的个人域名，且无法更改。</string>
+    <string name="payments_tier_details_name_subtitle">这是您在 Aparok 网络上的独特名称，用于确认您的会员身份。它是您的个人域名，且无法更改。</string>
     <string name="payments_tier_details_name_hint">我自己</string>
     <string name="payments_tier_details_name_min">最少 7 个字符</string>
     <string name="payments_tier_details_name_error">此名称已被占用</string>
@@ -1521,9 +1521,9 @@
     <string name="payments_welcome_subtitle">为你的好奇心干一杯大的！</string>
     <string name="payments_welcome_button">继续</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@anytype.io</string>
+    <string name="membership_support_email">support@altercpre.w8n.pw</string>
     <string name="membership_support_subject">会员界面错误报告 - %1$s</string>
-    <string name="membership_support_body">您好，Anytype团队，\n\n
+    <string name="membership_support_body">您好，Aparok团队，\n\n
 
 我在应用程序的成员资格屏幕上遇到错误。以下是详细信息：\n
 
@@ -1600,7 +1600,7 @@
     <string name="membership_agree_terms">使用条款</string>
     <string name="membership_agree_middle">和</string>
     <string name="membership_agree_privacy">隐私策略</string>
-    <string name="membership_support_already_acquired">您已经使用其他的 Anytype 账号获得了一个会员计划。</string>
+    <string name="membership_support_already_acquired">您已经使用其他的 Aparok 账号获得了一个会员计划。</string>
     <string name="membership_support_different_subscription">找到不同 ID 的订阅</string>
     <string name="membership_support_more_then_one_subscription">找到了不止一个订阅</string>
     <string name="multiplayer_space_join_request_participants_error">空间参与者错误</string>
@@ -1626,7 +1626,7 @@
     <string name="error_login_network_id_mismatch">检测到网络 ID 不匹配。请验证您的网络配置。</string>
     <string name="error_login_select_vault_error">选择库时出错。</string>
     <string name="error_login_account_deleted_error">此账号已被删除。请尝试使用另一个账号或者创建一个新的。</string>
-    <string name="error_login_account_need_update_error">无法获取账户信息。请将 Anytype 更新至最新版本。</string>
+    <string name="error_login_account_need_update_error">无法获取账户信息。请将 Aparok 更新至最新版本。</string>
     <string name="error_wallet_setup">无法设置钱包。请检查设备存储空间后重试。</string>
     <string name="error_network_error">发生网络错误，请检查网络连接并重试。</string>
     <string name="error_offline_device">您的设备似乎处于离线状态。请连接到互联网，然后重试。</string>
@@ -1652,7 +1652,7 @@
     <string name="sync_status_p2p_disabled">连接不可用</string>
     <string name="sync_status_p2p_restricted">受限制。请检查设备设置。</string>
     <string name="sync_status_p2p_not_connected">未连接</string>
-    <string name="sync_status_anytype_network">Anytype 网络</string>
+    <string name="sync_status_anytype_network">Aparok 网络</string>
     <string name="sync_status_anytype_end_to_end">端到端加密</string>
     <plurals name="sync_status_network_items">
         <item quantity="other">%1$d 项目同步中…</item>
@@ -1887,7 +1887,7 @@
     <string name="profile_qr_code_button">我的二维码</string>
     <string name="profile_qr_share_button">分享</string>
     <string name="profile_qr_copy_button">拷贝链接</string>
-    <string name="profile_qr_circular_text">在 Anytype 上与我建立连接</string>
+    <string name="profile_qr_circular_text">在 Aparok 上与我建立连接</string>
     <string name="profile_qr_link_copied">链接已复制到剪贴板</string>
     <string name="object_type_add_property_screen_title">添加属性</string>
     <string name="object_type_add_property_screen_create">创建属性“%1$s”</string>
@@ -1974,7 +1974,7 @@
     <string name="vault_create_group">分组</string>
     <!-- Spaces Introduction Popup -->
     <string name="spaces_introduction_page1_title">想法需要对话</string>
-    <string name="spaces_introduction_page1_description">Anytype 现已支持共享空间的实时聊天——让每一次所思所言，共同生长。</string>
+    <string name="spaces_introduction_page1_description">Aparok 现已支持共享空间的实时聊天——让每一次所思所言，共同生长。</string>
     <string name="spaces_introduction_page2_title">您的保险库刚刚升级了</string>
     <string name="spaces_introduction_page2_description">“空间”与“聊天”现已支持实时预览及动态更新——助您在一处掌握所有关键信息。</string>
     <string name="spaces_introduction_page3_title">不止于聊天的“聊天”</string>
@@ -2021,7 +2021,7 @@
     <string name="vault_qr_try_again">请再试一次</string>
     <string name="camera_permission_required_title">需要相机权限</string>
     <string name="barcode_scanner_unavailable">此设备无法使用二维码扫描功能</string>
-    <string name="camera_permission_rationale_message">若要扫描二维码，Anytype 需要访问您的相机。此权限仅用于扫描二维码。</string>
+    <string name="camera_permission_rationale_message">若要扫描二维码，Aparok 需要访问您的相机。此权限仅用于扫描二维码。</string>
     <string name="camera_permission_settings_message">若要扫描二维码，您需要在设备设置中允许访问相机。</string>
     <string name="open_settings">打开设置</string>
     <string name="allow">允许</string>

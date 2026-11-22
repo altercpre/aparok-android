@@ -72,7 +72,7 @@ glanceVersion = "1.1.1"
 androidSvgVersion = "1.4"
 
 [libraries]
-middleware = { module = "io.anyproto:anytype-heart-android", version.ref = "middlewareVersion" }
+middleware = { module = "io.altercpre:anytype-heart-android", version.ref = "middlewareVersion" }
 androidxCore = { module = "androidx.core:core-ktx", version.ref = "androidxCoreVersion" }
 kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinVersion" }
 kotlinTest = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlinVersion" }
@@ -171,7 +171,7 @@ fragmentCompose = { group = "androidx.fragment", name = "fragment-compose", vers
 firebaseBom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
 firebaseMessaging = { module = "com.google.firebase:firebase-messaging"}
 customTabs = { module = "androidx.browser:browser", version.ref = "customTabsVersion" }
-anyCrypto = { module = "com.github.anyproto:any-crypto-kotlin", version = "1.0.2" }
+anyCrypto = { module = "com.github.altercpre:any-crypto-kotlin", version = "1.0.2" }
 glance = { module = "androidx.glance:glance", version.ref = "glanceVersion" }
 glanceAppWidget = { module = "androidx.glance:glance-appwidget", version.ref = "glanceVersion" }
 glanceMaterial3 = { module = "androidx.glance:glance-material3", version.ref = "glanceVersion" }

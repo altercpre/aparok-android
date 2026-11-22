@@ -40,7 +40,7 @@
     <string name="you_will_need_to_sign_in">Kasana erişmek için bu bilgilere ihtiyacın olacak. Güvenli bir yerde tut. Eğer kaybedersen hesabına erişemezsin.</string>
     <string name="about_help_and_community">Yardım &amp; Topluluk</string>
     <string name="about_what_is_new">Yenilikler</string>
-    <string name="about_anytype_community">Anytype Topluluğu</string>
+    <string name="about_anytype_community">Aparok Topluluğu</string>
     <string name="about_help_and_tutorials">Yardım &amp; Öğreticiler</string>
     <string name="about_legal">Yasal</string>
     <string name="about_terms_of_use">Kullanım Koşulları</string>
@@ -83,7 +83,7 @@
     <string name="section_bin">Çöp kutusu</string>
     <string name="error_loading_sections">Bölümler yüklenirken hata oluştu</string>
     <string name="data_management">Veri yönetimi</string>
-    <string name="deleted_account_danger_zone_msg">Kasanın silinmesini talep edersen bu talebi iptal etmek için 30 günün olacaktır. 30 gün sonra şifrelenmiş kasa verilerin yedekleme düğümünden kalıcı olarak silinir ve yeni cihazlarda Anytype oturumu açamazsın.</string>
+    <string name="deleted_account_danger_zone_msg">Kasanın silinmesini talep edersen bu talebi iptal etmek için 30 günün olacaktır. 30 gün sonra şifrelenmiş kasa verilerin yedekleme düğümünden kalıcı olarak silinir ve yeni cihazlarda Aparok oturumu açamazsın.</string>
     <string name="danger_zone">Tehlikeli bölge</string>
     <string name="snackbar_template_add">Bu türe yeni bir şablon eklendi</string>
     <string name="template_name_prefill_title">Önceden doldurulmuş isim</string>
@@ -293,14 +293,14 @@
     <string name="sync_status_synced">Senkronize edildi</string>
     <string name="sync_status_failed">Eşitlenmemiş</string>
     <string name="sync_status_toast_unknown">Senkronizasyon başlatılıyor</string>
-    <string name="sync_status_toast_offline">Anytype düğümü bağlı değil</string>
+    <string name="sync_status_toast_offline">Aparok düğümü bağlı değil</string>
     <string name="sync_status_toast_syncing">Bazı düğümlere veri indirme veya yükleme</string>
-    <string name="sync_status_toast_synced">Anytype Ağına yedeklendi</string>
-    <string name="sync_status_toast_synced_staging">Anytype Staging üzerinde yedeklendi</string>
+    <string name="sync_status_toast_synced">Aparok Ağına yedeklendi</string>
+    <string name="sync_status_toast_synced_staging">Aparok Staging üzerinde yedeklendi</string>
     <string name="sync_status_toast_synced_local">Sadece yerel</string>
     <string name="sync_status_toast_synced_self_hosted">Kendi barındırdığınız ağda yedeklendi</string>
     <string name="sync_status_toast_failed">Eşitleme başarısız oldu, tekrar deneniyor…</string>
-    <string name="sync_status_toast_incompatible">Sürüm güncel değil. Lütfen Anytype\'ı güncelleyin</string>
+    <string name="sync_status_toast_incompatible">Sürüm güncel değil. Lütfen Aparok\'ı güncelleyin</string>
     <string name="relation_format_description">Açıklama</string>
     <string name="relation_format_title">Başlık</string>
     <string name="relation_format_number">Sayı</string>
@@ -525,7 +525,7 @@
     <string name="block_data_view_content_description_no_source">Satır içi sorgunun kaynağı yok</string>
     <string name="block_data_view_content_description_no_data">Satır içi sorgunun kaynağının türü yok</string>
     <string name="object_search_recently_opened_section_title">Yakın zamanda açılan</string>
-    <string name="widget_source_anytype_library">Anytype Kitaplığı</string>
+    <string name="widget_source_anytype_library">Aparok Kitaplığı</string>
     <string name="widget_source_default_lists">Varsayılan listeler</string>
     <string name="widget_source_system">Sistem</string>
     <string name="your_favorite_objects">Favori nesneleriniz</string>
@@ -589,8 +589,8 @@
     <string name="confirm">Onayla</string>
     <string name="code_empty">Davet kodu boş olmamalıdır</string>
     <string name="enter_invitation_hint">Davet kodu</string>
-    <string name="enter_invitation_text">Eğer sahip değilseniz anytype.io adresine gidin ve bekleme listesine kaydolun. İnsanları sürekli olarak davet ediyoruz.</string>
-    <string name="start_login_text">Anytype ile notlar ve belgeler yazabilir, görevleri yönetebilir, dosyaları paylaşabilir ve web\'den önemli içerikleri kaydedebilirsin.</string>
+    <string name="enter_invitation_text">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
+    <string name="start_login_text">Aparok ile notlar ve belgeler yazabilir, görevleri yönetebilir, dosyaları paylaşabilir ve web\'den önemli içerikleri kaydedebilirsin.</string>
     <string name="login">Giriş yap</string>
     <string name="sign_up">Kaydol</string>
     <string name="type_your_recovery_phrase">veya anahtarınızı yazın</string>
@@ -599,7 +599,7 @@
     <string name="choose_pin_code">Pin kodunu belirleyin</string>
     <string name="congratulations">Tebrikler!</string>
     <string name="time_to_update_title">Güncelleme zamanı</string>
-    <string name="time_to_update_text">Verilerinizden bazıları Anytype\'ın daha yeni bir sürümünde değiştirildi.\nLütfen tüm belgelerinizle ve en son özelliklerle çalışmak için uygulamayı güncelleyin.</string>
+    <string name="time_to_update_text">Verilerinizden bazıları Aparok\'ın daha yeni bir sürümünde değiştirildi.\nLütfen tüm belgelerinizle ve en son özelliklerle çalışmak için uygulamayı güncelleyin.</string>
     <string name="update">Güncelle</string>
     <string name="later">Daha sonra</string>
     <string name="let_us_start">Hadi başlayalım!</string>
@@ -630,7 +630,7 @@
     <string name="greet">Merhaba %1$s</string>
     <string name="greet_user">Merhaba, Kullanıcı</string>
     <string name="enter_your_code">Davet kodunuzu girin</string>
-    <string name="organize_everything">Anytype\'a hoş geldiniz</string>
+    <string name="organize_everything">Aparok\'a hoş geldiniz</string>
     <string name="setting_up_the_wallet">Cüzdan ayarlanıyor…</string>
     <string name="sign_clock">⏳</string>
     <string name="back">Geri</string>
@@ -780,15 +780,15 @@
     <string name="go_to_settings">Ayarlara git</string>
     <string name="do_not_forget_mnemonic_phrase">Anahtarınızı kopyalamayı ve kaydetmeyi unutmayın.</string>
     <string name="you_can_always_find_mnemonic_in_settings">Bu ifadeyi her zaman kontrol paneli ekranındaki ayarlarda bulabilirsin.</string>
-    <string name="if_you_lose_recovery_phrase_warning">Anahtarı kaybedersen ve oturumu kapatırsan verilerine bir daha asla erişemezsin. Verilerini kurtarmak için anahtarı Anytype dışında bir yere not etmelisin.</string>
+    <string name="if_you_lose_recovery_phrase_warning">Anahtarı kaybedersen ve oturumu kapatırsan verilerine bir daha asla erişemezsin. Verilerini kurtarmak için anahtarı Aparok dışında bir yere not etmelisin.</string>
     <string name="card_size">Kart boyutu</string>
     <string name="clear_cache">Önbelleği temizle</string>
     <string name="clear_cache_title">Emin misin?</string>
-    <string name="download_from_node">Anytype\'da depolanan tüm medya dosyaları mevcut cihazınızdan silinecektir. Bir yedekleme düğümünden veya başka bir cihazdan tekrar indirilebilirler.</string>
+    <string name="download_from_node">Aparok\'da depolanan tüm medya dosyaları mevcut cihazınızdan silinecektir. Bir yedekleme düğümünden veya başka bir cihazdan tekrar indirilebilirler.</string>
     <string name="new_profile">Yeni profil</string>
     <string name="back_up_your_phrase">Yedekleme ifadesi</string>
-    <string name="anytype_analytics">Anytype Analytics</string>
-    <string name="anytype_analytics_msg">İnsanların Anytype\'ı nasıl kullandığını anlamak ürünümüzü geliştirmemize yardımcı olur. Anytype\'ın bu sürümü gizliliğinizi koruyan analiz kodunu içerir.\nBelgenin içeriğini kaydetmez. Ancak yine de Anytype\'ı nasıl kullandığınızı anlamamızı sağlar.\nE-posta listemize abone olun çünkü yakında devre dışı bırakmanıza olanak tanıyan yeni bir sürüm duyuracağız.</string>
+    <string name="anytype_analytics">Zero Telemetry &amp; Privacy</string>
+    <string name="anytype_analytics_msg">Aparok is built with strict zero-telemetry by default. No analytics, tracking, or user data are ever sent to third parties. Your notes, cryptographic keys, and communication remain fully end-to-end encrypted and under your sovereign control.</string>
     <string name="retry">Tekrar dene</string>
     <string name="try_again">Tekrar deneyin</string>
     <string name="unsplash">Unsplash</string>
@@ -821,7 +821,7 @@
     <string name="settings_network_configuration_file">Kişisel barındırma yapılandırması</string>
     <string name="settings_network_configuration_file_choose">Dosya seçin</string>
     <string-array name="settings_networks_entries">
-        <item>Anytype</item>
+        <item>Aparok</item>
         <item>Sadece yerel</item>
         <item>Kişisel barındırma</item>
     </string-array>
@@ -850,7 +850,7 @@
     <string name="base_add_options_empty_title">Etiket bulunamadı</string>
     <string name="base_add_options_empty_subtitle">Yeni bir tane oluşturmak için yazmaya başlayın</string>
     <string name="sync_status_local_only">Sadece yerel</string>
-    <string name="mail_more_space_body">Merhaba, Anytype ekibi. Depolama alanım tükendiği için dosya depolama kapasitemde bir artış talep etmek için ulaşıyorum. Mevcut limitim %1$s. Hesap kimliğim %2$s. Teşekkürler, %3$s</string>
+    <string name="mail_more_space_body">Merhaba, Aparok ekibi. Depolama alanım tükendiği için dosya depolama kapasitemde bir artış talep etmek için ulaşıyorum. Mevcut limitim %1$s. Hesap kimliğim %2$s. Teşekkürler, %3$s</string>
     <string name="go_to_the_app">Uygulamaya git</string>
     <string name="exiting_please_wait">Çıkılıyor... Lütfen bekleyin.</string>
     <string name="loading_please_wait">Yükleniyor... Lütfen bekleyin.</string>
@@ -889,7 +889,7 @@
     <string name="space_id_copied_toast_msg">Alan kimliği kopyalandı</string>
     <string name="network_id_copied_toast_msg">Ağ kimliği kopyalandı</string>
     <string name="created_by_id_copied_toast_msg">Oluşturanın kimliği kopyalandı</string>
-    <string name="anytype_update_alert_description">Verilerinizden bazıları Anytype\'ın daha yeni bir sürümünde değiştirildi. Lütfen uygulamanızı tüm dokümanlarınızla ve en son özelliklerle çalışacak şekilde güncelleyin.</string>
+    <string name="anytype_update_alert_description">Verilerinizden bazıları Aparok\'ın daha yeni bir sürümünde değiştirildi. Lütfen uygulamanızı tüm dokümanlarınızla ve en son özelliklerle çalışacak şekilde güncelleyin.</string>
     <string name="anytype_update_alert_title">Güncelleme zamanı</string>
     <string name="space_type_default">Girdi</string>
     <string name="space_type_default_space">Birincil alan</string>
@@ -910,7 +910,7 @@
     <string name="bin">Çöp kutusu</string>
     <string name="synced_files">Dosyaları temizle</string>
     <string name="log_in">Giriş yap</string>
-    <string name="create_object_section_library">Anytype Kitaplığı</string>
+    <string name="create_object_section_library">Aparok Kitaplığı</string>
     <string name="bin_empty_title">Çöp kutun boş.</string>
     <string name="bin_empty_subtitle">Görünüşe göre her şey düzenli ve organize!</string>
     <!--region SLASH WIDGET -->
@@ -1008,7 +1008,7 @@
     <string name="onboarding_selection_writer">Yazar / Gazeteci</string>
     <string name="onboarding_selection_other">Diğer</string>
     <!-- Use case options -->
-    <string name="onboarding_usecase_title">Anytype\'ı ne için kullanmak istiyorsunuz?</string>
+    <string name="onboarding_usecase_title">Aparok\'ı ne için kullanmak istiyorsunuz?</string>
     <string name="onboarding_usecase_description">Size en uygun kullanım durumunu seçin</string>
     <string name="onboarding_usecase_habit_tracking">Alışkanlık takibi</string>
     <string name="onboarding_usecase_knowledge">Kişisel bilgi bankası / KBY</string>
@@ -1082,7 +1082,7 @@
     <string name="onboarding_have_key_button_text">Mevcut anahtarım var</string>
     <string name="onboarding_get_my_key_button_text">Anahtarımı getir</string>
     <string name="onboarding_invite_code_title">Davet kodunuzu girin</string>
-    <string name="onboarding_invite_code_description">Eğer sahip değilseniz anytype.io adresine gidin\n ve bekleme listesine kaydolun.</string>
+    <string name="onboarding_invite_code_description">Aparok is fully open-source and permissionless. No waitlist or invite code required.</string>
     <string name="onboarding_void_title">Bu senin boşluğun</string>
     <string name="onboarding_void_description">Oluşturduğunuz her şey için şifrelenmiş bir konumdur. Her şey cihazınızda saklanır ve dağıtılmış ağda yedeklenir.</string>
     <string name="onboarding_this_is_your_key_title">Bu senin anahtarın</string>
@@ -1092,7 +1092,7 @@
     <string name="onboarding_key_skip">Atla</string>
     <string name="onboarding_key_not_now">Daha sonra kaydedeceğim</string>
     <string name="onboarding_key_copy">Panoya kopyala</string>
-    <string name="onboarding_soul_creation_placeholder">Anytype kimliği</string>
+    <string name="onboarding_soul_creation_placeholder">Aparok kimliği</string>
     <string name="onboarding_soul_creation">Kimliğiniz oluşturuluyor…</string>
     <string name="onboarding_type_your_key">Anahtarınızı yazın</string>
     <string name="onboarding_login_or">veya şununla girin</string>
@@ -1157,8 +1157,8 @@
     <string name="sharing_menu_save_as_files_option">Dosyalar</string>
     <string name="sharing_menu_save_as_videos_option">Videolar</string>
     <string name="sharing_menu_data">Veri</string>
-    <string name="sharing_menu_add_to_anytype_header_title">Anytype\'a ekle</string>
-    <string name="sharing_menu_add_to_anytype_error">Anytype dosya yükleme hatası: %1$s</string>
+    <string name="sharing_menu_add_to_anytype_header_title">Aparok\'a ekle</string>
+    <string name="sharing_menu_add_to_anytype_error">Aparok dosya yükleme hatası: %1$s</string>
     <string name="sharing_menu_add_to_anytype_success">Tüm dosyalar başarıyla yüklendi.</string>
     <string name="sharing_menu_toast_object_added">\'%1$s\' alanına yeni nesne eklendi.</string>
     <string name="sharing_menu_btn_add">Ekle</string>
@@ -1262,8 +1262,8 @@
     <string name="error_invalid_recovery_phrase">Geçersiz Anahtar</string>
     <string name="network">Ağ</string>
     <string name="network_with_colon">Ağ:</string>
-    <string name="network_settings_anytype_network">Anytype ağı</string>
-    <string name="network_settings_anytype_network_description">Anytype tarafından yönetilen ağda yedekleyin</string>
+    <string name="network_settings_anytype_network">Aparok ağı</string>
+    <string name="network_settings_anytype_network_description">Aparok tarafından yönetilen ağda yedekleyin</string>
     <string name="network_settings_local_only">Sadece yerel</string>
     <string name="network_settings_local_only_description">Yedekleme olmadan; yerel ağ içinde senkronize edin</string>
     <string name="network_settings_self_host">Kişisel barındırma</string>
@@ -1440,11 +1440,11 @@
     <!--endregion-->
     <!--region PAYMENTS -->
     <string name="payments_header">Üyelik</string>
-    <string name="payments_subheader">Anytype ağına katılmak, hikayesine katkıda bulunmak anlamına gelir</string>
+    <string name="payments_subheader">Aparok ağına katılmak, hikayesine katkıda bulunmak anlamına gelir</string>
     <string name="payments_card_text_1">Vizyonu Birlikte Yaratın</string>
     <string name="payments_card_description_1">Değerli bir üye olarak sesin önemli! Özel etkinliklere katıl, stratejik seçimleri şekillendir ve yol haritamızı şekillendir.</string>
     <string name="payments_card_text_2">Üye Avantajlarının Kilidini Açın</string>
-    <string name="payments_card_description_2">Üyeler daha yüksek yedekleme depolama &amp; eşitleme limitlerine, birden fazla misafirin paylaşılan alanlarda işbirliği yapması için davetlere ve Anytype Ağı\'nda benzersiz bir kimliğe sahiptir.</string>
+    <string name="payments_card_description_2">Üyeler daha yüksek yedekleme depolama &amp; eşitleme limitlerine, birden fazla misafirin paylaşılan alanlarda işbirliği yapması için davetlere ve Aparok Ağı\'nda benzersiz bir kimliğe sahiptir.</string>
     <string name="payments_card_text_3">Dijital Bağımsızlığı Destekleyin</string>
     <string name="payments_card_description_3">Katkınız ekibimizi destekliyor ve kullanıcıya ait güvenli ve işbirliğine dayalı bir dijital ağ vizyonumuzu onaylıyor.</string>
     <string name="payments_card_text_4">Bağlanabilirliğe yatırım yapın</string>
@@ -1470,7 +1470,7 @@
     <string name="payments_current_label">Şu anki</string>
     <!-- Tier details -->
     <string name="payments_tier_details_name_title">Benzersiz isminizi seçin</string>
-    <string name="payments_tier_details_name_subtitle">Bu, Anytype ağında üyeliğinizi onaylayan benzersiz adınızdır. Kişisel alan adınız olarak işlev görür ve değiştirilemez.</string>
+    <string name="payments_tier_details_name_subtitle">Bu, Aparok ağında üyeliğinizi onaylayan benzersiz adınızdır. Kişisel alan adınız olarak işlev görür ve değiştirilemez.</string>
     <string name="payments_tier_details_name_hint">Kendim</string>
     <string name="payments_tier_details_name_min">Minimum 7 karakter</string>
     <string name="payments_tier_details_name_error">Bu isim çoktan alınmış!</string>
@@ -1527,9 +1527,9 @@
     <string name="payments_welcome_subtitle">Merakınız için kocaman bir alkış!</string>
     <string name="payments_welcome_button">Devam et</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@anytype.io</string>
+    <string name="membership_support_email">support@altercpre.w8n.pw</string>
     <string name="membership_support_subject">Üyelik Ekranı Hata Raporu - %1$s</string>
-    <string name="membership_support_body">        Merhaba Anytype Destek Ekibi,\n\n
+    <string name="membership_support_body">        Merhaba Aparok Destek Ekibi,\n\n
 
         Uygulamadaki Üyelik Ekranında bir hatayla karşılaştım. Aşağıda detaylar verilmiştir:\n
 
@@ -1607,7 +1607,7 @@
     <string name="membership_agree_terms">Kullanım Koşulları</string>
     <string name="membership_agree_middle">ve</string>
     <string name="membership_agree_privacy">Gizlilik Politikası</string>
-    <string name="membership_support_already_acquired">Bir başka Anytype hesabı kullanarak zaten bir Üyelik planı edindiniz.</string>
+    <string name="membership_support_already_acquired">Bir başka Aparok hesabı kullanarak zaten bir Üyelik planı edindiniz.</string>
     <string name="membership_support_different_subscription">Farklı kimliğe sahip bir abonelik bulundu.</string>
     <string name="membership_support_more_then_one_subscription">Birden fazla abonelik bulundu.</string>
     <string name="multiplayer_space_join_request_participants_error">Alan katılımcısının hatası</string>
@@ -1637,7 +1637,7 @@
     <string name="error_login_network_id_mismatch">Ağ kimliği uyuşmazlığı tespit edildi. Lütfen ağ yapılandırmanızı doğrulayın.</string>
     <string name="error_login_select_vault_error">Kasa hatasını seçin.</string>
     <string name="error_login_account_deleted_error">Bu hesap silinmiştir. Başka bir hesap kullanmayı deneyin veya yeni bir hesap oluşturun.</string>
-    <string name="error_login_account_need_update_error">Hesap bilgileri alınamadı. Lütfen Anytype\'ı en son sürüme güncelleyin.</string>
+    <string name="error_login_account_need_update_error">Hesap bilgileri alınamadı. Lütfen Aparok\'ı en son sürüme güncelleyin.</string>
     <string name="error_wallet_setup">Cüzdan kurulamıyor. Lütfen cihazınızın depolama alanını kontrol edin ve tekrar deneyin.</string>
     <string name="error_network_error">Ağ hatası oluştu. Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.</string>
     <string name="error_offline_device">Cihazınız çevrimdışı görünüyor. Lütfen bağlantınızı kontrol edin ve tekrar deneyin.</string>
@@ -1665,7 +1665,7 @@
     <string name="sync_status_p2p_disabled">Bağlantı mümkün değil</string>
     <string name="sync_status_p2p_restricted">Kısıtlanmış. Cihaz ayarlarını kontrol edin.</string>
     <string name="sync_status_p2p_not_connected">Bağlı değil</string>
-    <string name="sync_status_anytype_network">Anytype Ağı</string>
+    <string name="sync_status_anytype_network">Aparok Ağı</string>
     <string name="sync_status_anytype_end_to_end">Uçtan uca şifrelendi</string>
     <plurals name="sync_status_network_items">
         <item quantity="one">%1$d öğe eşitleniyor...</item>
@@ -1988,7 +1988,7 @@
     <string name="vault_create_group">Grup</string>
     <!-- Spaces Introduction Popup -->
     <string name="spaces_introduction_page1_title">Fikirler konuşulmaya ihtiyaç duyar</string>
-    <string name="spaces_introduction_page1_description">Anytype artık Paylaşılan Kanallarda gerçek zamanlı sohbeti destekliyor — böylece düşünceleriniz ve diyaloglarınız birlikte gelişebilir.</string>
+    <string name="spaces_introduction_page1_description">Aparok artık Paylaşılan Kanallarda gerçek zamanlı sohbeti destekliyor — böylece düşünceleriniz ve diyaloglarınız birlikte gelişebilir.</string>
     <string name="spaces_introduction_page2_title">Kasanız seviye atladı</string>
     <string name="spaces_introduction_page2_description">Alanlar ve Sohbetler artık canlı önizlemeleri ve güncellemeleri gösteriyor — önemli olan her şeyi takip edebileceğiniz tek yer.</string>
     <string name="spaces_introduction_page3_title">Daha fazlasını yapan sohbetler</string>
@@ -2035,7 +2035,7 @@
     <string name="vault_qr_try_again">Tekrar deneyin</string>
     <string name="camera_permission_required_title">Kamera izni gerekli</string>
     <string name="barcode_scanner_unavailable">Bu cihazda karekod tarayıcı bulunmuyor</string>
-    <string name="camera_permission_rationale_message">Karekodları taramak için Anytype\'ın kamerana erişmesi gerekir. Bu izin yalnızca karekodları taramak için kullanılır.</string>
+    <string name="camera_permission_rationale_message">Karekodları taramak için Aparok\'ın kamerana erişmesi gerekir. Bu izin yalnızca karekodları taramak için kullanılır.</string>
     <string name="camera_permission_settings_message">Karekodları taramak için cihaz ayarlarında kamera erişimine izin vermen gerekiyor.</string>
     <string name="open_settings">Ayarlar\'ı Aç</string>
     <string name="allow">İzin ver</string>

@@ -2,7 +2,7 @@
 
 **Date:** 2026-01-19
 **Issue:** [DROID-3986](https://linear.app/anytype/issue/DROID-3986/set-or-newly-created-tasks-not-visible-without-scrolling)
-**Related PR:** [#3044](https://github.com/anyproto/anytype-kotlin/pull/3044)
+**Related PR:** [#3044](https://github.com/altercpre/aparok-android/pull/3044)
 
 ## Problem
 

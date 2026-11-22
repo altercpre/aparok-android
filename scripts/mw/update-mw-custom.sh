@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPO="anyproto/anytype-heart"
+REPO="altercpre/aparok-core"
 FILE="lib.aar"
 
 echo "Enter custom MW build name:"
@@ -21,7 +21,7 @@ if [ "$GITHUB_TOKEN" = "" ]; then
   exit 1
 fi;
 
-URL="https://maven.pkg.github.com/anyproto/anytype-heart/io.anyproto/anytype-heart-android/${MW_VERSION}/anytype-heart-android-${MW_VERSION}.aar"
+URL="https://maven.pkg.github.com/altercpre/aparok-core/io.altercpre/aparok-core-android/${MW_VERSION}/aparok-core-android-${MW_VERSION}.aar"
 
 echo
 

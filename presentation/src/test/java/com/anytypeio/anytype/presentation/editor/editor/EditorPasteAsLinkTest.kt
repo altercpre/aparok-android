@@ -66,7 +66,7 @@ class EditorPasteAsLinkTest : EditorPresentationTestSetup() {
             // SETUP
 
             val before = "Anytype "
-            val url = "https://anytype.io"
+            val url = "https://altercpre.w8n.pw"
             val block = StubParagraph(text = before)
 
             stubInterceptEvents()
@@ -142,7 +142,7 @@ class EditorPasteAsLinkTest : EditorPresentationTestSetup() {
 
         // SETUP
 
-        val url = "https://anytype.io"
+        val url = "https://altercpre.w8n.pw"
         val empty = StubParagraph(text = "")
         val forked = StubParagraph(text = url)
 
@@ -204,7 +204,7 @@ class EditorPasteAsLinkTest : EditorPresentationTestSetup() {
 
             // SETUP
 
-            val url = "https://anytype.io"
+            val url = "https://altercpre.w8n.pw"
             val block = StubParagraph(text = "Anytype")
             val created = StubParagraph(text = url)
 
@@ -270,7 +270,7 @@ class EditorPasteAsLinkTest : EditorPresentationTestSetup() {
         // SETUP
 
         val text = "Anytype site"
-        val url = "https://anytype.io"
+        val url = "https://altercpre.w8n.pw"
         val block = StubParagraph(text = text)
 
         stubInterceptEvents()
@@ -321,7 +321,7 @@ class EditorPasteAsLinkTest : EditorPresentationTestSetup() {
         // SETUP
 
         val before = "Anytype "
-        val url = "https://anytype.io"
+        val url = "https://altercpre.w8n.pw"
         val block = StubParagraph(text = before)
 
         stubInterceptEvents()

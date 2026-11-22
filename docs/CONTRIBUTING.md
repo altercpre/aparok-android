@@ -27,7 +27,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 
 This project and everyone participating in it is governed by the
 [Code of Conduct](CODE_OF_CONDUCT.md).
-By participating, you are expected to uphold this code. Please report unacceptable behavior to [support@anytype.io](mailto:support@anytype.io).
+By participating, you are expected to uphold this code. Please report unacceptable behavior to [support@altercpre.w8n.pw](mailto:support@altercpre.w8n.pw).
 
 ## Preferred Languages
 
@@ -35,9 +35,9 @@ We prefer all communications to be in English.
 
 ## I Have a Question
 
-> Here on GitHub, we're discussing everything related to building Anytype. If you have any questions about how to use Anytype, please join our [community](https://community.anytype.io) or contact us via [support@anytype.io](mailto:support@anytype.io).
+> Here on GitHub, we're discussing everything related to building Anytype. If you have any questions about how to use Anytype, please join our [community](https://community.altercpre.w8n.pw) or contact us via [support@altercpre.w8n.pw](mailto:support@altercpre.w8n.pw).
 >
-> If you want to ask a technical question, we assume that you have read the project's [README](../README.md) and our [tech documentation](https://tech.anytype.io).
+> If you want to ask a technical question, we assume that you have read the project's [README](../README.md) and our [tech documentation](https://tech.altercpre.w8n.pw).
 
 Before you ask a question, it is best to look into our [Contributors Community](https://github.com/orgs/anyproto/discussions). In case you have found a suitable topic and still need clarification, you can write a comment there.
 
@@ -51,7 +51,7 @@ We recommend the following:
 ## I Want To Contribute
 
 > ### Legal Notice 
-> When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license. For PRs our bot will ask you to accept the [Contributor License Agreement](https://github.com/anyproto/open/blob/main/templates/CLA.md).
+> When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license. For PRs our bot will ask you to accept the [Contributor License Agreement](https://github.com/altercpre/open/blob/main/templates/CLA.md).
 
 ### Reporting Bugs
 
@@ -61,11 +61,11 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 
 - Make sure that you are using the latest version.
 - Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (If you are looking for support, you might want to check [this section](#i-have-a-question)).
-- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](issues?q=label%3Abug) or in [existing bug reports](https://community.anytype.io/c/bug-reports/l/latest?board=default) created by users.
+- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](issues?q=label%3Abug) or in [existing bug reports](https://community.altercpre.w8n.pw/c/bug-reports/l/latest?board=default) created by users.
 
 #### How Do I Submit a Good Bug Report?
 
-> You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to [security@anytype.io](mailto:security@anytype.io) (please see [SECURITY.md](SECURITY.md) for details).
+> You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to [security@altercpre.w8n.pw](mailto:security@altercpre.w8n.pw) (please see [SECURITY.md](SECURITY.md) for details).
 
 If you run into an issue with the project:
 
@@ -86,7 +86,7 @@ Once it's filed:
 
 - Make sure that you are using the latest version.
 - If you are looking for support, you might want to check [this section](#i-have-a-question).
-- To see if other users already requested something similar you are suggesting, check the [tracker](issues?q=label%3Aenhancement) or [feature requests](https://community.anytype.io/c/feature-requests/l/latest?board=default) created by users.
+- To see if other users already requested something similar you are suggesting, check the [tracker](issues?q=label%3Aenhancement) or [feature requests](https://community.altercpre.w8n.pw/c/feature-requests/l/latest?board=default) created by users.
 
 #### How Do I Submit a Good Enhancement Suggestion?
 
@@ -98,15 +98,15 @@ Enhancement suggestions are tracked as [GitHub issues](/issues).
 
 ### Reporting Security Issues
 
-You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to [security@anytype.io](mailto:security@anytype.io) (please see [SECURITY.md](SECURITY.md) for details).
+You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to [security@altercpre.w8n.pw](mailto:security@altercpre.w8n.pw) (please see [SECURITY.md](SECURITY.md) for details).
 
 ### Contributing Code
-When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license. Our bot will ask you to accept the [Contributor License Agreement](https://github.com/anyproto/open/blob/main/templates/CLA.md) before we can accept the pull request.
+When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license. Our bot will ask you to accept the [Contributor License Agreement](https://github.com/altercpre/open/blob/main/templates/CLA.md) before we can accept the pull request.
 
 Basic rules for pull requests:
 - Pull requests generally need to be based on and opened against the `main` branch, unless by explicit agreement because the work is contributing to some more complex feature branch
 - Please follow a suggested template for the pull request description
-- When neccesary, changes are documented in [`README.md`](../README.md) or suggestions are also made to [`tech-docs`](https://github.com/anyproto/tech-docs)
+- When neccesary, changes are documented in [`README.md`](../README.md) or suggestions are also made to [`tech-docs`](https://github.com/altercpre/tech-docs)
 
 All pull requests will be reviewed by the team.
 
@@ -131,13 +131,13 @@ To keep the app working correctly, please:
 
 #### Fixing the English source text
 
-The English source strings live in [`localization/src/main/res/values/strings.xml`](../localization/src/main/res/values/strings.xml). If you spot a mistake in the **English source itself** (a typo or unclear wording), don't fix it in Crowdin — open an issue or a pull request against that file instead. This counts as a code contribution, so the [CLA](https://github.com/anyproto/open/blob/main/templates/CLA.md) applies.
+The English source strings live in [`localization/src/main/res/values/strings.xml`](../localization/src/main/res/values/strings.xml). If you spot a mistake in the **English source itself** (a typo or unclear wording), don't fix it in Crowdin — open an issue or a pull request against that file instead. This counts as a code contribution, so the [CLA](https://github.com/altercpre/open/blob/main/templates/CLA.md) applies.
 
 ## Contributors Recognition
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome! 
 
-You can check the list of contributors in a [dedicated repo](https://github.com/anyproto/contributors).
+You can check the list of contributors in a [dedicated repo](https://github.com/altercpre/contributors).
 
 ---
 

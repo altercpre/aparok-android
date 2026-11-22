@@ -85,7 +85,7 @@ class MarkupExtensionTest {
             Markup.Mark.Link(
                 from = 32,
                 to = 43,
-                param = "https://anytype.io/"
+                param = "https://altercpre.w8n.pw/"
             )
         )
 
@@ -113,7 +113,7 @@ class MarkupExtensionTest {
             Markup.Mark.Link(
                 from = 45,
                 to = 56,
-                param = "https://anytype.io/"
+                param = "https://altercpre.w8n.pw/"
             )
         )
 
@@ -141,7 +141,7 @@ class MarkupExtensionTest {
             Markup.Mark.Link(
                 from = 32,
                 to = 43,
-                param = "https://anytype.io/"
+                param = "https://altercpre.w8n.pw/"
             )
         )
 
@@ -169,7 +169,7 @@ class MarkupExtensionTest {
             Markup.Mark.Link(
                 from = 37,
                 to = 48,
-                param = "https://anytype.io/"
+                param = "https://altercpre.w8n.pw/"
             )
         )
 
@@ -265,7 +265,7 @@ class MarkupExtensionTest {
             Markup.Mark.Link(
                 from = 32,
                 to = 43,
-                param = "https://anytype.io/"
+                param = "https://altercpre.w8n.pw/"
             )
         )
 
@@ -293,7 +293,7 @@ class MarkupExtensionTest {
             Markup.Mark.Link(
                 from = 29,
                 to = 40,
-                param = "https://anytype.io/"
+                param = "https://altercpre.w8n.pw/"
             )
         )
 

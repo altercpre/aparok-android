@@ -555,7 +555,7 @@ class BlockExtensionTest {
                 endInclusive = 13
             ),
             type = Block.Content.Text.Mark.Type.LINK,
-            param = "www.anytype.io/test"
+            param = "www.altercpre.w8n.pw/test"
         )
         val block = Block(
             id = MockDataFactory.randomUuid(),
