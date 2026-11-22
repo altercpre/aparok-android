@@ -323,7 +323,7 @@ class AnytypeNotificationService @Inject constructor(
         const val MEMBER_REMOVED_TYPE = 4
         const val PERMISSIONS_CHANGED_TYPE = 5
 
-        const val NOTIFICATION_INTENT_ACTION = "io.anytype.app.notification-action"
+        const val NOTIFICATION_INTENT_ACTION = "io.aparok.app.notification-action"
 
         val defaultDuration = 1L.toDuration(DurationUnit.HOURS).inWholeMilliseconds
     }

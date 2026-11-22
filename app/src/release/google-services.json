@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:398281119989:android:6252371d552de869644dbc",
         "android_client_info": {
-          "package_name": "io.anytype.app"
+          "package_name": "io.aparok.app"
         }
       },
       "oauth_client": [],
@@ -28,7 +28,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:398281119989:android:04b413703d303778644dbc",
         "android_client_info": {
-          "package_name": "io.anytype.app.dev"
+          "package_name": "io.aparok.app.dev"
         }
       },
       "oauth_client": [],
