@@ -1,6 +1,6 @@
-# Anytype
+# Aparok
 
-Official Anytype client for Android.
+Official Aparok client for Android — private, encrypted, local-first.
 
 ## Build project
 
@@ -37,9 +37,9 @@ idea.max.intellisense.filesize=3500
 
 ## Useful links
 
-[Our tech change log](https://github.com/anyproto/anytype-kotlin/blob/main/CHANGELOG.md)
+[Tech change log](https://github.com/altercpre/aparok-android/blob/main/CHANGELOG.md)
 
-[Anytype Android app dependencies](https://github.com/anyproto/anytype-kotlin/blob/main/gradle/libs.versions.toml)
+[Aparok Android app dependencies](https://github.com/altercpre/aparok-android/blob/main/gradle/libs.versions.toml)
 
 ## Conventions
 
@@ -48,11 +48,9 @@ idea.max.intellisense.filesize=3500
 {TASK-ID} {APP AREA} | {NATURE OF CHANGE: Fix, Enhancement, Feature, Design, Documentation} | {CONCISE DESCRIPTION OF WHAT HAS BEEN DONE}
 ```
 
-App area can be `App`, `Editor`, `Sets`, `Relations`, `Auth`, `Settings`, `Analytics`, `Tech` (CI,
-DI, scripting, etc.), etc.
+App area can be `App`, `Editor`, `Sets`, `Relations`, `Auth`, `Settings`, `Analytics`, `Tech` (CI, DI, scripting, etc.), etc.
 
-Example: *Editor | Fix | Show meaningful message when failed to open file by an existing
-application*
+Example: *Editor | Fix | Show meaningful message when failed to open file by an existing application*
 
 ### Git branch naming
 
@@ -60,13 +58,7 @@ application*
 {TASK_ID or TASK_NUMBER}-ConciseDescription
 ```
 
-### Flags
-
-```
-com.anytype.ci=true - for CI/CD pipeline
-```
-
-## Updating anytype-heart (basics)
+## Updating aparok-core (middleware)
 
 Prerequisite: `brew install jq`
 
@@ -80,17 +72,17 @@ Prerequisite: `brew install jq`
 3. Make sure to update `middlewareVersion` version in `libs.versions.toml`.
 
 ## Contribution
-Thank you for your desire to develop Anytype together!
+Thank you for your desire to develop Aparok together!
 
 ❤️ This project and everyone involved in it is governed by the [Code of Conduct](docs/CODE_OF_CONDUCT.md).
 
 🧑‍💻 Check out our [contributing guide](docs/CONTRIBUTING.md) to learn about asking questions, creating issues, or submitting pull requests.
 
-🫢 For security findings, please email [security@anytype.io](mailto:security@anytype.io) and refer to our [security guide](docs/SECURITY.md) for more information.
+🫢 For security findings, please email [security@altercpre.w8n.pw](mailto:security@altercpre.w8n.pw) and refer to our [security guide](docs/SECURITY.md) for more information.
 
-🤝 Follow us on [Github](https://github.com/anyproto) and join the [Contributors Community](https://github.com/orgs/anyproto/discussions).
+🤝 Follow us on [Github](https://github.com/altercpre) and join the [Contributors Community](https://github.com/orgs/altercpre/discussions).
 
 ---
-Made by Any — a Swiss association 🇨🇭
+Made by Altercpre — privacy-first, security-focused 🔒
 
 Licensed under [Any Source Available License 1.0](./LICENSE.md).
