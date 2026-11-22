@@ -24,7 +24,7 @@ class SpanExtensionsTest {
         val text = "Testing Spans"
         val spannable = SpannableString(text)
         spannable.setSpan(
-            URLSpan("https://altercpre.w8n.pw/"),
+            URLSpan("https://github.com/altercpre/aparok-android/releases/latest"),
             0,
             text.lastIndex,
             Spannable.SPAN_EXCLUSIVE_INCLUSIVE

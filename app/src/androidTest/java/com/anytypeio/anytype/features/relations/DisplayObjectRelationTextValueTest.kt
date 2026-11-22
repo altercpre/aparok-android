@@ -345,7 +345,7 @@ class DisplayObjectRelationTextValueTest {
         // SETUP
 
         val relationText = "Url"
-        val valueText = "https://altercpre.w8n.pw"
+        val valueText = "https://github.com/altercpre/aparok-android/releases/latest"
 
         val target = MockDataFactory.randomUuid()
 

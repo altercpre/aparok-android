@@ -25,7 +25,7 @@ class SpanTest {
     fun `should find url span with red color`() {
 
         val source = "Everything was in confusion in the Oblonskys’ house"
-        val link = "www.altercpre.w8n.pw"
+        val link = "www.github.com/altercpre/aparok-android/releases/latest"
         val textColor = 2131
 
         val mark = Markup.Mark.Link(

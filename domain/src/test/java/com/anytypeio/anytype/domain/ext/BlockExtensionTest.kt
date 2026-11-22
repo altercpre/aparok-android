@@ -555,7 +555,7 @@ class BlockExtensionTest {
                 endInclusive = 13
             ),
             type = Block.Content.Text.Mark.Type.LINK,
-            param = "www.altercpre.w8n.pw/test"
+            param = "www.github.com/altercpre/aparok-android/releases/latest/test"
         )
         val block = Block(
             id = MockDataFactory.randomUuid(),

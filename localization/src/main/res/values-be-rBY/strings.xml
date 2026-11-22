@@ -1539,7 +1539,7 @@
     <string name="payments_welcome_subtitle">Вялікі дзякуй за вашу цікаўнасць!</string>
     <string name="payments_welcome_button">Працягнуць</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@altercpre.w8n.pw</string>
+    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
     <string name="membership_support_subject">Справаздача аб памылцы на экране членства - %1$s</string>
     <string name="membership_support_body">        Прывітанне, служба падтрымкі Aparok,\n\n
 

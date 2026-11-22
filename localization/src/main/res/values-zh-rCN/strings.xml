@@ -1521,7 +1521,7 @@
     <string name="payments_welcome_subtitle">为你的好奇心干一杯大的！</string>
     <string name="payments_welcome_button">继续</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@altercpre.w8n.pw</string>
+    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
     <string name="membership_support_subject">会员界面错误报告 - %1$s</string>
     <string name="membership_support_body">您好，Aparok团队，\n\n
 

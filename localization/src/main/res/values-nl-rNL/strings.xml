@@ -1527,7 +1527,7 @@
     <string name="payments_welcome_subtitle">Hulde voor jouw nieuwsgierigheid!</string>
     <string name="payments_welcome_button">Volgende</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@altercpre.w8n.pw</string>
+    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
     <string name="membership_support_subject">Foutrapport Lidmaatschapscherm - %1$s</string>
     <string name="membership_support_body">        Hoi Aparok ondersteuningsteam,\n\n
 

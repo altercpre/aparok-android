@@ -1527,7 +1527,7 @@
     <string name="payments_welcome_subtitle">Merakınız için kocaman bir alkış!</string>
     <string name="payments_welcome_button">Devam et</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@altercpre.w8n.pw</string>
+    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
     <string name="membership_support_subject">Üyelik Ekranı Hata Raporu - %1$s</string>
     <string name="membership_support_body">        Merhaba Aparok Destek Ekibi,\n\n
 

@@ -43,11 +43,12 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="aparok" />
                 <data android:scheme="anytype" />
                 <data android:host="main" />
             </intent-filter>
             <intent-filter
-                android:label="Anytype Invite"
+                android:label="Aparok Invite"
                 android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -57,7 +58,7 @@
                 <data android:host="invite.any.coop" />
             </intent-filter>
             <intent-filter
-                android:label="Anytype 1-1 Chat"
+                android:label="Aparok 1-1 Chat"
                 android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -70,7 +71,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https" android:host="download.altercpre.w8n.pw" />
+                <data android:scheme="https" android:host="github.com" android:pathPrefix="/altercpre/aparok-android/releases" />
             </intent-filter>
             <intent-filter android:label="Link to object" android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
@@ -83,6 +84,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="aparok" />
                 <data android:scheme="anytype" />
                 <data android:host="invite" />
             </intent-filter>
@@ -90,6 +92,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="aparok" />
                 <data android:scheme="anytype" />
                 <data android:host="object" />
             </intent-filter>
@@ -97,6 +100,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="aparok" />
                 <data android:scheme="anytype" />
                 <data android:host="membership" />
             </intent-filter>
@@ -104,6 +108,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="aparok" />
                 <data android:scheme="anytype" />
                 <data android:host="hi" />
             </intent-filter>
@@ -111,6 +116,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="aparok" />
                 <data android:scheme="anytype" />
                 <data android:host="os-widget" />
             </intent-filter>

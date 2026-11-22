@@ -10,7 +10,7 @@ data class SpaceInviteLink(
     val permissions: SpaceMemberPermissions,
     val heldByOwner: Boolean = false
 ) {
-    val scheme = "https://invite.any.coop/$contentId#$fileKey"
+    val scheme = "https://github.com/altercpre/aparok-android/releases/latest?invite=$contentId#$fileKey"
 
     /**
      * A member's device receives a successful InviteGetCurrent response with empty

@@ -78,7 +78,7 @@ Thank you for your desire to develop Aparok together!
 
 🧑‍💻 Check out our [contributing guide](docs/CONTRIBUTING.md) to learn about asking questions, creating issues, or submitting pull requests.
 
-🫢 For security findings, please email [security@altercpre.w8n.pw](mailto:security@altercpre.w8n.pw) and refer to our [security guide](docs/SECURITY.md) for more information.
+🫢 For security findings, please email [security@github.com/altercpre/aparok-android/releases/latest](mailto:security@github.com/altercpre/aparok-android/releases/latest) and refer to our [security guide](docs/SECURITY.md) for more information.
 
 🤝 Follow us on [Github](https://github.com/altercpre) and join the [Contributors Community](https://github.com/orgs/altercpre/discussions).
 

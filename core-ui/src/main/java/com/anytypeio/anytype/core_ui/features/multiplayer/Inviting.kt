@@ -41,7 +41,7 @@ import com.anytypeio.anytype.core_ui.views.Title1
 @DefaultPreviews
 fun ShareInviteLinkCardNotOwnerPreview() {
     ShareInviteLinkCard(
-        link = "https://altercpre.w8n.pw/ibafyrfhfsag6rea3ifffsasssa3ifffsasssga3ifffsasssga3ifffsas",
+        link = "https://github.com/altercpre/aparok-android/releases/latestibafyrfhfsag6rea3ifffsasssa3ifffsasssga3ifffsasssga3ifffsas",
         onShareInviteClicked = {},
         onDeleteLinkClicked = {},
         onShowQrCodeClicked = {},
@@ -54,7 +54,7 @@ fun ShareInviteLinkCardNotOwnerPreview() {
 @DefaultPreviews
 fun ShareInviteLinkCardOwnerPreview() {
     ShareInviteLinkCard(
-        link = "https://altercpre.w8n.pw/ibafyrfhfsag6rea3ifffsasssa3ifffsasssga3ifffsasssga3ifffsas",
+        link = "https://github.com/altercpre/aparok-android/releases/latestibafyrfhfsag6rea3ifffsasssa3ifffsasssga3ifffsasssga3ifffsas",
         onShareInviteClicked = {},
         onDeleteLinkClicked = {},
         onShowQrCodeClicked = {},

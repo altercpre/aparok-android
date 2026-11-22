@@ -180,7 +180,7 @@ class AboutAppFragment : BaseBottomSheetComposeFragment() {
         os: String,
         ethereumKey: String
     ) : String {
-        return "support@altercpre.w8n.pw" +
+        return "support@github.com/altercpre/aparok-android/releases/latest" +
                 "?subject=Support%20request%2C%20Account%20ID%20$account" +
                 "&body=%0D%0A%0D%0ATechnical%20information" +
                 "%0D%0ADevice%3A%20$device" +

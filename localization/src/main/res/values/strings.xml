@@ -83,11 +83,11 @@
     <string name="about_privacy_policy">Privacy Policy</string>
     <string name="about_acknowledgements">Acknowledgments</string>
 
-    <string name="about_what_is_new_link" translatable="false">https://community.altercpre.w8n.pw/android</string>
-    <string name="about_anytype_community_link" translatable="false">https://community.altercpre.w8n.pw</string>
-    <string name="about_help_and_tutorials_link" translatable="false">https://doc.altercpre.w8n.pw</string>
-    <string name="about_terms_and_conditions_link" translatable="false">https://altercpre.w8n.pw/terms_of_use/</string>
-    <string name="about_privacy_policy_link" translatable="false">https://altercpre.w8n.pw/privacy_policy.html</string>
+    <string name="about_what_is_new_link" translatable="false">https://github.com/altercpre/aparok-android/releases</string>
+    <string name="about_anytype_community_link" translatable="false">https://github.com/altercpre/aparok-android/discussions</string>
+    <string name="about_help_and_tutorials_link" translatable="false">https://github.com/altercpre/aparok-android#readme</string>
+    <string name="about_terms_and_conditions_link" translatable="false">https://github.com/altercpre/aparok-android/blob/main/LICENSE.md</string>
+    <string name="about_privacy_policy_link" translatable="false">https://github.com/altercpre/aparok-android/blob/main/docs/SECURITY.md</string>
 
     <string name="about_meta_info">App version: %1$s\nBuild number: %2$d\nLibrary version: %3$s\nAccount\u00A0ID:\u00A0%4$s\nDevice\u00A0ID:\u00A0%5$s\nAnalytics\u00A0ID:\u00A0%6$s</string>
     <string name="about_meta_info_new">App version: %1$s\nBuild number: %2$d\nLibrary version: %3$s\nAccount\u00A0ID:\u00A0%4$s\nDevice\u00A0ID:\u00A0%5$s\nAnalytics\u00A0ID:\u00A0%6$s\nEthereum key\u00A0ID:\u00A0%7$s</string>
@@ -1853,7 +1853,7 @@
     <string name="payments_welcome_button">Continue</string>
 
     <!-- Membership Email -->
-    <string name="membership_support_email">support@altercpre.w8n.pw</string>
+    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
     <string name="membership_support_subject">Membership Screen Error Report - %1$s</string>
     <string name="membership_support_body">
         Hi Aparok Support Team,\n\n

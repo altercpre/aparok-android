@@ -51,7 +51,7 @@ class ObjectWrapperExtensionsKtTest {
 
     lateinit var fieldParser: FieldParser
 
-    val URL = "altercpre.w8n.pw/"
+    val URL = "github.com/altercpre/aparok-android/releases/latest/"
 
     @Before
     fun before() {

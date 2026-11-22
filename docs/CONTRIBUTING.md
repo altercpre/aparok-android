@@ -27,7 +27,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 
 This project and everyone participating in it is governed by the
 [Code of Conduct](CODE_OF_CONDUCT.md).
-By participating, you are expected to uphold this code. Please report unacceptable behavior to [support@altercpre.w8n.pw](mailto:support@altercpre.w8n.pw).
+By participating, you are expected to uphold this code. Please report unacceptable behavior to [support@github.com/altercpre/aparok-android/releases/latest](mailto:support@github.com/altercpre/aparok-android/releases/latest).
 
 ## Preferred Languages
 
@@ -35,9 +35,9 @@ We prefer all communications to be in English.
 
 ## I Have a Question
 
-> Here on GitHub, we're discussing everything related to building Anytype. If you have any questions about how to use Anytype, please join our [community](https://community.altercpre.w8n.pw) or contact us via [support@altercpre.w8n.pw](mailto:support@altercpre.w8n.pw).
+> Here on GitHub, we're discussing everything related to building Anytype. If you have any questions about how to use Anytype, please join our [community](https://github.com/altercpre/aparok-android/discussions) or contact us via [support@github.com/altercpre/aparok-android/releases/latest](mailto:support@github.com/altercpre/aparok-android/releases/latest).
 >
-> If you want to ask a technical question, we assume that you have read the project's [README](../README.md) and our [tech documentation](https://tech.altercpre.w8n.pw).
+> If you want to ask a technical question, we assume that you have read the project's [README](../README.md) and our [tech documentation](https://tech.github.com/altercpre/aparok-android/releases/latest).
 
 Before you ask a question, it is best to look into our [Contributors Community](https://github.com/orgs/anyproto/discussions). In case you have found a suitable topic and still need clarification, you can write a comment there.
 
@@ -61,11 +61,11 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 
 - Make sure that you are using the latest version.
 - Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (If you are looking for support, you might want to check [this section](#i-have-a-question)).
-- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](issues?q=label%3Abug) or in [existing bug reports](https://community.altercpre.w8n.pw/c/bug-reports/l/latest?board=default) created by users.
+- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](issues?q=label%3Abug) or in [existing bug reports](https://github.com/altercpre/aparok-android/discussions/c/bug-reports/l/latest?board=default) created by users.
 
 #### How Do I Submit a Good Bug Report?
 
-> You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to [security@altercpre.w8n.pw](mailto:security@altercpre.w8n.pw) (please see [SECURITY.md](SECURITY.md) for details).
+> You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to [security@github.com/altercpre/aparok-android/releases/latest](mailto:security@github.com/altercpre/aparok-android/releases/latest) (please see [SECURITY.md](SECURITY.md) for details).
 
 If you run into an issue with the project:
 
@@ -86,7 +86,7 @@ Once it's filed:
 
 - Make sure that you are using the latest version.
 - If you are looking for support, you might want to check [this section](#i-have-a-question).
-- To see if other users already requested something similar you are suggesting, check the [tracker](issues?q=label%3Aenhancement) or [feature requests](https://community.altercpre.w8n.pw/c/feature-requests/l/latest?board=default) created by users.
+- To see if other users already requested something similar you are suggesting, check the [tracker](issues?q=label%3Aenhancement) or [feature requests](https://github.com/altercpre/aparok-android/discussions/c/feature-requests/l/latest?board=default) created by users.
 
 #### How Do I Submit a Good Enhancement Suggestion?
 
@@ -98,7 +98,7 @@ Enhancement suggestions are tracked as [GitHub issues](/issues).
 
 ### Reporting Security Issues
 
-You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to [security@altercpre.w8n.pw](mailto:security@altercpre.w8n.pw) (please see [SECURITY.md](SECURITY.md) for details).
+You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to [security@github.com/altercpre/aparok-android/releases/latest](mailto:security@github.com/altercpre/aparok-android/releases/latest) (please see [SECURITY.md](SECURITY.md) for details).
 
 ### Contributing Code
 When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license. Our bot will ask you to accept the [Contributor License Agreement](https://github.com/altercpre/open/blob/main/templates/CLA.md) before we can accept the pull request.

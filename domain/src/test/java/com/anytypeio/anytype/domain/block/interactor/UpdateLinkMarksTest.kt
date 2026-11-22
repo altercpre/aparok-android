@@ -44,7 +44,7 @@ class UpdateLinkMarksTest {
 
             val newMark = Block.Content.Text.Mark(
                 range = IntRange(4, 20),
-                param = "wwww.altercpre.w8n.pw",
+                param = "wwww.github.com/altercpre/aparok-android/releases/latest",
                 type = Block.Content.Text.Mark.Type.LINK
             )
 
@@ -56,7 +56,7 @@ class UpdateLinkMarksTest {
                 ),
                 Block.Content.Text.Mark(
                     range = IntRange(4, 20),
-                    param = "wwww.altercpre.w8n.pw",
+                    param = "wwww.github.com/altercpre/aparok-android/releases/latest",
                     type = Block.Content.Text.Mark.Type.LINK
                 )
             )
@@ -93,7 +93,7 @@ class UpdateLinkMarksTest {
 
             val newMark = Block.Content.Text.Mark(
                 range = IntRange(25, 35),
-                param = "wwww.altercpre.w8n.pw",
+                param = "wwww.github.com/altercpre/aparok-android/releases/latest",
                 type = Block.Content.Text.Mark.Type.LINK
             )
 
@@ -115,7 +115,7 @@ class UpdateLinkMarksTest {
                 ),
                 Block.Content.Text.Mark(
                     range = IntRange(25, 35),
-                    param = "wwww.altercpre.w8n.pw",
+                    param = "wwww.github.com/altercpre/aparok-android/releases/latest",
                     type = Block.Content.Text.Mark.Type.LINK
                 )
             )
@@ -149,7 +149,7 @@ class UpdateLinkMarksTest {
 
             val newMark = Block.Content.Text.Mark(
                 range = IntRange(25, 35),
-                param = "wwww.altercpre.w8n.pw",
+                param = "wwww.github.com/altercpre/aparok-android/releases/latest",
                 type = Block.Content.Text.Mark.Type.LINK
             )
 
@@ -168,7 +168,7 @@ class UpdateLinkMarksTest {
                 ),
                 Block.Content.Text.Mark(
                     range = IntRange(25, 35),
-                    param = "wwww.altercpre.w8n.pw",
+                    param = "wwww.github.com/altercpre/aparok-android/releases/latest",
                     type = Block.Content.Text.Mark.Type.LINK
                 )
             )
@@ -202,7 +202,7 @@ class UpdateLinkMarksTest {
 
             val newMark = Block.Content.Text.Mark(
                 range = IntRange(6, 16),
-                param = "wwww.altercpre.w8n.pw",
+                param = "wwww.github.com/altercpre/aparok-android/releases/latest",
                 type = Block.Content.Text.Mark.Type.LINK
             )
 
@@ -221,7 +221,7 @@ class UpdateLinkMarksTest {
                 ),
                 Block.Content.Text.Mark(
                     range = IntRange(6, 16),
-                    param = "wwww.altercpre.w8n.pw",
+                    param = "wwww.github.com/altercpre/aparok-android/releases/latest",
                     type = Block.Content.Text.Mark.Type.LINK
                 )
             )

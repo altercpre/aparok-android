@@ -60,7 +60,7 @@ class RelationTextValueViewModelTest {
         // SETUP
         val objectId = MockDataFactory.randomUuid()
         val typeId = MockDataFactory.randomUuid()
-        val urlValue = "https://altercpre.w8n.pw"
+        val urlValue = "https://github.com/altercpre/aparok-android/releases/latest"
 
         val relation = ObjectWrapper.Relation(
             map = mapOf<String, Any?>(
@@ -118,7 +118,7 @@ class RelationTextValueViewModelTest {
         // SETUP
         val objectId = MockDataFactory.randomUuid()
         val typeId = MockDataFactory.randomUuid()
-        val urlValue = "https://altercpre.w8n.pw"
+        val urlValue = "https://github.com/altercpre/aparok-android/releases/latest"
 
         val relation = ObjectWrapper.Relation(
             map = mapOf<String, Any?>(

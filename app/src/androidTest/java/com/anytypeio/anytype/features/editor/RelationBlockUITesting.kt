@@ -181,8 +181,8 @@ class RelationBlockUITesting : EditorTestSetup() {
         val value1 = "Anytype"
         val value2 = 2021.01
         val value3 = "+00000000000"
-        val value4 = "https://altercpre.w8n.pw/"
-        val value5 = "team@altercpre.w8n.pw"
+        val value4 = "https://github.com/altercpre/aparok-android/releases/latest"
+        val value5 = "team@github.com/altercpre/aparok-android/releases/latest"
 
         val customDetails = ObjectViewDetails(
             mapOf(
@@ -339,8 +339,8 @@ class RelationBlockUITesting : EditorTestSetup() {
         val value1 = "Anytype"
         val value2 = "2021"
         val value3 = "+00000000000"
-        val value4 = "https://altercpre.w8n.pw/"
-        val value5 = "team@altercpre.w8n.pw"
+        val value4 = "https://github.com/altercpre/aparok-android/releases/latest"
+        val value5 = "team@github.com/altercpre/aparok-android/releases/latest"
 
         val background1 = ThemeColor.PURPLE
         val background2 = ThemeColor.RED
@@ -786,8 +786,8 @@ class RelationBlockUITesting : EditorTestSetup() {
         val value1 = "Anytype"
         val value2 = "2021"
         val value3 = "+00000000000"
-        val value4 = "https://altercpre.w8n.pw/"
-        val value5 = "team@altercpre.w8n.pw"
+        val value4 = "https://github.com/altercpre/aparok-android/releases/latest"
+        val value5 = "team@github.com/altercpre/aparok-android/releases/latest"
 
         val customDetails = ObjectViewDetails(
             mapOf(
@@ -1002,8 +1002,8 @@ class RelationBlockUITesting : EditorTestSetup() {
         val value1 = "Anytype"
         val value2 = "2021"
         val value3 = "+00000000000"
-        val value4 = "https://altercpre.w8n.pw/"
-        val value5 = "team@altercpre.w8n.pw"
+        val value4 = "https://github.com/altercpre/aparok-android/releases/latest"
+        val value5 = "team@github.com/altercpre/aparok-android/releases/latest"
 
         val customDetails = ObjectViewDetails(
             mapOf(

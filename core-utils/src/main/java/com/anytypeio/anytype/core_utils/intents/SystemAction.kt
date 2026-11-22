@@ -89,7 +89,7 @@ fun Fragment.proceedWithAction(action: SystemAction): Boolean {
 
 fun Intent.createEmailOnlyChooserIntent(context: Context, title: CharSequence): Intent {
     val intents = mutableListOf<Intent>()
-    val placeholderIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "support@altercpre.w8n.pw", null))
+    val placeholderIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "support@github.com/altercpre/aparok-android/releases/latest", null))
     val activities = context.packageManager.queryIntentActivities(placeholderIntent, 0)
 
     for (resolveInfo in activities) {

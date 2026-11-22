@@ -1521,7 +1521,7 @@
     <string name="payments_welcome_subtitle">ご興味をお持ちいただき、ありがとうございます！</string>
     <string name="payments_welcome_button">続行</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@altercpre.w8n.pw</string>
+    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
     <string name="membership_support_subject">メンバーシップ画面エラーレポート - %1$s</string>
     <string name="membership_support_body">        Aparokチーム担当者の方へ\n\n
 

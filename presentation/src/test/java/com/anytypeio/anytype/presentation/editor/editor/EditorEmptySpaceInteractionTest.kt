@@ -669,7 +669,7 @@ class EditorEmptySpaceInteractionTest : EditorPresentationTestSetup() {
 
         val created = StubParagraph(text = "")
 
-        val url = "https://altercpre.w8n.pw"
+        val url = "https://github.com/altercpre/aparok-android/releases/latest"
 
         stubInterceptEvents()
         stubOpenDocument(doc)
@@ -733,7 +733,7 @@ class EditorEmptySpaceInteractionTest : EditorPresentationTestSetup() {
 
         val doc = listOf(page, header, title, block)
 
-        val url = "https://altercpre.w8n.pw"
+        val url = "https://github.com/altercpre/aparok-android/releases/latest"
 
         val created = StubParagraph(text = url)
 

@@ -131,7 +131,7 @@ class SpacesStorageFragment : BaseBottomSheetComposeFragment() {
 
         ): String {
         val bodyString = resources.getString(R.string.mail_more_space_body, limit, account, name)
-        return "storage@altercpre.w8n.pw" +
+        return "storage@github.com/altercpre/aparok-android/releases/latest" +
                 "?subject=Get%20more%20storage,%20account%20$account" +
                 "&body=$bodyString"
     }

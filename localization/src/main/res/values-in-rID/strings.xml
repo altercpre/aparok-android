@@ -1521,7 +1521,7 @@
     <string name="payments_welcome_subtitle">Tepuk tangan yang meriah untuk rasa ingin tahu Anda!</string>
     <string name="payments_welcome_button">Lanjutkan</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@altercpre.w8n.pw</string>
+    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
     <string name="membership_support_subject">Laporan Gangguan Tampilan Keanggotaan - %1$s</string>
     <string name="membership_support_body">        Hi Aparok Support Team,\n\n
 

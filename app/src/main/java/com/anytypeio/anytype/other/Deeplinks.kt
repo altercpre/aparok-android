@@ -9,7 +9,7 @@ import com.anytypeio.anytype.domain.multiplayer.SpaceInviteResolver
 import com.anytypeio.anytype.feature_os_widgets.deeplink.OsWidgetDeepLinks
 import timber.log.Timber
 
-const val DEEP_LINK_PATTERN = "anytype://"
+const val DEEP_LINK_PATTERN = "aparok://"
 
 const val DEEP_LINK_INVITE_DOMAIN = "invite.any.coop"
 
@@ -348,7 +348,7 @@ object DefaultSpaceInviteResolver : SpaceInviteResolver {
     }
 
     override fun createInviteLink(contentId: String, encryptionKey: String) : String {
-        return "https://$DEEP_LINK_INVITE_DOMAIN/$contentId#$encryptionKey"
+        return "https://github.com/altercpre/aparok-android/releases/latest?invite=$contentId#$encryptionKey"
     }
 
 
