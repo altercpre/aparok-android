@@ -54,9 +54,6 @@ interface MembershipProvider {
 
         @OptIn(ExperimentalCoroutinesApi::class)
         override fun activeTier(): Flow<TierId> = kotlinx.coroutines.flow.flowOf(TierId(5))
-            }.catch { e -> Timber.e(e) }
-                .flowOn(dispatchers.io)
-        }
 
         private fun buildActiveTierFlow(
             initial: Membership?
