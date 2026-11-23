@@ -13,7 +13,6 @@ import com.anytypeio.anytype.core_models.ui.spaceIcon
 import com.anytypeio.anytype.core_utils.ext.msg
 import com.anytypeio.anytype.core_utils.ui.ViewState
 import com.anytypeio.anytype.domain.base.fold
-import com.anytypeio.anytype.domain.multiplayer.CancelJoinSpaceRequest
 import com.anytypeio.anytype.domain.multiplayer.SpaceViewSubscriptionContainer
 import com.anytypeio.anytype.domain.multiplayer.UserPermissionProvider
 import com.anytypeio.anytype.domain.spaces.DeleteSpace
@@ -35,8 +34,7 @@ class SpaceListViewModel(
     private val spaces: SpaceViewSubscriptionContainer,
     private val permissions: UserPermissionProvider,
     private val urlBuilder: UrlBuilder,
-    private val deleteSpace: DeleteSpace,
-    private val cancelJoinSpaceRequest: CancelJoinSpaceRequest
+    private val deleteSpace: DeleteSpace
 ) : BaseViewModel() {
 
     val warning: MutableStateFlow<Warning> = MutableStateFlow(Warning.None)
@@ -104,24 +102,11 @@ class SpaceListViewModel(
     }
 
     fun onCancelJoinSpaceClicked(view: SpaceListItemView) {
-        warning.value = Warning.CancelSpaceJoinRequest(SpaceId(view.space.targetSpaceId!!))
+        // No-op in sovereign offline mode
     }
 
     fun onCancelJoinRequestAccepted(space: SpaceId) {
-        Timber.d("onCancelJoinRequestClicked")
-        viewModelScope.launch {
-            warning.update { Warning.None }
-            cancelJoinSpaceRequest.async(space).fold(
-                onSuccess = {
-                    Timber.d("Space deleted successfully")
-                },
-                onFailure = { e ->
-                    Timber.e(e, "Error while deleting space").also {
-                        sendToast(e.msg())
-                    }
-                }
-            )
-        }
+        // No-op in sovereign offline mode
     }
 
     fun onDeleteSpaceAccepted(space: SpaceId) {
@@ -190,7 +175,6 @@ class SpaceListViewModel(
         private val spaces: SpaceViewSubscriptionContainer,
         private val permissions: UserPermissionProvider,
         private val deleteSpace: DeleteSpace,
-        private val cancelJoinSpaceRequest: CancelJoinSpaceRequest,
         private val urlBuilder: UrlBuilder
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
@@ -200,8 +184,7 @@ class SpaceListViewModel(
             spaces = spaces,
             deleteSpace = deleteSpace,
             permissions = permissions,
-            urlBuilder = urlBuilder,
-            cancelJoinSpaceRequest = cancelJoinSpaceRequest
+            urlBuilder = urlBuilder
         ) as T
     }
 }
