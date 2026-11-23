@@ -168,8 +168,8 @@ class AndroidApplication : Application(), HasComponentDependencies, SingletonIma
 
     companion object {
         const val NOTIFICATION_CHANNEL_ID = "anytype_notification_channel"
-        const val NOTIFICATION_CHANNEL_NAME = "Local Anytype notifications"
-        const val NOTIFICATION_CHANNEL_DESCRIPTION = "Important notifications from Anytype, including collaboration events in multiplayer mode"
+        const val NOTIFICATION_CHANNEL_NAME = "Local Aparok notifications"
+        const val NOTIFICATION_CHANNEL_DESCRIPTION = "Important notifications from Aparok"
     }
 
     object SignalHandler {

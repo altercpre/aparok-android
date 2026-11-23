@@ -1841,7 +1841,7 @@
     <string name="profile_qr_code_button">Mein QR-Code</string>
     <string name="profile_qr_share_button">Teilen</string>
     <string name="profile_qr_copy_button">Link kopieren</string>
-    <string name="profile_qr_circular_text">CONNECT ME AT ANYTYPE </string>
+    <string name="profile_qr_circular_text">CONNECT ME AT APAROK </string>
     <string name="profile_qr_link_copied">Link in die Zwischenablage kopiert</string>
     <string name="object_type_add_property_screen_title">Eigenschaft hinzufügen</string>
     <string name="object_type_add_property_screen_create">Eigenschaft ‚%1$s‘ erstellen</string>

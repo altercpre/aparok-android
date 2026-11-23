@@ -1828,7 +1828,7 @@
     <string name="profile_qr_code_button">Kode QR-ku</string>
     <string name="profile_qr_share_button">Bagikan</string>
     <string name="profile_qr_copy_button">Salin tautan</string>
-    <string name="profile_qr_circular_text">CONNECT ME AT ANYTYPE </string>
+    <string name="profile_qr_circular_text">CONNECT ME AT APAROK </string>
     <string name="profile_qr_link_copied">Tautan disalin ke papan kerani</string>
     <string name="object_type_add_property_screen_title">Tambahkan atribut</string>
     <string name="object_type_add_property_screen_create">Buat atribut \'%1$s\'</string>

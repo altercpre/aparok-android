@@ -1828,7 +1828,7 @@
     <string name="profile_qr_code_button">My QR code</string>
     <string name="profile_qr_share_button">共有</string>
     <string name="profile_qr_copy_button">リンクをコピー</string>
-    <string name="profile_qr_circular_text">CONNECT ME AT ANYTYPE </string>
+    <string name="profile_qr_circular_text">CONNECT ME AT APAROK </string>
     <string name="profile_qr_link_copied">Link copied to clipboard</string>
     <string name="object_type_add_property_screen_title">プロパティを追加</string>
     <string name="object_type_add_property_screen_create">プロパティ「%1$s」を作成</string>

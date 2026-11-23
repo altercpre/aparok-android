@@ -1841,7 +1841,7 @@
     <string name="profile_qr_code_button">Karekodum</string>
     <string name="profile_qr_share_button">Paylaş</string>
     <string name="profile_qr_copy_button">Bağlantıyı kopyala</string>
-    <string name="profile_qr_circular_text">BNEİMLE ANYTYPE ÜZERİNDEN BAĞLANTI KUR </string>
+    <string name="profile_qr_circular_text">BENİMLE APAROK ÜZERİNDEN BAĞLANTI KUR </string>
     <string name="profile_qr_link_copied">Bağlantı panoya kopyalandı</string>
     <string name="object_type_add_property_screen_title">Özellik ekle</string>
     <string name="object_type_add_property_screen_create">\'%1$s\' özelliğini oluştur</string>

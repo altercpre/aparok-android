@@ -20,7 +20,7 @@
         android:imeOptions="actionDone"
         android:textColorHint="@color/text_tertiary"
         app:layout_goneMarginEnd="@dimen/dp_20"
-        tools:text="Anytype is a next generation software that breaks down barriers between applications, gives back privacy and data ownership to users."
+        tools:text="Aparok is a private, sovereign, local-first workspace."
         tools:visibility="visible" />
 
 </FrameLayout>

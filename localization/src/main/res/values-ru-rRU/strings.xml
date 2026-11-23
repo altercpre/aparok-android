@@ -1867,7 +1867,7 @@
     <string name="profile_qr_code_button">Мой QR-код</string>
     <string name="profile_qr_share_button">Поделиться</string>
     <string name="profile_qr_copy_button">Скопировать ссылку</string>
-    <string name="profile_qr_circular_text">СВЯЗАТЬСЯ СО МНОЙ В АНИТИПЕ </string>
+    <string name="profile_qr_circular_text">СВЯЗАТЬСЯ СО МНОЙ В APAROK </string>
     <string name="profile_qr_link_copied">Ссылка скопирована</string>
     <string name="object_type_add_property_screen_title">Добавить свойство</string>
     <string name="object_type_add_property_screen_create">Создать свойство \"%1$s\'</string>

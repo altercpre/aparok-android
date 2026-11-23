@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Page Icon Widget</string>
     <string name="page_icon_picker_upload_photo">Upload photo</string>
     <string name="content_description_upload_photo">Upload photo image</string>
     <string name="page_icon_picker_pick_emoji_randomly">Pick emoji randomly</string>
