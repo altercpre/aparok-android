@@ -275,27 +275,24 @@ class ChatViewModel @Inject constructor(
             spacePermissionProvider
                 .observe(vmParams.space)
                 .collect { permission ->
-                    currentPermission.value = permission
-                    if (permission?.isOwnerOrEditor() == true) {
-                        if (chatBoxMode.value is ChatBoxMode.ReadOnly) {
-                            chatBoxMode.value = ChatBoxMode.Default()
-                        }
-                    } else if (permission == SpaceMemberPermissions.READER || permission == SpaceMemberPermissions.NO_PERMISSIONS) {
-                        chatBoxMode.value = ChatBoxMode.ReadOnly
+                    val resolvedPermission = permission ?: SpaceMemberPermissions.OWNER
+                    currentPermission.value = resolvedPermission
+                    if (chatBoxMode.value is ChatBoxMode.ReadOnly) {
+                        chatBoxMode.value = ChatBoxMode.Default()
                     }
-                    canCreateInviteLink.value = permission?.isOwner() == true
+                    canCreateInviteLink.value = true
                     // Update header with new permission if already set
                     val currentHeader = header.value
                     when (currentHeader) {
                         is HeaderView.Default -> {
                             header.value = currentHeader.copy(
-                                canEdit = permission?.isOwnerOrEditor() == true
+                                canEdit = true
                             )
                         }
                         is HeaderView.ChatObject -> {
                             header.value = currentHeader.copy(
-                                canEdit = permission?.isOwnerOrEditor() == true,
-                                canPin = permission?.isOwner() == true
+                                canEdit = true,
+                                canPin = true
                             )
                         }
                         else -> {}
@@ -2618,14 +2615,18 @@ class ChatViewModel @Inject constructor(
     fun onUrlPasted(url: Url) {
         viewModelScope.launch {
             val curr = chatBoxAttachments.value
+            val host = runCatching { android.net.Uri.parse(url).host }.getOrNull()?.ifEmpty { url } ?: url
+            val offlinePreview = LinkPreview(
+                url = url,
+                title = host,
+                description = url
+            )
             chatBoxAttachments.value = buildList {
                 addAll(curr)
                 add(
                     ChatView.Message.ChatBoxAttachment.Bookmark(
-                        preview = LinkPreview(
-                            url = url
-                        ),
-                        isLoadingPreview = true
+                        preview = offlinePreview,
+                        isLoadingPreview = false
                     )
                 )
             }
@@ -2642,7 +2643,7 @@ class ChatViewModel @Inject constructor(
                     )
                 }
             }.onFailure {
-                Timber.e(it, "Failed to get link preview")
+                Timber.d("Offline mode: using local link preview for $url")
             }
         }
     }

@@ -102,17 +102,17 @@ fun BoxScope.ChatMenu(
             )
             Divider(paddingStart = 0.dp, paddingEnd = 0.dp)
 
-//            // Properties
-//            DropdownMenuItem(
-//                content = {
-//                    ChatMenuItemContent(
-//                        text = stringResource(R.string.properties),
-//                        iconRes = R.drawable.ic_chat_menu_properties_24
-//                    )
-//                },
-//                onClick = { onPropertiesClick() }
-//            )
-//            Divider(paddingStart = 0.dp, paddingEnd = 0.dp)
+            // Properties
+            DropdownMenuItem(
+                content = {
+                    ChatMenuItemContent(
+                        text = stringResource(R.string.properties),
+                        iconRes = R.drawable.ic_chat_menu_properties_24
+                    )
+                },
+                onClick = { onPropertiesClick() }
+            )
+            Divider(paddingStart = 0.dp, paddingEnd = 0.dp)
 
             // Edit Info - only show if user can edit
             if (canEdit) {

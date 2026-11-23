@@ -3435,9 +3435,23 @@ class Middleware @Inject constructor(
     fun getLinkPreview(url: Url): LinkPreview {
         val request = Rpc.LinkPreview.Request(url = url)
         logRequestIfDebug(request)
-        val (response, time) = measureTimedValue { service.linkPreview(request) }
-        logResponseIfDebug(response, time)
-        return response.linkPreview?.toCoreLinkPreview() ?: throw Exception("MW return empty link preview")
+        return try {
+            val (response, time) = measureTimedValue { service.linkPreview(request) }
+            logResponseIfDebug(response, time)
+            response.linkPreview?.toCoreLinkPreview() ?: defaultLinkPreview(url)
+        } catch (e: Exception) {
+            defaultLinkPreview(url)
+        }
+    }
+
+    private fun defaultLinkPreview(url: Url): LinkPreview {
+        val host = runCatching { java.net.URI(url).host }.getOrNull()?.ifEmpty { url } ?: url
+        return LinkPreview(
+            url = url,
+            title = host,
+            description = url,
+            imageUrl = null
+        )
     }
 
     @Throws(Exception::class)

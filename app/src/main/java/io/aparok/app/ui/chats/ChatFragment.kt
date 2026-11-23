@@ -191,14 +191,24 @@ class ChatFragment : Fragment() {
                                 proceedWithAction(action)
                             }
 
-                            url.startsWith(ANYTYPE_PREFIX) || url.startsWith(FILE_PREFIX) -> {
-                                // Unsupported schemes - copy to clipboard directly
-                                proceedWithAction(
-                                    SystemAction.CopyToClipboard(
-                                        plain = url,
-                                        label = "link"
+                            url.startsWith("aparok://") || url.startsWith(ANYTYPE_PREFIX) || url.startsWith(FILE_PREFIX) -> {
+                                val uri = runCatching { android.net.Uri.parse(url) }.getOrNull()
+                                val objectId = uri?.getQueryParameter("objectId") ?: uri?.lastPathSegment
+                                val spaceId = uri?.getQueryParameter("spaceId")
+                                if (!objectId.isNullOrEmpty() && (uri?.host == "object" || url.contains("/object/"))) {
+                                    val nav = Navigation.OpenObject(
+                                        id = objectId,
+                                        spaceId = spaceId ?: vm.vmParams.space.id
                                     )
-                                )
+                                    proceedWithOpenObjectNavigation(nav)
+                                } else {
+                                    proceedWithAction(
+                                        SystemAction.CopyToClipboard(
+                                            plain = url,
+                                            label = "link"
+                                        )
+                                    )
+                                }
                             }
 
                             else -> {
