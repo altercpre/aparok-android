@@ -37,4 +37,4 @@ jobs:
         run: ./gradlew :app:compileReleaseKotlin --no-daemon
 
       - name: Run Sovereign Unit Tests
-        run: ./gradlew :app:testReleaseUnitTest --tests "com.anytypeio.anytype.offline.SovereignOfflineMatrixTest" --tests "com.anytypeio.anytype.security.AparokEncryptionManagerTest" --tests "com.anytypeio.anytype.storage.AparokStorageManagerTest" --tests "com.anytypeio.anytype.backup.AparokBackupManagerTest" --no-daemon
+        run: ./gradlew :app:testDebugUnitTest --tests "io.aparok.app.offline.SovereignOfflineMatrixTest" --tests "io.aparok.app.security.AparokEncryptionManagerTest" --tests "io.aparok.app.storage.AparokStorageManagerTest" --tests "io.aparok.app.backup.AparokBackupManagerTest" --no-daemon

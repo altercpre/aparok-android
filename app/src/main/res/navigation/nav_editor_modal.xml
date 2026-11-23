@@ -7,12 +7,12 @@
 
     <dialog
         android:id="@+id/editorModalScreen"
-        android:name="com.anytypeio.anytype.ui.editor.EditorModalFragment"
+        android:name="io.aparok.app.ui.editor.EditorModalFragment"
         android:label="EditorModalFragment" />
 
     <fragment
         android:id="@+id/pageScreen"
-        android:name="com.anytypeio.anytype.ui.editor.EditorFragment"
+        android:name="io.aparok.app.ui.editor.EditorFragment"
         android:label="Page screen"
         tools:layout="@layout/fragment_editor">
         <action
@@ -32,27 +32,27 @@
     </fragment>
     <dialog
         android:id="@+id/objectRelationListScreen"
-        android:name="com.anytypeio.anytype.ui.primitives.ObjectFieldsFragment"
+        android:name="io.aparok.app.ui.primitives.ObjectFieldsFragment"
         android:label="Object-Relation-List-Screen" />
     <dialog
         android:id="@+id/objectIconPickerScreen"
-        android:name="com.anytypeio.anytype.ui.editor.modals.ObjectIconPickerFragment"
+        android:name="io.aparok.app.ui.editor.modals.ObjectIconPickerFragment"
         android:label="Object-Icon-Picker-Screen" />
     <dialog
         android:id="@+id/objectMenuScreen"
-        android:name="com.anytypeio.anytype.ui.editor.sheets.ObjectMenuFragment"
+        android:name="io.aparok.app.ui.editor.sheets.ObjectMenuFragment"
         android:label="Object-Menu-Screen" />
     <dialog
         android:id="@+id/objectCoverScreen"
-        android:name="com.anytypeio.anytype.ui.editor.cover.SelectCoverObjectFragment"
+        android:name="io.aparok.app.ui.editor.cover.SelectCoverObjectFragment"
         android:label="Object-Cover-Screen" />
     <dialog
         android:id="@+id/objectCoverUnsplashScreen"
-        android:name="com.anytypeio.anytype.ui.editor.cover.ObjectUnsplashFragment"
+        android:name="io.aparok.app.ui.editor.cover.ObjectUnsplashFragment"
         android:label="Object-Cover-Unsplash-Screen" />
     <dialog
         android:id="@+id/relationAddToObjectBlockFragment"
-        android:name="com.anytypeio.anytype.ui.relations.RelationAddToObjectBlockFragment"
+        android:name="io.aparok.app.ui.relations.RelationAddToObjectBlockFragment"
         android:label="RelationAddToObjectBlockFragment">
         <action
             android:id="@+id/action_relationAddToObjectBlockFragment_to_relationCreateFromScratchForObjectBlockFragment"
@@ -64,16 +64,16 @@
     </dialog>
     <dialog
         android:id="@+id/relationCreateFromScratchForObjectBlockFragment"
-        android:name="com.anytypeio.anytype.ui.relations.RelationCreateFromScratchForObjectBlockFragment"
+        android:name="io.aparok.app.ui.relations.RelationCreateFromScratchForObjectBlockFragment"
         android:label="RelationCreateFromScratchForObjectBlockFragment" />
     <dialog
         android:id="@+id/versionHistoryScreen"
-        android:name="com.anytypeio.anytype.ui.history.VersionHistoryFragment"
+        android:name="io.aparok.app.ui.history.VersionHistoryFragment"
         android:label="Object-Version_history-Screen"/>
 
     <dialog
         android:id="@+id/objectValueScreen"
-        android:name="com.anytypeio.anytype.ui.relations.value.ObjectValueFragment"
+        android:name="io.aparok.app.ui.relations.value.ObjectValueFragment"
         android:label="Relation-Object-Value-Screen" />
 
     <include app:graph="@navigation/nav_relations" />

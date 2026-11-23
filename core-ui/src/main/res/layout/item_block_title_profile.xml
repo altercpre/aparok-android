@@ -53,7 +53,7 @@
             tools:text="S" />
     </FrameLayout>
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TextInputWidget
+    <io.aparok.app.core_ui.widgets.text.TextInputWidget
         android:id="@+id/title"
         style="@style/BlockTitleContentStyle"
         android:layout_width="0dp"

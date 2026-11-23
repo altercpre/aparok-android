@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonPrimaryLarge
+    <io.aparok.app.core_ui.views.ButtonPrimaryLarge
         android:id="@+id/btnSelectTemplate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

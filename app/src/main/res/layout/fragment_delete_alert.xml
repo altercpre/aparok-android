@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="com.anytypeio.anytype.ui.dashboard.DeleteAlertFragment">
+    tools:context="io.aparok.app.ui.dashboard.DeleteAlertFragment">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -35,7 +35,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp">
 
-        <com.anytypeio.anytype.core_ui.views.ButtonSecondaryLarge
+        <io.aparok.app.core_ui.views.ButtonSecondaryLarge
             android:id="@+id/btnCancel"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -44,7 +44,7 @@
             android:gravity="center"
             android:text="@string/cancel" />
 
-        <com.anytypeio.anytype.core_ui.views.ButtonWarningLarge
+        <io.aparok.app.core_ui.views.ButtonWarningLarge
             android:id="@+id/btnDelete"
             android:layout_width="0dp"
             android:layout_height="match_parent"

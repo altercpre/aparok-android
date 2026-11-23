@@ -50,7 +50,7 @@
         app:barrierMargin="-8dp"
         app:constraint_referenced_ids="addNewButton,addNewIconButton" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonPrimaryXSmall
+    <io.aparok.app.core_ui.views.ButtonPrimaryXSmall
         android:id="@+id/addNewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonPrimarySmallIcon
+    <io.aparok.app.core_ui.views.ButtonPrimarySmallIcon
         android:id="@+id/addNewIconButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

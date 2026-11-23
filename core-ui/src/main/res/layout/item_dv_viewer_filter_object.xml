@@ -15,7 +15,7 @@
         app:layout_constraintStart_toEndOf="@+id/iconRemoveObject"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.anytypeio.anytype.core_ui.widgets.RelationFormatIconWidget
+        <io.aparok.app.core_ui.widgets.RelationFormatIconWidget
             android:id="@+id/iconFormat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
         tools:text="Contains" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+    <io.aparok.app.core_ui.widgets.ObjectIconWidget
         android:id="@+id/objectIcon"
         style="@style/ObjectIcon15Style"
         android:layout_width="18dp"

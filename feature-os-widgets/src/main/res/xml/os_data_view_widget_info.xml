@@ -13,5 +13,5 @@
     android:initialLayout="@layout/os_widget_loading"
     android:previewImage="@drawable/os_widget_data_view_preview"
     android:description="@string/os_widget_data_view_description"
-    android:configure="com.anytypeio.anytype.ui.oswidgets.DataViewWidgetConfigActivity"
+    android:configure="io.aparok.app.ui.oswidgets.DataViewWidgetConfigActivity"
     android:updatePeriodMillis="1800000" />

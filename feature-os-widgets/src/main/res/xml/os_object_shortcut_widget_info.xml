@@ -13,5 +13,5 @@
     android:initialLayout="@layout/os_widget_loading"
     android:previewImage="@drawable/os_widget_object_shortcut_preview"
     android:description="@string/os_widget_object_shortcut_description"
-    android:configure="com.anytypeio.anytype.ui.oswidgets.ObjectShortcutWidgetConfigActivity"
+    android:configure="io.aparok.app.ui.oswidgets.ObjectShortcutWidgetConfigActivity"
     android:updatePeriodMillis="86400000" />

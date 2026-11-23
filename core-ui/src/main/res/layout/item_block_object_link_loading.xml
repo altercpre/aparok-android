@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:paddingStart="@dimen/dp_8"
     android:paddingEnd="8dp"
-    tools:context="com.anytypeio.anytype.core_ui.features.editor.holders.other.LinkToObjectLoading">
+    tools:context="io.aparok.app.core_ui.features.editor.holders.other.LinkToObjectLoading">
 
     <LinearLayout
         android:id="@+id/container"

@@ -6,7 +6,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.anytypeio.anytype.ui.dashboard.DashboardMnemonicReminderDialog">
+    tools:context="io.aparok.app.ui.dashboard.DashboardMnemonicReminderDialog">
 
     <ImageView
         android:id="@+id/drag"
@@ -67,7 +67,7 @@
 
         tools:text="@string/keychain_mock" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondaryLarge
+    <io.aparok.app.core_ui.views.ButtonSecondaryLarge
         android:id="@+id/btnCopy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

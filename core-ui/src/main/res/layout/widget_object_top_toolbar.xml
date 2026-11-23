@@ -33,7 +33,7 @@
         android:elevation="2dp"
         tools:targetApi="28">
 
-        <com.anytypeio.anytype.core_ui.widgets.StatusBadgeWidget
+        <io.aparok.app.core_ui.widgets.StatusBadgeWidget
             android:id="@+id/statusBadge"
             android:layout_width="28dp"
             android:layout_height="28dp"
@@ -61,7 +61,7 @@
             tools:targetApi="28"
             tools:visibility="gone">
 
-            <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+            <io.aparok.app.core_ui.widgets.ObjectIconWidget
                 android:id="@+id/ivTopToolbarIcon"
                 android:layout_width="18dp"
                 android:layout_height="18dp"

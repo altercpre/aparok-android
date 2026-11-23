@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+    <io.aparok.app.core_ui.widgets.ObjectIconWidget
         android:id="@+id/objectIconWidget"
         android:layout_width="48dp"
         android:layout_height="48dp"

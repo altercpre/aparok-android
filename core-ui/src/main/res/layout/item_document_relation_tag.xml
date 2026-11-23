@@ -45,7 +45,7 @@
         tools:text="@string/default_text_placeholder"
         tools:visibility="gone" />
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TagWidget
+    <io.aparok.app.core_ui.widgets.text.TagWidget
         android:id="@+id/tag0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
         tools:text="S"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TagWidget
+    <io.aparok.app.core_ui.widgets.text.TagWidget
         android:id="@+id/tag1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         tools:text="T"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TagWidget
+    <io.aparok.app.core_ui.widgets.text.TagWidget
         android:id="@+id/tag2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
         tools:text="M"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TagWidget
+    <io.aparok.app.core_ui.widgets.text.TagWidget
         android:id="@+id/tag3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
         tools:text="U"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TagWidget
+    <io.aparok.app.core_ui.widgets.text.TagWidget
         android:id="@+id/tag4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
         tools:text="Y"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TagWidget
+    <io.aparok.app.core_ui.widgets.text.TagWidget
         android:id="@+id/tag5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondaryLarge
+    <io.aparok.app.core_ui.views.ButtonSecondaryLarge
         android:id="@+id/cancelScrollAndMove"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -11,7 +11,7 @@
         android:layout_weight="1"
         android:text="@string/cancel" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonPrimaryLarge
+    <io.aparok.app.core_ui.views.ButtonPrimaryLarge
         android:id="@+id/applyScrollAndMove"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

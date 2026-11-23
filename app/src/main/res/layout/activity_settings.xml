@@ -34,7 +34,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment"
-            android:name="com.anytypeio.anytype.ui.settings.system.PreferenceFragment"
+            android:name="io.aparok.app.ui.settings.system.PreferenceFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />

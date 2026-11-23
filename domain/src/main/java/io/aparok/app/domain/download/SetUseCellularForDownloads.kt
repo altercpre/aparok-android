@@ -1,0 +1,16 @@
+package io.aparok.app.domain.download
+
+import io.aparok.app.domain.base.AppCoroutineDispatchers
+import io.aparok.app.domain.base.ResultInteractor
+import io.aparok.app.domain.config.UserSettingsRepository
+import javax.inject.Inject
+
+class SetUseCellularForDownloads @Inject constructor(
+    private val settings: UserSettingsRepository,
+    dispatchers: AppCoroutineDispatchers
+) : ResultInteractor<Boolean, Unit>(dispatchers.io) {
+
+    override suspend fun doWork(params: Boolean) {
+        settings.setUseCellularForDownloads(params)
+    }
+}

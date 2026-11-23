@@ -27,7 +27,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.anytypeio.anytype.core_ui.views.ButtonPrimaryLarge
+        <io.aparok.app.core_ui.views.ButtonPrimaryLarge
             android:id="@+id/createBookmarkButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/urlInput" />
 
-        <com.anytypeio.anytype.core_ui.views.ButtonSecondaryLarge
+        <io.aparok.app.core_ui.views.ButtonSecondaryLarge
             android:id="@+id/cancelBookmarkButton"
             android:layout_width="0dp"
             android:layout_height="@dimen/auth_default_button_height"

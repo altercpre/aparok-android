@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="68dp">
 
-        <com.anytypeio.anytype.core_ui.views.ButtonPrimaryLarge
+        <io.aparok.app.core_ui.views.ButtonPrimaryLarge
             android:id="@+id/btnAction"
             android:layout_width="match_parent"
             android:layout_gravity="center_vertical"

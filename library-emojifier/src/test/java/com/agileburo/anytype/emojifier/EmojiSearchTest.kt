@@ -1,6 +1,6 @@
 package com.agileburo.anytype.emojifier
 
-import com.anytypeio.anytype.emojifier.Emojifier
+import io.aparok.app.emojifier.Emojifier
 import org.junit.Test
 
 class EmojiSearchTest {

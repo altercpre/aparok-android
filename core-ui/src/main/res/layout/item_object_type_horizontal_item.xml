@@ -6,7 +6,7 @@
     android:layout_width="76dp"
     android:layout_height="wrap_content">
 
-    <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+    <io.aparok.app.core_ui.widgets.ObjectIconWidget
         android:id="@+id/icon"
         android:layout_width="52dp"
         android:layout_height="52dp"

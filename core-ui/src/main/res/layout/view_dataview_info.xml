@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="190dp"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.anytypeio.anytype.core_ui.widgets.toolbar.DataViewInfo">
+    tools:context="io.aparok.app.core_ui.widgets.toolbar.DataViewInfo">
 
     <TextView
         android:id="@+id/title"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondarySmall
+    <io.aparok.app.core_ui.views.ButtonSecondarySmall
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

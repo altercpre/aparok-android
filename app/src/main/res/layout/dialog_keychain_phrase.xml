@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/subtitle"
         tools:text="@string/keychain_mock" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondaryLarge
+    <io.aparok.app.core_ui.views.ButtonSecondaryLarge
         android:id="@+id/btnCopy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

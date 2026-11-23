@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.anytypeio.anytype.core_ui.features.editor.decoration.EditorDecorationContainer
+    <io.aparok.app.core_ui.features.editor.decoration.EditorDecorationContainer
         android:id="@+id/decorationContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -42,7 +42,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/default_text_placeholder" />
 
-        <com.anytypeio.anytype.core_ui.widgets.RelationObjectItem
+        <io.aparok.app.core_ui.widgets.RelationObjectItem
             android:id="@+id/obj0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:visibility="visible" />
 
-        <com.anytypeio.anytype.core_ui.widgets.RelationObjectItem
+        <io.aparok.app.core_ui.widgets.RelationObjectItem
             android:id="@+id/obj1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
             app:layout_constraintTop_toTopOf="@+id/obj0"
             tools:visibility="visible" />
 
-        <com.anytypeio.anytype.core_ui.widgets.RelationObjectItem
+        <io.aparok.app.core_ui.widgets.RelationObjectItem
             android:id="@+id/obj2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
             app:layout_constraintTop_toTopOf="@+id/obj0"
             tools:visibility="visible" />
 
-        <com.anytypeio.anytype.core_ui.widgets.RelationObjectItem
+        <io.aparok.app.core_ui.widgets.RelationObjectItem
             android:id="@+id/obj3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

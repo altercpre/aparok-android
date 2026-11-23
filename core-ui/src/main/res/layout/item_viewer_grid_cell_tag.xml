@@ -7,7 +7,7 @@
     android:paddingEnd="16dp"
     android:layout_height="match_parent">
 
-    <com.anytypeio.anytype.core_ui.widgets.ListViewRelationTagValueView
+    <io.aparok.app.core_ui.widgets.ListViewRelationTagValueView
         android:id="@+id/tagValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

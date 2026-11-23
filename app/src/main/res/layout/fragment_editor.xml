@@ -8,7 +8,7 @@
     android:background="@color/defaultCanvasColor"
     android:clipChildren="false"
     android:clipToPadding="false"
-    tools:context="com.anytypeio.anytype.ui.editor.EditorFragment">
+    tools:context="io.aparok.app.ui.editor.EditorFragment">
 
     <View
         android:id="@+id/placeholder"
@@ -43,7 +43,7 @@
             android:visibility="gone"
             tools:listitem="@layout/item_block_title" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.ObjectTopToolbar
+        <io.aparok.app.core_ui.widgets.toolbar.ObjectTopToolbar
             android:id="@+id/topToolbar"
             android:layout_width="0dp"
             android:layout_height="44dp"
@@ -86,7 +86,7 @@
                 style="@style/TextView.UXStyle.Body.Callout.Regular"
                 android:textColor="@color/text_secondary" />
 
-            <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+            <io.aparok.app.core_ui.widgets.ObjectIconWidget
                 android:id="@+id/templateBannerIcon"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -103,7 +103,7 @@
 
         </LinearLayout>
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.MultiSelectTopToolbarWidget
+        <io.aparok.app.core_ui.widgets.toolbar.MultiSelectTopToolbarWidget
             android:id="@+id/multiSelectTopToolbar"
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -113,7 +113,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.BlockToolbarWidget
+        <io.aparok.app.core_ui.widgets.toolbar.BlockToolbarWidget
             android:id="@+id/toolbar"
             android:layout_width="0dp"
             android:layout_height="@dimen/default_toolbar_height"
@@ -123,7 +123,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.MarkupColorToolbarWidget
+        <io.aparok.app.core_ui.widgets.toolbar.MarkupColorToolbarWidget
             android:id="@+id/markupColorToolbar"
             android:layout_width="0dp"
             android:layout_height="56dp"
@@ -133,7 +133,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.MarkupToolbarWidget
+        <io.aparok.app.core_ui.widgets.toolbar.MarkupToolbarWidget
             android:id="@+id/markupToolbar"
             android:layout_width="0dp"
             android:layout_height="@dimen/default_toolbar_height"
@@ -143,7 +143,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.MentionToolbar
+        <io.aparok.app.core_ui.widgets.toolbar.MentionToolbar
             android:id="@+id/mentionSuggesterToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:visibility="visible" />
 
-        <com.anytypeio.anytype.core_ui.widgets.ScrollAndMoveHintWidget
+        <io.aparok.app.core_ui.widgets.ScrollAndMoveHintWidget
             android:id="@+id/scrollAndMoveHint"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -164,7 +164,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.anytypeio.anytype.core_ui.widgets.ScrollAndMoveActionWidget
+        <io.aparok.app.core_ui.widgets.ScrollAndMoveActionWidget
             android:id="@+id/scrollAndMoveBottomAction"
             android:layout_width="match_parent"
             android:layout_height="64dp"
@@ -174,7 +174,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.anytypeio.anytype.core_ui.features.editor.slash.SlashWidget
+        <io.aparok.app.core_ui.features.editor.slash.SlashWidget
             android:id="@+id/slashWidget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:visibility="visible" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.SearchToolbarWidget
+        <io.aparok.app.core_ui.widgets.toolbar.SearchToolbarWidget
             android:id="@+id/searchToolbar"
             android:layout_width="0dp"
             android:layout_height="@dimen/default_toolbar_height"
@@ -253,7 +253,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.anytypeio.anytype.core_ui.widgets.BlockActionWidget
+        <io.aparok.app.core_ui.widgets.BlockActionWidget
             android:id="@+id/blockActionToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -266,7 +266,7 @@
             app:cardUseCompatPadding="true"
             app:layout_behavior="@string/bottom_sheet_behavior" />
 
-        <com.anytypeio.anytype.core_ui.widgets.StyleToolbarMainWidget
+        <io.aparok.app.core_ui.widgets.StyleToolbarMainWidget
             android:id="@+id/styleToolbarMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -279,7 +279,7 @@
             app:cardUseCompatPadding="true"
             app:layout_behavior="@string/bottom_sheet_behavior" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.StyleToolbarExtraWidget
+        <io.aparok.app.core_ui.widgets.toolbar.StyleToolbarExtraWidget
             android:id="@+id/styleToolbarOther"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -292,7 +292,7 @@
             app:cardUseCompatPadding="true"
             app:layout_behavior="@string/bottom_sheet_behavior" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.style.StyleColorToolbarWidget
+        <io.aparok.app.core_ui.widgets.toolbar.style.StyleColorToolbarWidget
             android:id="@+id/styleToolbarColors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -305,7 +305,7 @@
             app:cardUseCompatPadding="true"
             app:layout_behavior="@string/bottom_sheet_behavior" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.style.StyleBackgroundToolbarWidget
+        <io.aparok.app.core_ui.widgets.toolbar.style.StyleBackgroundToolbarWidget
             android:id="@+id/styleToolbarBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -318,7 +318,7 @@
             app:cardUseCompatPadding="true"
             app:layout_behavior="@string/bottom_sheet_behavior" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.UndoRedoToolbarWidget
+        <io.aparok.app.core_ui.widgets.toolbar.UndoRedoToolbarWidget
             android:id="@+id/undoRedoToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -330,7 +330,7 @@
             app:cardUseCompatPadding="true"
             app:layout_behavior="@string/bottom_sheet_behavior" />
 
-        <com.anytypeio.anytype.core_ui.widgets.toolbar.table.SimpleTableSettingWidget
+        <io.aparok.app.core_ui.widgets.toolbar.table.SimpleTableSettingWidget
             android:id="@+id/simpleTableWidget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -361,7 +361,7 @@
         android:layout_height="match_parent"
         android:visibility="gone" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonPrimaryLarge
+    <io.aparok.app.core_ui.views.ButtonPrimaryLarge
         android:id="@+id/btnSelectTemplate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

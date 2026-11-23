@@ -9,7 +9,7 @@ android {
         compose true
     }
 
-    namespace 'com.anytypeio.anytype.feature_search'
+    namespace 'io.aparok.app.feature_search'
 
     testOptions {
         unitTests.returnDefaultValues = true

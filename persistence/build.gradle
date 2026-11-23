@@ -40,7 +40,7 @@ dependencies {
 }
 
 android {
-    namespace 'com.anytypeio.anytype.persistence'
+    namespace 'io.aparok.app.persistence'
 }
 
 wire {

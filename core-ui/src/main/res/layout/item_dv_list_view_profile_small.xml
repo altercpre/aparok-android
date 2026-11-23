@@ -33,7 +33,7 @@
         tools:text="Here is Ted on the big screen for the first time — intervi..."
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.dv.ListViewItemRelationGroupWidget
+    <io.aparok.app.core_ui.widgets.dv.ListViewItemRelationGroupWidget
         android:id="@+id/relationsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSecondary"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+    <io.aparok.app.core_ui.widgets.ObjectIconWidget
         android:id="@+id/icon"
         android:layout_width="20dp"
         android:layout_height="20dp"

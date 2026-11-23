@@ -8,7 +8,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/circle"
         android:layout_width="26dp"
         android:layout_height="26dp"

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     style="@style/BlockDataViewRootStyle"
-    tools:context="com.anytypeio.anytype.core_ui.features.editor.holders.dataview.DataViewBlockEmptySourceHolder">
+    tools:context="io.aparok.app.core_ui.features.editor.holders.dataview.DataViewBlockEmptySourceHolder">
 
-    <com.anytypeio.anytype.core_ui.features.editor.decoration.EditorDecorationContainer
+    <io.aparok.app.core_ui.features.editor.decoration.EditorDecorationContainer
         android:id="@+id/decorationContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -47,7 +47,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardName" />
 
-            <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+            <io.aparok.app.core_ui.widgets.ObjectIconWidget
                 android:id="@+id/cardIcon"
                 style="@style/BlockDataViewIconStyle"
                 app:layout_constraintStart_toStartOf="parent"

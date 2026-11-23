@@ -26,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondarySmall
+    <io.aparok.app.core_ui.views.ButtonSecondarySmall
         android:id="@+id/btnToDashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

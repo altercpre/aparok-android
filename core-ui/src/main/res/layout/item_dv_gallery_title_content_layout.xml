@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+    <io.aparok.app.core_ui.widgets.ObjectIconWidget
         android:id="@+id/cardIcon"
         android:layout_width="18dp"
         android:layout_height="18dp"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Virgil Abloh’s Lecture " />
 
-    <com.anytypeio.anytype.core_ui.widgets.dv.GalleryViewContentWidget
+    <io.aparok.app.core_ui.widgets.dv.GalleryViewContentWidget
         android:id="@+id/contentContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -9,5 +9,5 @@ dependencies {
 }
 
 android {
-    namespace 'com.anytypeio.anytype.localization'
+    namespace 'io.aparok.app.localization'
 }

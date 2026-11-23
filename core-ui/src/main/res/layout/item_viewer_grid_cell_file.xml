@@ -7,7 +7,7 @@
     android:paddingStart="16dp"
     android:paddingEnd="16dp">
 
-    <com.anytypeio.anytype.core_ui.widgets.GridCellFileItem
+    <io.aparok.app.core_ui.widgets.GridCellFileItem
         android:id="@+id/file0"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.GridCellFileItem
+    <io.aparok.app.core_ui.widgets.GridCellFileItem
         android:id="@+id/file1"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="@+id/file0"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.GridCellFileItem
+    <io.aparok.app.core_ui.widgets.GridCellFileItem
         android:id="@+id/file2"
         android:layout_width="wrap_content"
         android:layout_height="20dp"

@@ -9,7 +9,7 @@
     android:clickable="true"
     android:focusable="true"
     android:transitionName="checkoutTransition"
-    tools:context="com.anytypeio.anytype.ui.sets.modals.filter.CreateFilterFromInputFieldValueFragment">
+    tools:context="io.aparok.app.ui.sets.modals.filter.CreateFilterFromInputFieldValueFragment">
 
     <View
         android:id="@+id/dragger"
@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvRelationName"
         tools:text="Is" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonPrimaryLarge
+    <io.aparok.app.core_ui.views.ButtonPrimaryLarge
         android:id="@+id/btnBottomAction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

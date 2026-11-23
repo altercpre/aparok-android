@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="com.anytypeio.anytype.core_ui.widgets.toolbar.style.StyleBackgroundToolbarWidget">
+    tools:context="io.aparok.app.core_ui.widgets.toolbar.style.StyleBackgroundToolbarWidget">
 
     <View
         android:id="@+id/dragger"

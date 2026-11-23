@@ -18,5 +18,5 @@ dependencies {
 }
 
 android {
-    namespace 'com.anytypeio.anytype.core_ai'
+    namespace 'io.aparok.app.core_ai'
 }

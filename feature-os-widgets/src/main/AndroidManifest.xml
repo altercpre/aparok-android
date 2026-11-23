@@ -6,7 +6,7 @@
 
     <application>
         <receiver
-            android:name="com.anytypeio.anytype.feature_os_widgets.receiver.OsSpacesWidgetReceiver"
+            android:name="io.aparok.app.feature_os_widgets.receiver.OsSpacesWidgetReceiver"
             android:enabled="false"
             android:exported="true"
             android:label="@string/os_widget_spaces_title">
@@ -19,7 +19,7 @@
         </receiver>
 
         <receiver
-            android:name="com.anytypeio.anytype.feature_os_widgets.receiver.OsCreateObjectWidgetReceiver"
+            android:name="io.aparok.app.feature_os_widgets.receiver.OsCreateObjectWidgetReceiver"
             android:enabled="false"
             android:exported="true"
             android:label="@string/os_widget_create_object_title">
@@ -32,7 +32,7 @@
         </receiver>
 
         <activity
-            android:name="com.anytypeio.anytype.ui.oswidgets.CreateObjectWidgetConfigActivity"
+            android:name="io.aparok.app.ui.oswidgets.CreateObjectWidgetConfigActivity"
             android:enabled="false"
             android:exported="true"
             android:theme="@style/AppTheme">
@@ -42,7 +42,7 @@
         </activity>
 
         <receiver
-            android:name="com.anytypeio.anytype.feature_os_widgets.receiver.OsSpaceShortcutWidgetReceiver"
+            android:name="io.aparok.app.feature_os_widgets.receiver.OsSpaceShortcutWidgetReceiver"
             android:enabled="false"
             android:exported="true"
             android:label="@string/os_widget_space_shortcut_title">
@@ -55,7 +55,7 @@
         </receiver>
 
         <activity
-            android:name="com.anytypeio.anytype.ui.oswidgets.SpaceShortcutWidgetConfigActivity"
+            android:name="io.aparok.app.ui.oswidgets.SpaceShortcutWidgetConfigActivity"
             android:enabled="false"
             android:exported="true"
             android:theme="@style/AppTheme">
@@ -65,7 +65,7 @@
         </activity>
 
         <receiver
-            android:name="com.anytypeio.anytype.feature_os_widgets.receiver.OsObjectShortcutWidgetReceiver"
+            android:name="io.aparok.app.feature_os_widgets.receiver.OsObjectShortcutWidgetReceiver"
             android:enabled="false"
             android:exported="true"
             android:label="@string/os_widget_object_shortcut_title">
@@ -78,7 +78,7 @@
         </receiver>
 
         <activity
-            android:name="com.anytypeio.anytype.ui.oswidgets.ObjectShortcutWidgetConfigActivity"
+            android:name="io.aparok.app.ui.oswidgets.ObjectShortcutWidgetConfigActivity"
             android:enabled="false"
             android:exported="true"
             android:theme="@style/AppTheme">
@@ -88,7 +88,7 @@
         </activity>
 
         <receiver
-            android:name="com.anytypeio.anytype.feature_os_widgets.receiver.OsDataViewWidgetReceiver"
+            android:name="io.aparok.app.feature_os_widgets.receiver.OsDataViewWidgetReceiver"
             android:enabled="false"
             android:exported="true"
             android:label="@string/os_widget_data_view_title">
@@ -101,7 +101,7 @@
         </receiver>
 
         <activity
-            android:name="com.anytypeio.anytype.ui.oswidgets.DataViewWidgetConfigActivity"
+            android:name="io.aparok.app.ui.oswidgets.DataViewWidgetConfigActivity"
             android:enabled="false"
             android:exported="true"
             android:theme="@style/AppTheme">

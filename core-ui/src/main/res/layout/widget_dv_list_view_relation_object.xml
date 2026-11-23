@@ -6,7 +6,7 @@
     android:layout_height="@dimen/dv_list_gallery_item_relation_height"
     android:orientation="horizontal">
 
-    <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+    <io.aparok.app.core_ui.widgets.ObjectIconWidget
         android:id="@+id/objectIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

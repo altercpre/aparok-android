@@ -4,7 +4,7 @@
     android:layout_width="44dp"
     android:layout_height="match_parent">
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/circle"
         android:layout_width="44dp"
         android:layout_height="44dp"

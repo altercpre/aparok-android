@@ -11,9 +11,9 @@
     android:clipToPadding="false"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="com.anytypeio.anytype.ui.sets.ObjectSetFragment">
+    tools:context="io.aparok.app.ui.sets.ObjectSetFragment">
 
-    <com.anytypeio.anytype.core_ui.widgets.dv.scroll.DataviewScrollHost
+    <io.aparok.app.core_ui.widgets.dv.scroll.DataviewScrollHost
         android:id="@+id/scrollHost"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -73,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <com.anytypeio.anytype.core_ui.widgets.dv.GalleryViewWidget
+            <io.aparok.app.core_ui.widgets.dv.GalleryViewWidget
                 android:id="@+id/galleryView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -81,7 +81,7 @@
                 android:paddingBottom="80dp"
                 android:clipToPadding="false" />
 
-            <com.anytypeio.anytype.core_ui.widgets.dv.ListViewWidget
+            <io.aparok.app.core_ui.widgets.dv.ListViewWidget
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -90,7 +90,7 @@
                 android:paddingBottom="80dp"
                 android:clipToPadding="false" />
 
-            <com.anytypeio.anytype.core_ui.widgets.dv.board.BoardViewWidget
+            <io.aparok.app.core_ui.widgets.dv.board.BoardViewWidget
                 android:id="@+id/boardView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -104,15 +104,15 @@
                 android:gravity="center"
                 android:visibility="gone" />
 
-            <com.anytypeio.anytype.core_ui.widgets.toolbar.DataViewInfo
+            <io.aparok.app.core_ui.widgets.toolbar.DataViewInfo
                 android:id="@+id/dataViewInfo"
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
                 android:visibility="invisible" />
         </FrameLayout>
-    </com.anytypeio.anytype.core_ui.widgets.dv.scroll.DataviewScrollHost>
+    </io.aparok.app.core_ui.widgets.dv.scroll.DataviewScrollHost>
 
-    <com.anytypeio.anytype.core_ui.widgets.toolbar.DataViewPaginatorToolbar
+    <io.aparok.app.core_ui.widgets.toolbar.DataViewPaginatorToolbar
         android:id="@+id/paginatorToolbar"
         android:layout_width="0dp"
         android:layout_height="@dimen/default_toolbar_height"
@@ -132,7 +132,7 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:visibility="invisible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.toolbar.ObjectTopToolbar
+    <io.aparok.app.core_ui.widgets.toolbar.ObjectTopToolbar
         android:id="@+id/topToolbar"
         android:layout_width="0dp"
         android:layout_height="44dp"

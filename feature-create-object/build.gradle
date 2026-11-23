@@ -9,7 +9,7 @@ android {
         compose true
     }
 
-    namespace 'com.anytypeio.anytype.feature_create_object'
+    namespace 'io.aparok.app.feature_create_object'
 
     testOptions {
         unitTests.returnDefaultValues = true

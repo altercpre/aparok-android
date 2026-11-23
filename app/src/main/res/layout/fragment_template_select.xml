@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/rounded_dialog_primary"
     android:orientation="vertical"
-    tools:context="com.anytypeio.anytype.ui.templates.TemplateSelectFragment">
+    tools:context="io.aparok.app.ui.templates.TemplateSelectFragment">
 
     <View
         android:id="@+id/dragger"

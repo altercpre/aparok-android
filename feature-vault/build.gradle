@@ -9,7 +9,7 @@ android {
         compose true
     }
 
-    namespace 'com.anytypeio.anytype.feature_vault'
+    namespace 'io.aparok.app.feature_vault'
 
     testOptions {
         unitTests.returnDefaultValues = true

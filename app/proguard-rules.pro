@@ -128,5 +128,5 @@
 # Prevent R8 from merging ComponentDependencies interfaces into their implementor.
 # These interfaces are used as map keys via @ComponentDependenciesKey; merging them
 # collapses distinct Class<?> keys into one, causing ImmutableMap duplicate-key crashes.
--keep,allowobfuscation interface * extends com.anytypeio.anytype.di.common.ComponentDependencies
+-keep,allowobfuscation interface * extends io.aparok.app.di.common.ComponentDependencies
 ##---------------End: proguard configuration for Dagger ComponentDependencies ----------

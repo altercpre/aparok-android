@@ -71,7 +71,7 @@
         android:layout_weight="1"
         tools:listitem="@layout/item_document_relation_default" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ButtonPrimaryNumber
+    <io.aparok.app.core_ui.widgets.ButtonPrimaryNumber
         android:id="@+id/btnBottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,6 +81,6 @@
         tools:visibility="visible"
         app:buttonTitle="@string/add"
         android:visibility="gone">
-    </com.anytypeio.anytype.core_ui.widgets.ButtonPrimaryNumber>
+    </io.aparok.app.core_ui.widgets.ButtonPrimaryNumber>
 
 </LinearLayout>

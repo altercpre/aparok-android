@@ -69,7 +69,7 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+        <io.aparok.app.core_ui.widgets.ObjectIconWidget
             android:id="@+id/objectIconWidget"
             android:layout_width="64dp"
             android:layout_height="80dp"
@@ -83,7 +83,7 @@
             app:layout_constraintTop_toBottomOf="@id/videoContainer"
             tools:src="@drawable/ic_mime_pdf" />
 
-        <com.anytypeio.anytype.core_ui.widgets.text.TextInputWidget
+        <io.aparok.app.core_ui.widgets.text.TextInputWidget
             android:id="@+id/title"
             style="@style/BlockTitleContentStyle"
             android:layout_width="0dp"

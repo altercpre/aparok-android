@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.anytypeio.anytype.core_ui.features.editor.decoration.EditorDecorationContainer
+    <io.aparok.app.core_ui.features.editor.decoration.EditorDecorationContainer
         android:id="@+id/decorationContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -38,7 +38,7 @@
                 android:overScrollMode="never"
                 android:scrollbars="none">
 
-                <com.anytypeio.anytype.core_ui.widgets.text.CodeTextInputWidget
+                <io.aparok.app.core_ui.widgets.text.CodeTextInputWidget
                     android:id="@+id/snippet"
                     style="@style/DefaultCodeBlockContentStyle"
                     android:layout_width="wrap_content"

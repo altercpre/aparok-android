@@ -13,7 +13,7 @@ android {
         viewBinding true
     }
 
-    namespace 'com.anytypeio.anytype.core_utils'
+    namespace 'io.aparok.app.core_utils'
 }
 
 dependencies {

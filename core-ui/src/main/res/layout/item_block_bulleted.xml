@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.anytypeio.anytype.core_ui.features.editor.decoration.EditorDecorationContainer
+    <io.aparok.app.core_ui.features.editor.decoration.EditorDecorationContainer
         android:id="@+id/decorationContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -29,7 +29,7 @@
             android:layout_marginTop="2.5dp"
             android:src="@drawable/ic_bulleted" />
 
-        <com.anytypeio.anytype.core_ui.widgets.text.TextInputWidget
+        <io.aparok.app.core_ui.widgets.text.TextInputWidget
             android:id="@+id/bulletedListContent"
             style="@style/BlockBulletContentStyle"
             android:layout_marginStart="@dimen/default_graphic_container_right_offset"

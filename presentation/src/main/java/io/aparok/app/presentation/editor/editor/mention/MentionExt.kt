@@ -1,0 +1,176 @@
+package io.aparok.app.presentation.editor.editor.mention
+
+import io.aparok.app.core_models.Block
+import io.aparok.app.core_models.ObjectType
+import io.aparok.app.core_models.ObjectWrapper
+import io.aparok.app.core_models.UrlBuilder
+import io.aparok.app.presentation.editor.editor.Markup
+import io.aparok.app.presentation.editor.editor.mention.MentionConst.MENTION_PREFIX
+import io.aparok.app.presentation.editor.editor.mention.MentionConst.MENTION_TITLE_EMPTY
+import io.aparok.app.core_models.ui.objectIcon
+import io.aparok.app.presentation.navigation.DefaultObjectView
+
+fun String.getMentionName(untitled: String): String = if (this.isBlank()) untitled else this
+
+/**
+ * Filter all mentions by text without symbol @
+ *
+ */
+fun List<DefaultObjectView>.filterMentionsBy(text: String): List<DefaultObjectView> {
+    val filter = text.removePrefix(MENTION_PREFIX)
+    return if (filter.isNotEmpty()) this.filter {
+        it.name.contains(
+            filter,
+            ignoreCase = true
+        )
+    } else this
+}
+
+object MentionConst {
+    const val MENTION_PREFIX = "@"
+    const val MENTION_TITLE_EMPTY = "Untitled"
+}
+
+fun Block.Content.Text.Mark.createMentionMarkup(
+    obj: ObjectWrapper.Basic?,
+    urlBuilder: UrlBuilder
+): Markup.Mark? {
+
+    val p = param
+
+    if (p.isNullOrBlank()) return null
+
+    if (obj == null) {
+        return Markup.Mark.Mention.Loading(
+            from = range.first,
+            to = range.last,
+            param = p
+        )
+    }
+
+    if (obj.isDeleted == true) {
+        return Markup.Mark.Mention.Deleted(
+            from = range.first,
+            to = range.last,
+            param = p
+        )
+    }
+
+    val emoji = obj.iconEmoji
+    val image = obj.iconImage
+    val initials = (obj.name ?: MENTION_TITLE_EMPTY).let {
+        if (it.isEmpty()) MENTION_TITLE_EMPTY.first() else it.first()
+    }
+    val isArchived = obj.isArchived == true
+
+    return when (obj.layout) {
+        ObjectType.Layout.BASIC -> createBaseMentionMark(
+            from = range.first,
+            to = range.last,
+            param = p,
+            emoji  = emoji,
+            image = image,
+            urlBuilder = urlBuilder,
+            isArchived = isArchived
+        )
+        ObjectType.Layout.OBJECT_TYPE -> {
+            val objType = ObjectWrapper.Type(map = obj.map)
+            Markup.Mark.Mention.ObjectType(
+                from = range.first,
+                to = range.last,
+                param = p,
+                icon = objType.objectIcon()
+            )
+        }
+        ObjectType.Layout.DATE -> {
+            Markup.Mark.Mention.Date(
+                from = range.first,
+                to = range.last,
+                param = p,
+            )
+        }
+        ObjectType.Layout.PROFILE, ObjectType.Layout.PARTICIPANT -> {
+            if (image.isNullOrBlank()) {
+                Markup.Mark.Mention.Profile.WithInitials(
+                    from = range.first,
+                    to = range.last,
+                    param = p,
+                    initials = initials,
+                    isArchived = isArchived
+                )
+            } else {
+                Markup.Mark.Mention.Profile.WithImage(
+                    from = range.first,
+                    to = range.last,
+                    imageUrl = urlBuilder.thumbnail(image),
+                    param = p,
+                    isArchived = isArchived
+                )
+            }
+        }
+        ObjectType.Layout.TODO -> {
+            if (obj.done == true) {
+                Markup.Mark.Mention.Task.Checked(
+                    from = range.first,
+                    to = range.last,
+                    param = p,
+                    isArchived = isArchived
+                )
+            } else {
+                Markup.Mark.Mention.Task.Unchecked(
+                    from = range.first,
+                    to = range.last,
+                    param = p,
+                    isArchived = isArchived
+                )
+            }
+        }
+        else -> createBaseMentionMark(
+            from = range.first,
+            to = range.last,
+            param = p,
+            emoji  = emoji,
+            image = image,
+            urlBuilder = urlBuilder,
+            isArchived = isArchived
+        )
+    }
+}
+
+private fun createBaseMentionMark(
+    from: Int,
+    to: Int,
+    param: String,
+    emoji: String?,
+    image: String?,
+    urlBuilder: UrlBuilder,
+    isArchived: Boolean
+): Markup.Mark.Mention {
+
+    if (!emoji.isNullOrEmpty()) {
+        return Markup.Mark.Mention.WithEmoji(
+            from = from,
+            to = to,
+            emoji = emoji,
+            param = param,
+            isArchived = isArchived
+        )
+    }
+
+    if (!image.isNullOrBlank()) {
+        return Markup.Mark.Mention.WithImage(
+            from = from,
+            to = to,
+            image = urlBuilder.thumbnail(image),
+            param = param,
+            isArchived = isArchived
+        )
+    }
+
+    return Markup.Mark.Mention.Base(
+        from = from,
+        to = to,
+        param = param,
+        isArchived = isArchived
+    )
+}

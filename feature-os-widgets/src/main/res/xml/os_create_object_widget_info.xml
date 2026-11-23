@@ -13,5 +13,5 @@
     android:initialLayout="@layout/os_widget_loading"
     android:previewImage="@drawable/os_widget_create_object_preview"
     android:description="@string/os_widget_create_object_description"
-    android:configure="com.anytypeio.anytype.ui.oswidgets.CreateObjectWidgetConfigActivity"
+    android:configure="io.aparok.app.ui.oswidgets.CreateObjectWidgetConfigActivity"
     android:updatePeriodMillis="86400000" />

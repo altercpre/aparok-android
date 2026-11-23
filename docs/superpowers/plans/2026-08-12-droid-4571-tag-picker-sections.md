@@ -32,7 +32,7 @@
 Test command used throughout:
 
 ```bash
-./gradlew :presentation:testDebugUnitTest --tests "com.anytypeio.anytype.presentation.relations.value.tagstatus.TagOrStatusValueViewModelTest"
+./gradlew :presentation:testDebugUnitTest --tests "io.aparok.app.presentation.relations.value.tagstatus.TagOrStatusValueViewModelTest"
 ```
 
 Compile check for the UI module:
@@ -308,7 +308,7 @@ In `TagOrStatusCompose.kt`:
 4a. Add imports:
 
 ```kotlin
-import com.anytypeio.anytype.core_ui.foundation.Section
+import io.aparok.app.core_ui.foundation.Section
 ```
 
 4b. Add a private key helper at file scope (below `getTitle`, line 417):
@@ -502,9 +502,9 @@ Add to the test class fields (near line 84):
 Add imports:
 
 ```kotlin
-import com.anytypeio.anytype.core_models.primitives.RelationKey
-import com.anytypeio.anytype.domain.base.Resultat
-import com.anytypeio.anytype.domain.relations.SetRelationOptionOrder
+import io.aparok.app.core_models.primitives.RelationKey
+import io.aparok.app.domain.base.Resultat
+import io.aparok.app.domain.relations.SetRelationOptionOrder
 import org.mockito.kotlin.verifyNoInteractions
 ```
 

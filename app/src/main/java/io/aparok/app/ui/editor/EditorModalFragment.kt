@@ -1,0 +1,67 @@
+package io.aparok.app.ui.editor
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import io.aparok.app.R
+import io.aparok.app.core_models.Id
+import io.aparok.app.core_utils.ext.arg
+import io.aparok.app.core_utils.ext.argInt
+import io.aparok.app.core_utils.ui.BaseBottomSheetFragment
+import io.aparok.app.databinding.MyFragmentContainerBinding
+import io.aparok.app.ui.templates.EditorTemplateFragment
+
+class EditorModalFragment : BaseBottomSheetFragment<MyFragmentContainerBinding>() {
+
+    private val space get() = arg<Id>(ARG_SPACE_ID)
+    private val template get() = arg<Id>(ARG_TEMPLATE_ID)
+    private val templateTypeId get() = arg<Id>(ARG_TEMPLATE_TYPE_ID)
+    private val templateTypeKey get() = arg<Id>(ARG_TEMPLATE_TYPE_KEY)
+    private val screenType get() = argInt(ARG_SCREEN_TYPE)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setStyle(STYLE_NORMAL, R.style.AppBottomSecondarySheetDialogTheme)
+        val editorFragment = EditorTemplateFragment.newInstance(
+            targetTemplateId = template,
+            space = space,
+            targetTypeId = templateTypeId,
+            targetTypeKey = templateTypeKey,
+            screenType = screenType
+        )
+        childFragmentManager.beginTransaction()
+            .add(R.id.fragment_container_view, editorFragment)
+            .commit()
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        skipCollapsed()
+        setFullHeightSheet()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        expand()
+    }
+
+    override fun injectDependencies() {}
+
+    override fun releaseDependencies() {}
+
+    override fun inflateBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): MyFragmentContainerBinding = MyFragmentContainerBinding.inflate(
+        inflater, container, false
+    )
+
+    companion object {
+        const val ARG_TEMPLATE_ID = "arg_template_id"
+        const val ARG_SPACE_ID = "arg_space_id"
+        const val ARG_TEMPLATE_TYPE_ID = "arg_template_object_type"
+        const val ARG_TEMPLATE_TYPE_KEY = "arg_template_object_type_key"
+        const val ARG_SCREEN_TYPE = "arg_screen_type"
+    }
+}

@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondaryXSmall
+    <io.aparok.app.core_ui.views.ButtonSecondaryXSmall
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView21"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondaryXSmall
+    <io.aparok.app.core_ui.views.ButtonSecondaryXSmall
         android:id="@+id/button30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button30" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondarySmall
+    <io.aparok.app.core_ui.views.ButtonSecondarySmall
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondarySmall
+    <io.aparok.app.core_ui.views.ButtonSecondarySmall
         android:id="@+id/button14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button14" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondaryMedium
+    <io.aparok.app.core_ui.views.ButtonSecondaryMedium
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondaryMedium
+    <io.aparok.app.core_ui.views.ButtonSecondaryMedium
         android:id="@+id/button15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button15" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondaryLarge
+    <io.aparok.app.core_ui.views.ButtonSecondaryLarge
         android:id="@+id/button11"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
-    <com.anytypeio.anytype.core_ui.views.ButtonSecondaryLarge
+    <io.aparok.app.core_ui.views.ButtonSecondaryLarge
         android:id="@+id/button16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

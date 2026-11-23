@@ -45,7 +45,7 @@
         tools:text="@string/default_text_placeholder"
         tools:visibility="gone" />
 
-    <com.anytypeio.anytype.core_ui.widgets.RelationObjectItem
+    <io.aparok.app.core_ui.widgets.RelationObjectItem
         android:id="@+id/obj0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.RelationObjectItem
+    <io.aparok.app.core_ui.widgets.RelationObjectItem
         android:id="@+id/obj1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
         app:layout_constraintTop_toTopOf="@+id/obj0"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.RelationObjectItem
+    <io.aparok.app.core_ui.widgets.RelationObjectItem
         android:id="@+id/obj2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toTopOf="@+id/obj0"
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.RelationObjectItem
+    <io.aparok.app.core_ui.widgets.RelationObjectItem
         android:id="@+id/obj3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

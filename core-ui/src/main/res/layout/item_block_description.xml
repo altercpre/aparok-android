@@ -7,7 +7,7 @@
     android:paddingStart="@dimen/default_document_item_padding_start"
     android:paddingEnd="@dimen/default_document_item_padding_end">
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TextInputWidget
+    <io.aparok.app.core_ui.widgets.text.TextInputWidget
         android:id="@+id/tvBlockDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

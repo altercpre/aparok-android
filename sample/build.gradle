@@ -12,7 +12,7 @@ android {
     compileSdk = config.compile_sdk
 
     defaultConfig {
-        applicationId = "com.anytypeio.anytype.sample"
+        applicationId = "io.aparok.app.sample"
         minSdk = config.min_sdk
         targetSdk = config.target_sdk
         versionCode = 1
@@ -37,7 +37,7 @@ android {
         buildConfig = true
     }
 
-    namespace 'com.anytypeio.anytype.sample'
+    namespace 'io.aparok.app.sample'
 }
 
 dependencies {

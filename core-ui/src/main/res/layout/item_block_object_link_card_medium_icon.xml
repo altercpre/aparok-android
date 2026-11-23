@@ -5,9 +5,9 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.anytypeio.anytype.core_ui.features.editor.holders.other.LinkToObjectCardMediumIcon">
+    tools:context="io.aparok.app.core_ui.features.editor.holders.other.LinkToObjectCardMediumIcon">
 
-    <com.anytypeio.anytype.core_ui.features.editor.decoration.EditorDecorationContainer
+    <io.aparok.app.core_ui.features.editor.decoration.EditorDecorationContainer
         android:id="@+id/decorationContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -72,7 +72,7 @@
                 tools:text="Page"
                 tools:visibility="visible" />
 
-            <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+            <io.aparok.app.core_ui.widgets.ObjectIconWidget
                 android:id="@+id/cardIcon"
                 android:layout_width="48dp"
                 android:layout_height="48dp"

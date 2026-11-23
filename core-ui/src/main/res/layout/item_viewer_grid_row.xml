@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dv_grid_cell_description_height">
         
-        <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+        <io.aparok.app.core_ui.widgets.ObjectIconWidget
             android:id="@+id/objectIcon"
             app:imageSize="20dp"
             app:emojiSize="18dp"

@@ -1,0 +1,206 @@
+package io.aparok.app.features.editor
+
+import androidx.core.os.bundleOf
+import androidx.test.espresso.action.ViewActions
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.LargeTest
+import androidx.test.platform.app.InstrumentationRegistry
+import io.aparok.app.R
+import io.aparok.app.core_models.Block
+import io.aparok.app.core_models.CoverType
+import io.aparok.app.core_models.ObjectType
+import io.aparok.app.core_models.ext.content
+import io.aparok.app.features.editor.base.EditorTestSetup
+import io.aparok.app.presentation.MockBlockContentFactory.StubTextContent
+import io.aparok.app.presentation.editor.cover.CoverColor
+import io.aparok.app.core_models.ObjectViewDetails
+import io.aparok.app.core_models.Relations
+import io.aparok.app.test_utils.MockDataFactory
+import io.aparok.app.test_utils.utils.checkHasText
+import io.aparok.app.test_utils.utils.checkIsDisplayed
+import io.aparok.app.test_utils.utils.onItemView
+import io.aparok.app.test_utils.utils.rVMatcher
+import io.aparok.app.ui.editor.EditorFragment
+import com.bartoszlipinski.disableanimationsrule.DisableAnimationsRule
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
+
+@RunWith(AndroidJUnit4::class)
+@LargeTest
+class ProfileTesting : EditorTestSetup() {
+
+    @get:Rule
+    val animationsRule = DisableAnimationsRule()
+
+    private val args = bundleOf(EditorFragment.CTX_KEY to root)
+
+    private val title = Block(
+        id = MockDataFactory.randomUuid(),
+        content = StubTextContent(
+            style = Block.Content.Text.Style.TITLE,
+            text = "Object's layout testing",
+            marks = emptyList()
+        ),
+        children = emptyList(),
+        fields = Block.Fields.empty()
+    )
+
+    private val header = Block(
+        id = MockDataFactory.randomUuid(),
+        content = Block.Content.Layout(
+            type = Block.Content.Layout.Type.HEADER
+        ),
+        fields = Block.Fields.empty(),
+        children = listOf(title.id)
+    )
+
+    val page = Block(
+        id = root,
+        fields = Block.Fields(emptyMap()),
+        content = Block.Content.Smart,
+        children = listOf(header.id)
+    )
+
+    val document = listOf(page, header, title)
+
+    @Before
+    override fun setup() {
+        super.setup()
+    }
+
+    @Test
+    fun shouldRenderProfileLetterAvatarWhenNoImage() {
+
+        // SETUP
+
+        val details = givenBlockDetailsWithOutImage()
+
+        stubInterceptEvents()
+        stubInterceptThreadStatus()
+        stubUpdateText()
+        stubAnalytics()
+        stubOpenDocument(
+            document = document,
+            details = details
+        )
+
+        // TESTING
+
+        launch(args)
+
+
+        R.id.recycler.rVMatcher().apply {
+            onItemView(0, R.id.cover).checkIsDisplayed()
+            onItemView(0, R.id.imageText).checkHasText("O")
+            onItemView(0, R.id.title).checkHasText(title.content<Block.Content.Text>().text)
+        }
+
+        val title = R.id.recycler.rVMatcher().run {
+            onItemView(0, R.id.title)
+        }
+
+
+        title.apply {
+            perform(ViewActions.click())
+            perform(ViewActions.replaceText("FooBar"))
+        }
+
+        R.id.recycler.rVMatcher().apply {
+            onItemView(0, R.id.cover).checkIsDisplayed()
+            onItemView(0, R.id.imageText).checkHasText("F")
+        }
+
+
+        title.apply {
+            perform(ViewActions.click())
+            perform(ViewActions.replaceText(""))
+        }
+
+        R.id.recycler.rVMatcher().apply {
+            onItemView(0, R.id.cover).checkIsDisplayed()
+            onItemView(0, R.id.imageText).checkHasText("U")
+        }
+    }
+
+    @Test
+    fun shouldNotRenderProfileLetterAvatarWhenImage() {
+
+        // SETUP
+
+        val details = givenBlockDetailsWithImage()
+
+        stubInterceptEvents()
+        stubInterceptThreadStatus()
+        stubUpdateText()
+        stubAnalytics()
+        stubOpenDocument(
+            document = document,
+            details = details
+        )
+
+        // TESTING
+
+        launch(args)
+
+        R.id.recycler.rVMatcher().apply {
+            onItemView(0, R.id.cover).checkIsDisplayed()
+            onItemView(0, R.id.imageText).checkHasText("")
+        }
+
+        val title = R.id.recycler.rVMatcher().run {
+            onItemView(0, R.id.title)
+        }
+
+
+        title.apply {
+            perform(ViewActions.click())
+            perform(ViewActions.replaceText("FooBar"))
+        }
+
+        R.id.recycler.rVMatcher().apply {
+            onItemView(0, R.id.cover).checkIsDisplayed()
+            onItemView(0, R.id.imageText).checkHasText("")
+        }
+
+
+        title.apply {
+            perform(ViewActions.click())
+            perform(ViewActions.replaceText(""))
+        }
+
+        R.id.recycler.rVMatcher().apply {
+            onItemView(0, R.id.cover).checkIsDisplayed()
+            onItemView(0, R.id.imageText).checkHasText("")
+        }
+    }
+
+    private fun givenBlockDetailsWithImage(): ObjectViewDetails {
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        return ObjectViewDetails(
+            mapOf(
+                root to
+                    mapOf(
+                        "iconImage" to "anyimage",
+                        Relations.LAYOUT to ObjectType.Layout.PROFILE.code.toDouble(),
+                        "coverType" to CoverType.COLOR.code.toDouble(),
+                        "coverId" to CoverColor.BLUE.code,
+                    )
+                )
+        )
+    }
+
+    private fun givenBlockDetailsWithOutImage(): ObjectViewDetails {
+        return ObjectViewDetails(
+            mapOf(
+                root to
+                    mapOf(
+                        Relations.LAYOUT to ObjectType.Layout.PROFILE.code.toDouble(),
+                        "coverType" to CoverType.COLOR.code.toDouble(),
+                        "coverId" to CoverColor.BLUE.code,
+                    )
+                )
+        )
+    }
+}

@@ -33,7 +33,7 @@
         tools:text="Here is Ted on the big screen for the first time — intervi..."
         tools:visibility="visible" />
 
-    <com.anytypeio.anytype.core_ui.widgets.dv.ListViewItemRelationGroupWidget
+    <io.aparok.app.core_ui.widgets.dv.ListViewItemRelationGroupWidget
         android:id="@+id/relationsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

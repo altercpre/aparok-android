@@ -1,0 +1,400 @@
+package io.aparok.app.presentation.editor.editor
+
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import io.aparok.app.core_models.Block
+import io.aparok.app.core_models.StubHeader
+import io.aparok.app.core_models.StubParagraph
+import io.aparok.app.core_models.StubTitle
+import io.aparok.app.core_models.ext.content
+import io.aparok.app.domain.block.interactor.MergeBlocks
+import io.aparok.app.domain.block.interactor.UpdateText
+import io.aparok.app.presentation.editor.EditorViewModel
+import io.aparok.app.presentation.editor.editor.model.BlockView
+import io.aparok.app.presentation.util.DefaultCoroutineTestRule
+import io.aparok.app.test_utils.MockDataFactory
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.advanceUntilIdle
+import kotlinx.coroutines.test.runTest
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
+import org.mockito.MockitoAnnotations
+import org.mockito.kotlin.eq
+import org.mockito.kotlin.times
+import org.mockito.kotlin.verifyBlocking
+import org.mockito.kotlin.verifyNoInteractions
+
+class EditorMergeTest : EditorPresentationTestSetup() {
+
+    @get:Rule
+    val rule = InstantTaskExecutorRule()
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    @get:Rule
+    val coroutineTestRule = DefaultCoroutineTestRule()
+
+    @Before
+    fun setup() {
+        MockitoAnnotations.openMocks(this)
+        proceedWithDefaultBeforeTestStubbing()
+    }
+
+    @Test
+    fun `should update text and proceed with merging the first paragraph with the second on non-empty-block-backspace-pressed event`() = runTest {
+
+        val title = StubTitle()
+        val header = StubHeader(children = listOf(title.id))
+
+        val first = StubParagraph()
+        val second = StubParagraph()
+
+        val page = Block(
+            id = root,
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Smart,
+            children = listOf(header.id, first.id, second.id)
+        )
+
+        val doc = listOf(page, header, title, first, second)
+
+        stubInterceptEvents()
+        stubOpenDocument(doc)
+        stubMergeBlocks(root)
+        stubUpdateText()
+
+        val vm = buildViewModel()
+
+        vm.onStart(id = root, space = defaultSpace)
+
+        advanceUntilIdle()
+
+        vm.onBlockFocusChanged(
+            id = second.id,
+            hasFocus = true
+        )
+
+        advanceUntilIdle()
+
+
+        vm.onSelectionChanged(
+            id = second.id,
+            selection = IntRange(0, 0)
+        )
+
+        advanceUntilIdle()
+
+        val text = MockDataFactory.randomString()
+
+        val blockView = BlockView.Text.Paragraph(
+            id = second.id,
+            text = text
+        )
+
+        vm.onTextBlockTextChanged(blockView)
+
+        advanceUntilIdle()
+
+
+        vm.onNonEmptyBlockBackspaceClicked(
+            id = second.id,
+            marks = emptyList(),
+            text = text
+        )
+
+        advanceUntilIdle()
+
+        coroutineTestRule.advanceTime(EditorViewModel.TEXT_CHANGES_DEBOUNCE_DURATION)
+
+        // The pre-merge save flush is skipped when text is unchanged, so only
+        // the actual edit produces a set-text write.
+        verifyBlocking(updateText, times(1)) {
+            invoke(
+                params = eq(
+                    UpdateText.Params(
+                        context = root,
+                        text = text,
+                        marks = emptyList(),
+                        target = second.id
+                    )
+                )
+            )
+        }
+
+        verifyBlocking(mergeBlocks, times(1)) {
+            invoke(
+                params = eq(
+                    MergeBlocks.Params(
+                        context = root,
+                        pair = Pair(first.id, second.id)
+                    )
+                )
+            )
+        }
+    }
+
+    @Test
+    fun `should merge two text blocks from two different divs`() = runTest {
+
+        // SETUP
+
+        val a = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Text(
+                text = MockDataFactory.randomString(),
+                marks = emptyList(),
+                style = Block.Content.Text.Style.P
+            ),
+            children = emptyList()
+        )
+
+        val b = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Text(
+                text = MockDataFactory.randomString(),
+                marks = emptyList(),
+                style = Block.Content.Text.Style.P
+            ),
+            children = emptyList()
+        )
+
+        val div1 = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            children = listOf(a.id),
+            content = Block.Content.Layout(
+                type = Block.Content.Layout.Type.DIV
+            )
+        )
+
+        val div2 = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            children = listOf(b.id),
+            content = Block.Content.Layout(
+                type = Block.Content.Layout.Type.DIV
+            )
+        )
+
+        val page = Block(
+            id = root,
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Smart,
+            children = listOf(div1.id, div2.id)
+        )
+
+        val doc = listOf(page, div1, div2, a, b)
+
+        stubOpenDocument(doc)
+        stubInterceptEvents()
+        stubUpdateText()
+        stubMergeBlocks(root)
+
+        val vm = buildViewModel()
+
+        vm.onStart(id = root, space = defaultSpace)
+
+        advanceUntilIdle()
+
+        vm.onBlockFocusChanged(b.id, true)
+
+        advanceUntilIdle()
+
+        vm.onNonEmptyBlockBackspaceClicked(
+            id = b.id,
+            text = b.content<Block.Content.Text>().text,
+            marks = b.content<Block.Content.Text>().marks
+        )
+
+        advanceUntilIdle()
+
+        coroutineTestRule.advanceTime(EditorViewModel.TEXT_CHANGES_DEBOUNCE_DURATION)
+
+        verifyBlocking(mergeBlocks, times(1)) {
+            invoke(
+                params = eq(
+                    MergeBlocks.Params(
+                        context = root,
+                        pair = Pair(a.id, b.id)
+                    )
+                )
+            )
+        }
+    }
+
+    @Test
+    fun `should merge two text blocks from the first of two divs`() = runTest {
+
+        // SETUP
+
+        val a = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Text(
+                text = MockDataFactory.randomString(),
+                marks = emptyList(),
+                style = Block.Content.Text.Style.P
+            ),
+            children = emptyList()
+        )
+
+        val b = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Text(
+                text = MockDataFactory.randomString(),
+                marks = emptyList(),
+                style = Block.Content.Text.Style.P
+            ),
+            children = emptyList()
+        )
+
+        val c = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Text(
+                text = MockDataFactory.randomString(),
+                marks = emptyList(),
+                style = Block.Content.Text.Style.P
+            ),
+            children = emptyList()
+        )
+
+        val d = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Text(
+                text = MockDataFactory.randomString(),
+                marks = emptyList(),
+                style = Block.Content.Text.Style.P
+            ),
+            children = emptyList()
+        )
+
+        val div1 = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            children = listOf(a.id, b.id),
+            content = Block.Content.Layout(
+                type = Block.Content.Layout.Type.DIV
+            )
+        )
+
+        val div2 = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            children = listOf(c.id, d.id),
+            content = Block.Content.Layout(
+                type = Block.Content.Layout.Type.DIV
+            )
+        )
+
+        val page = Block(
+            id = root,
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Smart,
+            children = listOf(div1.id, div2.id)
+        )
+
+        val doc = listOf(page, div1, div2, a, b, c, d)
+
+        stubOpenDocument(doc)
+        stubInterceptEvents()
+        stubUpdateText()
+        stubMergeBlocks(root)
+
+        val vm = buildViewModel()
+
+        vm.onStart(id = root, space = defaultSpace)
+
+        advanceUntilIdle()
+
+        vm.onBlockFocusChanged(d.id, true)
+
+        advanceUntilIdle()
+
+        vm.onNonEmptyBlockBackspaceClicked(
+            id = d.id,
+            text = d.content<Block.Content.Text>().text,
+            marks = d.content<Block.Content.Text>().marks
+        )
+
+        advanceUntilIdle()
+
+        coroutineTestRule.advanceTime(EditorViewModel.TEXT_CHANGES_DEBOUNCE_DURATION)
+
+        verifyBlocking(mergeBlocks, times(1)) {
+            invoke(
+                params = eq(
+                    MergeBlocks.Params(
+                        context = root,
+                        pair = Pair(c.id, d.id)
+                    )
+                )
+            )
+        }
+    }
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    @Test
+    fun `should not merge text block with the previous block if this previous block is not a text block`() = runTest {
+
+        // SETUP
+
+        val a = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Divider(style = Block.Content.Divider.Style.LINE),
+            children = emptyList()
+        )
+
+        val b = Block(
+            id = MockDataFactory.randomUuid(),
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Text(
+                text = MockDataFactory.randomString(),
+                marks = emptyList(),
+                style = Block.Content.Text.Style.P
+            ),
+            children = emptyList()
+        )
+
+        val page = Block(
+            id = root,
+            fields = Block.Fields(emptyMap()),
+            content = Block.Content.Smart,
+            children = listOf(a.id, b.id)
+        )
+
+        val doc = listOf(page, a, b)
+
+        stubOpenDocument(doc)
+        stubInterceptEvents()
+        stubUpdateText()
+        stubMergeBlocks(root)
+        stubUnlinkBlocks()
+
+        val vm = buildViewModel()
+
+        vm.onStart(id = root, space = defaultSpace)
+
+        advanceUntilIdle()
+
+        vm.onBlockFocusChanged(b.id, true)
+
+        advanceUntilIdle()
+
+        vm.onNonEmptyBlockBackspaceClicked(
+            id = b.id,
+            text = b.content<Block.Content.Text>().text,
+            marks = b.content<Block.Content.Text>().marks
+        )
+
+        advanceUntilIdle()
+
+        coroutineTestRule.advanceTime(EditorViewModel.TEXT_CHANGES_DEBOUNCE_DURATION)
+
+        verifyNoInteractions(mergeBlocks)
+    }
+}

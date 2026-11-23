@@ -1,0 +1,751 @@
+package io.aparok.app.presentation.objects.menu
+
+import android.net.Uri
+import androidx.lifecycle.viewModelScope
+import io.aparok.app.analytics.base.Analytics
+import io.aparok.app.core_models.Block
+import io.aparok.app.core_models.Id
+import io.aparok.app.core_models.Key
+import io.aparok.app.core_models.ObjectType
+import io.aparok.app.core_models.ObjectWrapper
+import io.aparok.app.core_models.Payload
+import io.aparok.app.core_models.Position
+import io.aparok.app.core_models.Struct
+import io.aparok.app.core_models.WidgetLayout
+import io.aparok.app.core_models.isDataView
+import io.aparok.app.core_models.multiplayer.SpaceAccessType
+import io.aparok.app.core_models.primitives.SpaceId
+import io.aparok.app.domain.base.fold
+import io.aparok.app.domain.base.onSuccess
+import io.aparok.app.domain.collections.AddObjectToCollection
+import io.aparok.app.domain.dashboard.interactor.SetObjectListIsFavorite
+import io.aparok.app.domain.favorites.AddPersonalFavorite
+import io.aparok.app.domain.favorites.RemovePersonalFavorite
+import io.aparok.app.domain.misc.DeepLinkResolver
+import io.aparok.app.core_models.UrlBuilder
+import io.aparok.app.domain.multiplayer.GetSpaceInviteLink
+import io.aparok.app.domain.multiplayer.SpaceViewSubscriptionContainer
+import io.aparok.app.domain.`object`.DuplicateObject
+import io.aparok.app.domain.`object`.GetObject
+import io.aparok.app.domain.objects.SetObjectListIsArchived
+import io.aparok.app.domain.page.AddBackLinkToObject
+import io.aparok.app.domain.primitives.FieldParser
+import io.aparok.app.domain.widgets.CreateWidget
+import io.aparok.app.domain.widgets.DeleteWidget
+import io.aparok.app.domain.workspace.SpaceManager
+import io.aparok.app.presentation.analytics.AnalyticSpaceHelperDelegate
+import io.aparok.app.presentation.common.Action
+import io.aparok.app.presentation.common.BaseViewModel
+import io.aparok.app.presentation.common.Delegator
+import io.aparok.app.presentation.common.PayloadDelegator
+import io.aparok.app.presentation.extension.sendAnalyticsAddToCollectionEvent
+import io.aparok.app.presentation.extension.sendAnalyticsAddToFavoritesEvent
+import io.aparok.app.presentation.extension.sendAnalyticsBackLinkAddEvent
+import io.aparok.app.presentation.extension.sendAnalyticsDuplicateEvent
+import io.aparok.app.presentation.extension.sendAnalyticsMoveToBinEvent
+import io.aparok.app.presentation.extension.sendAnalyticsRemoveFromFavoritesEvent
+import io.aparok.app.core_models.ui.objectIcon
+import io.aparok.app.presentation.objects.ObjectAction
+import io.aparok.app.core_models.ui.ObjectIcon
+import io.aparok.app.presentation.util.Dispatcher
+import io.aparok.app.presentation.util.downloader.DebugGoroutinesShareDownloader
+import io.aparok.app.presentation.util.downloader.MiddlewareShareDownloader
+import io.aparok.app.presentation.widgets.findWidgetBlockForObject
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
+import timber.log.Timber
+
+abstract class ObjectMenuViewModelBase(
+    private val addBackLinkToObject: AddBackLinkToObject,
+    protected val delegator: Delegator<Action>,
+    protected val urlBuilder: UrlBuilder,
+    private val dispatcher: Dispatcher<Payload>,
+    private val analytics: Analytics,
+    private val menuOptionsProvider: ObjectMenuOptionsProvider,
+    private val duplicateObject: DuplicateObject,
+    private val addObjectToCollection: AddObjectToCollection,
+    private val debugGoroutinesShareDownloader: DebugGoroutinesShareDownloader,
+    private val createWidget: CreateWidget,
+    private val spaceManager: SpaceManager,
+    private val analyticSpaceHelperDelegate: AnalyticSpaceHelperDelegate,
+    private val payloadDelegator: PayloadDelegator,
+    private val setObjectListIsFavorite: SetObjectListIsFavorite,
+    private val setObjectIsArchived: SetObjectListIsArchived,
+    private val fieldParser: FieldParser,
+    private val spaceViewSubscriptionContainer: SpaceViewSubscriptionContainer,
+    private val getSpaceInviteLink: GetSpaceInviteLink,
+    private val deepLinkResolver: DeepLinkResolver,
+    private val showObject: GetObject,
+    private val deleteWidget: DeleteWidget,
+    private val addPersonalFavorite: AddPersonalFavorite,
+    private val removePersonalFavorite: RemovePersonalFavorite
+) : BaseViewModel(), AnalyticSpaceHelperDelegate by analyticSpaceHelperDelegate {
+
+    protected val jobs = mutableListOf<Job>()
+    val isDismissed = MutableStateFlow(false)
+    val isObjectArchived = MutableStateFlow(false)
+    val commands = MutableSharedFlow<Command>(replay = 0)
+    val actions = MutableStateFlow(emptyList<ObjectAction>())
+
+    private val pinnedWidgetBlockId = MutableStateFlow<Id?>(null)
+
+    private val _options = MutableStateFlow(
+        ObjectMenuOptionsProvider.Options(
+            hasIcon = false,
+            hasCover = false,
+            hasRelations = false,
+            hasDiagnosticsVisibility = false,
+            hasHistory = false,
+            hasDescriptionShow = false,
+            hasObjectLayoutConflict = false
+        )
+    )
+    val options: Flow<ObjectMenuOptionsProvider.Options> = _options
+
+    /**
+     * Quick capture shows a trimmed menu for the unpublished draft: nothing that
+     * publishes, links to or exposes it (spec: docs/quick-capture-android-spec.md §7).
+     * Keeps Properties / Icon / Cover / description toggle plus Undo-Redo.
+     */
+    protected var isQuickCapture: Boolean = false
+        private set
+
+    // Deliberately an allowlist (positive construction, not copy-with-overrides): a field
+    // added to Options later must NOT default to visible for an unpublished draft.
+    private fun ObjectMenuOptionsProvider.Options.restrictToQuickCapture() =
+        ObjectMenuOptionsProvider.Options(
+            hasIcon = hasIcon,
+            hasCover = hasCover,
+            hasRelations = hasRelations,
+            hasDescriptionShow = hasDescriptionShow,
+            hasDiagnosticsVisibility = false,
+            hasHistory = false,
+            hasObjectLayoutConflict = false
+        )
+
+    abstract fun onIconClicked(ctx: Id, space: Id)
+    abstract fun onCoverClicked(ctx: Id, space: Id)
+    abstract fun onDescriptionClicked(ctx: Id, space: Id)
+    abstract fun onRelationsClicked()
+    abstract fun onResetToDefaultLayout(ctx: Id, space: Id)
+    abstract fun onTemplateNamePrefillToggleClicked(ctx: Id, space: Id)
+
+    val showLayoutConflictScreen = MutableStateFlow(false)
+
+    fun onHistoryClicked(ctx: Id, space: Id) {
+        viewModelScope.launch {
+            commands.emit(Command.OpenHistoryScreen(ctx, space))
+        }
+    }
+
+    fun onStop() {
+        jobs.forEach(Job::cancel)
+        jobs.clear()
+    }
+
+    fun onStart(
+        ctx: Id,
+        space: SpaceId,
+        isFavorite: Boolean,
+        isArchived: Boolean,
+        isLocked: Boolean,
+        isTemplate: Boolean,
+        isReadOnly: Boolean,
+        isQuickCapture: Boolean = false
+    ) {
+        Timber.d("ObjectMenuViewModelBase, onStart, ctx:[$ctx], isFavorite:[$isFavorite], isArchived:[$isArchived], isLocked:[$isLocked], isReadOnly: [$isReadOnly]")
+        this.isQuickCapture = isQuickCapture
+        viewModelScope.launch {
+            combine(
+                pinnedWidgetBlockId,
+                _options.map { it.isFavorited }.distinctUntilChanged(),
+                _options.map { it.canToggleChannelPin }.distinctUntilChanged()
+            ) { widgetId, isInMyFavorites, canTogglePin ->
+                Triple(widgetId, isInMyFavorites, canTogglePin)
+            }.collect { (widgetId, isInMyFavorites, canTogglePin) ->
+                val built = buildActions(
+                    ctx = ctx,
+                    isArchived = isArchived,
+                    isFavorite = isFavorite,
+                    isTemplate = isTemplate,
+                    isLocked = isLocked,
+                    isReadOnly = isReadOnly,
+                    isCurrentObjectPinned = widgetId != null,
+                    isInMyFavorites = isInMyFavorites,
+                    canToggleChannelPin = canTogglePin
+                )
+                actions.value = if (isQuickCapture) {
+                    built.filter { action -> action == ObjectAction.UNDO_REDO }
+                } else {
+                    built
+                }
+            }
+        }
+        jobs += viewModelScope.launch {
+            menuOptionsProvider
+                .provide(ctx = ctx, isLocked = isLocked, isReadOnly = isReadOnly)
+                .map { options ->
+                    if (isQuickCapture) options.restrictToQuickCapture() else options
+                }
+                .distinctUntilChanged()
+                .collect(_options)
+        }
+        jobs += viewModelScope.launch {
+            checkIfObjectIsPinned(ctx, space)
+        }
+    }
+
+    abstract fun onActionClicked(ctx: Id, space: Id, action: ObjectAction)
+
+    abstract fun buildActions(
+        ctx: Id,
+        isArchived: Boolean,
+        isFavorite: Boolean,
+        isTemplate: Boolean = false,
+        isLocked: Boolean,
+        isReadOnly: Boolean,
+        isCurrentObjectPinned: Boolean,
+        /** DROID-4397: true iff [ctx] is in the current user's personal favorites for the space. */
+        isInMyFavorites: Boolean = false,
+        /** DROID-4397: true iff the current user has Owner/Editor role. Gates PIN/UNPIN. */
+        canToggleChannelPin: Boolean = false
+    ): List<ObjectAction>
+
+    protected fun proceedWithRemovingFromFavorites(ctx: Id) {
+        Timber.d("proceedWithRemovingFromFavorites, cts:[$ctx]")
+        viewModelScope.launch {
+            val params = SetObjectListIsFavorite.Params(
+                objectIds = listOf(ctx),
+                isFavorite = false
+            )
+            setObjectListIsFavorite.async(params).fold(
+                onSuccess = {
+                    sendAnalyticsRemoveFromFavoritesEvent(analytics)
+                    _toasts.emit(REMOVE_FROM_FAVORITE_SUCCESS_MSG).also {
+                        isDismissed.value = true
+                    }
+                },
+                onFailure = {
+                    Timber.e(it, "Error while removing from favorite.")
+                    _toasts.emit(SOMETHING_WENT_WRONG_MSG)
+                }
+            )
+        }
+    }
+
+    protected fun proceedWithAddingToFavorites(ctx: Id) {
+        Timber.d("proceedWithAddingToFavorites, ctx:[$ctx]")
+        viewModelScope.launch {
+            val params = SetObjectListIsFavorite.Params(
+                objectIds = listOf(ctx),
+                isFavorite = true
+            )
+            setObjectListIsFavorite.async(params).fold(
+                onSuccess = {
+                    sendAnalyticsAddToFavoritesEvent(analytics)
+                    _toasts.emit(ADD_TO_FAVORITE_SUCCESS_MSG).also {
+                        isDismissed.value = true
+                    }
+                },
+                onFailure = {
+                    Timber.e(it, "Error while removing from favorite.")
+                    _toasts.emit(SOMETHING_WENT_WRONG_MSG)
+                }
+            )
+        }
+    }
+
+    /** DROID-4397: add [ctx] to the current user's personal favorites in [space]. */
+    protected fun proceedWithAddingToMyFavorites(ctx: Id, space: SpaceId) {
+        Timber.d("proceedWithAddingToMyFavorites, ctx:[$ctx], space:[${space.id}]")
+        viewModelScope.launch {
+            addPersonalFavorite.async(
+                AddPersonalFavorite.Params(space = space, target = ctx)
+            ).fold(
+                onSuccess = { payload ->
+                    payloadDelegator.dispatch(payload)
+                    _toasts.emit(ADD_TO_MY_FAVORITES_SUCCESS_MSG).also {
+                        isDismissed.value = true
+                    }
+                },
+                onFailure = {
+                    Timber.e(it, "Error while adding to my favorites.")
+                    _toasts.emit(SOMETHING_WENT_WRONG_MSG)
+                }
+            )
+        }
+    }
+
+    /** DROID-4397: remove [ctx] from the current user's personal favorites in [space]. */
+    protected fun proceedWithRemovingFromMyFavorites(ctx: Id, space: SpaceId) {
+        Timber.d("proceedWithRemovingFromMyFavorites, ctx:[$ctx], space:[${space.id}]")
+        viewModelScope.launch {
+            removePersonalFavorite.async(
+                RemovePersonalFavorite.Params(space = space, target = ctx)
+            ).fold(
+                onSuccess = { payload ->
+                    if (payload != null) payloadDelegator.dispatch(payload)
+                    Timber.d("Removed from my favorites (payload=${payload != null})")
+                    _toasts.emit(REMOVE_FROM_MY_FAVORITES_SUCCESS_MSG).also {
+                        isDismissed.value = true
+                    }
+                },
+                onFailure = {
+                    Timber.e(it, "Error while removing from my favorites.")
+                    _toasts.emit(SOMETHING_WENT_WRONG_MSG)
+                }
+            )
+        }
+    }
+
+    fun proceedWithUpdatingArchivedStatus(ctx: Id, isArchived: Boolean) {
+        Timber.d("proceedWithUpdatingArchivedStatus, cts:[$ctx], isArchived:[$isArchived]")
+        viewModelScope.launch {
+            val params = SetObjectListIsArchived.Params(
+                targets = listOf(ctx),
+                isArchived = isArchived
+            )
+            setObjectIsArchived.async(params).fold(
+                onSuccess = {
+                    if (isArchived) {
+                        sendAnalyticsMoveToBinEvent(analytics)
+                        _toasts.emit(MOVE_OBJECT_TO_BIN_SUCCESS_MSG)
+                    } else {
+                        _toasts.emit(RESTORE_OBJECT_SUCCESS_MSG)
+                    }
+                    isObjectArchived.value = true
+                },
+                onFailure = {
+                    Timber.e(it, MOVE_OBJECT_TO_BIN_ERR_MSG)
+                    _toasts.emit(MOVE_OBJECT_TO_BIN_ERR_MSG)
+                }
+            )
+        }
+    }
+
+    fun onBackLinkOrAddToObjectAction(
+        ctx: Id,
+        space: Id,
+        backLinkId: Id,
+        backLinkName: String,
+        backLinkLayout: ObjectType.Layout?,
+        backLinkIcon: ObjectIcon,
+        fromName: String
+    ) {
+        Timber.d("onBackLinkOrAddToObjectAction, ctx:[$ctx], backLinkId:[$backLinkId], backLinkLayout:[$backLinkLayout]")
+        if (backLinkLayout == null) {
+            Timber.e("onBackLinkOrAddToObjectAction, layout is null")
+            viewModelScope.launch { _toasts.emit(BACK_LINK_WRONG_LAYOUT) }
+            return
+        }
+        when (backLinkLayout) {
+            ObjectType.Layout.BASIC,
+            ObjectType.Layout.PROFILE,
+            ObjectType.Layout.TODO,
+            ObjectType.Layout.NOTE -> {
+                onLinkedMyselfTo(
+                    myself = ctx,
+                    addTo = backLinkId,
+                    fromName = fromName,
+                    space = space
+                )
+            }
+
+            ObjectType.Layout.COLLECTION -> {
+                proceedWithAddObjectToCollection(
+                    ctx = ctx,
+                    space = space,
+                    collection = backLinkId,
+                    collectionName = backLinkName,
+                    collectionIcon = backLinkIcon,
+                    fromName = fromName
+                )
+            }
+
+            else -> {
+                Timber.e("onBackLinkOrAddToObjectAction, layout:$backLinkLayout is not supported")
+            }
+        }
+    }
+
+    private fun proceedWithAddObjectToCollection(
+        ctx: Id,
+        space: Id,
+        collection: Id,
+        collectionName: String,
+        collectionIcon: ObjectIcon,
+        fromName: String
+    ) {
+        val params = AddObjectToCollection.Params(
+            ctx = collection,
+            after = "",
+            targets = listOf(ctx)
+        )
+        viewModelScope.launch {
+            val startTime = System.currentTimeMillis()
+            addObjectToCollection.execute(params).fold(
+                onSuccess = { payload ->
+                    dispatcher.send(payload)
+                    sendAnalyticsAddToCollectionEvent(
+                        analytics = analytics,
+                        startTime = startTime
+                    )
+                    commands.emit(
+                        Command.OpenSnackbar(
+                            id = collection,
+                            currentObjectName = fromName,
+                            targetObjectName = collectionName,
+                            icon = collectionIcon,
+                            isCollection = true,
+                            space = space
+                        )
+                    )
+                },
+                onFailure = { Timber.e(it, "Error while adding object to collection") }
+            )
+        }
+    }
+
+    fun onLinkedMyselfTo(
+        myself: Id,
+        addTo: Id,
+        fromName: String?,
+        space: Id
+    ) {
+        Timber.d("onLinkedMyselfTo, myself:[$myself], addTo:[$addTo], fromName:[$fromName]")
+        jobs += viewModelScope.launch {
+            val startTime = System.currentTimeMillis()
+            addBackLinkToObject.execute(
+                AddBackLinkToObject.Params(
+                    objectToLink = myself,
+                    objectToPlaceLink = addTo,
+                    saveAsLastOpened = true,
+                    spaceId = SpaceId(space)
+                )
+            ).fold(
+                onSuccess = { obj ->
+                    sendAnalyticsBackLinkAddEvent(
+                        analytics = analytics,
+                        startTime = startTime,
+                        spaceParams = provideParams(space)
+                    )
+                    commands.emit(
+                        Command.OpenSnackbar(
+                            id = addTo,
+                            currentObjectName = fromName,
+                            targetObjectName = fieldParser.getObjectName(obj),
+                            icon = obj.objectIcon(urlBuilder),
+                            space = space
+                        )
+                    )
+                },
+                onFailure = {
+                    Timber.e(it, "Error while adding link from object to object")
+                }
+            )
+        }
+    }
+
+    protected fun proceedWithLinkTo() {
+        jobs += viewModelScope.launch { commands.emit(Command.OpenLinkToChooser) }
+    }
+
+    fun proceedWithOpeningPage(target: Id, space: Id) {
+        Timber.d("proceedWithOpeningPage, id:[$target]")
+        viewModelScope.launch {
+            delegator.delegate(
+                Action.OpenObject(target = target, space = space)
+            )
+        }
+    }
+
+    fun proceedWithOpeningCollection(target: Id, space: Id) {
+        Timber.d("proceedWithOpeningCollection, id:[$target]")
+        viewModelScope.launch {
+            delegator.delegate(
+                Action.OpenCollection(
+                    target = target,
+                    space = space
+                )
+            )
+        }
+    }
+
+    fun proceedWithDuplication(ctx: Id, space: Id, details: Map<Id, Struct>) {
+        Timber.d("proceedWithDuplication, ctx:[$ctx]")
+        val startTime = System.currentTimeMillis()
+        viewModelScope.launch {
+            duplicateObject(ctx).process(
+                failure = {
+                    Timber.e(it, "Duplication error")
+                    _toasts.emit(SOMETHING_WENT_WRONG_MSG)
+                },
+                success = { id ->
+                    _toasts.emit("Your object is duplicated")
+                    delegator.delegate(
+                        Action.Duplicate(
+                            target = id,
+                            space = space
+                        )
+                    )
+                    sendAnalyticsDuplicateEvent(
+                        analytics = analytics,
+                        startTime = startTime,
+                        details = details,
+                        ctx = ctx,
+                        spaceParams = provideParams(space)
+                    )
+                }
+            )
+        }
+    }
+
+    open fun onDiagnosticsClicked(ctx: Id) {
+        viewModelScope.launch {
+            _toasts.emit("You should not call diagnostics for sets")
+        }
+    }
+
+    fun onDiagnosticsGoroutinesClicked(ctx: Id) {
+        jobs += viewModelScope.launch {
+            debugGoroutinesShareDownloader.stream(
+                MiddlewareShareDownloader.Params(objectId = ctx, name = "goroutines")
+            ).collect { result ->
+                result.fold(
+                    onSuccess = { success -> commands.emit(Command.ShareDebugGoroutines(success.path)) },
+                    onFailure = {
+                        sendToast("Error while collecting goroutines diagnostics :${it.message}")
+                        Timber.e(it, "Error while collecting goroutines diagnostics")
+                    }
+                )
+            }
+        }
+    }
+
+    fun proceedWithCreatingWidget(obj: ObjectWrapper.Basic) {
+        viewModelScope.launch {
+            val config = spaceManager.getConfig()
+            if (config != null && obj.isValid) {
+
+                var target: Id? = null
+
+                showObject.async(
+                    GetObject.Params(
+                        target = config.widgets,
+                        space = SpaceId(config.space),
+                        saveAsLastOpened = false
+                    )
+                ).onSuccess { objectView ->
+                    objectView.blocks.find { it.content is Block.Content.Widget }?.let {
+                        target = it.id
+                    }
+                }
+
+                val params = CreateWidget.Params(
+                    ctx = config.widgets,
+                    source = obj.id,
+                    type = when {
+                        obj.layout.isDataView() -> {
+                            WidgetLayout.VIEW
+                        }
+
+                        obj.layout == ObjectType.Layout.PARTICIPANT -> {
+                            WidgetLayout.LINK
+                        }
+
+                        else -> {
+                            WidgetLayout.TREE
+                        }
+                    },
+                    position = Position.TOP,
+                    target = target
+                )
+                createWidget.async(params).fold(
+                    onSuccess = { payload ->
+                        payloadDelegator.dispatch(payload)
+                        sendToast("Widget created")
+                        isDismissed.value = true
+                    },
+                    onFailure = {
+                        Timber.e(it, "Error while creating widget")
+                        sendToast(SOMETHING_WENT_WRONG_MSG)
+                    }
+                )
+            } else {
+                if (!obj.isValid) {
+                    sendToast("Could not create widget: object is not valid.")
+                }
+                if (config == null) {
+                    sendToast("Could not create widget: config is missing.")
+                }
+            }
+        }
+    }
+
+    fun proceedWithRemovingWidget() {
+        val widgetId = pinnedWidgetBlockId.value ?: return
+        viewModelScope.launch {
+            val config = spaceManager.getConfig()
+            deleteWidget.async(
+                params = DeleteWidget.Params(
+                    ctx = config?.widgets ?: return@launch,
+                    targets = listOf(widgetId)
+                )
+            ).fold(
+                onSuccess = { payload ->
+                    payloadDelegator.dispatch(payload)
+                    pinnedWidgetBlockId.value = null
+                    sendToast("Widget removed")
+                    isDismissed.value = true
+                },
+                onFailure = {
+                    Timber.e(it, "Error while deleting widget")
+                    sendToast(SOMETHING_WENT_WRONG_MSG)
+                }
+            )
+        }
+    }
+
+    suspend fun proceedWithGeneratingObjectLink(
+        space: SpaceId,
+        ctx: String
+    ): String {
+        val spaceView = spaceViewSubscriptionContainer.get(space)
+        return if (spaceView?.spaceAccessType == SpaceAccessType.SHARED) {
+            val link = getSpaceInviteLink.async(space).getOrNull()
+            if (link != null) {
+                deepLinkResolver.createObjectDeepLinkWithInvite(
+                    obj = ctx,
+                    space = space,
+                    encryptionKey = link.fileKey,
+                    invite = link.contentId
+                )
+            } else {
+                deepLinkResolver.createObjectDeepLink(
+                    obj = ctx,
+                    space = space
+                )
+            }
+        } else {
+            deepLinkResolver.createObjectDeepLink(
+                obj = ctx,
+                space = space
+            )
+        }
+    }
+
+    fun onShowConflictScreen(objectId: Id, space: Id) {
+        viewModelScope.launch {
+            showLayoutConflictScreen.value = true
+        }
+    }
+
+    fun onHideConflictScreen() {
+        viewModelScope.launch {
+            showLayoutConflictScreen.value = false
+        }
+    }
+
+    fun onPublishToWebClicked(ctx: Id, space: Id) {
+        viewModelScope.launch {
+            commands.emit(
+                Command.PublishToWeb(
+                    ctx = ctx,
+                    space = space
+                )
+            )
+        }
+    }
+
+    /**
+     * Checks if the given object is pinned as a widget in the space's home screen.
+     * Updates [pinnedWidgetBlockId] with the widget block ID if found, or null otherwise.
+     */
+    private suspend fun checkIfObjectIsPinned(ctx: Id, space: SpaceId) {
+        spaceManager.getConfig(space)?.let { config ->
+            fetchWidgetsAndUpdatePinnedState(
+                ctx = ctx,
+                widgetsObjectId = config.widgets,
+                space = space
+            )
+        }
+    }
+
+    /**
+     * Fetches the widgets object and updates the pinned state for the given context.
+     */
+    private suspend fun fetchWidgetsAndUpdatePinnedState(
+        ctx: Id,
+        widgetsObjectId: Id,
+        space: SpaceId
+    ) {
+        val params = GetObject.Params(
+            target = widgetsObjectId,
+            space = space,
+            saveAsLastOpened = false
+        )
+        showObject.async(params).fold(
+            onFailure = { error ->
+                Timber.e(error, "Error fetching widgets object")
+                pinnedWidgetBlockId.value = null
+            },
+            onSuccess = { obj ->
+                pinnedWidgetBlockId.value = findWidgetBlockForObject(ctx, obj.blocks)
+            }
+        )
+    }
+
+    sealed class Command {
+        data object OpenObjectIcons : Command()
+        data object OpenSetIcons : Command()
+        data object OpenObjectCover : Command()
+        data object OpenSetCover : Command()
+        data object OpenSetLayout : Command()
+        data object OpenObjectRelations : Command()
+        data object OpenSetRelations : Command()
+        data object OpenLinkToChooser : Command()
+        data class ShareDeeplinkToObject(val link: String) : Command()
+        data class ShareDebugTree(val uri: Uri) : Command()
+        data class ShareDebugGoroutines(val path: String) : Command()
+        data class OpenHistoryScreen(val objectId: Id, val spaceId: Id) : Command()
+        data class PublishToWeb(val ctx: Id, val space: Id) : Command()
+        data class OpenSnackbar(
+            val id: Id,
+            val space: Id,
+            val currentObjectName: String?,
+            val targetObjectName: String?,
+            val icon: ObjectIcon,
+            val isCollection: Boolean = false
+        ) : Command()
+
+        data class OpenTemplate(
+            val templateId: Id,
+            val space: Id,
+            val typeId: Id,
+            val typeKey: Key,
+            val typeName: String
+        ) : Command()
+    }
+
+    companion object {
+        const val MOVE_OBJECT_TO_BIN_SUCCESS_MSG = "Moved to bin!"
+        const val RESTORE_OBJECT_SUCCESS_MSG = "Object restored!"
+        const val MOVE_OBJECT_TO_BIN_ERR_MSG =
+            "Error while moving object to bin. Please, try again later."
+        const val ADD_TO_FAVORITE_SUCCESS_MSG = "Object added to favorites."
+        const val REMOVE_FROM_FAVORITE_SUCCESS_MSG = "Object removed from favorites."
+        const val ADD_TO_MY_FAVORITES_SUCCESS_MSG = "Added to My Favorites."
+        const val REMOVE_FROM_MY_FAVORITES_SUCCESS_MSG = "Removed from My Favorites."
+        const val NOT_ALLOWED = "Not allowed for this object"
+        const val OBJECT_IS_LOCKED_MSG = "Your object is locked"
+        const val OBJECT_IS_UNLOCKED_MSG = "Your object is locked"
+        const val SOMETHING_WENT_WRONG_MSG = "Something went wrong. Please, try again later."
+        const val BACK_LINK_WRONG_LAYOUT = "Wrong object layout, try again"
+    }
+}

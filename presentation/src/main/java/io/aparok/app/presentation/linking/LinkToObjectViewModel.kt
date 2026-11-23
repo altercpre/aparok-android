@@ -1,0 +1,102 @@
+package io.aparok.app.presentation.linking
+
+import androidx.lifecycle.viewModelScope
+import io.aparok.app.analytics.base.Analytics
+import io.aparok.app.core_models.Id
+import io.aparok.app.core_models.ObjectType
+import io.aparok.app.core_models.ObjectWrapper
+import io.aparok.app.core_models.SupportedLayouts
+import io.aparok.app.domain.base.Resultat
+import io.aparok.app.core_models.UrlBuilder
+import io.aparok.app.domain.multiplayer.SpaceViewSubscriptionContainer
+import io.aparok.app.domain.objects.StoreOfObjectTypes
+import io.aparok.app.domain.primitives.FieldParser
+import io.aparok.app.domain.search.SearchObjects
+import io.aparok.app.presentation.analytics.AnalyticSpaceHelperDelegate
+import io.aparok.app.presentation.navigation.DefaultObjectView
+import io.aparok.app.presentation.search.ObjectSearchConstants
+import io.aparok.app.presentation.search.ObjectSearchViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.launch
+import timber.log.Timber
+
+class LinkToObjectViewModel(
+    private val vmParams: VmParams,
+    urlBuilder: UrlBuilder,
+    searchObjects: SearchObjects,
+    analytics: Analytics,
+    analyticSpaceHelperDelegate: AnalyticSpaceHelperDelegate,
+    fieldParser: FieldParser,
+    storeOfObjectTypes: StoreOfObjectTypes,
+    private val spaceViews: SpaceViewSubscriptionContainer
+) : ObjectSearchViewModel(
+    vmParams = vmParams,
+    urlBuilder = urlBuilder,
+    searchObjects = searchObjects,
+    analytics = analytics,
+    analyticSpaceHelperDelegate = analyticSpaceHelperDelegate,
+    fieldParser = fieldParser,
+    storeOfObjectTypes = storeOfObjectTypes,
+    spaceViews = spaceViews
+) {
+
+    val commands = MutableSharedFlow<Command>(replay = 0)
+
+    init {
+        Timber.d("LinkToObjectViewModel init")
+    }
+
+    override suspend fun getSearchObjectsParams(ignore: Id?) = SearchObjects.Params(
+        space = vmParams.space,
+        limit = SEARCH_LIMIT,
+        filters = buildList {
+            val isOneToOneSpace = spaceViews.get(vmParams.space)?.isOneToOneSpace == true
+            addAll(
+                ObjectSearchConstants.getFilterLinkTo(
+                    ignore = ignore,
+                    isOneToOneSpace = isOneToOneSpace
+                )
+            )
+        },
+        sorts = ObjectSearchConstants.sortLinkTo,
+        fulltext = EMPTY_QUERY,
+        keys = ObjectSearchConstants.defaultKeys
+    )
+
+    override fun onObjectClicked(view: DefaultObjectView) {
+        sendSearchResultEvent(view.id)
+        viewModelScope.launch {
+            commands.emit(
+                Command.Link(
+                    link = view.id,
+                    isBookmark = view.layout == ObjectType.Layout.BOOKMARK
+                )
+            )
+        }
+    }
+
+    override fun onDialogCancelled() {
+        viewModelScope.launch {
+            commands.emit(Command.Exit)
+        }
+    }
+
+    override suspend fun setObjects(data: List<ObjectWrapper.Basic>) {
+        Timber.d("LinkToObjectViewModel setObjects called with ${data.size} items")
+        val isOneToOneSpace = spaceViews.get(vmParams.space)?.isOneToOneSpace == true
+        val supportedLayouts = SupportedLayouts.getLayouts(isOneToOneSpace)
+        objects.emit(
+            Resultat.success(data.filter {
+                supportedLayouts.contains(it.layout)
+            })
+        )
+    }
+
+    sealed class Command {
+        data object Exit : Command()
+        data class Link(
+            val link: Id,
+            val isBookmark: Boolean
+        ) : Command()
+    }
+}

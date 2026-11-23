@@ -30,5 +30,5 @@ dependencies {
 }
 
 android {
-    namespace 'com.anytypeio.anytype.middleware'
+    namespace 'io.aparok.app.middleware'
 }

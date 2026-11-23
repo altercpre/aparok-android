@@ -13,5 +13,5 @@
     android:initialLayout="@layout/os_widget_loading"
     android:previewImage="@drawable/os_widget_space_shortcut_preview"
     android:description="@string/os_widget_space_shortcut_description"
-    android:configure="com.anytypeio.anytype.ui.oswidgets.SpaceShortcutWidgetConfigActivity"
+    android:configure="io.aparok.app.ui.oswidgets.SpaceShortcutWidgetConfigActivity"
     android:updatePeriodMillis="86400000" />

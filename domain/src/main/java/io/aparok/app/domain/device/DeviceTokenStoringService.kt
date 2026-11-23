@@ -1,0 +1,8 @@
+package io.aparok.app.domain.device
+
+interface DeviceTokenStoringService {
+    fun saveToken(token: String)
+    fun start()
+    fun stop()
+    suspend fun getToken(): String?
+}

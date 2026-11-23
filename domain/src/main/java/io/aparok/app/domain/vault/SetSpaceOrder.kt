@@ -1,0 +1,25 @@
+package io.aparok.app.domain.vault
+
+import io.aparok.app.core_models.Id
+import io.aparok.app.domain.base.AppCoroutineDispatchers
+import io.aparok.app.domain.base.ResultInteractor
+import io.aparok.app.domain.block.repo.BlockRepository
+import javax.inject.Inject
+
+class SetSpaceOrder @Inject constructor(
+    private val repository: BlockRepository,
+    dispatchers: AppCoroutineDispatchers
+): ResultInteractor<SetSpaceOrder.Params, List<Id>>(dispatchers.io) {
+
+    override suspend fun doWork(params: Params): List<Id> {
+        return repository.spaceSetOrder(
+            spaceViewId = params.spaceViewId,
+            spaceViewOrder = params.spaceViewOrder
+        )
+    }
+
+    data class Params(
+        val spaceViewId: Id,
+        val spaceViewOrder: List<Id>
+    )
+}

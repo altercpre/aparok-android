@@ -10,7 +10,7 @@ android {
         compose true
     }
 
-    namespace 'com.anytypeio.anytype.feature_os_widgets'
+    namespace 'io.aparok.app.feature_os_widgets'
 
     testOptions {
         unitTests.returnDefaultValues = true

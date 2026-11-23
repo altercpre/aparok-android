@@ -1,0 +1,10 @@
+package io.aparok.app.core_models
+
+/**
+ * @property [collapsed] list of collapsed widgets
+ * @property [widgetsToActiveViews] maps specific widget to the selected view inside this widget
+ */
+data class WidgetSession(
+    val collapsed: List<Id> = emptyList(),
+    val widgetsToActiveViews: Map<Id, Id> = emptyMap()
+)

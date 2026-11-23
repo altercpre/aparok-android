@@ -1,0 +1,121 @@
+package io.aparok.app.core_ui.widgets.toolbar
+
+import android.content.Context
+import android.util.AttributeSet
+import android.view.LayoutInflater
+import android.widget.LinearLayout
+import io.aparok.app.core_ui.R
+import io.aparok.app.core_ui.databinding.WidgetMarkupToolbarMainBinding
+import io.aparok.app.core_ui.extensions.dark
+import io.aparok.app.core_ui.extensions.light
+import io.aparok.app.core_ui.extensions.tint
+import io.aparok.app.core_ui.reactive.clicks
+import io.aparok.app.core_utils.ext.invisible
+import io.aparok.app.core_utils.ext.visible
+import io.aparok.app.presentation.editor.editor.Markup
+import io.aparok.app.core_models.ThemeColor
+import io.aparok.app.presentation.editor.markup.MarkupStyleDescriptor
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.merge
+
+class MarkupToolbarWidget @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null
+) : LinearLayout(context, attrs) {
+
+    val binding = WidgetMarkupToolbarMainBinding.inflate(
+        LayoutInflater.from(context), this
+    )
+
+    private fun bold() = binding.bold.clicks().map { Markup.Type.BOLD }
+    private fun italic() = binding.italic.clicks().map { Markup.Type.ITALIC }
+    private fun strike() = binding.strike.clicks().map { Markup.Type.STRIKETHROUGH }
+    private fun code() = binding.code.clicks().map { Markup.Type.KEYBOARD }
+    private fun underline() = binding.underline.clicks().map { Markup.Type.UNDERLINE }
+
+    fun linkClicks() = binding.url.clicks().map { Markup.Type.LINK }
+    fun colorClicks() = binding.color.clicks()
+    fun highlightClicks() = binding.highlight.clicks()
+    fun markup() = merge(bold(), italic(), strike(), underline(), code())
+
+    fun setProps(
+        props: MarkupStyleDescriptor?,
+        supportedTypes: List<Markup.Type>,
+        isBackgroundColorSelected: Boolean,
+        isTextColorSelected: Boolean
+    ) = with(binding) {
+        bold.isSelected = props?.isBold ?: false
+        bold.isEnabled = supportedTypes.contains(Markup.Type.BOLD)
+        boldIcon.isEnabled = bold.isEnabled
+        italic.isSelected = props?.isItalic ?: false
+        italic.isEnabled = supportedTypes.contains(Markup.Type.ITALIC)
+        italicIcon.isEnabled = italic.isEnabled
+        strike.isSelected = props?.isStrikethrough ?: false
+        strike.isEnabled = supportedTypes.contains(Markup.Type.STRIKETHROUGH)
+        strikeIcon.isEnabled = strike.isEnabled
+        underline.isSelected = props?.isUnderline ?: false
+        underline.isEnabled = supportedTypes.contains(Markup.Type.UNDERLINE)
+        underlineIcon.isEnabled = underline.isEnabled
+        code.isSelected = props?.isCode ?: false
+        code.isEnabled = supportedTypes.contains(Markup.Type.KEYBOARD)
+        codeIcon.isEnabled = code.isEnabled
+        url.isSelected = props?.isLinked ?: false
+        url.isEnabled = supportedTypes.contains(Markup.Type.LINK)
+        urlIcon.isEnabled = url.isEnabled
+
+        if (props?.markupTextColor != null) {
+            val code = ThemeColor.values().first { it.code == props.markupTextColor }
+            val default = resources.getColor(R.color.text_primary, null)
+            val value = resources.dark(code, default)
+            textColorCircle.tint(value)
+        } else {
+            val code = ThemeColor.values().find { it.code == props?.blockTextColor }
+            if (code != null) {
+                val default = resources.getColor(R.color.text_primary, null)
+                val value = resources.dark(code, default)
+                textColorCircle.tint(value)
+            } else {
+                textColorCircle.backgroundTintList = null
+            }
+        }
+
+        if (props?.markupHighlightColor != null) {
+            val code = ThemeColor.values().first { it.code == props.markupHighlightColor }
+            if (code != ThemeColor.DEFAULT) {
+                backgroundColorCircle.visible()
+                backgroundColorCircle.innerColor = resources.light(code)
+                backgroundColorCircle.invalidate()
+                backgroundColorCircleDefault.invisible()
+            } else {
+                backgroundColorCircle.invisible()
+                backgroundColorCircleDefault.visible()
+            }
+        } else {
+            val code = ThemeColor.values().find { it.code == props?.blockBackroundColor }
+            if (code != null) {
+                backgroundColorCircle.visible()
+                backgroundColorCircle.innerColor = resources.light(code)
+                backgroundColorCircle.invalidate()
+                backgroundColorCircleDefault.invisible()
+            } else {
+                backgroundColorCircle.invisible()
+                backgroundColorCircleDefault.visible()
+            }
+        }
+
+        backgroundColorCircle.isSelected = isBackgroundColorSelected
+        backgroundColorCircleDefault.isSelected = isBackgroundColorSelected
+
+        if (isTextColorSelected)
+            selectedTextColorCircle.visible()
+        else
+            selectedTextColorCircle.invisible()
+    }
+
+    sealed class Action
+
+    sealed class Event {
+        data class OnMarkupClicked(val type: Markup.Type) : Event()
+        object OnColorClicked : Event()
+    }
+}

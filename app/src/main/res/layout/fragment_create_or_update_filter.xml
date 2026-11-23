@@ -9,7 +9,7 @@
     android:focusable="true"
     android:orientation="vertical"
     android:transitionName="checkoutTransition"
-    tools:context="com.anytypeio.anytype.ui.sets.modals.filter.CreateFilterFromSelectedValueFragment">
+    tools:context="io.aparok.app.ui.sets.modals.filter.CreateFilterFromSelectedValueFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -95,7 +95,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchBar" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ButtonPrimaryNumber
+    <io.aparok.app.core_ui.widgets.ButtonPrimaryNumber
         android:id="@+id/btnBottomAction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -105,6 +105,6 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="@dimen/dp_20"
         app:buttonTitle="@string/apply">
-    </com.anytypeio.anytype.core_ui.widgets.ButtonPrimaryNumber>
+    </io.aparok.app.core_ui.widgets.ButtonPrimaryNumber>
 
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context="com.anytypeio.anytype.ui.dashboard.MnemonicReminderDialog">
+    tools:context="io.aparok.app.ui.dashboard.MnemonicReminderDialog">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -26,7 +26,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp">
 
-        <com.anytypeio.anytype.core_ui.views.ButtonSecondaryLarge
+        <io.aparok.app.core_ui.views.ButtonSecondaryLarge
             android:id="@+id/btnClose"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -35,7 +35,7 @@
             android:gravity="center"
             android:text="@string/close" />
 
-        <com.anytypeio.anytype.core_ui.views.ButtonWarningLarge
+        <io.aparok.app.core_ui.views.ButtonWarningLarge
             android:id="@+id/btnSettings"
             android:layout_width="0dp"
             android:layout_height="match_parent"

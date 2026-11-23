@@ -9,7 +9,7 @@ android {
         compose true
     }
 
-    namespace 'com.anytypeio.anytype.feature_discussions'
+    namespace 'io.aparok.app.feature_discussions'
 
     testOptions {
         unitTests.returnDefaultValues = true

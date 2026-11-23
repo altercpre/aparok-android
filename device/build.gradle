@@ -29,5 +29,5 @@ dependencies {
 }
 
 android {
-    namespace 'com.anytypeio.anytype.device'
+    namespace 'io.aparok.app.device'
 }

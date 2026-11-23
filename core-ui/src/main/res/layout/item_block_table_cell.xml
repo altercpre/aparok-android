@@ -8,7 +8,7 @@
     android:minWidth="@dimen/item_block_table_cell_width"
     android:minHeight="@dimen/item_block_table_cell_height">
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TextInputWidget
+    <io.aparok.app.core_ui.widgets.text.TextInputWidget
         android:id="@+id/textContent"
         style="@style/BlockCellTextContentStyle"
         android:layout_width="match_parent"

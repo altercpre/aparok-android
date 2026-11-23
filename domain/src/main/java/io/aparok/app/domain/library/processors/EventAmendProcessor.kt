@@ -1,0 +1,44 @@
+package io.aparok.app.domain.library.processors
+
+import io.aparok.app.core_models.ObjectWrapper
+import io.aparok.app.core_models.SubscriptionEvent
+import io.aparok.app.domain.debugging.Logger
+import io.aparok.app.domain.library.SubscriptionObject
+import io.aparok.app.domain.`object`.amend
+
+class EventAmendProcessor(private val logger: Logger) : SubscriptionEventProcessor<SubscriptionEvent.Amend> {
+
+    override fun process(
+        event: SubscriptionEvent.Amend,
+        dataItems: MutableList<SubscriptionObject>
+    ): MutableList<SubscriptionObject> = with(dataItems) {
+
+        val index = indexOfFirst { it.id == event.target }
+
+        if (index != -1) {
+            val item = get(index)
+            val objectWrapper = item.objectWrapper
+            if (objectWrapper != null) {
+                set(
+                    index,
+                    SubscriptionObject(
+                        id = item.id,
+                        objectWrapper = objectWrapper.amend(event.diff)
+                    )
+                )
+            } else {
+                set(
+                    index,
+                    SubscriptionObject(
+                        id = item.id,
+                        objectWrapper = ObjectWrapper.Basic(event.diff)
+                    )
+                )
+            }
+        } else {
+            logger.logWarning("EventAmendProcessor warning. Item with id:${event.target} is not found")
+        }
+        return this
+    }
+
+}

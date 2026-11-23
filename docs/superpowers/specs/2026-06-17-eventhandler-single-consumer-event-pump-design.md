@@ -83,11 +83,11 @@ gomobile callback (Go thread, sequential)
 ### Full implementation
 
 ```kotlin
-package com.anytypeio.anytype.middleware.interactor
+package io.aparok.app.middleware.interactor
 
 import anytype.Event
-import com.anytypeio.anytype.data.auth.status.SyncAndP2PStatusEventsStore
-import com.anytypeio.anytype.middleware.EventProxy
+import io.aparok.app.data.auth.status.SyncAndP2PStatusEventsStore
+import io.aparok.app.middleware.EventProxy
 import java.util.concurrent.atomic.AtomicInteger
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException

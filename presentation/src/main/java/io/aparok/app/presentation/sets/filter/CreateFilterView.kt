@@ -1,0 +1,69 @@
+package io.aparok.app.presentation.sets.filter
+
+import io.aparok.app.core_models.DVFilterCondition
+import io.aparok.app.core_models.DVFilterQuickOption
+import io.aparok.app.core_models.Id
+import io.aparok.app.core_models.RelativeDate
+import io.aparok.app.core_models.ui.ObjectIcon
+
+sealed class CreateFilterView {
+
+    abstract val text: String
+    abstract val isSelected: Boolean
+
+    data class Tag(
+        val id: Id,
+        val name: String,
+        val color: String,
+        override val isSelected: Boolean
+    ) : CreateFilterView() {
+        override val text: String
+            get() = name
+    }
+
+    data class Status(
+        val id: Id,
+        val name: String,
+        val color: String,
+        override val isSelected: Boolean
+    ) : CreateFilterView() {
+        override val text: String
+            get() = name
+    }
+
+    data class Date(
+        val id: Id,
+        val description: String,
+        val type: DVFilterQuickOption,
+        val condition: DVFilterCondition,
+        val value: Long,
+        override val isSelected: Boolean,
+        val relativeDate: RelativeDate?
+    ) : CreateFilterView() {
+        override val text: String
+            get() = description
+
+        companion object {
+            const val NO_VALUE = 0L
+        }
+    }
+
+    data class Object(
+        val id: Id,
+        val name: String,
+        val typeName: String?,
+        val icon: ObjectIcon,
+        override val isSelected: Boolean
+    ): CreateFilterView() {
+        override val text: String
+            get() = name
+    }
+
+    data class Checkbox(
+        val isChecked: Boolean,
+        override val isSelected: Boolean
+    ): CreateFilterView() {
+        override val text: String
+            get() = ""
+    }
+}

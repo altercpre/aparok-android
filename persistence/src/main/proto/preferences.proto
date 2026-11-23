@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "com.anytypeio.anytype.persistence";
+option java_package = "io.aparok.app.persistence";
 option java_multiple_files = true;
 
 message SpacePreferences {

@@ -16,7 +16,7 @@ android {
         }
     }
 
-    namespace 'com.anytypeio.anytype.clipboard'
+    namespace 'io.aparok.app.clipboard'
 }
 
 dependencies {

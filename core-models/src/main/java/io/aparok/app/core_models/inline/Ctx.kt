@@ -1,0 +1,4 @@
+package io.aparok.app.core_models.inline
+
+@JvmInline
+value class Ctx(private val ctx: String)

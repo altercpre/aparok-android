@@ -46,7 +46,7 @@ val setObjectNameState: StateFlow<SetObjectNameState> = _setObjectNameState.asSt
 Add at top of file:
 
 ```kotlin
-import com.anytypeio.anytype.presentation.objects.ObjectIcon
+import io.aparok.app.presentation.objects.ObjectIcon
 ```
 
 **Step 4: Commit**
@@ -193,7 +193,7 @@ fun onSetObjectNameOpenClicked() {
 Ensure this import exists:
 
 ```kotlin
-import com.anytypeio.anytype.core_models.Relations
+import io.aparok.app.core_models.Relations
 ```
 
 **Step 7: Commit**
@@ -254,7 +254,7 @@ git commit -m "feat(DROID-3986): use Compose sheet instead of Fragment for namin
 **Step 1: Create the file with imports and state**
 
 ```kotlin
-package com.anytypeio.anytype.core_ui.features.sets
+package io.aparok.app.core_ui.features.sets
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -298,11 +298,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
-import com.anytypeio.anytype.core_ui.R
-import com.anytypeio.anytype.core_ui.foundation.noRippleClickable
-import com.anytypeio.anytype.core_ui.views.PreviewTitle1Medium
-import com.anytypeio.anytype.core_ui.widgets.ListWidgetObjectIcon
-import com.anytypeio.anytype.presentation.objects.ObjectIcon
+import io.aparok.app.core_ui.R
+import io.aparok.app.core_ui.foundation.noRippleClickable
+import io.aparok.app.core_ui.views.PreviewTitle1Medium
+import io.aparok.app.core_ui.widgets.ListWidgetObjectIcon
+import io.aparok.app.presentation.objects.ObjectIcon
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -443,7 +443,7 @@ Add after the `SetObjectNameBottomSheet` function:
 @Composable
 fun SetObjectIconPickerBottomSheet(
     isVisible: Boolean,
-    views: List<com.anytypeio.anytype.presentation.picker.EmojiPickerView>,
+    views: List<io.aparok.app.presentation.picker.EmojiPickerView>,
     onEmojiClicked: (String) -> Unit,
     onQueryChanged: (String) -> Unit,
     onDismiss: () -> Unit
@@ -458,7 +458,7 @@ fun SetObjectIconPickerBottomSheet(
         containerColor = colorResource(id = R.color.background_secondary),
         shape = RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp)
     ) {
-        com.anytypeio.anytype.core_ui.widgets.EmojiPickerScreen(
+        io.aparok.app.core_ui.widgets.EmojiPickerScreen(
             views = views,
             onEmojiClicked = onEmojiClicked,
             onQueryChanged = onQueryChanged,
@@ -471,7 +471,7 @@ fun SetObjectIconPickerBottomSheet(
 **Step 2: Add missing import**
 
 ```kotlin
-import com.anytypeio.anytype.presentation.picker.EmojiPickerView
+import io.aparok.app.presentation.picker.EmojiPickerView
 ```
 
 **Step 3: Commit**
@@ -602,8 +602,8 @@ fun onEmojiQueryChanged(query: String) {
 **Step 4: Add required imports**
 
 ```kotlin
-import com.anytypeio.anytype.presentation.picker.EmojiPickerView
-import com.anytypeio.anytype.emojifier.data.Emoji
+import io.aparok.app.presentation.picker.EmojiPickerView
+import io.aparok.app.emojifier.data.Emoji
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 ```
@@ -669,8 +669,8 @@ binding.setObjectNameSheet.apply {
 **Step 2: Add imports**
 
 ```kotlin
-import com.anytypeio.anytype.core_ui.features.sets.SetObjectNameBottomSheet
-import com.anytypeio.anytype.core_ui.features.sets.SetObjectIconPickerBottomSheet
+import io.aparok.app.core_ui.features.sets.SetObjectNameBottomSheet
+import io.aparok.app.core_ui.features.sets.SetObjectIconPickerBottomSheet
 ```
 
 **Step 3: Add ComposeView to layout XML**
@@ -744,8 +744,8 @@ private val emojiSuggester: EmojiSuggester,
 **Step 2: Add imports**
 
 ```kotlin
-import com.anytypeio.anytype.emojifier.data.EmojiProvider
-import com.anytypeio.anytype.emojifier.suggest.EmojiSuggester
+import io.aparok.app.emojifier.data.EmojiProvider
+import io.aparok.app.emojifier.suggest.EmojiSuggester
 ```
 
 **Step 3: Update ViewModel Factory**

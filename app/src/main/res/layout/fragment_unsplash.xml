@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/default_toolbar_height">
 
-        <com.anytypeio.anytype.core_ui.widgets.DefaultSearchToolbar
+        <io.aparok.app.core_ui.widgets.DefaultSearchToolbar
             android:id="@+id/searchToolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/default_search_toolbar_clip_height"

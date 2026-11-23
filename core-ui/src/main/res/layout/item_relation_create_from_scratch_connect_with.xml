@@ -13,7 +13,7 @@
         android:text="@string/item_relation_create_from_scratch_title"
         android:textColor="@color/text_secondary" />
 
-    <com.anytypeio.anytype.core_ui.widgets.RelationFormatIconWidget
+    <io.aparok.app.core_ui.widgets.RelationFormatIconWidget
         android:id="@+id/ivRelationFormat"
         android:layout_width="24dp"
         android:layout_height="24dp"

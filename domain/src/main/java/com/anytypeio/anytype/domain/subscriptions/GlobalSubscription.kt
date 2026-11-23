@@ -1,3 +1,0 @@
-package com.anytypeio.anytype.domain.subscriptions
-
-interface GlobalSubscription

@@ -8,7 +8,7 @@
     android:orientation="horizontal"
     android:paddingStart="@dimen/dp_8">
 
-    <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+    <io.aparok.app.core_ui.widgets.ObjectIconWidget
         android:id="@+id/icon1"
         android:layout_width="14dp"
         android:layout_height="14dp"
@@ -36,7 +36,7 @@
         tools:text="Favorites"
         tools:visibility="visible"/>
 
-    <com.anytypeio.anytype.core_ui.widgets.ObjectIconWidget
+    <io.aparok.app.core_ui.widgets.ObjectIconWidget
         android:id="@+id/icon2"
         android:layout_width="14dp"
         android:layout_height="14dp"

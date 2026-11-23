@@ -9,7 +9,7 @@ android {
         compose true
     }
 
-    namespace 'com.anytypeio.anytype.feature_chats'
+    namespace 'io.aparok.app.feature_chats'
 
     testOptions {
         unitTests.returnDefaultValues = true

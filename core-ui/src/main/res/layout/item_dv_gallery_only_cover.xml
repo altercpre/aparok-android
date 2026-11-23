@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.anytypeio.anytype.core_ui.widgets.GalleryCoverWidget
+        <io.aparok.app.core_ui.widgets.GalleryCoverWidget
             android:id="@+id/cover"
             android:layout_width="match_parent"
             android:layout_height="0dp"

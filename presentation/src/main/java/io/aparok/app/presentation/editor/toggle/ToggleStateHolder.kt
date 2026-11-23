@@ -1,0 +1,25 @@
+package io.aparok.app.presentation.editor.toggle
+
+import io.aparok.app.core_models.Id
+import javax.inject.Inject
+
+interface ToggleStateHolder {
+
+    fun isToggled(target: Id): Boolean
+    fun onToggleChanged(target: Id)
+
+    class Default @Inject constructor() : ToggleStateHolder {
+
+        private val memory = mutableMapOf<Id, Boolean>()
+
+        override fun isToggled(target: Id) = memory[target] ?: false
+
+        override fun onToggleChanged(target: Id) {
+            val value = memory[target]
+            if (value != null)
+                memory[target] = !value
+            else
+                memory[target] = true
+        }
+    }
+}

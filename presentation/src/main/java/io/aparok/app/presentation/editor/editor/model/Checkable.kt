@@ -1,0 +1,8 @@
+package io.aparok.app.presentation.editor.editor.model
+
+/**
+ * Defines a view that can be checked
+ */
+interface Checkable {
+    var isChecked: Boolean
+}

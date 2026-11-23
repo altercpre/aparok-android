@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.anytypeio.anytype.core_ui.widgets.FeaturedRelationGroupWidget
+<io.aparok.app.core_ui.widgets.FeaturedRelationGroupWidget
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/featuredRelationRoot"
     android:layout_marginTop="@dimen/dp_8"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorDefault"
         style="@style/DefaultCircleColorStyle"
         app:innerColor="@color/background_primary"
@@ -15,7 +15,7 @@
         app:showSlantedLine="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorGrey"
         style="@style/DefaultCircleColorStyle"
         app:innerColor="@color/palette_light_grey"
@@ -24,7 +24,7 @@
         app:showInnerStroke="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorYellow"
         style="@style/DefaultCircleColorStyle"
         app:innerStrokeColor="@color/text_tertiary"
@@ -33,7 +33,7 @@
         app:showInnerStroke="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorOrange"
         style="@style/DefaultCircleColorStyle"
         app:innerStrokeColor="@color/text_tertiary"
@@ -42,7 +42,7 @@
         app:showInnerStroke="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorRed"
         style="@style/DefaultCircleColorStyle"
         app:innerStrokeColor="@color/text_tertiary"
@@ -51,7 +51,7 @@
         app:showInnerStroke="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorPink"
         style="@style/DefaultCircleColorStyle"
         app:innerStrokeColor="@color/text_tertiary"
@@ -60,7 +60,7 @@
         app:showInnerStroke="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorPurple"
         style="@style/DefaultCircleColorStyle"
         app:innerStrokeColor="@color/text_tertiary"
@@ -69,7 +69,7 @@
         app:showInnerStroke="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorBlue"
         style="@style/DefaultCircleColorStyle"
         app:innerStrokeColor="@color/text_tertiary"
@@ -78,7 +78,7 @@
         app:showInnerStroke="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorIce"
         style="@style/DefaultCircleColorStyle"
         app:innerStrokeColor="@color/text_tertiary"
@@ -87,7 +87,7 @@
         app:showInnerStroke="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorTeal"
         style="@style/DefaultCircleColorStyle"
         app:innerStrokeColor="@color/text_tertiary"
@@ -96,7 +96,7 @@
         app:showInnerStroke="true"
         tools:ignore="MissingConstraints" />
 
-    <com.anytypeio.anytype.core_ui.widgets.ColorCircleWidget
+    <io.aparok.app.core_ui.widgets.ColorCircleWidget
         android:id="@+id/backgroundColorLime"
         style="@style/DefaultCircleColorStyle"
         app:innerStrokeColor="@color/text_tertiary"

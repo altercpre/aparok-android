@@ -28,7 +28,7 @@
 
     </FrameLayout>
 
-    <com.anytypeio.anytype.core_ui.widgets.text.TextInputWidget
+    <io.aparok.app.core_ui.widgets.text.TextInputWidget
         android:hint="@string/hint_title"
         android:id="@+id/title"
         android:imeOptions="actionDone"
