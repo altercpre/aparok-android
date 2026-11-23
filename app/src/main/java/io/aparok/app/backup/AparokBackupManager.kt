@@ -127,6 +127,9 @@ class AparokBackupManager {
         } catch (e: SecurityException) {
             Timber.e(e, "Decryption failed during backup restore")
             throw e
+        } catch (e: IllegalArgumentException) {
+            Timber.e(e, "Invalid backup archive format")
+            throw e
         } catch (e: Exception) {
             Timber.e(e, "Failed to restore backup")
             false
