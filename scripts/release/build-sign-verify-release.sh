@@ -85,11 +85,11 @@ fi
 # 4. Prepare Core Middleware (lib.aar) & publish to mavenLocal
 echo "[3/6] Ensuring core middleware (lib.aar) is available in mavenLocal..."
 if [ ! -f "libs/lib.aar" ]; then
-    echo "  Downloading pre-compiled anytype-heart-android v0.51.6 middleware..."
+    echo "  Ensuring core middleware (lib.aar) is available..."
     mkdir -p libs
-    curl -fsSL "https://github.com/anyproto/anytype-heart/releases/download/v0.51.6/android_lib_v0.51.6.tar.gz" -o libs/android_lib.tar.gz
-    tar -xzf libs/android_lib.tar.gz -C libs/
-    rm -f libs/android_lib.tar.gz
+    curl -fsSL "https://github.com/altercpre/aparok-core/releases/download/v0.51.6-aparok/lib.aar" -o libs/lib.aar || \
+    ( curl -fsSL "https://github.com/anyproto/anytype-heart/releases/download/v0.51.6/android_lib_v0.51.6.tar.gz" -o libs/android_lib.tar.gz && \
+      tar -xzf libs/android_lib.tar.gz -C libs/ && rm -f libs/android_lib.tar.gz )
 fi
 
 chmod +x ./gradlew
