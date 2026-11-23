@@ -121,6 +121,7 @@ android {
                 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
                 storeFile rootProject.file("scripts/release/app-release.jks")
+                storeType "jks"
                 keyAlias keystoreProperties['RELEASE_KEY_ALIAS']
                 keyPassword keystoreProperties['RELEASE_KEY_PASSWORD']
                 storePassword keystoreProperties['RELEASE_STORE_PASSWORD']

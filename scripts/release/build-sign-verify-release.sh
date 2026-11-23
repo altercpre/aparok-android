@@ -34,7 +34,8 @@ if [ ! -f "${KEYSTORE_FILE}" ]; then
             -validity 10000 \
             -storepass "${STORE_PASS}" \
             -keypass "${KEY_PASS}" \
-            -dname "CN=Aparok"
+            -dname "CN=Aparok" \
+            -storetype JKS
     fi
 fi
 
