@@ -35,9 +35,7 @@ import com.anytypeio.anytype.di.feature.chats.SelectChatIconDependencies
 import com.anytypeio.anytype.di.feature.chats.SelectChatReactionDependencies
 import com.anytypeio.anytype.di.feature.gallery.GalleryInstallationComponentDependencies
 import com.anytypeio.anytype.di.feature.home.HomeScreenDependencies
-import com.anytypeio.anytype.di.feature.multiplayer.RequestJoinSpaceDependencies
 import com.anytypeio.anytype.di.feature.multiplayer.ShareSpaceDependencies
-import com.anytypeio.anytype.di.feature.multiplayer.SpaceJoinRequestDependencies
 import com.anytypeio.anytype.di.feature.notifications.NotificationDependencies
 import com.anytypeio.anytype.di.feature.notifications.PushContentDependencies
 import com.anytypeio.anytype.di.feature.objects.SelectObjectTypeDependencies
@@ -127,8 +125,6 @@ interface MainComponent :
     SpacesStorageDependencies,
     AppPreferencesDependencies,
     ShareSpaceDependencies,
-    SpaceJoinRequestDependencies,
-    RequestJoinSpaceDependencies,
     GalleryInstallationComponentDependencies,
     NotificationDependencies,
     GlobalSearchDependencies,
@@ -297,15 +293,6 @@ abstract class ComponentDependenciesModule {
     @ComponentDependenciesKey(ShareSpaceDependencies::class)
     abstract fun provideShareSpaceDependencies(component: MainComponent): ComponentDependencies
 
-    @Binds
-    @IntoMap
-    @ComponentDependenciesKey(SpaceJoinRequestDependencies::class)
-    abstract fun provideSpaceJoinRequestDependencies(component: MainComponent): ComponentDependencies
-
-    @Binds
-    @IntoMap
-    @ComponentDependenciesKey(RequestJoinSpaceDependencies::class)
-    abstract fun provideRequestToJoinSpaceDependencies(component: MainComponent): ComponentDependencies
 
     @Binds
     @IntoMap

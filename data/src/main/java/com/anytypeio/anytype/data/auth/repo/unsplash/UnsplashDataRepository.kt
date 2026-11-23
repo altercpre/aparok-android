@@ -12,19 +12,12 @@ class UnsplashDataRepository(
     override fun search(
         query: String,
         limit: Int
-    ): List<UnsplashImage> = remote.search(
-        query = query,
-        limit = limit
-    )
+    ): List<UnsplashImage> = emptyList()
+
     override fun download(
         id: Id,
         space: SpaceId,
         createdInContext: Id?,
         createdInContextRef: String?
-    ): Hash = remote.download(
-        id = id,
-        space = space,
-        createdInContext = createdInContext,
-        createdInContextRef = createdInContextRef
-    )
+    ): Hash = Hash("")
 }

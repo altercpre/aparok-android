@@ -62,9 +62,7 @@ import com.anytypeio.anytype.di.feature.chats.DaggerSelectChatReactionComponent
 import com.anytypeio.anytype.di.feature.cover.UnsplashModule
 import com.anytypeio.anytype.di.feature.gallery.DaggerGalleryInstallationComponent
 import com.anytypeio.anytype.di.feature.home.DaggerHomeScreenComponent
-import com.anytypeio.anytype.di.feature.multiplayer.DaggerRequestJoinSpaceComponent
 import com.anytypeio.anytype.di.feature.multiplayer.DaggerShareSpaceComponent
-import com.anytypeio.anytype.di.feature.multiplayer.DaggerSpaceJoinRequestComponent
 import com.anytypeio.anytype.di.feature.notifications.DaggerNotificationComponent
 import com.anytypeio.anytype.di.feature.notifications.DaggerPushContentComponent
 import com.anytypeio.anytype.di.feature.objects.DaggerSelectObjectTypeComponent
@@ -126,12 +124,10 @@ import com.anytypeio.anytype.presentation.history.VersionHistoryViewModel
 import com.anytypeio.anytype.presentation.home.HomeScreenVmParams
 import com.anytypeio.anytype.presentation.linking.LinkToObjectOrWebViewModel
 import com.anytypeio.anytype.presentation.moving.MoveToViewModel
-import com.anytypeio.anytype.presentation.multiplayer.RequestJoinSpaceViewModel
-import com.anytypeio.anytype.presentation.multiplayer.ShareSpaceViewModel
-import com.anytypeio.anytype.presentation.multiplayer.SpaceJoinRequestViewModel
 import com.anytypeio.anytype.presentation.objects.ObjectTypeChangeViewModel
 import com.anytypeio.anytype.presentation.objects.SelectObjectTypeViewModel
 import com.anytypeio.anytype.presentation.profile.ParticipantViewModel
+import com.anytypeio.anytype.presentation.multiplayer.ShareSpaceViewModel
 import com.anytypeio.anytype.presentation.publishtoweb.MySitesViewModel
 import com.anytypeio.anytype.presentation.publishtoweb.PublishToWebViewModel
 import com.anytypeio.anytype.presentation.relations.RelationAddViewModelBase
@@ -1057,21 +1053,6 @@ class ComponentManager(
             .build()
     }
 
-    val spaceJoinRequestComponent = ComponentMapWithParam { params: SpaceJoinRequestViewModel.VmParams ->
-        DaggerSpaceJoinRequestComponent
-            .builder()
-            .withDependencies(findComponentDependencies())
-            .withParams(params = params)
-            .build()
-    }
-
-    val requestToJoinSpaceComponent = ComponentWithParams { params: RequestJoinSpaceViewModel.Params ->
-        DaggerRequestJoinSpaceComponent
-            .builder()
-            .withDependencies(findComponentDependencies())
-            .withParams(params = params)
-            .build()
-    }
 
     val galleryInstallationsComponent =
         ComponentWithParams { params: GalleryInstallationViewModel.ViewModelParams ->

@@ -19,7 +19,6 @@ import com.anytypeio.anytype.di.common.componentManager
 import com.anytypeio.anytype.presentation.notifications.NotificationsViewModel
 import com.anytypeio.anytype.presentation.notifications.NotificationsViewModelFactory
 import com.anytypeio.anytype.ui.multiplayer.ShareSpaceFragment
-import com.anytypeio.anytype.ui.multiplayer.SpaceJoinRequestFragment
 import com.anytypeio.anytype.ui.settings.typography
 import javax.inject.Inject
 import timber.log.Timber
@@ -60,18 +59,7 @@ class NotificationsFragment : BaseBottomSheetComposeFragment() {
                     dismiss()
                 }
                 is NotificationsViewModel.Command.ViewSpaceJoinRequest -> {
-                    runCatching {
-                        findNavController().navigate(
-                            R.id.spaceJoinRequestScreen,
-                            SpaceJoinRequestFragment.args(
-                                space = command.space,
-                                member = command.member,
-                                analyticsRoute = EventsDictionary.Routes.notification
-                            )
-                        )
-                    }.onFailure {
-                        Timber.e(it, "Error while navigation")
-                    }
+                    // Join requests removed in Aparok sovereign offline build
                 }
                 is NotificationsViewModel.Command.ViewSpaceLeaveRequest -> {
                     runCatching {

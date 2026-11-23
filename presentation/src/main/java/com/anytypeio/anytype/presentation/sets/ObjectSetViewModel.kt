@@ -928,9 +928,7 @@ class ObjectSetViewModel(
                         is Result.Failure -> {
                             when (result.error) {
                                 Error.BackwardCompatibility -> {
-                                    navigation.postValue(
-                                        EventWrapper(AppNavigation.Command.OpenUpdateAppScreen)
-                                    )
+                                    Timber.w("Backward compatibility issue encountered opening object set")
                                 }
                                 Error.NotFoundObject -> {
                                     toast(TOAST_SET_NOT_EXIST).also {

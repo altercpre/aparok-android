@@ -95,17 +95,7 @@ abstract class SelectCoverGalleryFragment :
             .onEach { vm.onRemoveCover(ctx) }
             .launchIn(lifecycleScope)
 
-        binding.btnUnsplash.clicks()
-            .onEach {
-                findNavController().navigate(
-                    R.id.objectCoverUnsplashScreen,
-                    UnsplashBaseFragment.args(
-                        ctx = ctx,
-                        space = space
-                    )
-                )
-            }
-            .launchIn(lifecycleScope)
+        // Unsplash disabled in Aparok sovereign offline build
 
         binding.btnUpload.clicks()
             .onEach {

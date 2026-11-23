@@ -170,7 +170,6 @@ import com.anytypeio.anytype.presentation.editor.model.EditorFooter
 import com.anytypeio.anytype.presentation.editor.template.SelectTemplateViewState
 import com.anytypeio.anytype.presentation.navigation.NavPanelState
 import com.anytypeio.anytype.presentation.relations.value.tagstatus.RelationContext
-import com.anytypeio.anytype.ui.alert.AlertUpdateAppFragment
 import com.anytypeio.anytype.ui.base.NavigationFragment
 import com.anytypeio.anytype.ui.base.navigation
 import com.anytypeio.anytype.ui.editor.cover.SelectCoverObjectFragment
@@ -1485,13 +1484,7 @@ open class EditorFragment : NavigationFragment<FragmentEditorBinding>(R.layout.f
                     }
                 }
                 is Command.AlertDialog -> {
-                    if (childFragmentManager.findFragmentByTag(TAG_ALERT) == null) {
-                        AlertUpdateAppFragment().apply {
-                            onCancel = { navigation().exit(space) }
-                        }.showChildFragment(TAG_ALERT)
-                    } else {
-                        // Do nothing
-                    }
+                    // In-app update alert removed in Aparok sovereign offline build
                 }
                 is Command.ClearSearchInput -> {
                     if (hasBinding) {

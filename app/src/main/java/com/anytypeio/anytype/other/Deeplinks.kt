@@ -348,7 +348,8 @@ object DefaultSpaceInviteResolver : SpaceInviteResolver {
     }
 
     override fun createInviteLink(contentId: String, encryptionKey: String) : String {
-        return "https://github.com/altercpre/aparok-android/releases/latest?invite=$contentId#$encryptionKey"
+        // Invite links removed in Aparok sovereign offline build
+        return ""
     }
 
 

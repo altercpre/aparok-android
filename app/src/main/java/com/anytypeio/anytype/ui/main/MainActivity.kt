@@ -88,9 +88,6 @@ import com.anytypeio.anytype.ui.editor.CreateObjectFragment
 import com.anytypeio.anytype.ui.editor.EditorFragment
 import com.anytypeio.anytype.ui.gallery.GalleryInstallationFragment
 import com.anytypeio.anytype.ui.home.WidgetsScreenFragment
-import com.anytypeio.anytype.ui.multiplayer.RequestJoinSpaceFragment
-import com.anytypeio.anytype.ui.multiplayer.ShareSpaceFragment
-import com.anytypeio.anytype.ui.multiplayer.SpaceJoinRequestFragment
 import com.anytypeio.anytype.ui.notifications.NotificationsFragment
 import com.anytypeio.anytype.ui.primitives.ObjectTypeFragment
 import com.anytypeio.anytype.ui.profile.ParticipantFragment
@@ -324,14 +321,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), AppNavigation.Pr
                                 }
                             }
                             is Command.Deeplink.Invite -> {
-                                runCatching {
-                                    findNavController(R.id.fragment).navigate(
-                                        R.id.requestJoinSpaceScreen,
-                                        RequestJoinSpaceFragment.args(link = command.link)
-                                    )
-                                }.onFailure {
-                                    Timber.e(it, "Error while navigation for deep link invite")
-                                }
+                                // Invite links removed in Aparok sovereign offline build
                             }
                             is Command.Deeplink.MembershipScreen -> {
                                 // Membership removed in Aparok sovereign offline build
@@ -971,18 +961,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), AppNavigation.Pr
     private fun proceedWithNotificationCommand(command: NotificationCommand) {
         when (command) {
             is NotificationCommand.ViewSpaceJoinRequest -> {
-                runCatching {
-                    findNavController(R.id.fragment).navigate(
-                        R.id.spaceJoinRequestScreen,
-                        SpaceJoinRequestFragment.args(
-                            space = command.space,
-                            member = command.member,
-                            analyticsRoute = EventsDictionary.Routes.notification
-                        )
-                    )
-                }.onFailure {
-                    Timber.e(it, "Error while navigation")
-                }
+                // Join requests removed in Aparok sovereign offline build
             }
 
             is NotificationCommand.ViewSpaceLeaveRequest -> {

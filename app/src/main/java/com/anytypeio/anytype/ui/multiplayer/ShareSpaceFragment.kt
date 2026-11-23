@@ -215,18 +215,7 @@ class ShareSpaceFragment : BaseBottomSheetComposeFragment() {
                 startActivity(Intent.createChooser(intent, null))
             }
             is Command.ViewJoinRequest -> {
-                runCatching {
-                    findNavController().navigate(
-                        resId = R.id.spaceJoinRequestScreen,
-                        args = SpaceJoinRequestFragment.args(
-                            space = command.space,
-                            member = command.member,
-                            analyticsRoute = EventsDictionary.Routes.settings
-                        )
-                    )
-                }.onFailure {
-                    Timber.e(it, "Error while navigation")
-                }
+                // Join requests removed in Aparok sovereign offline build
             }
             is Command.ShowHowToShareSpace -> {
                 runCatching {

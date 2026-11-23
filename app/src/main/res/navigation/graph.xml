@@ -633,10 +633,6 @@
         android:id="@+id/appearanceScreen"
         android:name="com.anytypeio.anytype.ui.settings.AppearanceFragment"
         android:label="fragment_wallpaper_set" />
-    <dialog
-        android:id="@+id/alertUpdateAppFragment"
-        android:name="com.anytypeio.anytype.ui.alert.AlertUpdateAppFragment"
-        android:label="AlertUpdateAppFragment" />
     <fragment
         android:id="@+id/createObjectFragment"
         android:name="com.anytypeio.anytype.ui.editor.CreateObjectFragment"
@@ -683,17 +679,6 @@
         android:id="@+id/shareSpaceScreen"
         android:name="com.anytypeio.anytype.ui.multiplayer.ShareSpaceFragment"/>
 
-    <dialog
-        android:id="@+id/spaceJoinRequestScreen"
-        android:name="com.anytypeio.anytype.ui.multiplayer.SpaceJoinRequestFragment"/>
-
-    <dialog
-        android:id="@+id/requestJoinSpaceScreen"
-        android:name="com.anytypeio.anytype.ui.multiplayer.RequestJoinSpaceFragment">
-        <action
-            android:id="@+id/actionOpenSpaceFromVault"
-            app:destination="@id/homeScreen" />
-    </dialog>
 
     <dialog
         android:id="@+id/howToShareSpaceScreen"

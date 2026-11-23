@@ -28,14 +28,14 @@ class GenerateOneToOneChatLink @Inject constructor(
         }
 
         return OneToOneLinkData(
-            link = "$BASE_URL${params.identity}#${params.metaDataKey}",
+            link = "aparok://chat/${params.identity}#${params.metaDataKey}",
             name = params.name,
             identity = params.identity
         )
     }
 
     companion object {
-        const val BASE_URL = "https://hi.any.coop/"
+        const val BASE_URL = "aparok://chat/"
     }
 }
 

@@ -71,7 +71,6 @@ import com.anytypeio.anytype.presentation.spaces.UiSpaceQrCodeState
 import com.anytypeio.anytype.ui.base.navigation
 import com.anytypeio.anytype.ui.gallery.GalleryInstallationFragment
 import com.anytypeio.anytype.ui.multiplayer.LeaveSpaceWarning
-import com.anytypeio.anytype.ui.multiplayer.RequestJoinSpaceFragment
 import com.anytypeio.anytype.ui.multiplayer.ShareSpaceFragment
 import com.anytypeio.anytype.ui.objects.creation.WidgetSourceTypeFragment
 import com.anytypeio.anytype.ui.objects.types.pickers.ObjectTypeSelectionListener
@@ -461,10 +460,7 @@ class WidgetsScreenFragment : Fragment(),
             }
 
             is Command.Deeplink.Invite -> {
-                findNavController().navigate(
-                    R.id.requestJoinSpaceScreen,
-                    RequestJoinSpaceFragment.args(link = command.link)
-                )
+                // Invites removed in Aparok sovereign offline build
             }
 
             is Command.Deeplink.GalleryInstallation -> {

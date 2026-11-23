@@ -281,7 +281,7 @@ class Navigator : AppNavigation {
     }
 
     override fun openUpdateAppScreen() {
-        navController?.navigate(R.id.alertUpdateAppFragment)
+        // In-app update check removed in Aparok sovereign offline build
     }
 
     override fun deletedAccountScreen(deadline: Long) {

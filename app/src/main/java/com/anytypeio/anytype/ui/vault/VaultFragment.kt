@@ -44,7 +44,6 @@ import com.anytypeio.anytype.ui.chats.ChatFragment
 import com.anytypeio.anytype.ui.gallery.GalleryInstallationFragment
 import com.anytypeio.anytype.ui.home.WidgetsScreenFragment
 import com.anytypeio.anytype.ui.multiplayer.LeaveSpaceWarning
-import com.anytypeio.anytype.ui.multiplayer.RequestJoinSpaceFragment
 import com.anytypeio.anytype.ui.qrcode.QrScannerActivity
 import com.anytypeio.anytype.ui.quickcapture.QuickCaptureFragment
 import com.anytypeio.anytype.ui.search.v2.SearchV2Fragment
@@ -333,10 +332,7 @@ class VaultFragment : BaseComposeFragment() {
             }
 
             is VaultCommand.Deeplink.Invite -> {
-                findNavController().navigate(
-                    R.id.requestJoinSpaceScreen,
-                    RequestJoinSpaceFragment.args(link = command.link)
-                )
+                // Invites removed in Aparok sovereign offline build
             }
 
             is VaultCommand.Deeplink.GalleryInstallation -> {
@@ -413,14 +409,7 @@ class VaultFragment : BaseComposeFragment() {
             }
             
             is VaultCommand.NavigateToRequestJoinSpace -> {
-                runCatching {
-                    findNavController().navigate(
-                        R.id.requestJoinSpaceScreen,
-                        RequestJoinSpaceFragment.args(link = command.link)
-                    )
-                }.onFailure {
-                    Timber.e(it, "Error while navigating to request join space")
-                }
+                // Join requests removed in Aparok sovereign offline build
             }
 
             is VaultCommand.Deeplink.InitiateOneToOneChat -> {

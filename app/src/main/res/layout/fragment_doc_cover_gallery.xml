@@ -68,6 +68,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/unsplash"
+            android:visibility="gone"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:textColor="@color/glyph_active" />
