@@ -111,6 +111,10 @@ android {
         resources {
             excludes += ['LICENSE.txt', 'META-INF/DEPENDENCIES', 'META-INF/ASL2.0', 'META-INF/NOTICE', 'META-INF/LICENSE']
         }
+        jniLibs {
+            useLegacyPackaging = false
+            keepDebugSymbols.clear()
+        }
     }
 
     signingConfigs {

@@ -4,10 +4,11 @@ import android.content.Context
 import com.anytypeio.anytype.BuildConfig
 import com.anytypeio.anytype.core_models.Command
 import com.anytypeio.anytype.domain.platform.InitialParamsProvider
+import com.anytypeio.anytype.storage.AparokStorageManager
 
 class DefaultInitialParamsProvider(context: Context) : InitialParamsProvider {
 
-    override val workDir = context.filesDir.absolutePath
+    override val workDir = AparokStorageManager.resolveStorageDir(context).absolutePath
     override val defaultLogLevel =
         "common.commonspace.headsync=INFO;core.block.editor.spaceview=INFO;*=WARN"
 

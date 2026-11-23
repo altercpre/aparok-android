@@ -412,6 +412,21 @@ object DataModule {
     @Singleton
     fun provideKeystoreManager(context: Context): KeystoreManager = KeystoreManager(context)
 
+    @Provides
+    @Singleton
+    fun provideAparokEncryptionManager(keystoreManager: KeystoreManager): com.anytypeio.anytype.security.AparokEncryptionManager =
+        com.anytypeio.anytype.security.AparokEncryptionManager(keystoreManager)
+
+    @Provides
+    @Singleton
+    fun provideAparokStorageManager(context: Context): com.anytypeio.anytype.storage.AparokStorageManager =
+        com.anytypeio.anytype.storage.AparokStorageManager(context)
+
+    @Provides
+    @Singleton
+    fun provideAparokBackupManager(): com.anytypeio.anytype.backup.AparokBackupManager =
+        com.anytypeio.anytype.backup.AparokBackupManager()
+
     @Module
     interface Bindings {
 

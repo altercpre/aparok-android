@@ -28,5 +28,13 @@ jobs:
           chmod +x scripts/verify-offline.sh
           bash scripts/verify-offline.sh
 
+      - name: Verify sovereign offline matrix
+        run: |
+          chmod +x scripts/verify-sovereign-offline.sh
+          bash scripts/verify-sovereign-offline.sh
+
       - name: Compile Release Kotlin
         run: ./gradlew :app:compileReleaseKotlin --no-daemon
+
+      - name: Run Sovereign Unit Tests
+        run: ./gradlew :app:testReleaseUnitTest --tests "com.anytypeio.anytype.offline.SovereignOfflineMatrixTest" --tests "com.anytypeio.anytype.security.AparokEncryptionManagerTest" --tests "com.anytypeio.anytype.storage.AparokStorageManagerTest" --tests "com.anytypeio.anytype.backup.AparokBackupManagerTest" --no-daemon

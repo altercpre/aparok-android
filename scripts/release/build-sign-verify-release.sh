@@ -103,6 +103,7 @@ echo "[4/6] Building release APKs with Gradle..."
 # 5.5 Verify Offline & Merged Manifest Permissions
 echo "[Verification] Running offline and zero-telemetry verification..."
 bash scripts/verify-offline.sh
+bash scripts/verify-sovereign-offline.sh
 
 # 6. Gather and verify APKs
 echo "[5/6] Verifying APK signatures and calculating checksums..."
