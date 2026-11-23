@@ -139,7 +139,7 @@ fun OnboardingProfileScreen(
                     .size(96.dp)
                     .clip(CircleShape)
                     .background(colorResource(id = R.color.shape_tertiary))
-                    .border(2.dp, colorResource(id = R.color.shape_border), CircleShape)
+                    .border(2.dp, colorResource(id = R.color.border_gray), CircleShape)
                     .clickable {
                         photoPickerLauncher.launch(
                             PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
@@ -232,7 +232,7 @@ fun OnboardingProfileScreen(
             ButtonOnboardingPrimaryLarge(
                 text = "Create profile",
                 onClick = { submit() },
-                enabled = !isLoading,
+                enabled = !isLoading && name.trim().isNotBlank(),
                 loading = isLoading,
                 size = ButtonSize.Large,
                 modifierBox = Modifier.fillMaxWidth()
@@ -255,7 +255,7 @@ fun OnboardingProfileScreen(
 @Composable
 private fun AvatarPlaceholder() {
     Image(
-        painter = painterResource(id = R.drawable.ic_camera_32),
+        painter = painterResource(id = R.drawable.ci_camera),
         contentDescription = "Pick Avatar",
         modifier = Modifier.size(36.dp)
     )

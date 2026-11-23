@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.anytypeio.anytype.CrashReporter
 import com.anytypeio.anytype.analytics.base.Analytics
 import com.anytypeio.anytype.di.common.ComponentDependencies
-import com.anytypeio.anytype.di.feature.onboarding.signup.SoulCreationScreenScope
 import com.anytypeio.anytype.domain.account.AwaitAccountStartManager
 import com.anytypeio.anytype.domain.auth.interactor.CreateAccount
 import com.anytypeio.anytype.domain.auth.interactor.SetupWallet

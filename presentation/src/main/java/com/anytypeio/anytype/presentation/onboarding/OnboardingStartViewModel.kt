@@ -57,6 +57,8 @@ class OnboardingStartViewModel @Inject constructor(
     val navigation: MutableSharedFlow<AuthNavigation> = MutableSharedFlow()
     
     private var walletSetupJob: Job? = null
+    private var pendingName: String = ""
+    private var pendingAvatarPath: String? = null
 
     init {
         Timber.i("OnboardingStartViewModel, init")
@@ -64,6 +66,12 @@ class OnboardingStartViewModel @Inject constructor(
             analytics = analytics,
             eventName = EventsDictionary.authScreenShow
         )
+    }
+
+    fun onCreateProfileClicked(name: String, avatarPath: String?) {
+        pendingName = name.trim()
+        pendingAvatarPath = avatarPath
+        proceedWithCreatingWallet()
     }
 
     fun onJoinClicked() {
@@ -120,7 +128,8 @@ class OnboardingStartViewModel @Inject constructor(
         analytics.sendEvent(eventName = EventsDictionary.startCreateAccount)
         
         val params = CreateAccount.Params(
-            name = DEFAULT_ACCOUNT_NAME,
+            name = if (pendingName.isNotBlank()) pendingName else DEFAULT_ACCOUNT_NAME,
+            avatarPath = pendingAvatarPath,
             iconGradientValue = spaceGradientProvider.randomId()
         )
         createAccount.async(params = params).fold(
