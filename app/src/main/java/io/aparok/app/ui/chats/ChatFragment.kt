@@ -192,23 +192,13 @@ class ChatFragment : Fragment() {
                             }
 
                             url.startsWith("aparok://") || url.startsWith(ANYTYPE_PREFIX) || url.startsWith(FILE_PREFIX) -> {
-                                val uri = runCatching { android.net.Uri.parse(url) }.getOrNull()
-                                val objectId = uri?.getQueryParameter("objectId") ?: uri?.lastPathSegment
-                                val spaceId = uri?.getQueryParameter("spaceId")
-                                if (!objectId.isNullOrEmpty() && (uri?.host == "object" || url.contains("/object/"))) {
-                                    val nav = Navigation.OpenObject(
-                                        id = objectId,
-                                        spaceId = spaceId ?: vm.vmParams.space.id
+                                // Unsupported schemes - copy to clipboard directly
+                                proceedWithAction(
+                                    SystemAction.CopyToClipboard(
+                                        plain = url,
+                                        label = "link"
                                     )
-                                    proceedWithOpenObjectNavigation(nav)
-                                } else {
-                                    proceedWithAction(
-                                        SystemAction.CopyToClipboard(
-                                            plain = url,
-                                            label = "link"
-                                        )
-                                    )
-                                }
+                                )
                             }
 
                             else -> {
@@ -218,7 +208,8 @@ class ChatFragment : Fragment() {
                         }
 
                         // If the primary action failed, fallback to copying to clipboard
-                        if (!handled && !url.startsWith(ANYTYPE_PREFIX)
+                        if (!handled && !url.startsWith("aparok://")
+                            && !url.startsWith(ANYTYPE_PREFIX)
                             && !url.startsWith(FILE_PREFIX)
                         ) {
                             proceedWithAction(
