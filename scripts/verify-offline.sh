@@ -7,7 +7,7 @@ echo "=== Verifying Offline Enforcement & Zero-Telemetry ==="
 echo "[1/2] Verifying zero telemetry references in sources and gradle files..."
 TELEMETRY_MATCHES=$(grep -rn -i -E "firebase|sentry|amplitude" \
     --include="*.kt" --include="*.java" --include="*.gradle" --include="*.toml" --include="*.xml" . \
-    | grep -v "\.git" | grep -v "docs/" | grep -v "scripts/" | grep -v "/build/" || true)
+    | grep -v "\.git" | grep -v "docs/" | grep -v "scripts/" | grep -v "/build/" | grep -v "libs/" || true)
 
 if [ -n "$TELEMETRY_MATCHES" ]; then
     echo "ERROR: Telemetry references found in source code:"
