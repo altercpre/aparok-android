@@ -120,11 +120,12 @@ class OnboardingFragment : Fragment() {
                                     deeplink = null
                                 )
                             )
-                            if (navigation.startingObjectId != null) {
+                            val startingObjectId = navigation.startingObjectId
+                            if (startingObjectId != null) {
                                 findNavController().navigate(
                                     R.id.objectNavigation,
                                     EditorFragment.args(
-                                        ctx = navigation.startingObjectId,
+                                        ctx = startingObjectId,
                                         space = navigation.spaceId,
                                     )
                                 )
@@ -173,7 +174,7 @@ class OnboardingFragment : Fragment() {
         errorMessage?.let { message ->
             BaseAlertDialog(
                 dialogText = message,
-                buttonText = stringResource(id = R.string.common_ok),
+                buttonText = stringResource(id = android.R.string.ok),
                 onButtonClick = {
                     vm.onErrorDismissed()
                 },
