@@ -47,9 +47,6 @@ import com.anytypeio.anytype.di.feature.oswidgets.CreateObjectWidgetConfigDepend
 import com.anytypeio.anytype.di.feature.oswidgets.DataViewWidgetConfigDependencies
 import com.anytypeio.anytype.di.feature.oswidgets.ObjectShortcutWidgetConfigDependencies
 import com.anytypeio.anytype.di.feature.onboarding.OnboardingStartDependencies
-import com.anytypeio.anytype.di.feature.onboarding.login.OnboardingMnemonicLoginDependencies
-import com.anytypeio.anytype.di.feature.onboarding.signup.OnboardingMnemonicDependencies
-import com.anytypeio.anytype.di.feature.onboarding.signup.OnboardingSoulCreationDependencies
 import com.anytypeio.anytype.di.feature.participant.ParticipantComponentDependencies
 import com.anytypeio.anytype.di.feature.relations.RelationCreateFromLibraryDependencies
 import com.anytypeio.anytype.di.feature.search.GlobalSearchDependencies
@@ -121,9 +118,6 @@ interface MainComponent :
     FilesStorageDependencies,
     OnboardingDependencies,
     OnboardingStartDependencies,
-    OnboardingMnemonicDependencies,
-    OnboardingMnemonicLoginDependencies,
-    OnboardingSoulCreationDependencies,
     AboutAppDependencies,
     TemplateBlankDependencies,
     TemplateSelectDependencies,
@@ -250,21 +244,6 @@ abstract class ComponentDependenciesModule {
     @IntoMap
     @ComponentDependenciesKey(OnboardingStartDependencies::class)
     abstract fun provideOnboardingStartDependencies(component: MainComponent): ComponentDependencies
-
-    @Binds
-    @IntoMap
-    @ComponentDependenciesKey(OnboardingMnemonicDependencies::class)
-    abstract fun provideOnboardingMnemonicDependencies(component: MainComponent): ComponentDependencies
-
-    @Binds
-    @IntoMap
-    @ComponentDependenciesKey(OnboardingMnemonicLoginDependencies::class)
-    abstract fun provideOnboardingMnemonicLoginDependencies(component: MainComponent): ComponentDependencies
-
-    @Binds
-    @IntoMap
-    @ComponentDependenciesKey(OnboardingSoulCreationDependencies::class)
-    abstract fun provideOnboardingSoulCreationDependencies(component: MainComponent): ComponentDependencies
 
     @Binds
     @IntoMap

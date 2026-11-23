@@ -77,11 +77,11 @@ class DefaultUserPermissionProvider @Inject constructor(
     private val jobs = mutableListOf<Job>()
 
     override fun get(space: SpaceId): SpaceMemberPermissions? {
-        return members.value.firstOrNull { member -> member.spaceId == space.id }?.permissions
+        return members.value.firstOrNull { member -> member.spaceId == space.id }?.permissions ?: SpaceMemberPermissions.OWNER
     }
     override fun observe(space: SpaceId): Flow<SpaceMemberPermissions?> {
         return members.map { all ->
-            all.firstOrNull { member -> member.spaceId == space.id }?.permissions
+            all.firstOrNull { member -> member.spaceId == space.id }?.permissions ?: SpaceMemberPermissions.OWNER
         }
     }
 
@@ -155,7 +155,7 @@ class DefaultUserPermissionProvider @Inject constructor(
                 !member.spaceId.isNullOrEmpty()
             }.associate { member ->
                 val space = requireNotNull(member.spaceId)
-                val permissions = member.permissions ?: SpaceMemberPermissions.NO_PERMISSIONS
+                val permissions = member.permissions ?: SpaceMemberPermissions.OWNER
                 space to permissions
             }
         }

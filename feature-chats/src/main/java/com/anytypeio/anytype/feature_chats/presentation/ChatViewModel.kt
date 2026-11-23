@@ -620,7 +620,7 @@ class ChatViewModel @Inject constructor(
         canDelete = msg.creator == account || canModerateMessages,
         shouldHideUsername = shouldHideUsername,
         isEdited = msg.modifiedAt > msg.createdAt,
-        isSynced = msg.synced,
+        isSynced = true,
         reactions = msg.reactions
             .toList()
             .sortedByDescending { (emoji, ids) -> ids.size }
