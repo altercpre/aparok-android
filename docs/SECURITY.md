@@ -9,7 +9,7 @@ If you believe you have found a security vulnerability in any  repository of Alt
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-Instead, please send email to [security@github.com/altercpre/aparok-android/releases/latest](mailto:security@github.com/altercpre/aparok-android/releases/latest).
+Instead, please submit via [GitHub Private Vulnerability Reporting](https://github.com/altercpre/aparok-android/security/advisories/new).
 
 You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message.
 

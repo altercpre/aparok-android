@@ -21,12 +21,7 @@ ext.application_id = project.findProperty("app.applicationId") ?: "io.aparok.app
 ext.test_runner = project.findProperty("app.testRunner") ?: "androidx.test.runner.AndroidJUnitRunner"
 ext.onCi = project.findProperty("com.aparok.ci")?.toBoolean() ?: false
 
-// Load API keys
-def apiKeysProperties = new Properties()
-def apiKeysPropertiesFile = file("$rootDir${File.separator}apikeys.properties")
-if (apiKeysPropertiesFile.exists()) {
-    apiKeysProperties.load(new FileInputStream(apiKeysPropertiesFile))
-}
+
 
 def testDebugAll = tasks.create("testDebugAll")
 

@@ -60,7 +60,6 @@ import io.aparok.app.di.feature.chats.DaggerChatReactionComponent
 import io.aparok.app.di.feature.chats.DaggerSelectChatIconComponent
 import io.aparok.app.di.feature.chats.DaggerSelectChatReactionComponent
 import io.aparok.app.di.feature.cover.UnsplashModule
-import io.aparok.app.di.feature.gallery.DaggerGalleryInstallationComponent
 import io.aparok.app.di.feature.home.DaggerHomeScreenComponent
 import io.aparok.app.di.feature.multiplayer.DaggerShareSpaceComponent
 import io.aparok.app.di.feature.notifications.DaggerNotificationComponent
@@ -118,7 +117,6 @@ import io.aparok.app.feature_object_type.ui.ObjectTypeVmParams
 import io.aparok.app.feature_object_type.viewmodel.CreateTypeVmParams
 import io.aparok.app.feature_properties.add.EditTypePropertiesVmParams
 import io.aparok.app.feature_properties.space.SpacePropertiesViewModel
-import io.aparok.app.gallery_experience.viewmodel.GalleryInstallationViewModel
 import io.aparok.app.presentation.editor.EditorViewModel
 import io.aparok.app.presentation.history.VersionHistoryViewModel
 import io.aparok.app.presentation.home.HomeScreenVmParams
@@ -1054,13 +1052,7 @@ class ComponentManager(
     }
 
 
-    val galleryInstallationsComponent =
-        ComponentWithParams { params: GalleryInstallationViewModel.ViewModelParams ->
-            DaggerGalleryInstallationComponent.builder()
-                .withDependencies(findComponentDependencies())
-                .withParams(params)
-                .build()
-        }
+
 
     val versionHistoryComponent =
         ComponentWithParams { vmParams: VersionHistoryViewModel.VmParams ->

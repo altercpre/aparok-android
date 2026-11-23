@@ -65,7 +65,7 @@ jobs:
             Official sovereign release of Aparok for Android.
 
             - **Zero-Telemetry**: No tracking, analytics, or third-party monitoring.
-            - **End-to-End Encrypted**: Sovereign peer-to-peer sync protocol.
+            - **Sovereign Storage**: Fully local-first data architecture.
             - **Local-First**: Complete functionality offline and on local networks.
             - **Permissionless**: Unlocked lifetime access, no paywalls or memberships.
         env:

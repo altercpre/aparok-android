@@ -46,7 +46,6 @@ include ':app',
         ':core-ui',
         ':library-page-icon-picker-widget',
         ':library-emojifier',
-        ':sample',
         ':clipboard',
         ':protocol',
         ':core-models',
@@ -57,7 +56,6 @@ include ':app',
 
 include ':feature-ui-settings'
 include ':localization'
-include ':gallery-experience'
 include ':feature-chats'
 include ':feature-discussions'
 include ':feature-all-content'
@@ -68,4 +66,3 @@ include ':feature-vault'
 include ':feature-create-object'
 include ':feature-os-widgets'
 include ':feature-search'
-include ':core-ai'

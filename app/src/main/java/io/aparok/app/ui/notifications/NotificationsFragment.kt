@@ -53,7 +53,7 @@ class NotificationsFragment : BaseBottomSheetComposeFragment() {
     override fun onStart() {
         super.onStart()
         jobs += subscribe(vm.command) { command ->
-            Timber.d("GalleryInstallationFragment command: $command")
+            Timber.d("NotificationsFragment command: $command")
             when (command) {
                 is NotificationsViewModel.Command.Dismiss -> {
                     dismiss()

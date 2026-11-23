@@ -33,7 +33,6 @@ import io.aparok.app.di.feature.discussions.DiscussionComponentDependencies
 import io.aparok.app.di.feature.chats.ChatReactionDependencies
 import io.aparok.app.di.feature.chats.SelectChatIconDependencies
 import io.aparok.app.di.feature.chats.SelectChatReactionDependencies
-import io.aparok.app.di.feature.gallery.GalleryInstallationComponentDependencies
 import io.aparok.app.di.feature.home.HomeScreenDependencies
 import io.aparok.app.di.feature.multiplayer.ShareSpaceDependencies
 import io.aparok.app.di.feature.notifications.NotificationDependencies
@@ -125,7 +124,6 @@ interface MainComponent :
     SpacesStorageDependencies,
     AppPreferencesDependencies,
     ShareSpaceDependencies,
-    GalleryInstallationComponentDependencies,
     NotificationDependencies,
     GlobalSearchDependencies,
     SearchV2Dependencies,
@@ -294,10 +292,7 @@ abstract class ComponentDependenciesModule {
     abstract fun provideShareSpaceDependencies(component: MainComponent): ComponentDependencies
 
 
-    @Binds
-    @IntoMap
-    @ComponentDependenciesKey(GalleryInstallationComponentDependencies::class)
-    abstract fun provideGalleryInstallationDependencies(component: MainComponent): ComponentDependencies
+
 
     @Binds
     @IntoMap

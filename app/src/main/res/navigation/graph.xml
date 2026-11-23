@@ -404,9 +404,7 @@
         android:name="io.aparok.app.ui.auth.account.DeleteAccountWarning"/>
 
 
-    <dialog
-        android:id="@+id/galleryInstallationScreen"
-        android:name="io.aparok.app.ui.gallery.GalleryInstallationFragment" />
+
 
     <fragment
         android:id="@+id/splashScreen"

@@ -69,7 +69,6 @@ import io.aparok.app.presentation.home.SpaceHomePickerState
 import io.aparok.app.presentation.spaces.UiEvent
 import io.aparok.app.presentation.spaces.UiSpaceQrCodeState
 import io.aparok.app.ui.base.navigation
-import io.aparok.app.ui.gallery.GalleryInstallationFragment
 import io.aparok.app.ui.multiplayer.LeaveSpaceWarning
 import io.aparok.app.ui.multiplayer.ShareSpaceFragment
 import io.aparok.app.ui.objects.creation.WidgetSourceTypeFragment
@@ -464,13 +463,7 @@ class WidgetsScreenFragment : Fragment(),
             }
 
             is Command.Deeplink.GalleryInstallation -> {
-                findNavController().navigate(
-                    R.id.galleryInstallationScreen,
-                    GalleryInstallationFragment.args(
-                        deepLinkType = command.deepLinkType,
-                        deepLinkSource = command.deepLinkSource
-                    )
-                )
+                // Gallery templates removed in Aparok sovereign offline build
             }
 
             is Command.Deeplink.MembershipScreen -> {

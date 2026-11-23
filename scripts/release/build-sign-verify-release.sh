@@ -58,23 +58,12 @@ if [ -n "${CURRENT_FP}" ]; then
     fi
 fi
 
-# 2. Configure signing and properties
-echo "[2/6] Configuring signing and zero-telemetry properties..."
+# 2. Configure signing
+echo "[2/6] Configuring signing properties..."
 cat << EOF > signing.properties
 RELEASE_KEY_ALIAS=${KEY_ALIAS}
 RELEASE_KEY_PASSWORD=${KEY_PASS}
 RELEASE_STORE_PASSWORD=${STORE_PASS}
-EOF
-
-cat << EOF > apikeys.properties
-amplitude.debug=""
-amplitude.release=""
-sentry_dsn=""
-EOF
-
-cat << EOF > github.properties
-gpr.usr="aparok"
-gpr.key="public"
 EOF
 
 # 3. Prepare Android Manifest for APKs
@@ -146,7 +135,7 @@ if [ -z "${CI}" ] && command -v gh >/dev/null 2>&1 && [ -n "${GITHUB_TOKEN}" ]; 
 Official release of Aparok for Android.
 
 - **Zero-Telemetry**: No tracking, analytics, or third-party monitoring.
-- **End-to-End Encrypted**: Sovereign peer-to-peer sync protocol.
+- **Sovereign Storage**: Fully local-first data architecture.
 - **Local-First**: Complete functionality offline and on local networks.
 - **Permissionless**: Unlocked lifetime access, no paywalls or memberships.
 

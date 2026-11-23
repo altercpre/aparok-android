@@ -20,8 +20,8 @@ jobs:
 
       - name: Setup middleware dependency
         run: |
-          chmod +x ./middleware2.sh
-          ./middleware2.sh
+          chmod +x ./scripts/setup-middleware.sh
+          ./scripts/setup-middleware.sh
 
       - name: Verify zero-telemetry
         run: |

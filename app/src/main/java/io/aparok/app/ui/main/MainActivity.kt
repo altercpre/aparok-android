@@ -86,7 +86,6 @@ import io.aparok.app.ui.chats.ChatFragment
 import io.aparok.app.ui.date.DateObjectFragment
 import io.aparok.app.ui.editor.CreateObjectFragment
 import io.aparok.app.ui.editor.EditorFragment
-import io.aparok.app.ui.gallery.GalleryInstallationFragment
 import io.aparok.app.ui.home.WidgetsScreenFragment
 import io.aparok.app.ui.notifications.NotificationsFragment
 import io.aparok.app.ui.primitives.ObjectTypeFragment
@@ -308,17 +307,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), AppNavigation.Pr
                                 }
                             }
                             is Command.Deeplink.GalleryInstallation -> {
-                                runCatching {
-                                    findNavController(R.id.fragment).navigate(
-                                        R.id.galleryInstallationScreen,
-                                        GalleryInstallationFragment.args(
-                                            deepLinkType = command.deepLinkType,
-                                            deepLinkSource = command.deepLinkSource
-                                        )
-                                    )
-                                }.onFailure {
-                                    Timber.e(it, "Error while navigation for deep link gallery installation")
-                                }
+                                // Gallery templates removed in Aparok sovereign offline build
                             }
                             is Command.Deeplink.Invite -> {
                                 // Invite links removed in Aparok sovereign offline build

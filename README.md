@@ -1,31 +1,20 @@
 # Aparok
 
-Official Aparok client for Android — private, encrypted, local-first.
+Official Aparok client for Android — private, sovereign, local-first.
 
 ## Build project
 
 ### Prerequisites
 
-- Clone this repository
-  
-- Create `github.properties` file in root project folder:
+- Android SDK (API 34)
+- JDK 17
+- Git
 
-    ```
-    gpr.usr=GITHUB_USER_ID
-    gpr.key=GITHUB_PERSONAL_ACCESS_TOKEN
-    ```
+### Building
 
-Your Github ID (starting with '#' character) can be found [here](https://caius.github.io/github_id/). As to your personal Github access token, you can generate it in `Developer settings` in your profile settings on Github. 
-
-- Create `apikeys.properties` file in root project folder:
-
-    ```
-    amplitude.debug="AMPLITUDE_DEBUG_KEY"
-    amplitude.release="AMPLITUDE_RELEASE_KEY"
-    sentry_dsn="SENTRY_DSN_KEY"
-    ```
-
-Then build project.
+```bash
+./gradlew :app:assembleRelease
+```
 
 ### IDE setup (optional) 
 
@@ -78,7 +67,7 @@ Thank you for your desire to develop Aparok together!
 
 🧑‍💻 Check out our [contributing guide](docs/CONTRIBUTING.md) to learn about asking questions, creating issues, or submitting pull requests.
 
-🫢 For security findings, please email [security@github.com/altercpre/aparok-android/releases/latest](mailto:security@github.com/altercpre/aparok-android/releases/latest) and refer to our [security guide](docs/SECURITY.md) for more information.
+🫢 For security findings, please submit via [GitHub Private Vulnerability Reporting](https://github.com/altercpre/aparok-android/security/advisories/new) and refer to our [security guide](docs/SECURITY.md) for more information.
 
 🤝 Follow us on [Github](https://github.com/altercpre) and join the [Contributors Community](https://github.com/orgs/altercpre/discussions).
 
