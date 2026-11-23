@@ -965,14 +965,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), AppNavigation.Pr
             }
 
             is NotificationCommand.ViewSpaceLeaveRequest -> {
-                runCatching {
-                    findNavController(R.id.fragment).navigate(
-                        R.id.shareSpaceScreen,
-                        ShareSpaceFragment.args(space = command.space)
-                    )
-                }.onFailure {
-                    Timber.e(it, "Error while navigation")
-                }
+                // Leave requests removed in Aparok sovereign offline build
             }
 
             is NotificationCommand.GoToSpace -> {
