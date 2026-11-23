@@ -82,5 +82,4 @@ dependencies {
 
     implementation "com.google.accompanist:accompanist-navigation-material:0.34.0"
 
-    implementation platform('com.google.firebase:firebase-bom:32.1.1')
 }

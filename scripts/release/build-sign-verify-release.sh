@@ -91,6 +91,10 @@ echo "  Publishing lib.aar to mavenLocal()..."
 echo "[4/6] Building release APKs with Gradle..."
 ./gradlew :app:assembleRelease -PenableAbiSplits=true --no-daemon
 
+# 5.5 Verify Offline & Merged Manifest Permissions
+echo "[Verification] Running offline and zero-telemetry verification..."
+bash scripts/verify-offline.sh
+
 # 6. Gather and verify APKs
 echo "[5/6] Verifying APK signatures and calculating checksums..."
 OUTPUT_DIR="build/release-artefacts"

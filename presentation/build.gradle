@@ -33,9 +33,7 @@ dependencies {
     implementation project(':core-utils')
     implementation project(':localization')
     implementation project(':library-emojifier')
-    implementation project(':analytics')
     implementation project(':core-models')
-    implementation project(':crash-reporting')
 
     implementation libs.kotlin
     implementation libs.coroutinesAndroid
@@ -49,7 +47,6 @@ dependencies {
 
     implementation libs.urlcleaner
 
-    implementation libs.amplitude
 
     compileOnly libs.javaxInject
 

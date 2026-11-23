@@ -1,4 +1,2 @@
 <resources>
-    <string name="amplitude_api_key" translatable="false"></string>
-    <string name="amplitude_api_key_debug" translatable="false"></string>
 </resources>

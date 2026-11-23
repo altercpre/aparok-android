@@ -6,8 +6,6 @@ plugins {
     alias(libs.plugins.kserialization) apply false
     alias(libs.plugins.wire) apply false
     alias(libs.plugins.dokka) apply false
-    alias(libs.plugins.firebaseDistribution) apply false
-    alias(libs.plugins.gms) apply false
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.licensee) apply false
 }
@@ -29,7 +27,6 @@ def apiKeysPropertiesFile = file("$rootDir${File.separator}apikeys.properties")
 if (apiKeysPropertiesFile.exists()) {
     apiKeysProperties.load(new FileInputStream(apiKeysPropertiesFile))
 }
-ext.sentryApiKey = apiKeysProperties["sentry_dsn"] ?: ""
 
 def testDebugAll = tasks.create("testDebugAll")
 

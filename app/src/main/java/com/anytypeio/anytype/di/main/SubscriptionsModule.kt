@@ -28,7 +28,6 @@ import com.anytypeio.anytype.domain.objects.CrossSpaceObjectTypesContainer
 import com.anytypeio.anytype.domain.multiplayer.SpaceViewSubscriptionContainer
 import com.anytypeio.anytype.domain.multiplayer.UserPermissionProvider
 import com.anytypeio.anytype.domain.notifications.PushKeyProvider
-import com.anytypeio.anytype.domain.notifications.RegisterDeviceToken
 import com.anytypeio.anytype.domain.objects.DefaultStoreOfObjectTypes
 import com.anytypeio.anytype.domain.objects.DefaultStoreOfRelationOptions
 import com.anytypeio.anytype.domain.objects.DefaultStoreOfRelations
@@ -436,15 +435,7 @@ object SubscriptionsModule {
     @JvmStatic
     @Provides
     @Singleton
-    fun deviceTokenStoreService(
-        registerDeviceToken: RegisterDeviceToken,
-        dispatchers: AppCoroutineDispatchers,
-        @Named(DEFAULT_APP_COROUTINE_SCOPE) scope: CoroutineScope
-    ): DeviceTokenStoringService = DeviceTokenStoringServiceImpl(
-        registerDeviceToken = registerDeviceToken,
-        dispatchers = dispatchers,
-        scope = scope
-    )
+    fun deviceTokenStoreService(): DeviceTokenStoringService = DeviceTokenStoringServiceImpl()
 
     @JvmStatic
     @Provides

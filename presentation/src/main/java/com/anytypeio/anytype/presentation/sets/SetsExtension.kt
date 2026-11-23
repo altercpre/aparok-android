@@ -389,7 +389,7 @@ fun ObjectState.dataViewStateOrNull(): ObjectState.DataView? =
  * uninitialized state means the user acted before the object finished opening.
  *
  * Deliberately WARN, not ERROR: `Timber.e` is forwarded to crash reporting as an issue
- * (`SentryTimberIntegration(minEventLevel = ERROR)`), and this message carries no context — no
+ * and this message carries no context — no
  * object id, no call site — to act on. WARN still clears the breadcrumb threshold, so the trail
  * survives for any real crash that follows.
  */

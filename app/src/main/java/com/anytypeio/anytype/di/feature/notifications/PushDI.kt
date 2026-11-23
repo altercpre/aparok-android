@@ -1,7 +1,6 @@
 package com.anytypeio.anytype.di.feature.notifications
 
 import android.content.Context
-import com.anytypeio.anytype.device.AnytypePushService
 import com.anytypeio.anytype.device.DefaultPushMessageProcessor
 import com.anytypeio.anytype.device.PushMessageProcessor
 import com.anytypeio.anytype.di.common.ComponentDependencies
@@ -36,8 +35,6 @@ interface PushContentComponent {
     interface Factory {
         fun create(dependency: PushContentDependencies): PushContentComponent
     }
-
-    fun inject(service: AnytypePushService)
 }
 
 @Module

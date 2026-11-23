@@ -63,7 +63,6 @@ import com.anytypeio.anytype.core_utils.ext.showSnackbar
 import com.anytypeio.anytype.core_utils.ext.toast
 import com.anytypeio.anytype.core_utils.intents.ActivityCustomTabsHelper
 import com.anytypeio.anytype.core_utils.tools.FeatureToggles
-import com.anytypeio.anytype.device.AnytypePushService
 import com.anytypeio.anytype.di.common.componentManager
 import com.anytypeio.anytype.domain.base.BaseUseCase
 import com.anytypeio.anytype.domain.misc.DeepLinkResolver
@@ -890,26 +889,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), AppNavigation.Pr
             }
             AnytypeNotificationService.NOTIFICATION_INTENT_ACTION -> {
                 proceedWithNotificationIntent(intent)
-            }
-            AnytypePushService.ACTION_OPEN_CHAT -> {
-                proceedWithOpenChatIntent(intent)
-            }
-        }
-    }
-
-    private fun proceedWithOpenChatIntent(intent: Intent) {
-        val chatId = intent.getStringExtra(Relations.CHAT_ID)
-        val spaceId = intent.getStringExtra(Relations.SPACE_ID)
-        if (!chatId.isNullOrEmpty() && !spaceId.isNullOrEmpty()) {
-            if (!isChatFragmentVisible(chatId)) {
-                vm.onOpenChatTriggeredByPush(
-                    chatId = chatId,
-                    spaceId = spaceId
-                )
-                // Clearing from-notification-to-chat intent.
-                intent.replaceExtras(Bundle())
-            } else {
-                // Do nothing, already there.
             }
         }
     }

@@ -16,8 +16,6 @@ dependencies {
 
     implementation libs.timber
 
-    implementation platform(libs.firebaseBom)
-    implementation libs.firebaseMessaging
 
     testImplementation libs.junit
     testImplementation libs.kotlinTest

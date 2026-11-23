@@ -131,7 +131,7 @@ class NewCreateObjectViewModel @Inject constructor(
                 }
             } catch (e: CancellationException) {
                 // Normal coroutine cancellation (screen closed, retry()) — not an
-                // error. Re-throw so it is not logged/reported to Sentry and does
+                // error. Re-throw so it is not logged and does
                 // not corrupt state.error.
                 throw e
             } catch (e: Exception) {

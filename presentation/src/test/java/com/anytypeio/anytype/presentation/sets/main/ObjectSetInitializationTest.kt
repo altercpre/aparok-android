@@ -54,7 +54,7 @@ class ObjectSetInitializationTest : ObjectSetViewModelTestSetup() {
     @Test
     fun `should not report the not-yet-initialized state at error level`() = runTest {
         // SETUP
-        // ERROR is the level SentryTimberIntegration forwards as a reported issue, so anything
+        // ERROR is the level Timber forwards as a reported issue, so anything
         // logged at it during a routine open becomes noise in crash reporting (DROID-4555).
         val reportedAtErrorLevel = mutableListOf<String>()
         val tree = object : Timber.Tree() {

@@ -3,9 +3,7 @@ plugins {
     id "kotlin-android"
     id 'com.google.devtools.ksp'
     alias(libs.plugins.compose.compiler)
-    id "com.google.firebase.appdistribution"
     id 'androidx.navigation.safeargs.kotlin'
-    id 'com.google.gms.google-services'
     alias(libs.plugins.licensee)
 }
 
@@ -57,7 +55,9 @@ apply from: "$rootDir/versioning.gradle"
 
 def apikeyPropertiesFile = rootProject.file("apikeys.properties")
 def apikeyProperties = new Properties()
-apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+if (apikeyPropertiesFile.exists()) {
+    apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+}
 
 def useReleaseKeystore = rootProject.file("scripts/release/app-release.jks").exists()
 
@@ -92,7 +92,6 @@ android {
         buildConfigField "boolean", "LOG_EDITOR_VIEWMODEL_EVENTS", localProperties.getProperty("LOG_EDITOR_VIEWMODEL_EVENTS", "false")
         buildConfigField "boolean", "LOG_EDITOR_CONTROL_PANEL", localProperties.getProperty("LOG_EDITOR_CONTROL_PANEL", "false")
         buildConfigField "boolean", "ENABLE_STRICT_MODE", "false"
-        resValue "string", "SENTRY_DSN", config.sentryApiKey
         externalNativeBuild {
             cmake {
                 // Specify any cpp flags if needed
@@ -139,7 +138,6 @@ android {
             debuggable false
             buildConfigField "boolean", "SHOW_CHATS", "true"
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "AMPLITUDE_KEY", apikeyProperties['amplitude.release'])
             if (useReleaseKeystore) {
                 signingConfig signingConfigs.release
             } else {
@@ -151,13 +149,6 @@ android {
             applicationIdSuffix ".dev"
             debuggable true
             buildConfigField "boolean", "SHOW_CHATS", "true"
-            buildConfigField("String", "AMPLITUDE_KEY", apikeyProperties['amplitude.debug'])
-            //signingConfig signingConfigs.debug
-            firebaseAppDistribution {
-                artifactType = "AAB"
-                groups = "anytype-q&a, android-team, product-review, nightly-ops"
-                serviceCredentialsFile = "$rootDir/scripts/distribution/anytype-debug-service-account-key.json"
-            }
         }
 
         applicationVariants.configureEach { variant ->
@@ -212,9 +203,7 @@ dependencies {
     implementation project(':core-ai')
     implementation project(':library-page-icon-picker-widget')
     implementation project(':library-emojifier')
-    implementation project(':analytics')
     implementation project(':feature-ui-settings')
-    implementation project(':crash-reporting')
     implementation project(':payments')
     implementation project(':feature-chats')
     implementation project(':feature-discussions')
@@ -282,13 +271,8 @@ dependencies {
 
     implementation libs.room
 
-    implementation platform(libs.firebaseBom)
-    implementation libs.firebaseMessaging
-
     implementation libs.exoPlayerCore
     implementation libs.exoPlayerUi
-
-    implementation libs.amplitude
 
     implementation libs.shimmerLayout
     implementation libs.photoView

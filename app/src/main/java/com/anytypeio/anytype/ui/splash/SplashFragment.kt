@@ -23,7 +23,6 @@ import com.anytypeio.anytype.core_utils.ext.toast
 import com.anytypeio.anytype.core_utils.ext.visible
 import com.anytypeio.anytype.core_utils.ui.BaseFragment
 import com.anytypeio.anytype.databinding.FragmentSplashBinding
-import com.anytypeio.anytype.device.AnytypePushService
 import com.anytypeio.anytype.di.common.componentManager
 import com.anytypeio.anytype.other.DefaultDeepLinkResolver
 import com.anytypeio.anytype.presentation.splash.SplashViewModel
@@ -285,19 +284,6 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(R.layout.fragment_spl
                             } else {
                                 vm.onIntentActionNotFound()
                             }
-                        }
-                    }
-
-                    intent?.action == AnytypePushService.ACTION_OPEN_CHAT -> {
-                        val chatId = intent.getStringExtra(Relations.CHAT_ID)
-                        val spaceId = intent.getStringExtra(Relations.SPACE_ID)
-                        if (!chatId.isNullOrEmpty() && !spaceId.isNullOrEmpty()) {
-                            vm.onIntentTriggeredByChatPush(
-                                space = spaceId,
-                                chat = chatId
-                            )
-                        } else {
-                            vm.onIntentActionNotFound()
                         }
                     }
 

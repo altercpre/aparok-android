@@ -365,7 +365,6 @@ class NotificationBuilderImpl(
     ): PendingIntent {
         // 1) Build the intent that'll open your MainActivity in the right chat
         val intent = Intent(context, MainActivity::class.java).apply {
-            action = AnytypePushService.ACTION_OPEN_CHAT
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             putExtra(Relations.CHAT_ID, chatId)
             putExtra(Relations.SPACE_ID, spaceId)

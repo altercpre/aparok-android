@@ -48,7 +48,6 @@ include ':app',
         ':library-emojifier',
         ':sample',
         ':clipboard',
-        ':analytics',
         ':protocol',
         ':core-models',
         ':test:android-utils',
@@ -57,7 +56,6 @@ include ':app',
         ':libs'
 
 include ':feature-ui-settings'
-include ':crash-reporting'
 include ':localization'
 include ':payments'
 include ':gallery-experience'

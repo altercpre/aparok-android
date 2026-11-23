@@ -19,11 +19,8 @@ import coil3.network.okhttp.OkHttpNetworkFetcherFactory
 import coil3.request.crossfade
 import coil3.svg.SvgDecoder
 import coil3.video.VideoFrameDecoder
-import com.amplitude.api.Amplitude
-import com.amplitude.api.TrackingOptions
 import com.anytypeio.anytype.BuildConfig
 import com.anytypeio.anytype.CrashReporter
-import com.anytypeio.anytype.analytics.tracker.AmplitudeTracker
 import com.anytypeio.anytype.device.AppStateService
 import com.anytypeio.anytype.di.common.ComponentDependenciesProvider
 import com.anytypeio.anytype.di.common.ComponentManager
@@ -38,9 +35,6 @@ import kotlin.time.ExperimentalTime
 import timber.log.Timber
 
 class AndroidApplication : Application(), HasComponentDependencies, SingletonImageLoader.Factory {
-
-    @Inject
-    lateinit var amplitudeTracker: AmplitudeTracker
 
     @Inject
     lateinit var localNetworkAddressHandler: LocalNetworkAddressProvider
@@ -105,15 +99,11 @@ class AndroidApplication : Application(), HasComponentDependencies, SingletonIma
     }
 
     private fun setupCrashReporter() {
-        crashReporter.init()
+        // No-op for zero-telemetry
     }
 
     private fun setupAnalytics() {
-        Amplitude
-            .getInstance()
-            .setMinTimeBetweenSessionsMillis(5 * 60 * 1000)
-            .setTrackingOptions(TrackingOptions().disableIpAddress())
-            .initialize(this, BuildConfig.AMPLITUDE_KEY)
+        // No-op for zero-telemetry
     }
 
     private fun setupLocalNetworkAddressHandler() {
