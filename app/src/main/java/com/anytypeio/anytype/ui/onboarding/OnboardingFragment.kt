@@ -172,10 +172,9 @@ class OnboardingFragment : Fragment() {
 
         errorMessage?.let { message ->
             BaseAlertDialog(
-                title = stringResource(id = R.string.common_error),
-                message = message,
-                positiveButtonText = stringResource(id = R.string.common_ok),
-                onPositiveClicked = {
+                dialogText = message,
+                buttonText = stringResource(id = R.string.common_ok),
+                onButtonClick = {
                     vm.onErrorDismissed()
                 },
                 onDismissRequest = {
