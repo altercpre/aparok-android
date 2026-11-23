@@ -51,6 +51,7 @@ jobs:
           bash scripts/release/build-sign-verify-release.sh "$TAG_VAL" "$TITLE_VAL"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
 
       - name: Upload Release Artefacts to GitHub Release
         uses: softprops/action-gh-release@v2

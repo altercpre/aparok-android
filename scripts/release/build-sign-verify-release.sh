@@ -15,19 +15,25 @@ KEY_PASS="aparok123456"
 STORE_PASS="aparok123456"
 CERT_PIN_FILE="release/CERT_SHA256"
 
-# 1. Generate release keystore if not exists (using neutral subject CN=Aparok)
+# 1. Restore release keystore from secret or generate if not exists
 if [ ! -f "${KEYSTORE_FILE}" ]; then
-    echo "[1/6] Generating self-signed release keystore (${KEYSTORE_FILE})..."
-    mkdir -p "$(dirname "${KEYSTORE_FILE}")"
-    keytool -genkeypair -v \
-        -keystore "${KEYSTORE_FILE}" \
-        -alias "${KEY_ALIAS}" \
-        -keyalg RSA \
-        -keysize 4096 \
-        -validity 10000 \
-        -storepass "${STORE_PASS}" \
-        -keypass "${KEY_PASS}" \
-        -dname "CN=Aparok"
+    if [ -n "${RELEASE_KEYSTORE_BASE64}" ]; then
+        echo "[1/6] Restoring release keystore from RELEASE_KEYSTORE_BASE64 secret..."
+        mkdir -p "$(dirname "${KEYSTORE_FILE}")"
+        echo "${RELEASE_KEYSTORE_BASE64}" | base64 -d > "${KEYSTORE_FILE}"
+    else
+        echo "[1/6] Generating self-signed release keystore (${KEYSTORE_FILE})..."
+        mkdir -p "$(dirname "${KEYSTORE_FILE}")"
+        keytool -genkeypair -v \
+            -keystore "${KEYSTORE_FILE}" \
+            -alias "${KEY_ALIAS}" \
+            -keyalg RSA \
+            -keysize 4096 \
+            -validity 10000 \
+            -storepass "${STORE_PASS}" \
+            -keypass "${KEY_PASS}" \
+            -dname "CN=Aparok"
+    fi
 fi
 
 # Pin and verify certificate fingerprint
