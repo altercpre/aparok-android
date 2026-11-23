@@ -29,13 +29,12 @@ if [ -n "$MERGED_MANIFEST" ] && [ -f "$MERGED_MANIFEST" ]; then
     echo "Merged manifest permissions list:"
     echo "$PERMISSIONS"
 
-    ALLOWED_PERMISSIONS="android.permission.INTERNET
-android.permission.CAMERA"
-
     DISALLOWED=0
     while read -r perm; do
         [ -z "$perm" ] && continue
-        if [ "$perm" != "android.permission.INTERNET" ] && [ "$perm" != "android.permission.CAMERA" ]; then
+        if [ "$perm" != "android.permission.INTERNET" ] && \
+           [ "$perm" != "android.permission.CAMERA" ] && \
+           [[ "$perm" != *DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION* ]]; then
             echo "ERROR: Disallowed permission found in merged manifest: $perm"
             DISALLOWED=1
         fi
@@ -44,7 +43,7 @@ android.permission.CAMERA"
     if [ "$DISALLOWED" -ne 0 ]; then
         exit 1
     fi
-    echo "✓ Merged manifest permissions strictly limited to INTERNET and CAMERA."
+    echo "✓ Merged manifest permissions strictly limited to INTERNET and CAMERA (with standard dynamic receiver guard)."
 else
     echo "Warning: Merged manifest not found yet (will be checked post-build)."
 fi

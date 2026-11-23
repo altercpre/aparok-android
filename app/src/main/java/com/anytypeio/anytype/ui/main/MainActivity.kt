@@ -92,7 +92,6 @@ import com.anytypeio.anytype.ui.multiplayer.RequestJoinSpaceFragment
 import com.anytypeio.anytype.ui.multiplayer.ShareSpaceFragment
 import com.anytypeio.anytype.ui.multiplayer.SpaceJoinRequestFragment
 import com.anytypeio.anytype.ui.notifications.NotificationsFragment
-import com.anytypeio.anytype.ui.payments.MembershipFragment
 import com.anytypeio.anytype.ui.primitives.ObjectTypeFragment
 import com.anytypeio.anytype.ui.profile.ParticipantFragment
 import com.anytypeio.anytype.ui.sets.ObjectSetFragment
@@ -335,15 +334,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), AppNavigation.Pr
                                 }
                             }
                             is Command.Deeplink.MembershipScreen -> {
-                                runCatching {
-                                    findNavController(R.id.fragment).navigate(
-                                        R.id.paymentsScreen,
-                                        MembershipFragment.args(tierId = command.tierId, code = command.code),
-                                        NavOptions.Builder().setLaunchSingleTop(true).build()
-                                    )
-                                }.onFailure {
-                                    Timber.w(it, "Error while navigation for deep link membership tier")
-                                }
+                                // Membership removed in Aparok sovereign offline build
                             }
                             is Command.Deeplink.InitiateOneToOneChat -> {
                                 // Navigate to vault where the deeplink will be processed

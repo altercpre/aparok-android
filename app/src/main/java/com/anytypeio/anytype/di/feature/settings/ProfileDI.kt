@@ -24,7 +24,6 @@ import com.anytypeio.anytype.domain.networkmode.GetNetworkMode
 import com.anytypeio.anytype.domain.`object`.SetObjectDetails
 import com.anytypeio.anytype.domain.search.ProfileSubscriptionManager
 import com.anytypeio.anytype.domain.workspace.SpaceManager
-import com.anytypeio.anytype.presentation.membership.provider.MembershipProvider
 import com.anytypeio.anytype.presentation.spaces.SpaceGradientProvider
 import com.anytypeio.anytype.ui.settings.ProfileSettingsFragment
 import com.anytypeio.anytype.ui_settings.account.ProfileSettingsViewModel
@@ -58,7 +57,6 @@ object ProfileModule {
         configStorage: ConfigStorage,
         urlBuilder: UrlBuilder,
         setDocumentImageIcon: SetDocumentImageIcon,
-        membershipProvider: MembershipProvider,
         getNetworkMode: GetNetworkMode,
         profileSubscriptionManager: ProfileSubscriptionManager,
         removeObjectIcon: RemoveObjectIcon,
@@ -73,7 +71,6 @@ object ProfileModule {
         configStorage = configStorage,
         urlBuilder = urlBuilder,
         setDocumentImageIcon = setDocumentImageIcon,
-        membershipProvider = membershipProvider,
         getNetworkMode = getNetworkMode,
         profileSubscriptionManager = profileSubscriptionManager,
         removeObjectIcon = removeObjectIcon,

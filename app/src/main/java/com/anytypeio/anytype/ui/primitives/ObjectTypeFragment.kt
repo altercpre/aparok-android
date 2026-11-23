@@ -207,7 +207,7 @@ class ObjectTypeFragment : BaseComposeFragment() {
                 is UiErrorState.Reason.ErrorGettingObjects -> {
                     BaseAlertDialog(
                         dialogText = "${stringResource(R.string.object_type_open_type_error)}:\n${r.msg}",
-                        buttonText = stringResource(id = R.string.membership_error_button_text_dismiss),
+                        buttonText = stringResource(id = android.R.string.ok),
                         onButtonClick = vm::closeObject,
                         onDismissRequest = vm::closeObject
                     )
@@ -215,7 +215,7 @@ class ObjectTypeFragment : BaseComposeFragment() {
                 is UiErrorState.Reason.Other -> {
                     BaseAlertDialog(
                         dialogText = r.msg,
-                        buttonText = stringResource(id = R.string.membership_error_button_text_dismiss),
+                        buttonText = stringResource(id = android.R.string.ok),
                         onButtonClick = vm::hideError,
                         onDismissRequest = vm::hideError
                     )
@@ -223,7 +223,7 @@ class ObjectTypeFragment : BaseComposeFragment() {
                 UiErrorState.Reason.ErrorEditingTypeDetails -> {
                     BaseAlertDialog(
                         dialogText = stringResource(R.string.object_type_edit_type_details_error),
-                        buttonText = stringResource(id = R.string.membership_error_button_text_dismiss),
+                        buttonText = stringResource(id = android.R.string.ok),
                         onButtonClick = vm::hideError,
                         onDismissRequest = vm::hideError
                     )

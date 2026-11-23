@@ -259,11 +259,7 @@ class ShareSpaceFragment : BaseBottomSheetComposeFragment() {
                 toast(msg)
             }
             is Command.ShowMembershipScreen -> {
-                runCatching {
-                    findNavController().navigate(R.id.paymentsScreen)
-                }.onFailure {
-                    Timber.e(it, "Error while navigation: $command")
-                }
+                // Membership removed in Aparok sovereign offline build
             }
             is Command.ShowMultiplayerError -> {
                 when(command.error) {

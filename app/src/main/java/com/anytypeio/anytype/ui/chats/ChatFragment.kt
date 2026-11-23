@@ -903,7 +903,7 @@ class ChatFragment : Fragment() {
             is ChatViewModel.UiErrorState.Show -> {
                 BaseAlertDialog(
                     dialogText = state.msg,
-                    buttonText = stringResource(id = R.string.membership_error_button_text_dismiss),
+                    buttonText = stringResource(id = android.R.string.ok),
                     onButtonClick = vm::hideError,
                     onDismissRequest = vm::hideError
                 )

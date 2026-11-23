@@ -1508,9 +1508,6 @@
     <string name="payments_tier_current_paid_by_apple">Langganan Apple</string>
     <string name="payments_tier_current_paid_by_google">Langganan Google</string>
     <string name="payments_tier_current_button">Kelola pembayaran</string>
-    <string name="membership_manage_tier_desktop">Anda dapat mengelola jenjang pada platform Desktop</string>
-    <string name="membership_manage_tier_ios">Anda dapat mengelola jenjang pada platform iOS</string>
-    <string name="membership_manage_tier_another_account">Anda dapat mengelola jenjang pada akun Google lainnya</string>
     <string name="payments_tier_current_change_email_button">Ganti surel</string>
     <!-- Payments Code -->
     <string name="payments_code_title">Masukkan kode yang dikirim ke surelmu</string>
@@ -1521,49 +1518,7 @@
     <string name="payments_welcome_subtitle">Tepuk tangan yang meriah untuk rasa ingin tahu Anda!</string>
     <string name="payments_welcome_button">Lanjutkan</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
-    <string name="membership_support_subject">Laporan Gangguan Tampilan Keanggotaan - %1$s</string>
-    <string name="membership_support_body">        Hi Aparok Support Team,\n\n
-
-        I encountered an error on the Membership Screen in the app. Below are the details:\n
-
-        - Error Message: %1$s\n
-        - Description:      \n
-        - Date and Time: %2$s\n
-        - Device Model: %3$s\n
-        - Operating System: %4$s\n
-        - App Version: %5$s\n
-
-        Additional Comments:\n\n
-
-        Thank you for your assistance in resolving this issue.\n\n
-
-        Best regards,       \n
-    </string>
     <!-- Membership name errors -->
-    <string name="membership_name_bad_input">Ada yang salah dengan masukan, coba lagi</string>
-    <string name="membership_name_cache_error">Gangguan dari pihak kami, coba lagi nanti</string>
-    <string name="membership_name_cant_connect">Tidak dapat terhubung, cek koneksi internet Anda</string>
-    <string name="membership_name_invalid_chars">Nama mengandung karakter tidak valid</string>
-    <string name="membership_name_not_logged">Anda belum masuk! 😵‍💫</string>
-    <string name="membership_name_payment_node_error">Gangguan dari pihak kami, coba lagi nanti</string>
-    <string name="membership_name_tier_features_no_name">Nama tidak tersedia untuk jenjang ini</string>
-    <string name="membership_name_tier_not_found">Jenjang tidak ditemukan, coba lagi nanti</string>
-    <string name="membership_name_too_long">Nama terlalu panjang</string>
-    <string name="membership_name_too_short">Nama terlalu pendek</string>
-    <string name="membership_any_name_not_reserved">Nama ini tidak dapat dipesan</string>
-    <string name="membership_any_name_null_error">Kosong masalah</string>
-    <string name="membership_any_name_unknown">Kesalahan tak dikenal</string>
-    <string name="membership_email_wrong_format">Format surel salah</string>
-    <string name="membership_email_already_verified">Surel telah diverifikasi</string>
-    <string name="membership_email_already_sent">Surel telah terkirim, coba lagi setelah 1 menit</string>
-    <string name="membership_email_failed_to_send">Surel gagal dikirim</string>
-    <string name="membership_email_membership_already_exists">Keanggotaan sudah ada</string>
-    <string name="membership_email_code_expired">Kode kedaluwarsa</string>
-    <string name="membership_email_code_wrong">Kode salah</string>
-    <string name="membership_email_code_success">Kode benar</string>
-    <string name="membership_email_membership_not_found">Keanggotaan tidak ditemukan</string>
-    <string name="membership_email_membership_already_active">Keanggotaan telah aktif</string>
     <!-- Notifications -->
     <string name="notifications_alert_error_unknown">Terjadi galat yang tidak diketahui. Silakan coba lagi nanti.</string>
     <string name="notifications_alert_error_bad_input">Terdeteksi input yang tidak valid. Silakan cek datamu dan coba lagi.</string>
@@ -1582,7 +1537,6 @@
     <string name="gallery_experience_alert_title_error">Waduh!</string>
     <string name="gallery_experience_alert_button_space">Buka ruang</string>
     <string name="gallery_experience_alert_button_error">Tutup</string>
-    <string name="membership_btn_join">Gabung</string>
     <string name="notifications_prompt_get_notified">Dapatkan pemberitahuan</string>
     <string name="notifications_prompt_secondary_button_text">Tidak dulu</string>
     <string name="notifications_prompt_description">Nyalakan pemberitahuan permintaan bergabung atau keluar dari ruangan.</string>
@@ -1590,26 +1544,14 @@
     <string name="clipboard_panel_create_bookmark_from_clipboard">Buat markah dari papan kerani</string>
     <string name="error_unexpected_layout">Galat: tata letak tak terduga</string>
     <string name="error_non_valid_object">Galat: ID objek hilang</string>
-    <string name="membership_price_pending">Ditunda...</string>
     <string name="per_period">per %1$s</string>
     <string name="free_for">Gratis hingga %1$s</string>
     <string name="free_for_unknown">Gratis hinga …</string>
     <string name="free_until">Gratis hingga</string>
-    <string name="membership_valid_forever">Berlaku selamanya</string>
-    <string name="membership_valid_for_unknown">Berlaku hingga…</string>
-    <string name="membership_agree_start">Dengan melanjutkan, kamu menyetujui</string>
-    <string name="membership_agree_terms">Ketentuan Penggunaan</string>
-    <string name="membership_agree_middle">dan</string>
-    <string name="membership_agree_privacy">Kebijakan Privasi</string>
-    <string name="membership_support_already_acquired">Anda telah memperoleh paket Berlangganan menggunakan akun Aparok lain.</string>
-    <string name="membership_support_different_subscription">Ditemukan berlangganan dengan id yang berbeda</string>
-    <string name="membership_support_more_then_one_subscription">Ditemukan lebih dari satu berlangganan</string>
     <string name="multiplayer_space_join_request_participants_error">Gangguan pada peserta ruang</string>
     <string name="multiplayer_space_join_request_new_member_error">Gangguan pada permintaan anggota</string>
     <string name="multiplayer_space_join_request_current_user_error">Gangguan pada status pengguna saat ini</string>
     <string name="multiplayer_space_join_request_membership_status_error">Gangguan pada status keanggotaan saat ini</string>
-    <string name="membership_space_settings_share_limit">Kamu telah mencapai batas %1$d ruang terbagi</string>
-    <string name="membership_space_settings_share_limit_2">Tingkatkan akun untuk menambah atau menghapus ruang.</string>
     <plurals name="period_years">
         <item quantity="other">%d tahun</item>
     </plurals>
@@ -1622,8 +1564,6 @@
     <plurals name="period_days">
         <item quantity="other">%d hari</item>
     </plurals>
-    <string name="membership_error_button_text_action">Hubungi kami</string>
-    <string name="membership_error_button_text_dismiss">Oke</string>
     <string name="error_login_network_id_mismatch">Ketidakcocokan ID jaringan terdeteksi. Harap verifikasi konfigurasi jaringan Anda.</string>
     <string name="error_login_select_vault_error">Memilih akun salah.</string>
     <string name="error_login_account_deleted_error">Akun ini sudah dihapus. Coba gunakan akun lain atau buat yang baru.</string>

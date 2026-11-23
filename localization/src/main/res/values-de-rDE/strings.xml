@@ -1514,9 +1514,6 @@
     <string name="payments_tier_current_paid_by_apple">Apple-Abonnement</string>
     <string name="payments_tier_current_paid_by_google">Google-Abonnement</string>
     <string name="payments_tier_current_button">Zahlung verwalten</string>
-    <string name="membership_manage_tier_desktop">Du kannst deine Mitgliedschaft in der Desktop-App verwalten</string>
-    <string name="membership_manage_tier_ios">Du kannst deine Mitgliedschaft in der iOS App verwalten</string>
-    <string name="membership_manage_tier_another_account">Du kannst deine Mitgliedschaft über ein anderes Google-Konto verwalten</string>
     <string name="payments_tier_current_change_email_button">E-Mail-Adresse ändern</string>
     <!-- Payments Code -->
     <string name="payments_code_title">Gib den an deine E-Mail-Adresse gesendeten Code ein</string>
@@ -1527,49 +1524,7 @@
     <string name="payments_welcome_subtitle">Ein Hoch auf deine Neugierde!</string>
     <string name="payments_welcome_button">Fortfahren</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
-    <string name="membership_support_subject">Fehlerbericht für den Mitgliedschaftsbereich - %1$s</string>
-    <string name="membership_support_body">        Hi Aparok Support Team,\n\n
-
-        I encountered an error on the Membership Screen in the app. Below are the details:\n
-
-        - Error Message: %1$s\n
-        - Description:      \n
-        - Date and Time: %2$s\n
-        - Device Model: %3$s\n
-        - Operating System: %4$s\n
-        - App Version: %5$s\n
-
-        Additional Comments:\n\n
-
-        Thank you for your assistance in resolving this issue.\n\n
-
-        Best regards,       \n
-    </string>
     <!-- Membership name errors -->
-    <string name="membership_name_bad_input">Etwas stimmt nicht mit der Eingabe, versuche es erneut</string>
-    <string name="membership_name_cache_error">Fehler auf unserer Seite, versuche es später noch erneut</string>
-    <string name="membership_name_cant_connect">Verbindung fehlgeschlagen, überprüfen Sie Ihre Internetverbindung</string>
-    <string name="membership_name_invalid_chars">Name enthält ungültige Zeichen</string>
-    <string name="membership_name_not_logged">Du bist nicht angemeldet! 😵‍💫</string>
-    <string name="membership_name_payment_node_error">Fehler auf unserer Seite, versuche es später noch erneut</string>
-    <string name="membership_name_tier_features_no_name">Name nicht verfügbar für diese Stufe</string>
-    <string name="membership_name_tier_not_found">Stufe nicht gefunden, versuche es später erneut</string>
-    <string name="membership_name_too_long">Name ist zu lang</string>
-    <string name="membership_name_too_short">Name ist zu kurz</string>
-    <string name="membership_any_name_not_reserved">Dieser Name kann nicht reserviert werden</string>
-    <string name="membership_any_name_null_error">Leerer Fehler</string>
-    <string name="membership_any_name_unknown">Unbekannter Fehler</string>
-    <string name="membership_email_wrong_format">Ungültige E-Mail-Adresse</string>
-    <string name="membership_email_already_verified">E-Mail-Adresse bereits bestätigt</string>
-    <string name="membership_email_already_sent">E-Mail ist bereits gesendet, versuchen Sie es nach 1 Minute erneut</string>
-    <string name="membership_email_failed_to_send">E-Mail konnte nicht gesendet werden</string>
-    <string name="membership_email_membership_already_exists">Mitgliedschaft besteht bereits</string>
-    <string name="membership_email_code_expired">Code abgelaufen</string>
-    <string name="membership_email_code_wrong">Code ist falsch</string>
-    <string name="membership_email_code_success">Code ist korrekt</string>
-    <string name="membership_email_membership_not_found">Mitgliedschaft nicht gefunden</string>
-    <string name="membership_email_membership_already_active">Mitgliedschaft bereits aktiv</string>
     <!-- Notifications -->
     <string name="notifications_alert_error_unknown">Es ist ein unbekannter Fehler aufgetreten. Bitte versuche es später noch einmal.</string>
     <string name="notifications_alert_error_bad_input">Ungültige Eingabe erkannt. Bitte überprüfe deine Daten und versuche es erneut.</string>
@@ -1588,7 +1543,6 @@
     <string name="gallery_experience_alert_title_error">Hoppla!</string>
     <string name="gallery_experience_alert_button_space">Öffne Space</string>
     <string name="gallery_experience_alert_button_error">Schließen</string>
-    <string name="membership_btn_join">Beitreten</string>
     <string name="notifications_prompt_get_notified">Benachrichtigung erhalten</string>
     <string name="notifications_prompt_secondary_button_text">Nicht jetzt</string>
     <string name="notifications_prompt_description">Bitte aktiviere Benachrichtigungen, um über Anfragen zum Bei- oder Austritt für Räume informiert zu bleiben.</string>
@@ -1596,26 +1550,14 @@
     <string name="clipboard_panel_create_bookmark_from_clipboard">Lesezeichen aus der Zwischenablage erstellen</string>
     <string name="error_unexpected_layout">Fehler: Unerwartetes Layout</string>
     <string name="error_non_valid_object">Fehler: Objekt-ID fehlt</string>
-    <string name="membership_price_pending">Ausstehend...</string>
     <string name="per_period">pro %1$s</string>
     <string name="free_for">Kostenlos für %1$s</string>
     <string name="free_for_unknown">Kostenlos bis...</string>
     <string name="free_until">Kostenlos bis</string>
-    <string name="membership_valid_forever">Für immer gültig</string>
-    <string name="membership_valid_for_unknown">Gültig bis...</string>
-    <string name="membership_agree_start">Wenn du fortfährst, stimmst du unseren</string>
-    <string name="membership_agree_terms">Nutzungsbedingungen</string>
-    <string name="membership_agree_middle">und</string>
-    <string name="membership_agree_privacy">Datenschutzerklärung</string>
-    <string name="membership_support_already_acquired">Du hast bereits einen Mitgliedschaftsplan mit einem anderen Aparok Account erworben.</string>
-    <string name="membership_support_different_subscription">Ein Abonnement mit einer anderen ID gefunden</string>
-    <string name="membership_support_more_then_one_subscription">Mehr als ein Abonnement gefunden</string>
     <string name="multiplayer_space_join_request_participants_error">Fehler beim Beitritt in den Space</string>
     <string name="multiplayer_space_join_request_new_member_error">Request\'s member error</string>
     <string name="multiplayer_space_join_request_current_user_error">Current user status error</string>
     <string name="multiplayer_space_join_request_membership_status_error">Aktueller Mitgliedschaftsstatus Fehler</string>
-    <string name="membership_space_settings_share_limit">Du hast die Grenze von %1$d geteilten Spaces erreicht</string>
-    <string name="membership_space_settings_share_limit_2">Upgrade for more or remove spaces.</string>
     <plurals name="period_years">
         <item quantity="one">Jahr</item>
         <item quantity="other">%d Jahre</item>
@@ -1632,8 +1574,6 @@
         <item quantity="one">Tag</item>
         <item quantity="other">%d Tage</item>
     </plurals>
-    <string name="membership_error_button_text_action">Kontaktiere uns</string>
-    <string name="membership_error_button_text_dismiss">OK</string>
     <string name="error_login_network_id_mismatch">Netzwerk-ID stimmt nicht überein. Bitte überprüfe deine Netzwerkkonfiguration.</string>
     <string name="error_login_select_vault_error">Fehler beim Auswählen des Tresors.</string>
     <string name="error_login_account_deleted_error">Dieses Konto wurde gelöscht. Versuche es mit einem anderen Konto oder erstelle ein neues.</string>

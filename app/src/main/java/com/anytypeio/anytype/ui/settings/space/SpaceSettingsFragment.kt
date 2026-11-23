@@ -297,7 +297,7 @@ class SpaceSettingsFragment : Fragment(), ObjectTypeSelectionListener {
                     toast(getString(R.string.multiplayer_toast_share_limit_reached))
                 }
                 Command.NavigateToMembership -> {
-                    findNavController().navigate(R.id.paymentsScreen)
+                    // Membership removed in Aparok sovereign offline build
                 }
                 is Command.ExitToVault -> {
                     runCatching {

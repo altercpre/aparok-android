@@ -10,7 +10,6 @@ import com.anytypeio.anytype.analytics.base.sendEvent
 import com.anytypeio.anytype.core_models.NetworkMode
 import com.anytypeio.anytype.core_models.Relations
 import com.anytypeio.anytype.core_models.UrlBuilder
-import com.anytypeio.anytype.core_models.membership.MembershipStatus
 import com.anytypeio.anytype.core_models.primitives.SpaceId
 import com.anytypeio.anytype.core_models.ui.AccountProfile
 import com.anytypeio.anytype.core_models.ui.profileIcon
@@ -29,7 +28,6 @@ import com.anytypeio.anytype.domain.networkmode.GetNetworkMode
 import com.anytypeio.anytype.domain.`object`.SetObjectDetails
 import com.anytypeio.anytype.domain.search.ProfileSubscriptionManager
 import com.anytypeio.anytype.presentation.common.BaseViewModel
-import com.anytypeio.anytype.presentation.membership.provider.MembershipProvider
 import com.anytypeio.anytype.presentation.profile.UiProfileQrCodeState
 import com.anytypeio.anytype.ui_settings.BuildConfig
 import kotlinx.coroutines.Job
@@ -50,7 +48,6 @@ class ProfileSettingsViewModel(
     private val configStorage: ConfigStorage,
     private val urlBuilder: UrlBuilder,
     private val setImageIcon: SetDocumentImageIcon,
-    private val membershipProvider: MembershipProvider,
     private val getNetworkMode: GetNetworkMode,
     private val profileContainer: ProfileSubscriptionManager,
     private val removeObjectIcon: RemoveObjectIcon,
@@ -66,8 +63,6 @@ class ProfileSettingsViewModel(
 
     val isLoggingOut = MutableStateFlow(false)
     val debugSyncReportUri = MutableStateFlow<Uri?>(null)
-    val membershipStatusState = MutableStateFlow<MembershipStatus?>(null)
-    val showMembershipState = MutableStateFlow<ShowMembership?>(null)
 
     val isDebugEnabled = MutableStateFlow(false)
 
@@ -111,19 +106,6 @@ class ProfileSettingsViewModel(
             analytics.sendEvent(
                 eventName = EventsDictionary.screenSettingsAccount
             )
-        }
-        viewModelScope.launch {
-            getNetworkMode.async(Unit).fold(
-                onSuccess = { result ->
-                    showMembershipState.value = ShowMembership(false)
-                },
-                onFailure = { Timber.e(it, "Error while getting network mode") }
-            )
-        }
-        viewModelScope.launch {
-            membershipProvider.status().collect { status ->
-                membershipStatusState.value = status
-            }
         }
     }
 
@@ -286,7 +268,6 @@ class ProfileSettingsViewModel(
         private val configStorage: ConfigStorage,
         private val urlBuilder: UrlBuilder,
         private val setDocumentImageIcon: SetDocumentImageIcon,
-        private val membershipProvider: MembershipProvider,
         private val getNetworkMode: GetNetworkMode,
         private val profileSubscriptionManager: ProfileSubscriptionManager,
         private val removeObjectIcon: RemoveObjectIcon,
@@ -304,7 +285,6 @@ class ProfileSettingsViewModel(
                 configStorage = configStorage,
                 urlBuilder = urlBuilder,
                 setImageIcon = setDocumentImageIcon,
-                membershipProvider = membershipProvider,
                 getNetworkMode = getNetworkMode,
                 profileContainer = profileSubscriptionManager,
                 removeObjectIcon = removeObjectIcon,
@@ -322,5 +302,3 @@ class ProfileSettingsViewModel(
 }
 
 private const val STOP_SUBSCRIPTION_TIMEOUT = 1_000L
-
-data class ShowMembership(val isShowing: Boolean)

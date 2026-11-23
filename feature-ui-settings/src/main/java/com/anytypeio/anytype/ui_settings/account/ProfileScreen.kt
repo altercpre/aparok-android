@@ -58,11 +58,6 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.rememberAsyncImagePainter
-import com.anytypeio.anytype.core_models.membership.Membership
-import com.anytypeio.anytype.core_models.membership.MembershipConstants
-import com.anytypeio.anytype.core_models.membership.MembershipPaymentMethod
-import com.anytypeio.anytype.core_models.membership.MembershipStatus
-import com.anytypeio.anytype.core_models.membership.TierId
 import com.anytypeio.anytype.core_models.ui.AccountProfile
 import com.anytypeio.anytype.core_models.ui.ProfileIconView
 import com.anytypeio.anytype.core_ui.common.DefaultPreviews
@@ -73,7 +68,6 @@ import com.anytypeio.anytype.core_ui.foundation.Divider
 import com.anytypeio.anytype.core_ui.foundation.Dragger
 import com.anytypeio.anytype.core_ui.foundation.GenericAlert
 import com.anytypeio.anytype.core_ui.foundation.Option
-import com.anytypeio.anytype.core_ui.foundation.OptionMembership
 import com.anytypeio.anytype.core_ui.foundation.OptionWithBadge
 import com.anytypeio.anytype.core_ui.foundation.noRippleClickable
 import com.anytypeio.anytype.core_ui.views.AvatarTitle
@@ -100,16 +94,13 @@ fun ProfileSettingsScreen(
     onMySitesClicked: () -> Unit,
     onAboutClicked: () -> Unit,
     onSpacesClicked: () -> Unit,
-    onMembershipClicked: () -> Unit,
-    membershipStatus: MembershipStatus?,
-    showMembership: ShowMembership?,
     clearProfileImage: () -> Unit,
     onDebugClicked: () -> Unit,
     onExperimentalFeaturesClicked: () -> Unit,
     onMiscSectionClicked: () -> Unit,
     notificationsDisabled: Boolean,
     onOpenNotificationSettings: () -> Unit,
-    onIdentityClicked: () -> Unit = onMembershipClicked,
+    onIdentityClicked: () -> Unit = {},
     onShowQrCodeClicked: () -> Unit = {}
 ) {
     LazyColumn(
@@ -166,19 +157,6 @@ fun ProfileSettingsScreen(
         }
         item {
             Divider(paddingStart = 16.dp, paddingEnd = 16.dp)
-        }
-        if (false /* membership stripped */) {
-            item {
-                OptionMembership(
-                    image = R.drawable.ic_settings_membership,
-                    text = stringResource(R.string.settings_membership),
-                    onClick = onMembershipClicked,
-                    membershipStatus = membershipStatus
-                )
-            }
-            item {
-                Divider(paddingStart = 16.dp, paddingEnd = 16.dp)
-            }
         }
 
         item {
@@ -698,17 +676,6 @@ private fun ProfileSettingPreview() {
         onDataManagementClicked = {},
         onAboutClicked = {},
         onSpacesClicked = {},
-        onMembershipClicked = {},
-        membershipStatus = MembershipStatus(
-            status = Membership.Status.STATUS_ACTIVE,
-            activeTier = TierId(MembershipConstants.CO_CREATOR_ID),
-            dateEnds = 1714199910,
-            paymentMethod = MembershipPaymentMethod.METHOD_CRYPTO,
-            anyName = "AnyName1983",
-            tiers = listOf(),
-            formattedDateEnds = "formattedDateEnds-fdsfadsfdsafs"
-        ),
-        showMembership = ShowMembership(true),
         clearProfileImage = {},
         onDebugClicked = {},
         onExperimentalFeaturesClicked = {},
@@ -719,41 +686,6 @@ private fun ProfileSettingPreview() {
         onMySitesClicked = {},
         onMiscSectionClicked = {}
     )
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun AnyIdInfoSheet(
-    onExplorePlans: () -> Unit,
-    onDismiss: () -> Unit
-) {
-    ModalBottomSheet(
-        modifier = Modifier,
-        onDismissRequest = onDismiss,
-        containerColor = Color.Transparent,
-        contentColor = Color.Transparent,
-        dragHandle = null,
-    ) {
-        GenericAlert(
-            modifier = Modifier
-                .navigationBarsPadding()
-                .padding(horizontal = 8.dp)
-                .padding(bottom = 16.dp)
-                .fillMaxWidth()
-                .background(
-                    color = colorResource(R.color.background_secondary),
-                    shape = RoundedCornerShape(16.dp)
-                ),
-            onFirstButtonClicked = onExplorePlans,
-            config = AlertConfig.WithOneButton(
-                icon = R.drawable.ic_any_id,
-                title = stringResource(R.string.any_id_info_title),
-                description = stringResource(R.string.any_id_info_description),
-                firstButtonText = stringResource(R.string.any_id_info_button),
-                firstButtonType = BUTTON_SECONDARY
-            )
-        )
-    }
 }
 
 @DefaultPreviews
@@ -775,17 +707,6 @@ private fun ProfileSettingLongGlobalNamePreview() {
         onDataManagementClicked = {},
         onAboutClicked = {},
         onSpacesClicked = {},
-        onMembershipClicked = {},
-        membershipStatus = MembershipStatus(
-            status = Membership.Status.STATUS_PENDING,
-            activeTier = TierId(1),
-            dateEnds = 0,
-            paymentMethod = MembershipPaymentMethod.METHOD_NONE,
-            anyName = "",
-            tiers = listOf(),
-            formattedDateEnds = ""
-        ),
-        showMembership = ShowMembership(true),
         clearProfileImage = {},
         onDebugClicked = {},
         onExperimentalFeaturesClicked = {},

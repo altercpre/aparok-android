@@ -75,7 +75,7 @@ class SpaceJoinRequestFragment : BaseBottomSheetComposeFragment() {
         Timber.d("proceedWithCommand: $command")
         when (command) {
             is SpaceJoinRequestViewModel.Command.NavigateToMembership -> {
-                findNavController().navigate(R.id.paymentsScreen)
+                // Membership removed in Aparok sovereign offline build
             }
             is SpaceJoinRequestViewModel.Command.ShowGenericMultiplayerError -> {
                 when(command.error) {

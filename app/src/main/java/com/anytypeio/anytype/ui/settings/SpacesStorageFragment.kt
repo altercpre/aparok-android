@@ -108,7 +108,7 @@ class SpacesStorageFragment : BaseBottomSheetComposeFragment() {
                 )
             }
             SpacesStorageViewModel.Command.ShowMembershipScreen -> {
-                findNavController().navigate(R.id.paymentsScreen)
+                // Membership removed in Aparok sovereign offline build
             }
         }
     }

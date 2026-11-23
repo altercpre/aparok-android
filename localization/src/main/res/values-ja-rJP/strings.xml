@@ -1508,9 +1508,6 @@
     <string name="payments_tier_current_paid_by_apple">Appleサブスクリプション</string>
     <string name="payments_tier_current_paid_by_google">Google Playでの定期購入</string>
     <string name="payments_tier_current_button">支払いの管理</string>
-    <string name="membership_manage_tier_desktop">プラン変更は、デスクトップ版から行ってください</string>
-    <string name="membership_manage_tier_ios">プラン変更は、iOS版から行ってください</string>
-    <string name="membership_manage_tier_another_account">プラン変更は、別のGoogleアカウントで行ってください</string>
     <string name="payments_tier_current_change_email_button">メールアドレスの変更</string>
     <!-- Payments Code -->
     <string name="payments_code_title">メールアドレスに送信されたコードを入力</string>
@@ -1521,49 +1518,7 @@
     <string name="payments_welcome_subtitle">ご興味をお持ちいただき、ありがとうございます！</string>
     <string name="payments_welcome_button">続行</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
-    <string name="membership_support_subject">メンバーシップ画面エラーレポート - %1$s</string>
-    <string name="membership_support_body">        Aparokチーム担当者の方へ\n\n
-
-        アプリ使用中に、メンバーシップ画面にて、エラーが表示されました。詳しくは以下の通りです。\n
-
-        - エラーメッセージ：%1$s\n
-        - 状況説明：：\n
-        - 発生日時：%2$s\n
-        - お使いのデバイス名：%3$s\n
-        - お使いのOS：%4$s\n
-        - アプリバージョン：%5$s\n
-
-        追記：\n\n
-
-        本件の解決にご協力いただき、ありがとうございます。\n\n
-
-        よろしくお願いいたします。\n
-    </string>
     <!-- Membership name errors -->
-    <string name="membership_name_bad_input">入力中に問題が発生しました。もう一度お試しください</string>
-    <string name="membership_name_cache_error">エラーが発生しました。しばらくしてからもう一度お試しください。</string>
-    <string name="membership_name_cant_connect">接続できません。インターネット接続を確認してください</string>
-    <string name="membership_name_invalid_chars">使用できない文字が含まれています</string>
-    <string name="membership_name_not_logged">ログインしていません！😵‍💫</string>
-    <string name="membership_name_payment_node_error">エラーが発生しました。しばらくしてからもう一度お試しください。</string>
-    <string name="membership_name_tier_features_no_name">このプランでは名前は使用できません</string>
-    <string name="membership_name_tier_not_found">プランが見つかりませんでした。あとでもう一度お試しください</string>
-    <string name="membership_name_too_long">名前が長すぎます</string>
-    <string name="membership_name_too_short">名前が短すぎます</string>
-    <string name="membership_any_name_not_reserved">この名前は予約できません</string>
-    <string name="membership_any_name_null_error">エンプティエラー</string>
-    <string name="membership_any_name_unknown">不明なエラー</string>
-    <string name="membership_email_wrong_format">正しくメールアドレスを入力してください</string>
-    <string name="membership_email_already_verified">このメールアドレスは確認済みです</string>
-    <string name="membership_email_already_sent">メールは既に送信されています。1分後にもう一度お試しください</string>
-    <string name="membership_email_failed_to_send">メールの送信に失敗しました</string>
-    <string name="membership_email_membership_already_exists">既にメンバーシップに加入しています</string>
-    <string name="membership_email_code_expired">コードの有効期限が切れました</string>
-    <string name="membership_email_code_wrong">コードが間違っています</string>
-    <string name="membership_email_code_success">コードが一致しました</string>
-    <string name="membership_email_membership_not_found">メンバーシップが見つかりませんでした</string>
-    <string name="membership_email_membership_already_active">すでにメンバーシップに加入しています</string>
     <!-- Notifications -->
     <string name="notifications_alert_error_unknown">不明なエラーが発生しました。あとでもう一度お試しください。</string>
     <string name="notifications_alert_error_bad_input">無効な入力が検出されました。データを確認して、もう一度やり直してください。</string>
@@ -1582,7 +1537,6 @@
     <string name="gallery_experience_alert_title_error">申し訳ありません</string>
     <string name="gallery_experience_alert_button_space">スペースを開く</string>
     <string name="gallery_experience_alert_button_error">閉じる</string>
-    <string name="membership_btn_join">参加</string>
     <string name="notifications_prompt_get_notified">通知を受け取る</string>
     <string name="notifications_prompt_secondary_button_text">あとで</string>
     <string name="notifications_prompt_description">スペースへの参加や退出のリクエストがあった際に通知を受け取るには、通知を有効にしてください。</string>
@@ -1590,26 +1544,14 @@
     <string name="clipboard_panel_create_bookmark_from_clipboard">クリップボードからブックマークを作成</string>
     <string name="error_unexpected_layout">エラー：予期しないレイアウト</string>
     <string name="error_non_valid_object">エラー：オブジェクトIDがありません</string>
-    <string name="membership_price_pending">保留中…</string>
     <string name="per_period">%1$sごと</string>
     <string name="free_for">無料期間 %1$s</string>
     <string name="free_for_unknown">無料期限…</string>
     <string name="free_until">無料期限</string>
-    <string name="membership_valid_forever">有効期限 無期限</string>
-    <string name="membership_valid_for_unknown">有効期限…</string>
-    <string name="membership_agree_start">続行することで同意したものとみなします。</string>
-    <string name="membership_agree_terms">利用規約</string>
-    <string name="membership_agree_middle">および</string>
-    <string name="membership_agree_privacy">プライバシーポリシー</string>
-    <string name="membership_support_already_acquired">他のプラットフォームにて、既にメンバーシップにご加入いただいているようです。</string>
-    <string name="membership_support_different_subscription">異なるIDの契約が見つかりました</string>
-    <string name="membership_support_more_then_one_subscription">複数の契約が見つかりました</string>
     <string name="multiplayer_space_join_request_participants_error">スペースメンバーエラー</string>
     <string name="multiplayer_space_join_request_new_member_error">リクエストメンバーエラー</string>
     <string name="multiplayer_space_join_request_current_user_error">現在のユーザーステータスエラー</string>
     <string name="multiplayer_space_join_request_membership_status_error">現在のメンバーシップステータスエラー</string>
-    <string name="membership_space_settings_share_limit">You’ve reached the limit of %1$d shared spaces</string>
-    <string name="membership_space_settings_share_limit_2">Upgrade for more or remove spaces.</string>
     <plurals name="period_years">
         <item quantity="other">%d 年間</item>
     </plurals>
@@ -1622,8 +1564,6 @@
     <plurals name="period_days">
         <item quantity="other">%d 日間</item>
     </plurals>
-    <string name="membership_error_button_text_action">お問い合わせ</string>
-    <string name="membership_error_button_text_dismiss">はい</string>
     <string name="error_login_network_id_mismatch">ネットワークIDの不一致が検出されました。ネットワーク設定を確認してください。</string>
     <string name="error_login_select_vault_error">保管庫選択エラーです。</string>
     <string name="error_login_account_deleted_error">このアカウントは削除されました。別のアカウントを使用するか、新しいアカウントを作成してください。</string>

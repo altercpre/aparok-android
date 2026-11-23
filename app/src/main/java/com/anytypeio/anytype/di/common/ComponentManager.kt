@@ -62,7 +62,6 @@ import com.anytypeio.anytype.di.feature.chats.DaggerSelectChatReactionComponent
 import com.anytypeio.anytype.di.feature.cover.UnsplashModule
 import com.anytypeio.anytype.di.feature.gallery.DaggerGalleryInstallationComponent
 import com.anytypeio.anytype.di.feature.home.DaggerHomeScreenComponent
-import com.anytypeio.anytype.di.feature.membership.DaggerMembershipComponent
 import com.anytypeio.anytype.di.feature.multiplayer.DaggerRequestJoinSpaceComponent
 import com.anytypeio.anytype.di.feature.multiplayer.DaggerShareSpaceComponent
 import com.anytypeio.anytype.di.feature.multiplayer.DaggerSpaceJoinRequestComponent
@@ -1072,10 +1071,6 @@ class ComponentManager(
             .withDependencies(findComponentDependencies())
             .withParams(params = params)
             .build()
-    }
-
-    val membershipComponent = Component {
-        DaggerMembershipComponent.factory().create(findComponentDependencies())
     }
 
     val galleryInstallationsComponent =

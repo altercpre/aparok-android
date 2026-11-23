@@ -76,7 +76,6 @@ import com.anytypeio.anytype.ui.multiplayer.ShareSpaceFragment
 import com.anytypeio.anytype.ui.objects.creation.WidgetSourceTypeFragment
 import com.anytypeio.anytype.ui.objects.types.pickers.ObjectTypeSelectionListener
 import com.anytypeio.anytype.ui.objects.types.pickers.WidgetSourceTypeListener
-import com.anytypeio.anytype.ui.payments.MembershipFragment
 import com.anytypeio.anytype.ui.settings.space.SpaceSettingsFragment
 import com.anytypeio.anytype.ui.widgets.CreateChatObjectFragment
 import com.anytypeio.anytype.ui.widgets.CreateChatObjectListener
@@ -479,15 +478,7 @@ class WidgetsScreenFragment : Fragment(),
             }
 
             is Command.Deeplink.MembershipScreen -> {
-                runCatching {
-                    findNavController().navigate(
-                        R.id.paymentsScreen,
-                        MembershipFragment.args(command.tierId, command.code),
-                        Builder().setLaunchSingleTop(true).build()
-                    )
-                }.onFailure {
-                    Timber.e(it, "Error while opening membership screen")
-                }
+                // Membership removed in Aparok sovereign offline build
             }
 
             is Command.Deeplink.DeepLinkToObjectNotWorking -> {

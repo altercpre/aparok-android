@@ -45,7 +45,6 @@ import com.anytypeio.anytype.ui.gallery.GalleryInstallationFragment
 import com.anytypeio.anytype.ui.home.WidgetsScreenFragment
 import com.anytypeio.anytype.ui.multiplayer.LeaveSpaceWarning
 import com.anytypeio.anytype.ui.multiplayer.RequestJoinSpaceFragment
-import com.anytypeio.anytype.ui.payments.MembershipFragment
 import com.anytypeio.anytype.ui.qrcode.QrScannerActivity
 import com.anytypeio.anytype.ui.quickcapture.QuickCaptureFragment
 import com.anytypeio.anytype.ui.search.v2.SearchV2Fragment
@@ -351,11 +350,7 @@ class VaultFragment : BaseComposeFragment() {
             }
 
             is VaultCommand.Deeplink.MembershipScreen -> {
-                findNavController().navigate(
-                    R.id.paymentsScreen,
-                    MembershipFragment.args(command.tierId, command.code),
-                    Builder().setLaunchSingleTop(true).build()
-                )
+                // Membership removed in Aparok sovereign offline build
             }
 
             is VaultCommand.Deeplink.DeepLinkToObjectNotWorking -> {

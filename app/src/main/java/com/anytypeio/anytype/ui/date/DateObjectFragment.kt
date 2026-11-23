@@ -314,7 +314,7 @@ class DateObjectFragment : BaseComposeFragment() {
                 }
                 BaseAlertDialog(
                     dialogText = message,
-                    buttonText = stringResource(id = R.string.membership_error_button_text_dismiss),
+                    buttonText = stringResource(id = android.R.string.ok),
                     onButtonClick = vm::hideError,
                     onDismissRequest = vm::hideError
                 )

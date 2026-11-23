@@ -1514,9 +1514,6 @@
     <string name="payments_tier_current_paid_by_apple">Apple-abonnement</string>
     <string name="payments_tier_current_paid_by_google">Google-abonnement</string>
     <string name="payments_tier_current_button">Beheer betaling</string>
-    <string name="membership_manage_tier_desktop">Je kunt het abonnement op het desktopplatform beheren</string>
-    <string name="membership_manage_tier_ios">Je kunt het abonnement op het iOS platform beheren.</string>
-    <string name="membership_manage_tier_another_account">Je kunt het abonnement op een ander Google account beheren.</string>
     <string name="payments_tier_current_change_email_button">Wijzig e-mailadres</string>
     <!-- Payments Code -->
     <string name="payments_code_title">Voer de code in die naar jouw e-mailadres is verstuurd</string>
@@ -1527,49 +1524,7 @@
     <string name="payments_welcome_subtitle">Hulde voor jouw nieuwsgierigheid!</string>
     <string name="payments_welcome_button">Volgende</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
-    <string name="membership_support_subject">Foutrapport Lidmaatschapscherm - %1$s</string>
-    <string name="membership_support_body">        Hoi Aparok ondersteuningsteam,\n\n
-
-        Ik heb een fout aangetroffen op het ledenscherm in de app. Hieronder staan ​​de details:\n
-
-        - Foutmelding: %1$s\n
-        - Beschrijving:      \n
-        - Datum en tijd: %2$s\n
-        - Apparaatmodel: %3$s\n
-        - Besturingssysteem: %4$s\n
-        - App-versie: %5$s\n
-
-        Aanvullende opmerkingen:\n\n
-
-        Bedankt voor jullie hulp bij het oplossen van dit probleem.\n\n
-
-        Met vriendelijke groet,       \n
-    </string>
     <!-- Membership name errors -->
-    <string name="membership_name_bad_input">Er ging iets mis met invoeren, probeer het opnieuw</string>
-    <string name="membership_name_cache_error">Fout aan onze kant, probeer het later opnieuw</string>
-    <string name="membership_name_cant_connect">Kan niet verbinden, controleer jouw internetverbinding</string>
-    <string name="membership_name_invalid_chars">Naam bevat ongeldige tekens</string>
-    <string name="membership_name_not_logged">Je bent niet ingelogd! 😵‍💫</string>
-    <string name="membership_name_payment_node_error">Fout aan onze kant, probeer het later opnieuw</string>
-    <string name="membership_name_tier_features_no_name">Naam is niet beschikbaar voor dit abonnement</string>
-    <string name="membership_name_tier_not_found">Abonnement niet gevonden, probeer het later opnieuw</string>
-    <string name="membership_name_too_long">Naam is te lang</string>
-    <string name="membership_name_too_short">Naam is te kort</string>
-    <string name="membership_any_name_not_reserved">Deze naam kan niet worden gereserveerd</string>
-    <string name="membership_any_name_null_error">Lege fout</string>
-    <string name="membership_any_name_unknown">Onbekende foutmelding</string>
-    <string name="membership_email_wrong_format">E-mailadres heeft een verkeerd formaat</string>
-    <string name="membership_email_already_verified">E-mailadres is al geverifieerd</string>
-    <string name="membership_email_already_sent">E-mailbericht is al verzonden, probeer het over 1 minuut opnieuw</string>
-    <string name="membership_email_failed_to_send">E-mailbericht kon niet worden verzonden</string>
-    <string name="membership_email_membership_already_exists">Lidmaatschap bestaat al</string>
-    <string name="membership_email_code_expired">Code is verlopen</string>
-    <string name="membership_email_code_wrong">Code is verkeerd</string>
-    <string name="membership_email_code_success">Code is correct</string>
-    <string name="membership_email_membership_not_found">Lidmaatschap niet gevonden</string>
-    <string name="membership_email_membership_already_active">Lidmaatschap is al actief</string>
     <!-- Notifications -->
     <string name="notifications_alert_error_unknown">Er heeft zich een onbekende fout voorgedaan. Probeer het later opnieuw.</string>
     <string name="notifications_alert_error_bad_input">Ongeldige invoer gedetecteerd. Controleer jouw gegevens en probeer het opnieuw.</string>
@@ -1588,7 +1543,6 @@
     <string name="gallery_experience_alert_title_error">Oeps!</string>
     <string name="gallery_experience_alert_button_space">Ruimte openen</string>
     <string name="gallery_experience_alert_button_error">Sluiten</string>
-    <string name="membership_btn_join">Deelnemen</string>
     <string name="notifications_prompt_get_notified">Ontvang een melding</string>
     <string name="notifications_prompt_secondary_button_text">Niet nu</string>
     <string name="notifications_prompt_description">Schakel meldingen in om op de hoogte te blijven van verzoeken om deel te nemen aan of ruimtes te verlaten.</string>
@@ -1596,26 +1550,14 @@
     <string name="clipboard_panel_create_bookmark_from_clipboard">Maak bladwijzer aan vanaf klembord</string>
     <string name="error_unexpected_layout">Fout: onverwachte opmaak</string>
     <string name="error_non_valid_object">Fout: object-ID ontbreekt</string>
-    <string name="membership_price_pending">In behandeling...</string>
     <string name="per_period">per %1$s</string>
     <string name="free_for">Gratis voor %1$s</string>
     <string name="free_for_unknown">Gratis tot...</string>
     <string name="free_until">Gratis tot</string>
-    <string name="membership_valid_forever">Permanent geldig</string>
-    <string name="membership_valid_for_unknown">Geldig tot...</string>
-    <string name="membership_agree_start">Door verder te gaan, ga je akkoord met onze</string>
-    <string name="membership_agree_terms">Gebruikersvoorwaarden</string>
-    <string name="membership_agree_middle">en</string>
-    <string name="membership_agree_privacy">Privacybeleid</string>
-    <string name="membership_support_already_acquired">Je hebt al een lidmaatschap met een ander Aparok account verkregen.</string>
-    <string name="membership_support_different_subscription">Een abonnement met een andere ID gevonden</string>
-    <string name="membership_support_more_then_one_subscription">Meer dan één abonnement gevonden</string>
     <string name="multiplayer_space_join_request_participants_error">Fout met ruimte van deelnemer</string>
     <string name="multiplayer_space_join_request_new_member_error">Fout met lidmaatschapsverzoek</string>
     <string name="multiplayer_space_join_request_current_user_error">Fout bij huidige gebruikersstatus</string>
     <string name="multiplayer_space_join_request_membership_status_error">Fout bij huidige lidmaatschapsstatus</string>
-    <string name="membership_space_settings_share_limit">Je hebt de limiet bereikt van %1$d gedeelde ruimten</string>
-    <string name="membership_space_settings_share_limit_2">Upgrade voor meer of verwijder ruimten.</string>
     <plurals name="period_years">
         <item quantity="one">jaar</item>
         <item quantity="other">%d jaren</item>
@@ -1632,8 +1574,6 @@
         <item quantity="one">dag</item>
         <item quantity="other">%d dagen</item>
     </plurals>
-    <string name="membership_error_button_text_action">Neem contact met ons op</string>
-    <string name="membership_error_button_text_dismiss">Ok</string>
     <string name="error_login_network_id_mismatch">Verkeerde netwerk-ID gedetecteerd. Controleer alsjeblieft je netwerkconfiguratie.</string>
     <string name="error_login_select_vault_error">Fout met het selecteren van kluis.</string>
     <string name="error_login_account_deleted_error">Dit account is verwijderd. Probeer een ander account te gebruiken of maak een nieuwe aan.</string>

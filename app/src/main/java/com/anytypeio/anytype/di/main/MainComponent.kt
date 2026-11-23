@@ -35,7 +35,6 @@ import com.anytypeio.anytype.di.feature.chats.SelectChatIconDependencies
 import com.anytypeio.anytype.di.feature.chats.SelectChatReactionDependencies
 import com.anytypeio.anytype.di.feature.gallery.GalleryInstallationComponentDependencies
 import com.anytypeio.anytype.di.feature.home.HomeScreenDependencies
-import com.anytypeio.anytype.di.feature.membership.MembershipComponentDependencies
 import com.anytypeio.anytype.di.feature.multiplayer.RequestJoinSpaceDependencies
 import com.anytypeio.anytype.di.feature.multiplayer.ShareSpaceDependencies
 import com.anytypeio.anytype.di.feature.multiplayer.SpaceJoinRequestDependencies
@@ -102,7 +101,6 @@ import javax.inject.Singleton
         TemplatesModule::class,
         NetworkModeModule::class,
         NotificationsModule::class,
-        MembershipModule::class,
         DispatcherModule::class,
         NavigationModule::class
     ]
@@ -131,7 +129,6 @@ interface MainComponent :
     ShareSpaceDependencies,
     SpaceJoinRequestDependencies,
     RequestJoinSpaceDependencies,
-    MembershipComponentDependencies,
     GalleryInstallationComponentDependencies,
     NotificationDependencies,
     GlobalSearchDependencies,
@@ -304,11 +301,6 @@ abstract class ComponentDependenciesModule {
     @IntoMap
     @ComponentDependenciesKey(SpaceJoinRequestDependencies::class)
     abstract fun provideSpaceJoinRequestDependencies(component: MainComponent): ComponentDependencies
-
-    @Binds
-    @IntoMap
-    @ComponentDependenciesKey(MembershipComponentDependencies::class)
-    abstract fun provideMembershipComponentDependencies(component: MainComponent): ComponentDependencies
 
     @Binds
     @IntoMap

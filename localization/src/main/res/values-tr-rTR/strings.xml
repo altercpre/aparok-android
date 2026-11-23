@@ -1514,9 +1514,6 @@
     <string name="payments_tier_current_paid_by_apple">Apple aboneliği</string>
     <string name="payments_tier_current_paid_by_google">Google aboneliği</string>
     <string name="payments_tier_current_button">Ödemeyi yönet</string>
-    <string name="membership_manage_tier_desktop">Katmanı Masaüstü platformunda yönetebilirsin</string>
-    <string name="membership_manage_tier_ios">Katmanı iOS platformunda yönetebilirsin</string>
-    <string name="membership_manage_tier_another_account">Katmanı başka bir Google hesabından yönetebilirsin</string>
     <string name="payments_tier_current_change_email_button">E-postayı değiştir</string>
     <!-- Payments Code -->
     <string name="payments_code_title">E-posta adresine gönderilen kodu gir</string>
@@ -1527,49 +1524,7 @@
     <string name="payments_welcome_subtitle">Merakınız için kocaman bir alkış!</string>
     <string name="payments_welcome_button">Devam et</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
-    <string name="membership_support_subject">Üyelik Ekranı Hata Raporu - %1$s</string>
-    <string name="membership_support_body">        Merhaba Aparok Destek Ekibi,\n\n
-
-        Uygulamadaki Üyelik Ekranında bir hatayla karşılaştım. Aşağıda detaylar verilmiştir:\n
-
-        - Hata mesajı: %1$s\n
-        - Açıklama:      \n
-        - Tarih ve saat: %2$s\n
-        - Cihaz modeli: %3$s\n
-        - İşletim sistemi: %4$s\n
-        - Uygulama sürümü: %5$s\n
-
-        Ek açıklamalar:\n\n
-
-        Bu sorunu çözme konusundaki yardımlarınız için teşekkür ederiz.\n\n
-
-        Saygılarımızla,       \n
-    </string>
     <!-- Membership name errors -->
-    <string name="membership_name_bad_input">Girdide bir sorun var, tekrar deneyin</string>
-    <string name="membership_name_cache_error">Bizden kaynaklı bir hata oluştu. Daha sonra tekrar deneyin.</string>
-    <string name="membership_name_cant_connect">Bağlanılamıyor. Lütfen internet bağlantınızı kontrol edin.</string>
-    <string name="membership_name_invalid_chars">İsim geçersiz karakterler içeriyor</string>
-    <string name="membership_name_not_logged">Giriş yapmadınız! 😵‍💫</string>
-    <string name="membership_name_payment_node_error">Bizden kaynaklı bir hata oluştu. Daha sonra tekrar deneyin.</string>
-    <string name="membership_name_tier_features_no_name">İsim bu kademe için mevcut değil</string>
-    <string name="membership_name_tier_not_found">Kademe bulunamadı, daha sonra tekrar deneyin</string>
-    <string name="membership_name_too_long">İsim çok uzun</string>
-    <string name="membership_name_too_short">İsim çok kısa</string>
-    <string name="membership_any_name_not_reserved">Bu isim rezerve edilemez</string>
-    <string name="membership_any_name_null_error">Boş hata</string>
-    <string name="membership_any_name_unknown">Bilinmeyen hata</string>
-    <string name="membership_email_wrong_format">E-posta yanlış biçime sahip</string>
-    <string name="membership_email_already_verified">E-posta zaten doğrulanmış</string>
-    <string name="membership_email_already_sent">E-posta zaten gönderildi. 1 dakika sonra tekrar deneyin.</string>
-    <string name="membership_email_failed_to_send">E-posta gönderilemedi</string>
-    <string name="membership_email_membership_already_exists">Üyelik zaten mevcut</string>
-    <string name="membership_email_code_expired">Kodun süresi doldu</string>
-    <string name="membership_email_code_wrong">Kod yanlış</string>
-    <string name="membership_email_code_success">Kod doğru</string>
-    <string name="membership_email_membership_not_found">Üyelik bulunamadı</string>
-    <string name="membership_email_membership_already_active">Üyelik zaten aktif</string>
     <!-- Notifications -->
     <string name="notifications_alert_error_unknown">Bilinmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyin.</string>
     <string name="notifications_alert_error_bad_input">Geçersiz girdi algılandı. Lütfen verilerinizi kontrol edin ve tekrar deneyin.</string>
@@ -1588,7 +1543,6 @@
     <string name="gallery_experience_alert_title_error">Hay aksi!</string>
     <string name="gallery_experience_alert_button_space">Alan açın</string>
     <string name="gallery_experience_alert_button_error">Kapat</string>
-    <string name="membership_btn_join">Katıl</string>
     <string name="notifications_prompt_get_notified">Haberdar olun</string>
     <string name="notifications_prompt_secondary_button_text">Şimdi değil</string>
     <string name="notifications_prompt_description">Alanlara katılma veya ayrılma taleplerinden haberdar olmak için lütfen bildirimleri etkinleştirin.</string>
@@ -1596,26 +1550,14 @@
     <string name="clipboard_panel_create_bookmark_from_clipboard">Panodan yer imi oluştur</string>
     <string name="error_unexpected_layout">Hata: beklenmedik düzen</string>
     <string name="error_non_valid_object">Hata: nesne kimliği eksik</string>
-    <string name="membership_price_pending">Beklemede...</string>
     <string name="per_period">%1$s başına</string>
     <string name="free_for">%1$s gün için ücretsiz</string>
     <string name="free_for_unknown">Şu tarihe kadar ücretsiz...</string>
     <string name="free_until">Şu tarihe kadar ücretsiz</string>
-    <string name="membership_valid_forever">Sonsuza kadar geçerli</string>
-    <string name="membership_valid_for_unknown">Şu tarihe kadar geçerlidir...</string>
-    <string name="membership_agree_start">Devam ederek şunları kabul etmiş olursunuz:</string>
-    <string name="membership_agree_terms">Kullanım Koşulları</string>
-    <string name="membership_agree_middle">ve</string>
-    <string name="membership_agree_privacy">Gizlilik Politikası</string>
-    <string name="membership_support_already_acquired">Bir başka Aparok hesabı kullanarak zaten bir Üyelik planı edindiniz.</string>
-    <string name="membership_support_different_subscription">Farklı kimliğe sahip bir abonelik bulundu.</string>
-    <string name="membership_support_more_then_one_subscription">Birden fazla abonelik bulundu.</string>
     <string name="multiplayer_space_join_request_participants_error">Alan katılımcısının hatası</string>
     <string name="multiplayer_space_join_request_new_member_error">İstek üye hatası</string>
     <string name="multiplayer_space_join_request_current_user_error">Mevcut kullanıcı durumu hatası</string>
     <string name="multiplayer_space_join_request_membership_status_error">Mevcut üyelik durumu hatası</string>
-    <string name="membership_space_settings_share_limit">%1$d paylaşılan alan sınırına ulaştınız</string>
-    <string name="membership_space_settings_share_limit_2">Daha fazlası için yükseltin veya var olan alanları kaldırın.</string>
     <plurals name="period_years">
         <item quantity="one">yıl</item>
         <item quantity="other">%d yıl</item>
@@ -1632,8 +1574,6 @@
         <item quantity="one">gün</item>
         <item quantity="other">%d gün</item>
     </plurals>
-    <string name="membership_error_button_text_action">Bize ulaşın</string>
-    <string name="membership_error_button_text_dismiss">Tamam</string>
     <string name="error_login_network_id_mismatch">Ağ kimliği uyuşmazlığı tespit edildi. Lütfen ağ yapılandırmanızı doğrulayın.</string>
     <string name="error_login_select_vault_error">Kasa hatasını seçin.</string>
     <string name="error_login_account_deleted_error">Bu hesap silinmiştir. Başka bir hesap kullanmayı deneyin veya yeni bir hesap oluşturun.</string>

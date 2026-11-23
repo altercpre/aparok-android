@@ -33,4 +33,10 @@ object WorkspaceModule {
     fun spaceSyncStatusChannel(
         store: SyncAndP2PStatusEventsStore
     ): SyncAndP2PStatusChannel = SyncAndP2PStatusDataChannel(store)
+
+    @JvmStatic
+    @Provides
+    @Singleton
+    fun provideMembershipProvider(): com.anytypeio.anytype.presentation.membership.provider.MembershipProvider =
+        com.anytypeio.anytype.presentation.membership.provider.MembershipProvider.Default()
 }

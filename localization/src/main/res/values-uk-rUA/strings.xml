@@ -1526,9 +1526,6 @@
     <string name="payments_tier_current_paid_by_apple">Apple subscription</string>
     <string name="payments_tier_current_paid_by_google">Google subscription</string>
     <string name="payments_tier_current_button">Manage payment</string>
-    <string name="membership_manage_tier_desktop">You can manage tier on Desktop platform</string>
-    <string name="membership_manage_tier_ios">You can manage tier on iOS platform</string>
-    <string name="membership_manage_tier_another_account">You can manage tier on another Google account</string>
     <string name="payments_tier_current_change_email_button">Change e-mail</string>
     <!-- Payments Code -->
     <string name="payments_code_title">Enter the code sent to your email</string>
@@ -1539,49 +1536,7 @@
     <string name="payments_welcome_subtitle">Big cheers for your curiosity!</string>
     <string name="payments_welcome_button">Continue</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
-    <string name="membership_support_subject">Membership Screen Error Report - %1$s</string>
-    <string name="membership_support_body">        Hi Aparok Support Team,\n\n
-
-        I encountered an error on the Membership Screen in the app. Below are the details:\n
-
-        - Error Message: %1$s\n
-        - Description:      \n
-        - Date and Time: %2$s\n
-        - Device Model: %3$s\n
-        - Operating System: %4$s\n
-        - App Version: %5$s\n
-
-        Additional Comments:\n\n
-
-        Thank you for your assistance in resolving this issue.\n\n
-
-        Best regards,       \n
-    </string>
     <!-- Membership name errors -->
-    <string name="membership_name_bad_input">Щось пішло не так, спробуйте ще раз</string>
-    <string name="membership_name_cache_error">Помилка на нашому боці, спробуйте ще раз пізніше</string>
-    <string name="membership_name_cant_connect">Не вдається підключитися, перевірте підключення до Інтернету</string>
-    <string name="membership_name_invalid_chars">Ім\'я має недопустимі символи</string>
-    <string name="membership_name_not_logged">Ви не ввійшли! 😵‍💫</string>
-    <string name="membership_name_payment_node_error">Помилка на нашому боці, спробуйте ще раз пізніше</string>
-    <string name="membership_name_tier_features_no_name">Name is not available for this tier</string>
-    <string name="membership_name_tier_not_found">Tier not found, try again later</string>
-    <string name="membership_name_too_long">Ім\'я занадто довге</string>
-    <string name="membership_name_too_short">Ім\'я занадто коротке</string>
-    <string name="membership_any_name_not_reserved">Це ім\'я не можна зарезервувати</string>
-    <string name="membership_any_name_null_error">Empty error</string>
-    <string name="membership_any_name_unknown">Невідома помилка</string>
-    <string name="membership_email_wrong_format">Email has wrong format</string>
-    <string name="membership_email_already_verified">Email is already verified</string>
-    <string name="membership_email_already_sent">Email is already sent, try again after 1 minute</string>
-    <string name="membership_email_failed_to_send">Email failed to send</string>
-    <string name="membership_email_membership_already_exists">Membership already exists</string>
-    <string name="membership_email_code_expired">Code expired</string>
-    <string name="membership_email_code_wrong">Code is wrong</string>
-    <string name="membership_email_code_success">Code is correct</string>
-    <string name="membership_email_membership_not_found">Membership not found</string>
-    <string name="membership_email_membership_already_active">Membership already active</string>
     <!-- Notifications -->
     <string name="notifications_alert_error_unknown">An unknown error has occurred. Please try again later.</string>
     <string name="notifications_alert_error_bad_input">Invalid input detected. Please check your data and try again.</string>
@@ -1600,7 +1555,6 @@
     <string name="gallery_experience_alert_title_error">Oops!</string>
     <string name="gallery_experience_alert_button_space">Open space</string>
     <string name="gallery_experience_alert_button_error">Close</string>
-    <string name="membership_btn_join">Join</string>
     <string name="notifications_prompt_get_notified">Get notified</string>
     <string name="notifications_prompt_secondary_button_text">Not now</string>
     <string name="notifications_prompt_description">Please enable notifications to stay informed about any requests to join or leave spaces.</string>
@@ -1608,26 +1562,14 @@
     <string name="clipboard_panel_create_bookmark_from_clipboard">Create bookmark from clipboard</string>
     <string name="error_unexpected_layout">Error: unexpected layout</string>
     <string name="error_non_valid_object">Error: object ID is missing</string>
-    <string name="membership_price_pending">Pending...</string>
     <string name="per_period">per %1$s</string>
     <string name="free_for">Free for %1$s</string>
     <string name="free_for_unknown">Free until...</string>
     <string name="free_until">Free until</string>
-    <string name="membership_valid_forever">Valid forever</string>
-    <string name="membership_valid_for_unknown">Valid until...</string>
-    <string name="membership_agree_start">By continuing you agree to our</string>
-    <string name="membership_agree_terms">Умови використання</string>
-    <string name="membership_agree_middle">and</string>
-    <string name="membership_agree_privacy">Політика конфіденційності</string>
-    <string name="membership_support_already_acquired">You’ve already acquired a Membership plan using another Aparok account.</string>
-    <string name="membership_support_different_subscription">Found a subscription with a different id</string>
-    <string name="membership_support_more_then_one_subscription">Found more than one subscription</string>
     <string name="multiplayer_space_join_request_participants_error">Space participant\'s error</string>
     <string name="multiplayer_space_join_request_new_member_error">Request\'s member error</string>
     <string name="multiplayer_space_join_request_current_user_error">Current user status error</string>
     <string name="multiplayer_space_join_request_membership_status_error">Current membership status error</string>
-    <string name="membership_space_settings_share_limit">You’ve reached the limit of %1$d shared spaces</string>
-    <string name="membership_space_settings_share_limit_2">Upgrade for more or remove spaces.</string>
     <plurals name="period_years">
         <item quantity="one">year</item>
         <item quantity="few">%d years</item>
@@ -1652,8 +1594,6 @@
         <item quantity="many">%d days</item>
         <item quantity="other">%d days</item>
     </plurals>
-    <string name="membership_error_button_text_action">Contact us</string>
-    <string name="membership_error_button_text_dismiss">Гаразд</string>
     <string name="error_login_network_id_mismatch">Network ID mismatch detected. Please verify your network configuration.</string>
     <string name="error_login_select_vault_error">Select vault error.</string>
     <string name="error_login_account_deleted_error">This account is deleted. Try using another account or create a new one.</string>

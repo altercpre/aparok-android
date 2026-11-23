@@ -205,7 +205,6 @@ dependencies {
     implementation project(':library-page-icon-picker-widget')
     implementation project(':library-emojifier')
     implementation project(':feature-ui-settings')
-    implementation project(':payments')
     implementation project(':feature-chats')
     implementation project(':feature-discussions')
     implementation project(':gallery-experience')

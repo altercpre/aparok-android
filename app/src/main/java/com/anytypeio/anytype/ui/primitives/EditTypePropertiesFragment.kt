@@ -70,7 +70,7 @@ class EditTypePropertiesFragment : BaseBottomSheetComposeFragment() {
                 is UiEditTypePropertiesErrorState.Reason.ErrorAddingProperty -> {
                     BaseAlertDialog(
                         dialogText = stringResource(id = R.string.add_property_error_add),
-                        buttonText = stringResource(id = R.string.membership_error_button_text_dismiss),
+                        buttonText = stringResource(id = android.R.string.ok),
                         onButtonClick = vm::hideError,
                         onDismissRequest = vm::hideError
                     )
@@ -79,7 +79,7 @@ class EditTypePropertiesFragment : BaseBottomSheetComposeFragment() {
                 is UiEditTypePropertiesErrorState.Reason.ErrorCreatingProperty -> {
                     BaseAlertDialog(
                         dialogText = stringResource(id = R.string.add_property_error_create_new),
-                        buttonText = stringResource(id = R.string.membership_error_button_text_dismiss),
+                        buttonText = stringResource(id = android.R.string.ok),
                         onButtonClick = vm::hideError,
                         onDismissRequest = vm::hideError
                     )
@@ -88,7 +88,7 @@ class EditTypePropertiesFragment : BaseBottomSheetComposeFragment() {
                 is UiEditTypePropertiesErrorState.Reason.ErrorUpdatingProperty -> {
                     BaseAlertDialog(
                         dialogText = stringResource(id = R.string.add_property_error_update),
-                        buttonText = stringResource(id = R.string.membership_error_button_text_dismiss),
+                        buttonText = stringResource(id = android.R.string.ok),
                         onButtonClick = vm::hideError,
                         onDismissRequest = vm::hideError
                     )
@@ -97,7 +97,7 @@ class EditTypePropertiesFragment : BaseBottomSheetComposeFragment() {
                 is UiEditTypePropertiesErrorState.Reason.Other -> {
                     BaseAlertDialog(
                         dialogText = r.msg,
-                        buttonText = stringResource(id = R.string.membership_error_button_text_dismiss),
+                        buttonText = stringResource(id = android.R.string.ok),
                         onButtonClick = vm::hideError,
                         onDismissRequest = vm::hideError
                     )

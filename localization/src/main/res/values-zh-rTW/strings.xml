@@ -1508,9 +1508,6 @@
     <string name="payments_tier_current_paid_by_apple">Apple 訂閱</string>
     <string name="payments_tier_current_paid_by_google">Google 訂閱</string>
     <string name="payments_tier_current_button">管理付款方式</string>
-    <string name="membership_manage_tier_desktop">您可以在桌面平臺上管理層級</string>
-    <string name="membership_manage_tier_ios">You can manage tier on iOS platform</string>
-    <string name="membership_manage_tier_another_account">You can manage tier on another Google account</string>
     <string name="payments_tier_current_change_email_button">變更 e-mail</string>
     <!-- Payments Code -->
     <string name="payments_code_title">請輸入發送到您 email 的兌換代碼</string>
@@ -1521,49 +1518,7 @@
     <string name="payments_welcome_subtitle">為你的好奇心喝彩！</string>
     <string name="payments_welcome_button">繼續</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
-    <string name="membership_support_subject">會員畫面錯誤回報 - %1$s</string>
-    <string name="membership_support_body">        Hi Aparok Support Team,\n\n
-
-        I encountered an error on the Membership Screen in the app. Below are the details:\n
-
-        - Error Message: %1$s\n
-        - Description:      \n
-        - Date and Time: %2$s\n
-        - Device Model: %3$s\n
-        - Operating System: %4$s\n
-        - App Version: %5$s\n
-
-        Additional Comments:\n\n
-
-        Thank you for your assistance in resolving this issue.\n\n
-
-        Best regards,       \n
-    </string>
     <!-- Membership name errors -->
-    <string name="membership_name_bad_input">輸入錯誤，請再試一次。</string>
-    <string name="membership_name_cache_error">我們這邊出錯了，請稍後再試。</string>
-    <string name="membership_name_cant_connect">無法連線，請檢查您的網路狀態。</string>
-    <string name="membership_name_invalid_chars">用戶名包含無效字符</string>
-    <string name="membership_name_not_logged">您尚未登入😵‍💫</string>
-    <string name="membership_name_payment_node_error">我們這邊出錯了，請稍後再試。</string>
-    <string name="membership_name_tier_features_no_name">用戶名無法在此階段使用</string>
-    <string name="membership_name_tier_not_found">找不到此層級，請稍後再試。</string>
-    <string name="membership_name_too_long">用戶名過長</string>
-    <string name="membership_name_too_short">用戶名過短</string>
-    <string name="membership_any_name_not_reserved">此名稱無法使用</string>
-    <string name="membership_any_name_null_error">空白錯誤</string>
-    <string name="membership_any_name_unknown">未知錯誤</string>
-    <string name="membership_email_wrong_format">電子信箱格式錯誤</string>
-    <string name="membership_email_already_verified">此電子郵箱已經驗證過</string>
-    <string name="membership_email_already_sent">電子郵件已發送，一分鐘後再次嘗試</string>
-    <string name="membership_email_failed_to_send">電子郵件發送失敗</string>
-    <string name="membership_email_membership_already_exists">會員身份已存在</string>
-    <string name="membership_email_code_expired">驗證碼已過期</string>
-    <string name="membership_email_code_wrong">驗證碼錯誤</string>
-    <string name="membership_email_code_success">驗證碼正確</string>
-    <string name="membership_email_membership_not_found">找不到該會員身份</string>
-    <string name="membership_email_membership_already_active">會員身份已經開通</string>
     <!-- Notifications -->
     <string name="notifications_alert_error_unknown">發生未知錯誤，請稍後再試。</string>
     <string name="notifications_alert_error_bad_input">檢測到無效的輸入。請檢查您的數據後再試一次。</string>
@@ -1582,7 +1537,6 @@
     <string name="gallery_experience_alert_title_error">哎呀！</string>
     <string name="gallery_experience_alert_button_space">開放空間</string>
     <string name="gallery_experience_alert_button_error">關閉</string>
-    <string name="membership_btn_join">加入</string>
     <string name="notifications_prompt_get_notified">獲取通知</string>
     <string name="notifications_prompt_secondary_button_text">稍後</string>
     <string name="notifications_prompt_description">請啟用通知以便隨時了解有關加入或離開空間的請求。</string>
@@ -1590,26 +1544,14 @@
     <string name="clipboard_panel_create_bookmark_from_clipboard">從剪貼簿建立書籤</string>
     <string name="error_unexpected_layout">錯誤：版型異常</string>
     <string name="error_non_valid_object">Error: object ID is missing</string>
-    <string name="membership_price_pending">等候中...</string>
     <string name="per_period">每 %1$s</string>
     <string name="free_for">Free for %1$s</string>
     <string name="free_for_unknown">Free until...</string>
     <string name="free_until">Free until</string>
-    <string name="membership_valid_forever">永遠有效</string>
-    <string name="membership_valid_for_unknown">有效期限至...</string>
-    <string name="membership_agree_start">繼續即表示您同意 </string>
-    <string name="membership_agree_terms">使用條款</string>
-    <string name="membership_agree_middle">和</string>
-    <string name="membership_agree_privacy">隱私政策</string>
-    <string name="membership_support_already_acquired">You’ve already acquired a Membership plan using another Aparok account.</string>
-    <string name="membership_support_different_subscription">Found a subscription with a different id</string>
-    <string name="membership_support_more_then_one_subscription">發現您有多個訂閱</string>
     <string name="multiplayer_space_join_request_participants_error">Space participant\'s error</string>
     <string name="multiplayer_space_join_request_new_member_error">Request\'s member error</string>
     <string name="multiplayer_space_join_request_current_user_error">Current user status error</string>
     <string name="multiplayer_space_join_request_membership_status_error">Current membership status error</string>
-    <string name="membership_space_settings_share_limit">You’ve reached the limit of %1$d shared spaces</string>
-    <string name="membership_space_settings_share_limit_2">Upgrade for more or remove spaces.</string>
     <plurals name="period_years">
         <item quantity="other">%d 年</item>
     </plurals>
@@ -1622,8 +1564,6 @@
     <plurals name="period_days">
         <item quantity="other">%d 天</item>
     </plurals>
-    <string name="membership_error_button_text_action">聯繫我們</string>
-    <string name="membership_error_button_text_dismiss">好的</string>
     <string name="error_login_network_id_mismatch">Network ID 配對失敗，請件查您的網路設定</string>
     <string name="error_login_select_vault_error">Select vault error.</string>
     <string name="error_login_account_deleted_error">This account is deleted. Try using another account or create a new one.</string>

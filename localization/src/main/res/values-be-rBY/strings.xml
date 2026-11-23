@@ -1526,9 +1526,6 @@
     <string name="payments_tier_current_paid_by_apple">Apple падпіска</string>
     <string name="payments_tier_current_paid_by_google">Google падпіска</string>
     <string name="payments_tier_current_button">Кіраваць плацяжом</string>
-    <string name="membership_manage_tier_desktop">Вы можаце кіраваць узроўнем на камп\'ютары</string>
-    <string name="membership_manage_tier_ios">Вы можаце кіраваць узроўнем на платформе iOS</string>
-    <string name="membership_manage_tier_another_account">Вы можаце кіраваць узроўнем у іншым уліковым запісе Google</string>
     <string name="payments_tier_current_change_email_button">Змяніць эл. пошту</string>
     <!-- Payments Code -->
     <string name="payments_code_title">Увядзіце код, адпраўлены на вашу электронную пошту</string>
@@ -1539,49 +1536,7 @@
     <string name="payments_welcome_subtitle">Вялікі дзякуй за вашу цікаўнасць!</string>
     <string name="payments_welcome_button">Працягнуць</string>
     <!-- Membership Email -->
-    <string name="membership_support_email">support@github.com/altercpre/aparok-android/releases/latest</string>
-    <string name="membership_support_subject">Справаздача аб памылцы на экране членства - %1$s</string>
-    <string name="membership_support_body">        Прывітанне, служба падтрымкі Aparok,\n\n
-
-        Я сутыкнуўся з памылкай на экране членства ў праграме. Ніжэй падрабязнасці:\n
-
-        - Паведамленне пра памылку: %1$s\n
-        - Апісанне: \n
-        - Дата і час: %2$s\n
-        - Мадэль прылады: %3$s\n
-        - Аперацыйная сістэма: %4$s\n
-        - Версія праграмы: %5$s\n
-
-        Дадатковыя каментарыі:\n\n
-
-        Дзякуй за вашу дапамогу ў вырашэнні гэтай праблемы.\n\n
-
-        З найлепшымі пажаданнямі, \n
-    </string>
     <!-- Membership name errors -->
-    <string name="membership_name_bad_input">Нешта не так з уводам, паўтарыце спробу</string>
-    <string name="membership_name_cache_error">Памылка з нашага боку, паспрабуйце пазней</string>
-    <string name="membership_name_cant_connect">Немагчыма падключыцца, праверце падключэнне да Інтэрнэту</string>
-    <string name="membership_name_invalid_chars">Імя змяшчае недапушчальныя сімвалы</string>
-    <string name="membership_name_not_logged">Вы не ўвайшлі ў сістэму! 😵‍💫</string>
-    <string name="membership_name_payment_node_error">Памылка з нашага боку, паспрабуйце пазней</string>
-    <string name="membership_name_tier_features_no_name">Імя для гэтага ўзроўню недаступнае</string>
-    <string name="membership_name_tier_not_found">Узровень не знойдзены, паўтарыце спробу пазней</string>
-    <string name="membership_name_too_long">Імя занадта доўгае</string>
-    <string name="membership_name_too_short">Імя занадта кароткае</string>
-    <string name="membership_any_name_not_reserved">Гэта імя нельга зарэзерваваць</string>
-    <string name="membership_any_name_null_error">Пустая памылка</string>
-    <string name="membership_any_name_unknown">Невядомая памылка</string>
-    <string name="membership_email_wrong_format">Электронны ліст мае няправільны фармат</string>
-    <string name="membership_email_already_verified">Адрас электроннай пошты ўжо правераны</string>
-    <string name="membership_email_already_sent">Электронны ліст ужо адпраўлены, паўтарыце спробу праз 1 хвіліну</string>
-    <string name="membership_email_failed_to_send">Не атрымалася адправіць электронны ліст</string>
-    <string name="membership_email_membership_already_exists">Членства ўжо існуе</string>
-    <string name="membership_email_code_expired">Код скончыўся</string>
-    <string name="membership_email_code_wrong">Няправільны код</string>
-    <string name="membership_email_code_success">Код правільны</string>
-    <string name="membership_email_membership_not_found">Членства не знойдзена</string>
-    <string name="membership_email_membership_already_active">Членства ўжо актыўнае</string>
     <!-- Notifications -->
     <string name="notifications_alert_error_unknown">Адбылася невядомая памылка. Калі ласка, паспрабуйце зноў.</string>
     <string name="notifications_alert_error_bad_input">Выяўлены няправільны ўвод. Калі ласка, праверце свае даныя і паўтарыце спробу.</string>
@@ -1600,7 +1555,6 @@
     <string name="gallery_experience_alert_title_error">Упс!</string>
     <string name="gallery_experience_alert_button_space">Адкрыць прастору</string>
     <string name="gallery_experience_alert_button_error">Закрыць</string>
-    <string name="membership_btn_join">Далучыцца</string>
     <string name="notifications_prompt_get_notified">Атрыманне апавяшчэнняў</string>
     <string name="notifications_prompt_secondary_button_text">Не зараз</string>
     <string name="notifications_prompt_description">Калі ласка, уключыце апавяшчэнні, каб быць у курсе любых запытаў на далучэнне або выхад з прастор.</string>
@@ -1608,26 +1562,14 @@
     <string name="clipboard_panel_create_bookmark_from_clipboard">Стварыць закладку з буфера абмену</string>
     <string name="error_unexpected_layout">Памылка: нечаканы макет</string>
     <string name="error_non_valid_object">Error: object ID is missing</string>
-    <string name="membership_price_pending">У чаканні...</string>
     <string name="per_period">у  %1$s</string>
     <string name="free_for">Бясплатна за %1$s</string>
     <string name="free_for_unknown">Бясплатна да...</string>
     <string name="free_until">Бясплатна да</string>
-    <string name="membership_valid_forever">Сапраўдны назаўжды</string>
-    <string name="membership_valid_for_unknown">Дзейнічае да...</string>
-    <string name="membership_agree_start">Працягнуўшы, вы пагаджаецеся з нашымі </string>
-    <string name="membership_agree_terms">Умовы выкарыстання</string>
-    <string name="membership_agree_middle">і</string>
-    <string name="membership_agree_privacy">Палітыка прыватнасці</string>
-    <string name="membership_support_already_acquired">Вы ўжо набылі членства, выкарыстоўваючы іншы ўліковы запіс Aparok.</string>
-    <string name="membership_support_different_subscription">Знойдзена падпіска з іншым ідэнтыфікатарам</string>
-    <string name="membership_support_more_then_one_subscription">Знойдзена больш чым адна падпіска</string>
     <string name="multiplayer_space_join_request_participants_error">Памылка ўдзельніка прасторы</string>
     <string name="multiplayer_space_join_request_new_member_error">Памылка запыту ўдзельніка</string>
     <string name="multiplayer_space_join_request_current_user_error">Памылка бягучага стану карыстальніка</string>
     <string name="multiplayer_space_join_request_membership_status_error">Памылка бягучага стану членства</string>
-    <string name="membership_space_settings_share_limit">You’ve reached the limit of %1$d shared spaces</string>
-    <string name="membership_space_settings_share_limit_2">Upgrade for more or remove spaces.</string>
     <plurals name="period_years">
         <item quantity="one">год</item>
         <item quantity="few">%d гады</item>
@@ -1652,8 +1594,6 @@
         <item quantity="many">%d дзён</item>
         <item quantity="other">%d дзён</item>
     </plurals>
-    <string name="membership_error_button_text_action">Звяжыцеся з намі</string>
-    <string name="membership_error_button_text_dismiss">Ok</string>
     <string name="error_login_network_id_mismatch">Выяўлена несупадзенне ідэнтыфікатара сеткі. Праверце канфігурацыю сеткі.</string>
     <string name="error_login_select_vault_error">Памылка выбару сховішча.</string>
     <string name="error_login_account_deleted_error">This account is deleted. Try using another account or create a new one.</string>

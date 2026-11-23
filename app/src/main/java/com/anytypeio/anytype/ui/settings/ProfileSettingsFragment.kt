@@ -45,7 +45,6 @@ import com.anytypeio.anytype.di.common.componentManager
 import com.anytypeio.anytype.other.MediaPermissionHelper
 import com.anytypeio.anytype.ui.profile.KeychainPhraseDialog
 import com.anytypeio.anytype.ui.qrcode.QrScannerActivity
-import com.anytypeio.anytype.ui_settings.account.AnyIdInfoSheet
 import com.anytypeio.anytype.ui_settings.account.NotificationSettingsScreen
 import com.anytypeio.anytype.ui_settings.account.ProfileSettingsScreen
 import com.anytypeio.anytype.ui_settings.account.ProfileSettingsViewModel
@@ -96,7 +95,6 @@ class ProfileSettingsFragment : BaseBottomSheetComposeFragment() {
             setContent {
                 MaterialTheme(typography = typography) {
                     var showNotificationSettingsModal by remember { mutableStateOf(false) }
-                    var showAnyIdInfoSheet by remember { mutableStateOf(false) }
                     val notificationsDisabled = vm.notificationsDisabled.collectAsStateWithLifecycle().value
                     val accountProfile = vm.profileData.collectAsStateWithLifecycle().value
                     ProfileSettingsScreen(
@@ -121,13 +119,6 @@ class ProfileSettingsFragment : BaseBottomSheetComposeFragment() {
                                 findNavController().navigate(R.id.aboutAppScreen)
                             }
                         ),
-                        onMembershipClicked = throttledClick(
-                            onClick = {
-                                findNavController().navigate(R.id.paymentsScreen)
-                            }
-                        ),
-                        membershipStatus = vm.membershipStatusState.collectAsStateWithLifecycle().value,
-                        showMembership = vm.showMembershipState.collectAsStateWithLifecycle().value,
                         onSpacesClicked = throttledClick(
                             onClick = {
                                 runCatching {
@@ -156,14 +147,7 @@ class ProfileSettingsFragment : BaseBottomSheetComposeFragment() {
                                 findNavController().navigate(R.id.mySitesScreen)
                             }
                         },
-                        onIdentityClicked = {
-                            val account = accountProfile
-                            if (account is AccountProfile.Data && account.globalName.isNullOrEmpty()) {
-                                showAnyIdInfoSheet = true
-                            } else {
-                                findNavController().navigate(R.id.paymentsScreen)
-                            }
-                        },
+                        onIdentityClicked = {},
                         onShowQrCodeClicked = { vm.onShowQrCodeClicked() }
                     )
                     if (showNotificationSettingsModal) {
@@ -175,17 +159,6 @@ class ProfileSettingsFragment : BaseBottomSheetComposeFragment() {
                             onOpenSettings = {
                                 showNotificationSettingsModal = false
                                 requireContext().openNotificationSettings()
-                            }
-                        )
-                    }
-                    if (showAnyIdInfoSheet) {
-                        AnyIdInfoSheet(
-                            onExplorePlans = {
-                                showAnyIdInfoSheet = false
-                                findNavController().navigate(R.id.paymentsScreen)
-                            },
-                            onDismiss = {
-                                showAnyIdInfoSheet = false
                             }
                         )
                     }
