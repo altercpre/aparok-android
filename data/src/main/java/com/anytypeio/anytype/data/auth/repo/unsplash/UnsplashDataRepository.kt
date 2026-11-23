@@ -19,5 +19,5 @@ class UnsplashDataRepository(
         space: SpaceId,
         createdInContext: Id?,
         createdInContextRef: String?
-    ): Hash = Hash("")
+    ): Hash = ""
 }
