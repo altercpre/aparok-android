@@ -18,7 +18,7 @@ This document establishes the verified status of all 13 phases (R0 through R12) 
 | **R7** | Encryption at Rest | 14% | **PROVEN** | [CI Run 45180161265](https://github.com/altercpre/aparok-android/actions/runs/45180161265)<br>• [AparokEncryptionManager.kt](file:///storage/94CB-EF0B/Android/data/com.termux/files/guava/app/src/main/java/io/aparok/app/security/AparokEncryptionManager.kt#L1-L150) (AES-256-GCM AEAD, streaming cipher)<br>• [AparokEncryptionManagerTest.kt](file:///storage/94CB-EF0B/Android/data/com.termux/files/guava/app/src/test/java/io/aparok/app/security/AparokEncryptionManagerTest.kt#L1-L140): 5/5 unit tests PASS | 2026-11-23 |
 | **R8** | User Storage Location | 7% | **PROVEN** | [CI Run 45180161265](https://github.com/altercpre/aparok-android/actions/runs/45180161265)<br>• [AparokStorageManager.kt](file:///storage/94CB-EF0B/Android/data/com.termux/files/guava/app/src/main/java/io/aparok/app/storage/AparokStorageManager.kt#L1-L120) with pointer `.aparok_storage_pointer`<br>• [AparokStorageManagerTest.kt](file:///storage/94CB-EF0B/Android/data/com.termux/files/guava/app/src/test/java/io/aparok/app/storage/AparokStorageManagerTest.kt#L1-L130): 6/6 unit tests PASS | 2026-11-23 |
 | **R9** | Sovereign Backup & Restore | 9% | **PROVEN** | [CI Run 45180161265](https://github.com/altercpre/aparok-android/actions/runs/45180161265)<br>• [AparokBackupManager.kt](file:///storage/94CB-EF0B/Android/data/com.termux/files/guava/app/src/main/java/io/aparok/app/backup/AparokBackupManager.kt#L1-L180) (.aparok archive, PBKDF2 + AES-GCM + SHA256 integrity)<br>• [AparokBackupManagerTest.kt](file:///storage/94CB-EF0B/Android/data/com.termux/files/guava/app/src/test/java/io/aparok/app/backup/AparokBackupManagerTest.kt#L1-L100): 4/4 unit tests PASS | 2026-11-23 |
-| **R10** | APK Packaging & Sizing | 5% | **PROVEN** | [Release Workflow 45180177238](https://github.com/altercpre/aparok-android/actions/runs/45180177238)<br>• Universal APK excluded (0 bytes)<br>• `aparok-1.0.0-arm64-v8a.apk`: 149.95 MB (157,235,976 bytes)<br>• `aparok-1.0.0-armeabi-v7a.apk`: 143.10 MB (150,051,840 bytes) | 2026-11-23 |
+| **R10** | APK Packaging & Sizing | 5% | **PROVEN** | [Release Workflow 45180177238](https://github.com/altercpre/aparok-android/actions/runs/45180177238)<br>• Universal APK excluded (0 bytes)<br>• `aparok-1.2.0-arm64-v8a.apk`: 149.95 MB (157,235,976 bytes)<br>• `aparok-1.2.0-armeabi-v7a.apk`: 143.10 MB (150,051,840 bytes) | 2026-11-23 |
 | **R11** | Signing Certificate Security | 4% | **PROVEN** | [Release Workflow 45180177238](https://github.com/altercpre/aparok-android/actions/runs/45180177238)<br>• Neutral subject `CN=Aparok`<br>• Pinned SHA-256 fingerprint in [release/CERT_SHA256](file:///storage/94CB-EF0B/Android/data/com.termux/files/guava/release/CERT_SHA256#L1): `A1:A1:B4:B0:AA:C2:A9:83:C9:FC:EE:10:CC:F0:07:91:DA:02:B7:B8:72:59:A1:BE:88:12:37:10:FD:10:CE:4F`<br>• Verified with `apksigner` (v2 + v3) | 2026-11-23 |
 | **R12** | Offline Matrix & Network Isolation | 7% | **PROVEN** | [CI Run 45180161265](https://github.com/altercpre/aparok-android/actions/runs/45180161265)<br>• `SovereignOfflineMatrixTest` 13 tests PASS (items 1-12 offline contract + network socket isolation)<br>• `SovereignOfflineMatrixAndroidTest` PASS (Airplane Mode ON, /proc/net/tcp non-loopback verification) | 2026-11-23 |
 
@@ -62,8 +62,8 @@ This document establishes the verified status of all 13 phases (R0 through R12) 
   uses-permission: name='io.aparok.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
   ```
 - **APK Sizes per ABI**:
-  - `aparok-1.0.0-arm64-v8a.apk`: 149.95 MB (157,235,976 bytes)
-  - `aparok-1.0.0-armeabi-v7a.apk`: 143.10 MB (150,051,840 bytes)
+  - `aparok-1.2.0-arm64-v8a.apk`: 149.95 MB (157,235,976 bytes)
+  - `aparok-1.2.0-armeabi-v7a.apk`: 143.10 MB (150,051,840 bytes)
   - Universal APK: Excluded (0 MB, not generated).
 
 ---
