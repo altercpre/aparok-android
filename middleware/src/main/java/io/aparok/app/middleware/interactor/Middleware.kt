@@ -3450,7 +3450,7 @@ class Middleware @Inject constructor(
             url = url,
             title = host,
             description = url,
-            imageUrl = null
+            imageUrl = ""
         )
     }
 
