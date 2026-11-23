@@ -20,7 +20,9 @@ if [ ! -f "${KEYSTORE_FILE}" ]; then
     if [ -n "${RELEASE_KEYSTORE_BASE64}" ]; then
         echo "[1/6] Restoring release keystore from RELEASE_KEYSTORE_BASE64 secret..."
         mkdir -p "$(dirname "${KEYSTORE_FILE}")"
-        echo "${RELEASE_KEYSTORE_BASE64}" | base64 -d > "${KEYSTORE_FILE}"
+        KEYSTORE_FILE="${KEYSTORE_FILE}" python3 -c "import os, base64; open(os.environ['KEYSTORE_FILE'], 'wb').write(base64.b64decode(os.environ['RELEASE_KEYSTORE_BASE64']))" || \
+        echo "${RELEASE_KEYSTORE_BASE64}" | tr -d "
+ " | base64 -d -i > "${KEYSTORE_FILE}"
     else
         echo "[1/6] Generating self-signed release keystore (${KEYSTORE_FILE})..."
         mkdir -p "$(dirname "${KEYSTORE_FILE}")"
@@ -37,7 +39,7 @@ if [ ! -f "${KEYSTORE_FILE}" ]; then
 fi
 
 # Pin and verify certificate fingerprint
-CURRENT_FP=$(keytool -list -v -keystore "${KEYSTORE_FILE}" -alias "${KEY_ALIAS}" -storepass "${STORE_PASS}" 2>/dev/null | grep "SHA256:" | head -n 1 | awk '{print $2}')
+CURRENT_FP=$(keytool -list -v -keystore "${KEYSTORE_FILE}" -alias "${KEY_ALIAS}" -storepass "${STORE_PASS}" 2>/dev/null | grep "SHA256:" | head -n 1 | awk '{print $NF}')
 if [ -n "${CURRENT_FP}" ]; then
     if [ ! -f "${CERT_PIN_FILE}" ]; then
         mkdir -p "$(dirname "${CERT_PIN_FILE}")"
