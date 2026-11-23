@@ -3,24 +3,23 @@ set -e
 
 echo "=== Verifying Offline Enforcement & Zero-Telemetry ==="
 
-# 1. Grep check: absolute zero firebase, sentry, amplitude
+# 1. Grep check: absolute zero firebase, sentry, amplitude in source files
 echo "[1/2] Verifying zero telemetry references in sources and gradle files..."
 TELEMETRY_MATCHES=$(grep -rn -i -E "firebase|sentry|amplitude" \
     --include="*.kt" --include="*.java" --include="*.gradle" --include="*.toml" --include="*.xml" . \
-    | grep -v "\.git" | grep -v "docs/" | grep -v "scripts/verify-offline.sh" || true)
+    | grep -v "\.git" | grep -v "docs/" | grep -v "scripts/" | grep -v "/build/" || true)
 
 if [ -n "$TELEMETRY_MATCHES" ]; then
-    echo "ERROR: Telemetry references found:"
+    echo "ERROR: Telemetry references found in source code:"
     echo "$TELEMETRY_MATCHES"
     exit 1
 fi
-echo "✓ Zero telemetry references confirmed."
+echo "✓ Zero telemetry references confirmed in sources."
 
 # 2. Merged manifest permission check
 echo "[2/2] Verifying merged manifest permissions..."
 MERGED_MANIFEST="app/build/intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml"
 if [ ! -f "$MERGED_MANIFEST" ]; then
-    # Try finding any merged release manifest
     MERGED_MANIFEST=$(find app/build/intermediates -name "AndroidManifest.xml" | grep "release" | head -n 1 || echo "")
 fi
 

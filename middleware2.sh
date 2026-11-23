@@ -1,51 +1,33 @@
 #!/usr/bin/env bash
+set -e
 
-TOKEN=$1
-USER=$2
-AMPLITUDE_RELEASE_KEY=$3
-AMPLITUDE_DEBUG_KEY=$4
-SENTRY_DSN=$5
-
+# Setup local properties for sovereign zero-telemetry build
 GITHUB_USER_PROPERTY="gpr.usr"
 GITHUB_KEY_PROPERTY="gpr.key"
 AMPLITUDE_DEBUG_PROPERTY="amplitude.debug"
 AMPLITUDE_RELEASE_PROPERTY="amplitude.release"
 SENTRY_DSN_PROPERTY="sentry_dsn"
 
-if [ "$TOKEN" = "" ]; then
-  echo "ERROR: token is empty"
-  exit 1
-fi;
+cat << EOF > github.properties
+${GITHUB_USER_PROPERTY}=aparok
+${GITHUB_KEY_PROPERTY}=public
+EOF
 
-if [ "$USER" = "" ]; then
-  echo "ERROR: user is empty"
-  exit 1
-fi;
+cat << EOF > apikeys.properties
+${AMPLITUDE_DEBUG_PROPERTY}=""
+${AMPLITUDE_RELEASE_PROPERTY}=""
+${SENTRY_DSN_PROPERTY}=""
+EOF
 
-if [ "$AMPLITUDE_RELEASE_KEY" = "" ]; then
-  echo "ERROR: amplitude.release is empty"
-  exit 1
-fi;
+echo "Configured zero-telemetry github.properties and apikeys.properties."
 
-if [ "$AMPLITUDE_DEBUG_KEY" = "" ]; then
-  echo "ERROR: amplitude.debug is empty"
-  exit 1
-fi;
+if [ ! -f "libs/lib.aar" ]; then
+    echo "Downloading pre-compiled middleware lib.aar..."
+    mkdir -p libs
+    curl -fsSL "https://github.com/anyproto/anytype-heart/releases/download/v0.51.6/android_lib_v0.51.6.tar.gz" -o libs/android_lib.tar.gz
+    tar -xzf libs/android_lib.tar.gz -C libs/
+    rm -f libs/android_lib.tar.gz
+fi
 
-if [ "$SENTRY_DSN" = ""]; then
-  echo "ERROR: sentry_dsn is empty"
-  exit 1
-fi;
-
-rm -rf github.properties
-touch github.properties
-
-echo "$GITHUB_USER_PROPERTY=$USER" >> github.properties
-echo "$GITHUB_KEY_PROPERTY=$TOKEN" >> github.properties
-
-rm -rf apikeys.properties
-touch apikeys.properties
-
-echo "$AMPLITUDE_DEBUG_PROPERTY=\"$AMPLITUDE_DEBUG_KEY\"" >> apikeys.properties
-echo "$AMPLITUDE_RELEASE_PROPERTY=\"$AMPLITUDE_RELEASE_KEY\"" >> apikeys.properties
-echo "$SENTRY_DSN_PROPERTY=\"$SENTRY_DSN\"" >> apikeys.properties
+chmod +x ./gradlew
+./gradlew :libs:publishToMavenLocal --no-daemon

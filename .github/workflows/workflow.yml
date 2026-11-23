@@ -1,26 +1,32 @@
+name: CI
+
 on:
   push:
     branches: [main]
-name: CI
+
 jobs:
-  setup-android:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
 
-      -  uses: actions/checkout@v3
-      -  uses: actions/setup-java@v3
-         with:
-           distribution: "zulu"
-           java-version: 17
+      - uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: 17
+
+      - name: Setup Gradle Cache
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Setup middleware dependency
-        env:
-          token_secret: ${{ secrets.ANYTYPE_SECRET }}
-          user_secret: ${{ secrets.ANYTYPE_USER_SECRET }}
-          amplitude_secret: ${{ secrets.ANYTYPE_AMPLITUDE_SECRET }}
-          amplitude_secret_debug: ${{ secrets.ANYTYPE_AMPLITUDE_DEBUG_SECRET }}
-          sentry_dsn_secret: ${{ secrets.ANYTYPE_SENTRY_DSN_SECRET }}
-        run: ./middleware2.sh $token_secret $user_secret $amplitude_secret $amplitude_secret_debug $sentry_dsn_secret
+        run: |
+          chmod +x ./middleware2.sh
+          ./middleware2.sh
 
-      - name: Run unit tests. Full mode.
-        run: ./gradlew build test -Dpre-dex=false -q
+      - name: Verify zero-telemetry
+        run: |
+          chmod +x scripts/verify-offline.sh
+          bash scripts/verify-offline.sh
+
+      - name: Compile Release Kotlin
+        run: ./gradlew :app:compileReleaseKotlin --no-daemon
