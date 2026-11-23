@@ -719,13 +719,5 @@ private fun ProfileSettingLongGlobalNamePreview() {
     )
 }
 
-@DefaultPreviews
-@Composable
-private fun AnyIdInfoSheetPreview() {
-    AnyIdInfoSheet(
-        onExplorePlans = {},
-        onDismiss = {}
-    )
-}
 
 private const val PROFILE_NAME_CHANGE_DELAY = 300L
