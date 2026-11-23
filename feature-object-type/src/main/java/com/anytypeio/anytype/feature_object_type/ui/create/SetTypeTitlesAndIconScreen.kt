@@ -147,7 +147,7 @@ private fun ColumnScope.CreateNewTypeScreenContent(
                 },
             iconSize = 30.dp,
             icon = icon,
-            backgroundColor = R.color.amp_transparent
+            backgroundColor = android.R.color.transparent
         )
         Spacer(modifier = Modifier.width(9.dp))
         CreateTypeField(

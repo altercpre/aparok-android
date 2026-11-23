@@ -132,7 +132,7 @@ fun TopToolbar(
                 icon = uiIconState.icon,
                 backgroundSize = 18.dp,
                 iconWithoutBackgroundMaxSize = 18.dp,
-                backgroundColor = com.anytypeio.anytype.core_ui.R.color.amp_transparent
+                backgroundColor = android.R.color.transparent
             )
             Spacer(modifier = Modifier.width(6.dp))
             Text(

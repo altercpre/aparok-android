@@ -3,75 +3,26 @@ package com.anytypeio.anytype.persistence.networkmode
 import android.content.SharedPreferences
 import com.anytypeio.anytype.core_models.NetworkMode
 import com.anytypeio.anytype.core_models.NetworkModeConfig
-import com.anytypeio.anytype.core_models.NetworkModeConstants.NETWORK_MODE_CUSTOM
-import com.anytypeio.anytype.core_models.NetworkModeConstants.NETWORK_MODE_DEFAULT
-import com.anytypeio.anytype.core_models.NetworkModeConstants.NETWORK_MODE_LOCAL
 import com.anytypeio.anytype.domain.network.NetworkModeProvider
-import com.anytypeio.anytype.persistence.networkmode.DefaultNetworkModeProvider.NetworkModeConstants.NETWORK_MODE_APP_FILE_PATH_PREF
-import com.anytypeio.anytype.persistence.networkmode.DefaultNetworkModeProvider.NetworkModeConstants.NETWORK_MODE_PREF
-import com.anytypeio.anytype.persistence.networkmode.DefaultNetworkModeProvider.NetworkModeConstants.NETWORK_MODE_USER_FILE_PATH_PREF
-import com.anytypeio.anytype.persistence.networkmode.DefaultNetworkModeProvider.NetworkModeConstants.USE_RESERVE_MULTIPLEX_LIBRARY_PREF
 
 class DefaultNetworkModeProvider(private val sharedPreferences: SharedPreferences) :
     NetworkModeProvider {
 
     override fun set(networkModeConfig: NetworkModeConfig) {
-        val (userFilePath, storedFilePath) = if (networkModeConfig.networkMode == NetworkMode.CUSTOM) {
-            networkModeConfig.userFilePath to networkModeConfig.storedFilePath
-        } else {
-            null to null
-        }
-
-        val modeValue= when (networkModeConfig.networkMode) {
-            NetworkMode.DEFAULT -> NETWORK_MODE_DEFAULT
-            NetworkMode.LOCAL -> NETWORK_MODE_LOCAL
-            NetworkMode.CUSTOM -> NETWORK_MODE_CUSTOM
-        }
-
-        sharedPreferences.edit().apply {
-            putString(NETWORK_MODE_PREF, modeValue)
-            putString(NETWORK_MODE_USER_FILE_PATH_PREF, userFilePath)
-            putString(NETWORK_MODE_APP_FILE_PATH_PREF, storedFilePath)
-            putBoolean(USE_RESERVE_MULTIPLEX_LIBRARY_PREF, networkModeConfig.useReserveMultiplexLib)
-            apply()
-        }
+        // No-op: Aparok is local-only sovereign offline.
     }
 
     override fun get(): NetworkModeConfig {
-        val useReserveMultiplexLib = sharedPreferences.getBoolean(USE_RESERVE_MULTIPLEX_LIBRARY_PREF, false)
-
-        val networkMode =
-            when (sharedPreferences.getString(NETWORK_MODE_PREF, NETWORK_MODE_DEFAULT)) {
-                NETWORK_MODE_DEFAULT -> NetworkMode.DEFAULT
-                NETWORK_MODE_LOCAL -> NetworkMode.LOCAL
-                NETWORK_MODE_CUSTOM -> NetworkMode.CUSTOM
-                else -> NetworkMode.DEFAULT
-            }
-        return if (networkMode == NetworkMode.CUSTOM) {
-            val userFilePath = sharedPreferences.getString(
-                NETWORK_MODE_USER_FILE_PATH_PREF, null
-            )
-            val storedFilePath = sharedPreferences.getString(
-                NETWORK_MODE_APP_FILE_PATH_PREF, null
-            )
-            NetworkModeConfig(
-                networkMode = networkMode,
-                userFilePath = userFilePath,
-                storedFilePath = storedFilePath,
-                useReserveMultiplexLib = useReserveMultiplexLib
-            )
-        } else {
-            NetworkModeConfig(
-                networkMode = networkMode,
-                userFilePath = null,
-                storedFilePath = null,
-                useReserveMultiplexLib = useReserveMultiplexLib
-            )
-        }
+        return NetworkModeConfig(
+            networkMode = NetworkMode.LOCAL,
+            userFilePath = null,
+            storedFilePath = null,
+            useReserveMultiplexLib = false
+        )
     }
 
     override fun clear() {
-        // TODO?
+        // No-op
     }
 
     object NetworkModeConstants {

@@ -369,4 +369,6 @@
     <color name="incentive_gradient_start">#FEE7E0</color>
     <color name="incentive_gradient_end">#FFF6F3</color>
 
+    <color name="transparent">#00000000</color>
+    <color name="amp_transparent">#00000000</color>
 </resources>

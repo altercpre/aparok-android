@@ -48,7 +48,7 @@ fun IconAndTitleWidget(
             ListWidgetObjectIcon(
                 modifier = Modifier.size(32.dp),
                 icon = uiIconState.icon,
-                backgroundColor = R.color.amp_transparent
+                backgroundColor = android.R.color.transparent
             )
         }
         NameField(
