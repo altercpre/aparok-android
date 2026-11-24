@@ -218,11 +218,7 @@ class ShareSpaceFragment : BaseBottomSheetComposeFragment() {
                 // Join requests removed in Aparok sovereign offline build
             }
             is Command.ShowHowToShareSpace -> {
-                runCatching {
-                    findNavController().navigate(R.id.howToShareSpaceScreen)
-                }.onFailure {
-                    Timber.e(it, "Error while navigation")
-                }
+                // How to share space removed in sovereign offline mode
             }
             is Command.ShowRemoveMemberWarning -> {
                 runCatching {

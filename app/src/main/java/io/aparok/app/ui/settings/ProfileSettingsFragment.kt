@@ -202,9 +202,8 @@ class ProfileSettingsFragment : BaseBottomSheetComposeFragment() {
                 }
 
                 is ProfileSettingsViewModel.Command.ProcessScannedQrCode -> {
-                    // Dismiss the bottom sheet and let the activity handle the deep link
+                    // QR scanning removed in sovereign offline mode
                     dismiss()
-                    handleScannedQrCode(command.qrCode)
                 }
             }
         }
