@@ -1,5 +1,6 @@
 package io.aparok.app
 
+import android.os.Build
 import io.aparok.app.other.DefaultDeepLinkResolver
 import io.aparok.app.other.DefaultSpaceInviteResolver
 import io.aparok.app.other.DEEP_LINK_INVITE_DOMAIN
@@ -9,7 +10,12 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
+@Config(sdk = [Build.VERSION_CODES.P])
+@RunWith(RobolectricTestRunner::class)
 class AparokNoInvitesOrRemoteSharesTest {
 
     @Test
