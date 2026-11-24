@@ -45,10 +45,6 @@
             android:name="io.aparok.app.ui.editor.cover.SelectCoverObjectFragment"
             android:label="Object-Cover-Screen" />
         <dialog
-            android:id="@+id/objectCoverUnsplashScreen"
-            android:name="io.aparok.app.ui.editor.cover.ObjectUnsplashFragment"
-            android:label="Object-Cover-Unsplash-Screen" />
-        <dialog
             android:id="@+id/relationAddToObjectBlockFragment"
             android:name="io.aparok.app.ui.relations.RelationAddToObjectBlockFragment"
             android:label="RelationAddToObjectBlockFragment">
@@ -83,10 +79,6 @@
             android:name="io.aparok.app.ui.primitives.ObjectTypeFieldsFragment"
             android:label="ObjectTypeFieldsScreen" />
 
-        <dialog
-            android:id="@+id/publishToWebScreen"
-            android:name="io.aparok.app.ui.publishtoweb.PublishToWebFragment"
-            android:label="PublishToWebScreen"/>
 
     </navigation>
 
@@ -139,10 +131,6 @@
             android:id="@+id/objectSetCoverScreen"
             android:name="io.aparok.app.ui.editor.cover.SelectCoverObjectSetFragment"
             android:label="Object-Cover-Screen" />
-        <dialog
-            android:id="@+id/objectCoverUnsplashScreen"
-            android:name="io.aparok.app.ui.editor.cover.ObjectSetUnsplashFragment"
-            android:label="Object-Cover-Unsplash-Screen" />
         <dialog
             android:id="@+id/setNameForNewRecordScreen"
             android:name="io.aparok.app.ui.sets.modals.SetObjectSetRecordNameFragment" />
@@ -307,10 +295,6 @@
         android:name="io.aparok.app.ui.alert.AlertImportExperienceUnsupported" />
 
     <dialog
-        android:id="@+id/remoteStorageFragment"
-        android:name="io.aparok.app.ui.settings.RemoteFilesManageFragment"/>
-
-    <dialog
         android:id="@+id/selectWidgetTypeScreen"
         android:name="io.aparok.app.ui.widgets.SelectWidgetTypeFragment"/>
 
@@ -394,10 +378,6 @@
     <dialog
         android:id="@+id/aboutAppScreen"
         android:name="io.aparok.app.ui.settings.AboutAppFragment" />
-
-    <dialog
-        android:id="@+id/logoutWarningScreen"
-        android:name="io.aparok.app.ui.settings.LogoutWarningFragment"/>
 
     <dialog
         android:id="@+id/deleteAccountWarningScreen"
@@ -495,21 +475,6 @@
 
     </navigation>
 
-    <fragment
-        android:id="@+id/debugSettingsFragment"
-        android:name="io.aparok.app.ui.settings.DebugSettingsFragment"
-        android:label="DebugSettingsFragment"
-        tools:layout="@layout/fragment_debug_settings" />
-
-    <dialog
-        android:id="@+id/debugScreen"
-        android:name="io.aparok.app.ui.settings.DebugFragment"
-        android:label="DebugScreen" />
-
-    <dialog
-        android:id="@+id/experimentalFeaturesScreen"
-        android:name="io.aparok.app.ui.settings.ExperimentalFeaturesFragment"
-        android:label="ExperimentalFeaturesScreen" />
 
     <dialog
         android:id="@+id/globalSearchScreen"
@@ -673,18 +638,6 @@
         android:label="TemplateSelectScreen"
         tools:layout="@layout/fragment_template_select" />
 
-    <dialog
-        android:id="@+id/shareSpaceScreen"
-        android:name="io.aparok.app.ui.multiplayer.ShareSpaceFragment"/>
-
-
-    <dialog
-        android:id="@+id/howToShareSpaceScreen"
-        android:name="io.aparok.app.ui.multiplayer.HowToShareSpaceFragment"/>
-
-    <dialog
-        android:id="@+id/shareSpaceInviteQrCodeScreen"
-        android:name="io.aparok.app.ui.multiplayer.ShareQrCodeSpaceInviteFragment"/>
 
     <dialog
         android:id="@+id/requestNotificationPermissionDialog"
@@ -712,9 +665,5 @@
         android:name="io.aparok.app.ui.primitives.SpaceTypesFragment"
         android:label="SpaceMembersScreen" />
 
-    <dialog
-        android:id="@+id/mySitesScreen"
-        android:name="io.aparok.app.ui.publishtoweb.MySitesFragment"
-        android:label="MySitesScreen"/>
 
 </navigation>

@@ -39,6 +39,6 @@ class DashboardMnemonicReminderDialog :
     override val btnCopy: TextView by lazy { binding.btnCopy }
 
     companion object {
-        const val MNEMONIC_LABEL = "Your Anytype mnemonic phrase"
+        const val MNEMONIC_LABEL = "Your Aparok recovery phrase"
     }
 }

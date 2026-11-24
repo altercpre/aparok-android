@@ -27,7 +27,7 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:text="@string/mention_suggester_new_page"
-        tools:text="github.com/altercpre/aparok-android/releases/latest" />
+        tools:text="aparok.local" />
 
     <View
         android:id="@+id/view"

@@ -11,7 +11,7 @@ object MembershipConstants {
     const val CO_CREATOR_ID = 5
     const val ANY_TEAM_ID = 7
 
-    const val MEMBERSHIP_LEVEL_DETAILS = "https://github.com/altercpre/aparok-android/releases/latest"
+    const val MEMBERSHIP_LEVEL_DETAILS = ""
     const val PRIVACY_POLICY = "https://github.com/altercpre/aparok-android/blob/main/docs/SECURITY.md"
     const val TERMS_OF_SERVICE = "https://github.com/altercpre/aparok-android/blob/main/LICENSE.md"
 

@@ -18,7 +18,6 @@ import io.aparok.app.core_utils.ui.BaseBottomSheetComposeFragment
 import io.aparok.app.di.common.componentManager
 import io.aparok.app.presentation.notifications.NotificationsViewModel
 import io.aparok.app.presentation.notifications.NotificationsViewModelFactory
-import io.aparok.app.ui.multiplayer.ShareSpaceFragment
 import io.aparok.app.ui.settings.typography
 import javax.inject.Inject
 import timber.log.Timber
@@ -62,14 +61,7 @@ class NotificationsFragment : BaseBottomSheetComposeFragment() {
                     // Join requests removed in Aparok sovereign offline build
                 }
                 is NotificationsViewModel.Command.ViewSpaceLeaveRequest -> {
-                    runCatching {
-                        findNavController().navigate(
-                            R.id.shareSpaceScreen,
-                            ShareSpaceFragment.args(space = command.space)
-                        )
-                    }.onFailure {
-                        Timber.e(it, "Error while navigation")
-                    }
+                    // Space leave requests removed in offline sovereign mode
                 }
                 is NotificationsViewModel.Command.NavigateToSpace -> {
                     //TODO: implement navigation

@@ -52,7 +52,6 @@ import io.aparok.app.presentation.sync.SyncStatusWidgetState
 import io.aparok.app.presentation.widgets.collection.Subscription
 import io.aparok.app.ui.base.navigation
 import io.aparok.app.ui.home.WidgetOverlayFragment
-import io.aparok.app.ui.multiplayer.ShareSpaceFragment
 import io.aparok.app.ui.profile.ParticipantFragment
 import io.aparok.app.ui.search.GlobalSearchFragment
 import io.aparok.app.ui.settings.typography
@@ -208,14 +207,7 @@ class AllContentFragment : BaseComposeFragment() {
                     }
                 }
                 is AllContentViewModel.Command.OpenShareScreen -> {
-                    runCatching {
-                        findNavController().navigate(
-                            R.id.shareSpaceScreen,
-                            args = ShareSpaceFragment.args(command.space)
-                        )
-                    }.onFailure { e ->
-                        Timber.e(e, "Error while opening date object from All Objects screen")
-                    }
+                    // Space sharing removed in offline sovereign mode
                 }
 
                 is AllContentViewModel.Command.NavigateToParticipant -> {

@@ -19,14 +19,12 @@ import io.aparok.app.ui.date.DateObjectFragment
 import io.aparok.app.ui.editor.EditorFragment
 import io.aparok.app.ui.editor.EditorModalFragment
 import io.aparok.app.ui.home.WidgetsScreenFragment
-import io.aparok.app.ui.multiplayer.ShareSpaceFragment
 import io.aparok.app.ui.primitives.CreateTypeFragment
 import io.aparok.app.ui.primitives.ObjectTypeFieldsFragment
 import io.aparok.app.ui.primitives.ObjectTypeFragment
 import io.aparok.app.ui.profile.ParticipantFragment
 import io.aparok.app.ui.search.v2.SearchV2Fragment
 import io.aparok.app.ui.sets.ObjectSetFragment
-import io.aparok.app.ui.settings.RemoteFilesManageFragment
 import io.aparok.app.ui.templates.EditorTemplateFragment.Companion.TYPE_TEMPLATE_EDIT
 import io.aparok.app.ui.templates.EditorTemplateFragment.Companion.TYPE_TEMPLATE_SELECT
 import io.aparok.app.ui.templates.TemplateSelectFragment
@@ -234,10 +232,7 @@ class Navigator : AppNavigation {
     }
 
     override fun openShareScreen(space: SpaceId) {
-        navController?.navigate(
-            R.id.shareSpaceScreen,
-            args = ShareSpaceFragment.args(space)
-        )
+        // Space sharing removed in offline sovereign mode
     }
 
     override fun openObjectSet(
@@ -299,13 +294,7 @@ class Navigator : AppNavigation {
     }
 
     override fun openRemoteFilesManageScreen(subscription: Id, space: Id) {
-        navController?.navigate(
-            resId = R.id.remoteStorageFragment,
-            args = RemoteFilesManageFragment.args(
-                subscription = subscription,
-                space = space
-            )
-        )
+        // Remote file management removed in offline sovereign mode
     }
 
     override fun openTemplatesModal(typeId: Id) {

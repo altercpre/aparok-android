@@ -18,7 +18,7 @@ class DefaultSpaceInviteResolverTest {
         val fileKeyValue = "ae62abf2a19e"
         val cidValue = "75538c6c50351eca"
 
-        val link =  "invite.any.coop/${cidValue}#${fileKeyValue}"
+        val link =  "invite.local/${cidValue}#${fileKeyValue}"
 
         assertEquals(
             expected = cidValue,
@@ -37,7 +37,7 @@ class DefaultSpaceInviteResolverTest {
         val fileKeyValue = "ae62abf2a19e"
         val cidValue = "75538c6c50351eca"
 
-        val link =  "https://invite.any.coop/${cidValue}#${fileKeyValue}"
+        val link =  "https://invite.local/${cidValue}#${fileKeyValue}"
 
         assertEquals(
             expected = cidValue,
@@ -56,7 +56,7 @@ class DefaultSpaceInviteResolverTest {
         val fileKeyValue = "ae62abf2a19e"
         val cidValue = "75538c6c50351eca"
 
-        val link =  "http://invite.any.coop/${cidValue}#${fileKeyValue}"
+        val link =  "http://invite.local/${cidValue}#${fileKeyValue}"
 
         assertEquals(
             expected = cidValue,
@@ -74,7 +74,7 @@ class DefaultSpaceInviteResolverTest {
         val fileKeyValue = "ae62abf2a19e"
         val cidValue = "75538c6c50351eca"
 
-        val link = "anytype://invite/?cid=$cidValue&key=$fileKeyValue"
+        val link = "aparok://invite/?cid=$cidValue&key=$fileKeyValue"
 
         assertEquals(
             expected = cidValue,

@@ -43,7 +43,6 @@ import io.aparok.app.ui.base.navigation
 import io.aparok.app.ui.chats.ChatFragment
 import io.aparok.app.ui.home.WidgetsScreenFragment
 import io.aparok.app.ui.multiplayer.LeaveSpaceWarning
-import io.aparok.app.ui.qrcode.QrScannerActivity
 import io.aparok.app.ui.quickcapture.QuickCaptureFragment
 import io.aparok.app.ui.search.v2.SearchV2Fragment
 import io.aparok.app.ui.settings.space.SpaceSettingsFragment
@@ -61,22 +60,6 @@ class VaultFragment : BaseComposeFragment() {
 
     private val vm by viewModels<VaultViewModel> { factory }
 
-    private val qrCodeLauncher = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            result.data?.getStringExtra(QrScannerActivity.SCAN_RESULT)?.let { qrCode ->
-                vm.onQrCodeScanned(qrCode = qrCode)
-            } ?: run {
-                Timber.w("QR code scan failed: no contents found")
-                vm.onQrScannerError()
-            }
-        } else {
-            Timber.w("QR code scan cancelled by user")
-            vm.onQrScannerError()
-        }
-    }
-    
 
     val onMuteSpace: (String) -> Unit = { spaceTargetId ->
         vm.setSpaceNotificationState(spaceTargetId, NotificationState.MENTIONS)
@@ -390,7 +373,7 @@ class VaultFragment : BaseComposeFragment() {
             }
             
             VaultCommand.ScanQrCode -> {
-                handleCameraPermissionAndScan()
+                // QR scanning not supported in offline mode
             }
 
             VaultCommand.OpenSpaceListScreen -> {
@@ -579,16 +562,6 @@ class VaultFragment : BaseComposeFragment() {
         componentManager().vaultComponent.release()
     }
 
-    private fun handleCameraPermissionAndScan() {
-        // Google Code Scanner doesn't require camera permission
-        launchQrScanner()
-    }
-    
-    private fun launchQrScanner() {
-        qrCodeLauncher.launch(
-            Intent(requireContext(), QrScannerActivity::class.java)
-        )
-    }
 
     companion object {
         private const val SHOW_MNEMONIC_KEY = "arg.vault-screen.show-mnemonic"

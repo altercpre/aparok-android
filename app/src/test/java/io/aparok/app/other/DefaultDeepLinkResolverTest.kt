@@ -94,7 +94,7 @@ class DefaultDeepLinkResolverTest {
 
         val space = MockDataFactory.randomUuid()
 
-        val deeplink = "https://object.any.coop/$obj?spaceId=$space"
+        val deeplink = "aparok://object/$obj?spaceId=$space"
 
         // When
         val result = deepLinkResolver.resolve(deeplink)
@@ -123,7 +123,7 @@ class DefaultDeepLinkResolverTest {
 
         val invite = "$cid#$encryption"
 
-        val deeplink = "https://object.any.coop/$obj?spaceId=$space&inviteId=$invite"
+        val deeplink = "aparok://object/$obj?spaceId=$space&inviteId=$invite"
 
         // When
         val result = deepLinkResolver.resolve(deeplink)
@@ -145,7 +145,7 @@ class DefaultDeepLinkResolverTest {
     @Test
     fun `resolve returns Invite with deeplink for invite deep links`() {
         // Given
-        val deeplink = "https://invite.any.coop/bafybeibqdqtd65nlaey3mnkf24prpeq#DsESM2H2xi7Fs96XSp6YcaKaXASX"
+        val deeplink = "https://invite.local/bafybeibqdqtd65nlaey3mnkf24prpeq#DsESM2H2xi7Fs96XSp6YcaKaXASX"
 
         // When
         val result = deepLinkResolver.resolve(deeplink)
@@ -206,7 +206,7 @@ class DefaultDeepLinkResolverTest {
 
     @Test
     fun `check is deeplink`() {
-        val link1 = "https://object.any.coop/bafyreidqrtef4gcqjepl4llsy2xbauedtcdmjkz5xl4stfgt2ippbwveoq?spaceId=bafyreifj6nkvzfowzgfzu5ns4j54gjh5tmcxa3wd6rncbiuk3opq6o4244.1u5jgzo8m1ekc"
+        val link1 = "aparok://object/bafyreidqrtef4gcqjepl4llsy2xbauedtcdmjkz5xl4stfgt2ippbwveoq?spaceId=bafyreifj6nkvzfowzgfzu5ns4j54gjh5tmcxa3wd6rncbiuk3opq6o4244.1u5jgzo8m1ekc"
 
         assertTrue(
             deepLinkResolver.isDeepLink(link1)
@@ -223,11 +223,11 @@ class DefaultDeepLinkResolverTest {
     }
 
     @Test
-    fun `resolve returns InitiateOneToOneChat for valid hi any coop links`() {
+    fun `resolve returns InitiateOneToOneChat for valid local chat links`() {
         // Given
         val identity = "abc123identity"
         val metadataKey = "xyz789metadatakey"
-        val deeplink = "https://hi.any.coop/$identity#$metadataKey"
+        val deeplink = "https://chat.local/$identity#$metadataKey"
 
         // When
         val result = deepLinkResolver.resolve(deeplink)
@@ -243,27 +243,27 @@ class DefaultDeepLinkResolverTest {
     }
 
     @Test
-    fun `isDeepLink returns true for hi any coop links`() {
+    fun `isDeepLink returns true for local chat links`() {
         // Given
-        val deeplink = "https://hi.any.coop/someidentity#somemetadatakey"
+        val deeplink = "https://chat.local/someidentity#somemetadatakey"
 
         // When & Then
         assertTrue(deepLinkResolver.isDeepLink(deeplink))
     }
 
     @Test
-    fun `isDeepLink returns falsy for wrong hi any coop links`() {
+    fun `isDeepLink returns falsy for wrong local chat links`() {
         // Given
-        val deeplink = "https://hii.any.coop/someidentity#somemetadatakey"
+        val deeplink = "https://unknown.chat.local/someidentity#somemetadatakey"
 
         // When & Then
         assertFalse(deepLinkResolver.isDeepLink(deeplink))
     }
 
     @Test
-    fun `resolve returns Unknown for hi any coop link without fragment`() {
+    fun `resolve returns Unknown for local chat link without fragment`() {
         // Given
-        val deeplink = "https://hi.any.coop/identity"
+        val deeplink = "https://chat.local/identity"
 
         // When
         val result = deepLinkResolver.resolve(deeplink)
@@ -314,12 +314,12 @@ class DefaultDeepLinkResolverTest {
     }
 
     @Test
-    fun `resolve correctly decodes URL-encoded metadata key in hi any coop link`() {
+    fun `resolve correctly decodes URL-encoded metadata key in chat link`() {
         // Given - real-world example with percent-encoded base64 characters
         val identity = "AAWfdD5bD5EPqfseF3Ze1q7jnZMjNBsH4xYa7DHVnALQxWe8"
         val encodedMetadataKey = "CAISIM%2FbGH7Zx33A%2BVyTVrfhXSjcmN%2F%2B9Z2MBCZ42rZ2%2FgRF"
         val decodedMetadataKey = "CAISIM/bGH7Zx33A+VyTVrfhXSjcmN/+9Z2MBCZ42rZ2/gRF"
-        val deeplink = "https://hi.any.coop/$identity#$encodedMetadataKey"
+        val deeplink = "https://chat.local/$identity#$encodedMetadataKey"
 
         // When
         val result = deepLinkResolver.resolve(deeplink)
@@ -335,20 +335,20 @@ class DefaultDeepLinkResolverTest {
     }
 
     @Test
-    fun `isDeepLink returns true for URL-encoded hi any coop link`() {
+    fun `isDeepLink returns true for URL-encoded chat link`() {
         // Given - real-world example with percent-encoded characters
-        val deeplink = "https://hi.any.coop/AAWfdD5bD5EPqfseF3Ze1q7jnZMjNBsH4xYa7DHVnALQxWe8#CAISIM%2FbGH7Zx33A%2BVyTVrfhXSjcmN%2F%2B9Z2MBCZ42rZ2%2FgRF"
+        val deeplink = "https://chat.local/AAWfdD5bD5EPqfseF3Ze1q7jnZMjNBsH4xYa7DHVnALQxWe8#CAISIM%2FbGH7Zx33A%2BVyTVrfhXSjcmN%2F%2B9Z2MBCZ42rZ2%2FgRF"
 
         // When & Then
         assertTrue(deepLinkResolver.isDeepLink(deeplink))
     }
 
     @Test
-    fun `resolve preserves literal plus in iOS format hi any coop link`() {
+    fun `resolve preserves literal plus in iOS format chat link`() {
         // Given - iOS format with literal '+' (not percent-encoded)
         val identity = "A8QyNvSpUiw8iPcXbkdJBLNUVDzrf1MvfP2wG5Y32G6A4QF4"
         val metadataKey = "CAISIEnCArW+34o89A+CoMStH9OPKBML4SWLbxChduxnIypA"
-        val deeplink = "https://hi.any.coop/$identity#$metadataKey"
+        val deeplink = "https://chat.local/$identity#$metadataKey"
 
         // When
         val result = deepLinkResolver.resolve(deeplink)

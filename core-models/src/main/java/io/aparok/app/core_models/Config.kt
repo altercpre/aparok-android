@@ -1,7 +1,7 @@
 package io.aparok.app.core_models
 
 /**
- * Anytype app configuration properties.
+ * Aparok app configuration properties.
  * @property home id of the home dashboard
  * @property profile id of the current profile
  * @property gateway url of the gateway for fetching files.

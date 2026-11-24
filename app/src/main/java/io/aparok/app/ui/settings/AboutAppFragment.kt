@@ -132,7 +132,7 @@ class AboutAppFragment : BaseBottomSheetComposeFragment() {
                 requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip =
                 ClipData.newPlainText(
-                    "Your Anytype technical info",
+                    "Your Aparok technical info",
                     getString(
                         R.string.about_meta_info_for_copy_new,
                         getDeviceName(),

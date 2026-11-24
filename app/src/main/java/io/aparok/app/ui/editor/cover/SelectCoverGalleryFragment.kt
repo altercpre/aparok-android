@@ -217,13 +217,7 @@ open class SelectCoverObjectFragment : SelectCoverGalleryFragment() {
     override val vm by viewModels<SelectCoverObjectViewModel> { factory }
 
     override fun onUnsplashClicked() {
-        findNavController().navigate(
-            R.id.objectCoverUnsplashScreen,
-            UnsplashBaseFragment.args(
-                ctx = ctx,
-                space = space
-            )
-        )
+        // Unsplash removed in offline sovereign mode
     }
 
     override fun injectDependencies() {
@@ -278,13 +272,7 @@ class SelectCoverObjectSetFragment : SelectCoverGalleryFragment() {
     }
 
     override fun onUnsplashClicked() {
-        findNavController().navigate(
-            R.id.objectCoverUnsplashScreen,
-            UnsplashBaseFragment.args(
-                ctx = ctx,
-                space = space
-            )
-        )
+        // Unsplash removed in offline sovereign mode
     }
 
     companion object {

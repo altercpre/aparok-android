@@ -188,7 +188,6 @@ import io.aparok.app.ui.linking.OnLinkToAction
 import io.aparok.app.ui.media.MediaActivity
 import io.aparok.app.ui.moving.MoveToFragment
 import io.aparok.app.ui.moving.OnMoveToAction
-import io.aparok.app.ui.multiplayer.ShareSpaceFragment
 import io.aparok.app.ui.objects.appearance.ObjectAppearanceSettingFragment
 import io.aparok.app.ui.objects.creation.ObjectTypeSelectionFragment
 import io.aparok.app.ui.objects.types.pickers.EditorObjectTypeUpdateFragment
@@ -1750,12 +1749,7 @@ open class EditorFragment : NavigationFragment<FragmentEditorBinding>(R.layout.f
                     )
                 }
                 is Command.OpenShareScreen -> {
-                    findNavController().safeNavigate(
-                        currentDestinationId = R.id.pageScreen,
-                        id = R.id.shareSpaceScreen,
-                        args = ShareSpaceFragment.args(command.space),
-                        errorMessage = "Error while opening share screen"
-                    )
+                    // Space sharing removed in offline sovereign mode
                 }
             }
         }
@@ -2893,7 +2887,7 @@ open class EditorFragment : NavigationFragment<FragmentEditorBinding>(R.layout.f
         const val TAG_LINK_TO_OBJECT = "tag.link.to.object"
 
         const val EMPTY_TEXT = ""
-        const val DRAG_AND_DROP_LABEL = "Anytype's editor drag-and-drop."
+        const val DRAG_AND_DROP_LABEL = "Aparok editor drag-and-drop."
         private const val CURRENT_MEDIA_UPLOAD_KEY = "currentMediaUploadDescription"
     }
 }

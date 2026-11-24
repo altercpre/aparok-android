@@ -95,7 +95,6 @@ import io.aparok.app.ui.editor.EditorFragment
 import io.aparok.app.ui.home.WidgetOverlayFragment
 import io.aparok.app.ui.home.WidgetsScreenFragment
 import io.aparok.app.ui.media.MediaActivity
-import io.aparok.app.ui.multiplayer.ShareSpaceFragment
 import io.aparok.app.ui.primitives.ObjectTypeFragment
 import io.aparok.app.ui.profile.ParticipantFragment
 import io.aparok.app.ui.settings.space.SpaceSettingsFragment
@@ -663,12 +662,7 @@ class ChatFragment : Fragment() {
                         }
 
                         is ChatViewModel.ViewModelCommand.OpenSpaceMembers -> {
-                            findNavController().safeNavigate(
-                                currentDestinationId = R.id.chatScreen,
-                                id = R.id.shareSpaceScreen,
-                                args = ShareSpaceFragment.args(command.space),
-                                errorMessage = "Error while opening share screen"
-                            )
+                            // Space members/sharing removed in offline sovereign mode
                         }
 
                         is ChatViewModel.ViewModelCommand.OpenChatInfo -> {

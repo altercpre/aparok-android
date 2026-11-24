@@ -1157,7 +1157,7 @@ fun SpaceJoinRequestPreview() {
                 Relations.ID to "1",
                 Relations.NAME to "Konstantin",
                 Relations.PARTICIPANT_STATUS to ParticipantStatus.JOINING.code.toDouble(),
-                Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                Relations.GLOBAL_NAME to "konstantin.local"
             )
         ),
         icon = SpaceMemberIconView.Placeholder(name = "Konstantin"),
@@ -1187,7 +1187,7 @@ fun SpaceJoinLongTitleRequestPreview() {
                 Relations.NAME to "Very Long Name That Should Be Truncated",
                 Relations.PARTICIPANT_STATUS to ParticipantStatus.JOINING.code.toDouble(),
                 Relations.PARTICIPANT_PERMISSIONS to SpaceMemberPermissions.WRITER.code.toDouble(),
-                Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                Relations.GLOBAL_NAME to "konstantin.local"
             )
         ),
         icon = SpaceMemberIconView.Placeholder(name = "Konstantin"),
@@ -1211,7 +1211,7 @@ fun SpaceLeaveRequestPreview() {
                 Relations.NAME to "Konstantin",
                 Relations.PARTICIPANT_STATUS to ParticipantStatus.REMOVING.code.toDouble(),
                 Relations.PARTICIPANT_PERMISSIONS to SpaceMemberPermissions.WRITER.code.toDouble(),
-                Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                Relations.GLOBAL_NAME to "konstantin.local"
             )
         ),
         icon = SpaceMemberIconView.Placeholder(name = "Konstantin"),
@@ -1239,7 +1239,7 @@ fun ShareSpaceScreenPreview1() {
                             Relations.NAME to "Konstantin",
                             Relations.PARTICIPANT_STATUS to ParticipantStatus.JOINING.code.toDouble(),
                             Relations.PARTICIPANT_PERMISSIONS to SpaceMemberPermissions.WRITER.code.toDouble(),
-                            Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                            Relations.GLOBAL_NAME to "konstantin.local"
                         )
                     ),
                     icon = SpaceMemberIconView.Placeholder(
@@ -1255,7 +1255,7 @@ fun ShareSpaceScreenPreview1() {
                             Relations.NAME to "Evgenii",
                             Relations.PARTICIPANT_STATUS to ParticipantStatus.ACTIVE.code.toDouble(),
                             Relations.PARTICIPANT_PERMISSIONS to SpaceMemberPermissions.WRITER.code.toDouble(),
-                            Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                            Relations.GLOBAL_NAME to "konstantin.local"
                         )
                     ),
                     icon = SpaceMemberIconView.Placeholder(
@@ -1271,7 +1271,7 @@ fun ShareSpaceScreenPreview1() {
                             Relations.NAME to "Aleksey",
                             Relations.PARTICIPANT_STATUS to ParticipantStatus.ACTIVE.code.toDouble(),
                             Relations.PARTICIPANT_PERMISSIONS to SpaceMemberPermissions.WRITER.code.toDouble(),
-                            Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                            Relations.GLOBAL_NAME to "konstantin.local"
                         )
                     ),
                     icon = SpaceMemberIconView.Placeholder(
@@ -1287,7 +1287,7 @@ fun ShareSpaceScreenPreview1() {
                             Relations.NAME to "Anton",
                             Relations.PARTICIPANT_STATUS to ParticipantStatus.ACTIVE.code.toDouble(),
                             Relations.PARTICIPANT_PERMISSIONS to SpaceMemberPermissions.WRITER.code.toDouble(),
-                            Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                            Relations.GLOBAL_NAME to "konstantin.local"
                         )
                     ),
                     icon = SpaceMemberIconView.Placeholder(
@@ -1330,7 +1330,7 @@ private fun SpaceOwnerMemberPreview() {
                 Relations.ID to "2",
                 Relations.NAME to "Evgenii",
                 Relations.PARTICIPANT_PERMISSIONS to SpaceMemberPermissions.OWNER.code.toDouble(),
-                Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                Relations.GLOBAL_NAME to "konstantin.local"
             )
         ),
         icon = SpaceMemberIconView.Placeholder(name = "Evgenii"),
@@ -1353,7 +1353,7 @@ private fun SpaceEditorMemberPreview() {
                 Relations.ID to "2",
                 Relations.NAME to "Evgenii",
                 Relations.PARTICIPANT_PERMISSIONS to SpaceMemberPermissions.WRITER.code.toDouble(),
-                Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                Relations.GLOBAL_NAME to "konstantin.local"
             )
         ),
         icon = SpaceMemberIconView.Placeholder(name = "Evgenii"),
@@ -1392,7 +1392,7 @@ private fun SpaceMemberLongNamePreview() {
                 Relations.ID to "2",
                 Relations.NAME to "Walter Walter Walter Walter Walter Walter",
                 Relations.PARTICIPANT_PERMISSIONS to SpaceMemberPermissions.WRITER.code.toDouble(),
-                Relations.GLOBAL_NAME to "konstantin.github.com/altercpre/aparok-android/releases/latest"
+                Relations.GLOBAL_NAME to "konstantin.local"
             )
         ),
         icon = SpaceMemberIconView.Placeholder(name = "Walter"),

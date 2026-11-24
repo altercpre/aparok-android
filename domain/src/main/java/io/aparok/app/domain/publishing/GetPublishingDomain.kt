@@ -62,7 +62,7 @@ class GetPublishingDomain @Inject constructor(
     data class Params(val space: SpaceId)
 
     companion object {
-        private const val FREE_DOMAIN = "any.coop"
+        private const val FREE_DOMAIN = "aparok.local"
         private const val PAID_DOMAIN = "org"
     }
 }

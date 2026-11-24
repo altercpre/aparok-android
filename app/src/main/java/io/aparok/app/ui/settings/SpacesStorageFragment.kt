@@ -114,14 +114,7 @@ class SpacesStorageFragment : BaseBottomSheetComposeFragment() {
     }
 
     private fun openRemoteStorageScreen(subscription: String, spaceId: Id) {
-        findNavController().safeNavigate(
-            R.id.spacesStorageScreen,
-            R.id.remoteStorageFragment,
-            args = RemoteFilesManageFragment.args(
-                subscription = subscription,
-                space = spaceId
-            ),
-        )
+        // Remote storage removed in sovereign offline build
     }
 
     private fun generateSupportMail(

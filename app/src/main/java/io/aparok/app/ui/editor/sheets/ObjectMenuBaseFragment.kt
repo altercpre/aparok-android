@@ -42,7 +42,6 @@ import io.aparok.app.ui.linking.BacklinkAction
 import io.aparok.app.ui.linking.BacklinkOrAddToObjectFragment
 import io.aparok.app.ui.moving.OnMoveToAction
 import io.aparok.app.ui.primitives.ObjectFieldsFragment
-import io.aparok.app.ui.publishtoweb.PublishToWebFragment
 import com.google.android.material.snackbar.Snackbar
 import timber.log.Timber
 
@@ -236,17 +235,7 @@ abstract class ObjectMenuBaseFragment :
                 }
             }
             is ObjectMenuViewModelBase.Command.PublishToWeb -> {
-                runCatching {
-                    findNavController().navigate(
-                        R.id.publishToWebScreen,
-                        PublishToWebFragment.args(
-                            ctx = ctx,
-                            space = space
-                        )
-                    )
-                }.onFailure {
-                    Timber.e(it, "Failed to open publish-to-web screen")
-                }
+                // Publish to web removed in offline sovereign mode
             }
         }
     }

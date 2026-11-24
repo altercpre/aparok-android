@@ -70,7 +70,6 @@ import io.aparok.app.presentation.spaces.UiEvent
 import io.aparok.app.presentation.spaces.UiSpaceQrCodeState
 import io.aparok.app.ui.base.navigation
 import io.aparok.app.ui.multiplayer.LeaveSpaceWarning
-import io.aparok.app.ui.multiplayer.ShareSpaceFragment
 import io.aparok.app.ui.objects.creation.WidgetSourceTypeFragment
 import io.aparok.app.ui.objects.types.pickers.ObjectTypeSelectionListener
 import io.aparok.app.ui.objects.types.pickers.WidgetSourceTypeListener
@@ -477,14 +476,7 @@ class WidgetsScreenFragment : Fragment(),
             }
 
             is Command.ShareSpace -> {
-                runCatching {
-                    findNavController().navigate(
-                        R.id.shareSpaceScreen,
-                        args = ShareSpaceFragment.args(command.space)
-                    )
-                }.onFailure {
-                    Timber.e(it, "Error while opening share screen")
-                }
+                // Space sharing removed in offline sovereign mode
             }
 
             is Command.ShowLeaveSpaceWarning -> {

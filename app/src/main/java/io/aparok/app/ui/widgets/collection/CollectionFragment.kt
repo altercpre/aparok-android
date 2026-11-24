@@ -30,7 +30,6 @@ import io.aparok.app.presentation.widgets.collection.SubscriptionMapper
 import io.aparok.app.ui.base.navigation
 import io.aparok.app.ui.dashboard.DeleteAlertFragment
 import io.aparok.app.ui.home.WidgetsScreenFragment
-import io.aparok.app.ui.multiplayer.ShareSpaceFragment
 import javax.inject.Inject
 import timber.log.Timber
 
@@ -133,14 +132,7 @@ class CollectionFragment : BaseComposeFragment() {
                 }
             }
             is Command.OpenShareScreen -> {
-                runCatching {
-                    findNavController().navigate(
-                        R.id.shareSpaceScreen,
-                        args = ShareSpaceFragment.args(command.space)
-                    )
-                }.onFailure {
-                    Timber.e(it, "Error while opening share screen")
-                }
+                // Space sharing removed in offline sovereign mode
             }
 
             is Command.OpenParticipant -> {

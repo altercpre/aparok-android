@@ -44,7 +44,6 @@ import io.aparok.app.device.launchMediaPicker
 import io.aparok.app.di.common.componentManager
 import io.aparok.app.other.MediaPermissionHelper
 import io.aparok.app.ui.profile.KeychainPhraseDialog
-import io.aparok.app.ui.qrcode.QrScannerActivity
 import io.aparok.app.ui_settings.account.NotificationSettingsScreen
 import io.aparok.app.ui_settings.account.ProfileSettingsScreen
 import io.aparok.app.ui_settings.account.ProfileSettingsViewModel
@@ -68,7 +67,7 @@ class ProfileSettingsFragment : BaseBottomSheetComposeFragment() {
     }
 
     private val onLogoutClicked = {
-        safeNavigate(R.id.logoutWarningScreen)
+        // Logout removed in sovereign offline mode
     }
 
     private lateinit var permissionHelper: MediaPermissionHelper
@@ -127,26 +126,14 @@ class ProfileSettingsFragment : BaseBottomSheetComposeFragment() {
                             }
                         ),
                         clearProfileImage = { vm.onClearProfileImage() },
-                        onDebugClicked = {
-                            runCatching {
-                                findNavController().navigate(R.id.debugScreen)
-                            }
-                        },
-                        onExperimentalFeaturesClicked = {
-                            runCatching {
-                                findNavController().navigate(R.id.experimentalFeaturesScreen)
-                            }
-                        },
-                        isDebugEnabled = vm.isDebugEnabled.collectAsStateWithLifecycle().value,
-                        showExperimentalFeatures = vm.showExperimentalFeatures,
+                        onDebugClicked = {},
+                        onExperimentalFeaturesClicked = {},
+                        isDebugEnabled = false,
+                        showExperimentalFeatures = false,
                         onMiscSectionClicked = vm::onMiscSectionClicked,
                         notificationsDisabled = notificationsDisabled,
                         onOpenNotificationSettings = { showNotificationSettingsModal = true },
-                        onMySitesClicked = {
-                            runCatching {
-                                findNavController().navigate(R.id.mySitesScreen)
-                            }
-                        },
+                        onMySitesClicked = {},
                         onIdentityClicked = {},
                         onShowQrCodeClicked = { vm.onShowQrCodeClicked() }
                     )
@@ -168,7 +155,7 @@ class ProfileSettingsFragment : BaseBottomSheetComposeFragment() {
                         state = profileQrCodeState,
                         onShare = { link -> shareProfileLink(link) },
                         onCopyLink = { link -> copyProfileLink(link) },
-                        onScanQrCode = { launchQrScanner() },
+                        onScanQrCode = { /* QR scanning disabled in sovereign offline mode */ },
                         onDismiss = { vm.onHideQrCodeScreen() }
                     )
                 }
@@ -187,35 +174,9 @@ class ProfileSettingsFragment : BaseBottomSheetComposeFragment() {
     private fun copyProfileLink(link: String) {
         val clipboard =
             requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clip = ClipData.newPlainText("Anytype Profile Link", link)
+        val clip = ClipData.newPlainText("Aparok Profile Link", link)
         clipboard.setPrimaryClip(clip)
         toast(R.string.profile_qr_link_copied)
-    }
-
-    private val qrScannerLauncher = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            val qrCode = result.data?.getStringExtra(QrScannerActivity.SCAN_RESULT)
-            if (qrCode != null) {
-                vm.onQrCodeScanned(qrCode)
-            }
-        }
-    }
-
-    private fun launchQrScanner() {
-        val intent = Intent(requireContext(), QrScannerActivity::class.java)
-        qrScannerLauncher.launch(intent)
-    }
-
-    private fun handleScannedQrCode(qrCode: String) {
-        // Start the activity with the scanned QR code as a deep link
-        // This will trigger the MainActivity's onNewIntent handling
-        val intent = Intent(Intent.ACTION_VIEW, android.net.Uri.parse(qrCode)).apply {
-            setClass(requireContext(), requireActivity()::class.java)
-            addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        }
-        startActivity(intent)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

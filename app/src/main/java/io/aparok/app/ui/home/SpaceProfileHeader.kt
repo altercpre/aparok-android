@@ -95,10 +95,10 @@ private fun SpaceProfileHeaderPreview() {
         SpaceProfileHeader(
             spaceIcon = SpaceIconView.DataSpace.Placeholder(
                 color = SystemColor.SKY,
-                name = "Anytype"
+                name = "Aparok"
             ),
-            spaceName = "Anytype",
-            globalName = "anytype.any",
+            spaceName = "Aparok",
+            globalName = "aparok.local",
             identity = "0x1234567890abcdef",
             spaceAccessType = SpaceAccessType.PRIVATE
         )

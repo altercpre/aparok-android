@@ -103,7 +103,7 @@ fun PulsatingCircleScreen() {
             Image(
                 modifier = Modifier.align(Alignment.Center),
                 painter = painterResource(id = R.drawable.ic_anytype_logo),
-                contentDescription = "Anytype logo",
+                contentDescription = "Aparok logo",
             )
         }
 

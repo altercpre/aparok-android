@@ -44,7 +44,6 @@ import io.aparok.app.presentation.spaces.SpaceSettingsViewModel.SpaceSettingsErr
 import io.aparok.app.ui.home.SpaceHomePickerBottomSheet
 import io.aparok.app.presentation.util.downloader.UriFileProvider
 import io.aparok.app.ui.multiplayer.LeaveSpaceWarning
-import io.aparok.app.ui.multiplayer.ShareSpaceFragment
 import io.aparok.app.core_ui.features.multiplayer.ShareSpaceQrCodeScreen
 import io.aparok.app.ui.objects.types.pickers.AppDefaultObjectTypeFragment
 import io.aparok.app.ui.objects.types.pickers.ObjectTypeSelectionListener
@@ -250,26 +249,10 @@ class SpaceSettingsFragment : Fragment(), ObjectTypeSelectionListener {
                     }
                 }
                 is Command.ManageSharedSpace -> {
-                    runCatching {
-                        findNavController()
-                            .navigate(
-                                R.id.shareSpaceScreen,
-                                ShareSpaceFragment.args(command.space)
-                            )
-                    }.onFailure {
-                        Timber.e(it, "Error while opening share-space screen")
-                    }
+                    // Space sharing removed in offline sovereign mode
                 }
                 is Command.SharePrivateSpace -> {
-                    runCatching {
-                        findNavController()
-                            .navigate(
-                                R.id.shareSpaceScreen,
-                                ShareSpaceFragment.args(command.space)
-                            )
-                    }.onFailure {
-                        Timber.e(it, "Error while opening share-space screen")
-                    }
+                    // Space sharing removed in offline sovereign mode
                 }
                 is Command.ShowDeleteSpaceWarning -> {
                     val dialog = DeleteSpaceWarning.new()

@@ -41,7 +41,7 @@ import io.aparok.app.core_ui.views.Title1
 @DefaultPreviews
 fun ShareInviteLinkCardNotOwnerPreview() {
     ShareInviteLinkCard(
-        link = "https://github.com/altercpre/aparok-android/releases/latestibafyrfhfsag6rea3ifffsasssa3ifffsasssga3ifffsasssga3ifffsas",
+        link = "aparok://invite?cid=sample",
         onShareInviteClicked = {},
         onDeleteLinkClicked = {},
         onShowQrCodeClicked = {},
@@ -54,7 +54,7 @@ fun ShareInviteLinkCardNotOwnerPreview() {
 @DefaultPreviews
 fun ShareInviteLinkCardOwnerPreview() {
     ShareInviteLinkCard(
-        link = "https://github.com/altercpre/aparok-android/releases/latestibafyrfhfsag6rea3ifffsasssa3ifffsasssga3ifffsasssga3ifffsas",
+        link = "aparok://invite?cid=sample",
         onShareInviteClicked = {},
         onDeleteLinkClicked = {},
         onShowQrCodeClicked = {},

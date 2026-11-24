@@ -110,10 +110,6 @@
             android:windowSoftInputMode="adjustResize">
         </activity>
         <activity
-            android:name=".ui.qrcode.QrScannerActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".ui.media.MediaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false" />

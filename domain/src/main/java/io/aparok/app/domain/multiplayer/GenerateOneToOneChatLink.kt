@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 /**
  * Generates a deep link for initiating a 1-1 chat with the current user.
- * The link format is: https://hi.any.coop/{identity}#{metaDataKey}
+ * The link format is: aparok://chat/{identity}#{metaDataKey}
  */
 class GenerateOneToOneChatLink @Inject constructor(
     dispatchers: AppCoroutineDispatchers

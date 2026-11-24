@@ -11,21 +11,21 @@ import timber.log.Timber
 
 const val DEEP_LINK_PATTERN = "aparok://"
 
-const val DEEP_LINK_INVITE_DOMAIN = "invite.any.coop"
+const val DEEP_LINK_INVITE_DOMAIN = "invite.local"
 
-const val DEEP_LINK_ONE_TO_ONE_CHAT_DOMAIN = "hi.any.coop"
+const val DEEP_LINK_ONE_TO_ONE_CHAT_DOMAIN = "chat.local"
 
-const val DEEP_LINK_TO_OBJECT_BASE_URL = "https://object.any.coop"
+const val DEEP_LINK_TO_OBJECT_BASE_URL = "aparok://object"
 
 /**
  * Regex pattern for matching
  */
-const val DEEP_LINK_INVITE_REG_EXP = "invite.any.coop/([a-zA-Z0-9]+)#([a-zA-Z0-9]+)"
-const val DEEP_LINK_TO_OBJECT_REG_EXP = """object\.any\.coop/([a-zA-Z0-9?=&._-]+)"""
+const val DEEP_LINK_INVITE_REG_EXP = "invite\\.local/([a-zA-Z0-9]+)#([a-zA-Z0-9]+)"
+const val DEEP_LINK_TO_OBJECT_REG_EXP = """aparok://object/([a-zA-Z0-9?=&._-]+)"""
 const val DEEP_LINK_ONE_TO_ONE_CHAT_CUSTOM_REG_EXP =
-    "anytype://hi/\\?id=([a-zA-Z0-9_-]+)&key=([a-zA-Z0-9_+/=-]+)"
+    "aparok://hi/\\?id=([a-zA-Z0-9_-]+)&key=([a-zA-Z0-9_+/=-]+)"
 
-const val DEE_LINK_INVITE_CUSTOM_REG_EXP = "anytype://invite/\\?cid=([a-zA-Z0-9]+)&key=([a-zA-Z0-9]+)"
+const val DEE_LINK_INVITE_CUSTOM_REG_EXP = "aparok://invite/\\?cid=([a-zA-Z0-9]+)&key=([a-zA-Z0-9]+)"
 
 const val MAIN_PATH = "main"
 const val OBJECT_PATH = "object"
@@ -72,7 +72,7 @@ object DefaultDeepLinkResolver : DeepLinkResolver {
 
     private fun resolveOneToOneChatLink(deeplink: String): DeepLinkResolver.Action {
         val uri = Uri.parse(deeplink)
-        // Check if it's a hi.any.coop URL
+        // Check if it's a 1-1 chat domain URL
         if (uri.host != DEEP_LINK_ONE_TO_ONE_CHAT_DOMAIN) return DeepLinkResolver.Action.Unknown
 
         val identity = uri.pathSegments.firstOrNull()
