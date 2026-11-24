@@ -5,7 +5,7 @@
 
 | Phase | Name | Weight | Status | Evidence | Date |
 |-------|------|--------|--------|----------|------|
-| R0 | Verified State + Cleanup | 6% | NOT STARTED | — | — |
+| R0 | Verified State + Cleanup | 6% | PROVEN | CI [45318361525](https://github.com/altercpre/aparok-android/actions/runs/45318361525) + Core [45311900324](https://github.com/altercpre/aparok-core/actions/runs/45311900324); DefaultUserPermissionProviderTest, SovereignOfflineMatrixTest; DefaultUserPermissionProvider.kt:80 | 2026-11-24 |
 | R1 | Verify + Finish Offline | 8% | NOT STARTED | — | — |
 | R2 | Verify Local Profile | 6% | NOT STARTED | — | — |
 | R3 | Chat + Media + Files Offline | 14% | NOT STARTED | — | — |

@@ -23,7 +23,10 @@ jobs:
           chmod +x ./scripts/setup-middleware.sh
           ./scripts/setup-middleware.sh
 
-      - name: Verify zero-telemetry
+      - name: Process Merged Release Manifest
+        run: ./gradlew :app:processReleaseMainManifest --no-daemon
+
+      - name: Verify zero-telemetry and merged manifest permissions
         run: |
           chmod +x scripts/verify-offline.sh
           bash scripts/verify-offline.sh
