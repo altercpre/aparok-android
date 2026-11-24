@@ -160,7 +160,6 @@ annotations = { module = "androidx.room:room-compiler", version.ref = "roomVersi
 roomTesting = { module = "androidx.room:room-testing", version.ref = "roomVersion" }
 navigationCompose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationComposeVersion" }
 composeQrCode = { module = "com.lightspark:compose-qr-code", version.ref = "composeQrCodeVersion" }
-playBilling = { module = "com.android.billingclient:billing", version = "9.1.0" }
 fragmentCompose = { group = "androidx.fragment", name = "fragment-compose", version.ref = "fragmentComposeVersion" }
 customTabs = { module = "androidx.browser:browser", version.ref = "customTabsVersion" }
 anyCrypto = { module = "com.github.altercpre:any-crypto-kotlin", version = "1.0.2" }

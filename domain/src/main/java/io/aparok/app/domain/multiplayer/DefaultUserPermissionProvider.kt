@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
@@ -77,12 +78,11 @@ class DefaultUserPermissionProvider @Inject constructor(
     private val jobs = mutableListOf<Job>()
 
     override fun get(space: SpaceId): SpaceMemberPermissions? {
-        return members.value.firstOrNull { member -> member.spaceId == space.id }?.permissions ?: SpaceMemberPermissions.OWNER
+        return SpaceMemberPermissions.OWNER
     }
     override fun observe(space: SpaceId): Flow<SpaceMemberPermissions?> {
-        return members.map { all ->
-            all.firstOrNull { member -> member.spaceId == space.id }?.permissions ?: SpaceMemberPermissions.OWNER
-        }
+        return flowOf(SpaceMemberPermissions.OWNER)
+    }
     }
 
     override fun getCurrent(): Flow<ObjectWrapper.SpaceMember?> {
@@ -150,15 +150,12 @@ class DefaultUserPermissionProvider @Inject constructor(
     }
 
     override fun all(): Flow<Map<Id, SpaceMemberPermissions>> {
-        return members.map { all ->
-            all.filter { member ->
-                !member.spaceId.isNullOrEmpty()
-            }.associate { member ->
-                val space = requireNotNull(member.spaceId)
-                val permissions = member.permissions ?: SpaceMemberPermissions.OWNER
-                space to permissions
+        return spaceViewSubscriptionContainer
+            .observe()
+            .map { spaceViews ->
+                spaceViews.mapNotNull { it.targetSpaceId }
+                    .associateWith { SpaceMemberPermissions.OWNER }
             }
-        }
     }
 
     override fun stop() {

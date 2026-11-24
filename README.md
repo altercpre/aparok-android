@@ -1,6 +1,6 @@
 # Aparok
 
-Official Aparok client for Android — private, sovereign, local-first.
+Aparok client for Android — private, sovereign, local-first.
 
 ## Build project
 

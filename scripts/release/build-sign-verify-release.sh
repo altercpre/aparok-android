@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 TAG="${1:-v1.1.0}"
 RELEASE_TITLE="${2:-Aparok Android ${TAG} (Zero-Telemetry Sovereign Release)}"
@@ -11,20 +11,41 @@ echo "=========================================================="
 
 KEYSTORE_FILE="scripts/release/app-release.jks"
 KEY_ALIAS="aparok"
-KEY_PASS="aparok123456"
-STORE_PASS="aparok123456"
 CERT_PIN_FILE="release/CERT_SHA256"
 
-# 1. Restore release keystore from secret or generate if not exists
+# --- SECURITY: Keystore passwords MUST come from environment/secrets ---
+if [ -z "${RELEASE_STORE_PASS:-}" ] || [ -z "${RELEASE_KEY_PASS:-}" ]; then
+    # Fallback: auto-generate random passwords for CI if not provided
+    if [ -n "${CI:-}" ]; then
+        RELEASE_STORE_PASS=$(openssl rand -base64 32)
+        RELEASE_KEY_PASS=$(openssl rand -base64 32)
+        echo "WARNING: Generated random keystore passwords for CI build."
+    else
+        echo "ERROR: RELEASE_STORE_PASS and RELEASE_KEY_PASS must be set as environment variables or CI secrets."
+        echo "       Never hardcode keystore passwords in scripts."
+        exit 1
+    fi
+fi
+
+KEY_PASS="${RELEASE_KEY_PASS}"
+STORE_PASS="${RELEASE_STORE_PASS}"
+
+# 1. Restore release keystore from secret — FAIL if secret is missing for releases
 if [ ! -f "${KEYSTORE_FILE}" ]; then
-    if [ -n "${RELEASE_KEYSTORE_BASE64}" ]; then
+    if [ -n "${RELEASE_KEYSTORE_BASE64:-}" ]; then
         echo "[1/6] Restoring release keystore from RELEASE_KEYSTORE_BASE64 secret..."
         mkdir -p "$(dirname "${KEYSTORE_FILE}")"
-        KEYSTORE_FILE="${KEYSTORE_FILE}" python3 -c "import os, base64; open(os.environ['KEYSTORE_FILE'], 'wb').write(base64.b64decode(os.environ['RELEASE_KEYSTORE_BASE64']))" || \
-        echo "${RELEASE_KEYSTORE_BASE64}" | tr -d "
- " | base64 -d -i > "${KEYSTORE_FILE}"
+        echo "${RELEASE_KEYSTORE_BASE64}" | base64 -d > "${KEYSTORE_FILE}"
     else
-        echo "[1/6] Generating self-signed release keystore (${KEYSTORE_FILE})..."
+        # For tagged releases, the keystore MUST exist
+        if [[ "${TAG}" == v* ]]; then
+            echo "ERROR: RELEASE_KEYSTORE_BASE64 secret is not set!"
+            echo "       Cannot sign a release without the official keystore."
+            echo "       Set up the secret in your repository settings."
+            exit 1
+        fi
+        echo "[1/6] Generating DEVELOPMENT-ONLY self-signed keystore..."
+        echo "       WARNING: This APK will NOT be installable over official releases."
         mkdir -p "$(dirname "${KEYSTORE_FILE}")"
         keytool -genkeypair -v \
             -keystore "${KEYSTORE_FILE}" \
@@ -34,7 +55,7 @@ if [ ! -f "${KEYSTORE_FILE}" ]; then
             -validity 10000 \
             -storepass "${STORE_PASS}" \
             -keypass "${KEY_PASS}" \
-            -dname "CN=Aparok" \
+            -dname "CN=Aparok-DEV" \
             -storetype JKS
     fi
 fi
@@ -42,11 +63,7 @@ fi
 # Pin and verify certificate fingerprint
 CURRENT_FP=$(keytool -list -v -keystore "${KEYSTORE_FILE}" -alias "${KEY_ALIAS}" -storepass "${STORE_PASS}" 2>/dev/null | grep "SHA256:" | head -n 1 | awk '{print $NF}')
 if [ -n "${CURRENT_FP}" ]; then
-    if [ ! -f "${CERT_PIN_FILE}" ]; then
-        mkdir -p "$(dirname "${CERT_PIN_FILE}")"
-        echo "${CURRENT_FP}" > "${CERT_PIN_FILE}"
-        echo "Pinned release certificate SHA-256 fingerprint: ${CURRENT_FP}"
-    else
+    if [ -f "${CERT_PIN_FILE}" ]; then
         PINNED_FP=$(cat "${CERT_PIN_FILE}" | tr -d '[:space:]')
         if [ "${CURRENT_FP}" != "${PINNED_FP}" ]; then
             echo "ERROR: Certificate fingerprint mismatch!"
@@ -55,10 +72,14 @@ if [ -n "${CURRENT_FP}" ]; then
             exit 1
         fi
         echo "Release certificate fingerprint verified against ${CERT_PIN_FILE}: ${CURRENT_FP}"
+    else
+        mkdir -p "$(dirname "${CERT_PIN_FILE}")"
+        echo "${CURRENT_FP}" > "${CERT_PIN_FILE}"
+        echo "Pinned release certificate SHA-256 fingerprint: ${CURRENT_FP}"
     fi
 fi
 
-# 2. Configure signing
+# 2. Configure signing (passwords never stored in repo)
 echo "[2/6] Configuring signing properties..."
 cat << EOF > signing.properties
 RELEASE_KEY_ALIAS=${KEY_ALIAS}
@@ -87,7 +108,7 @@ echo "  Publishing lib.aar to mavenLocal()..."
 echo "[4/6] Building release APKs with Gradle..."
 ./gradlew :app:assembleRelease -PenableAbiSplits=true --no-daemon
 
-# 5.5 Verify Offline & Merged Manifest Permissions
+# 5.5 Verify Offline & Merged Manifest Permissions (MUST pass post-build)
 echo "[Verification] Running offline and zero-telemetry verification..."
 bash scripts/verify-offline.sh
 bash scripts/verify-sovereign-offline.sh
@@ -125,7 +146,7 @@ cat SHA256SUMS.txt
 cd - > /dev/null
 
 # 7. Publish GitHub Release if GitHub CLI / token is available (outside CI)
-if [ -z "${CI}" ] && command -v gh >/dev/null 2>&1 && [ -n "${GITHUB_TOKEN}" ]; then
+if [ -z "${CI:-}" ] && command -v gh >/dev/null 2>&1 && [ -n "${GITHUB_TOKEN:-}" ]; then
     echo "[6/6] Publishing release to GitHub via gh CLI..."
     gh release create "${TAG}" "${OUTPUT_DIR}"/* \
         --title "${RELEASE_TITLE}" \

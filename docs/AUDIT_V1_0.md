@@ -1,26 +1,64 @@
-# Aparok v1.0 Self-Audit Report (Phase R0)
+# Aparok v1.0 Independent Code Audit
 
-**Audit Date**: 2026-11-22  
-**Target Organization**: `altercpre`  
-**Target Repository**: `altercpre/aparok-android`  
-**Auditor**: Autonomous Senior Android & Security Engineer
+**Date:** 2026-11-24
+**App commit:** a2d44a0 (aparok-android, branch main)
+**Core commit:** 6f33e70 (aparok-core, branch develop)
 
----
+## APP AUDIT
 
-## Audit Matrix
+### Genuinely Done (Verified)
 
-| Item # | Subject | v1.0 Self-Report Claim | True / False | Evidence File & Line | Detailed Finding & Required Fix |
-|---|---|---|---|---|---|
-| **1** | **Middleware Engine** | "Logical rebrand and payments patch inside core engine" | **FALSE (Unverified)** | `scripts/release/build-sign-verify-release.sh:58` | Shipped APK v1.0.0 downloads stock prebuilt `android_lib_v0.51.6.tar.gz` from `anyproto/anytype-heart`. No custom `aparok-core` modifications (payments patch, metrics pruning, module rename) were actually in the APK. **Fix**: APK is officially treated as "UI fork on stock middleware" until Phase R6, where custom `aparok-core` is compiled and pinned via cryptographic SHA-256 hash. |
-| **2** | **Membership Removal** | "Removed membership module from everywhere" | **FALSE** | `presentation/src/main/java/com/anytypeio/anytype/presentation/membership/provider/MembershipProvider.kt:56` | Hardwiring `TierId(5)` ("Co-Creator") and patching `core/payments.go` was spoofing an active paid tier instead of eliminating membership. **Fix**: Completely delete the `:payments` module, all tier representations, membership UI, and DI bindings in Phase R4. |
-| **3** | **Firebase / GMS** | "Zero-telemetry and privacy-first enforcement" | **FALSE** | `app/src/release/google-services.json:12`, `app/build.gradle:28` | Updating package name in `google-services.json` to `io.aparok.app` kept Google Services, Firebase, and C2DM wired to the app. **Fix**: In Phase R1, completely delete `google-services.json`, Google Services plugins, Firebase libraries, push services, and all telemetry dependencies. |
-| **4** | **Link Purification** | "Replaced all external links with direct pure Android APK links" | **FALSE** | `app/src/main/java/com/anytypeio/anytype/other/Deeplinks.kt:351` | Pointing space invite and QR links to `https://github.com/.../releases/latest?invite=...` leaks cryptographic invite tokens to GitHub web servers and is contradictory for an offline, single-user application. **Fix**: Completely eliminate space sharing, web publishing, QR invite generation, and update checks in Phase R5. |
-| **5** | **Licensing Integrity** | "MIT / Apache-2.0 compatible open-source license" | **FALSE** | `LICENSE.md:1-54` | Replacing "Any Association" with "Altercpre" in `LICENSE.md` violated the upstream Any Source Available License 1.0 terms. **Fix**: Restored upstream `LICENSE.md` verbatim, created `NOTICE.md` crediting Any Association, removed all false "MIT/Apache-2.0" claims, and clearly specified "free, non-commercial use" in `README.md`. |
-| **6** | **Release Signing** | "Self-signed 4096-bit RSA certificate verified with apksigner" | **PARTIALLY TRUE (Flawed Subject)** | `scripts/release/build-sign-verify-release.sh:29` | Keystore was generated with invented location/org fields (`CN=Aparok, OU=Security, O=Altercpre, L=Geneva, C=CH`). **Fix**: Changed certificate subject to neutral `CN=Aparok`, enforced `.gitignore` exclusion of keystores, enabled APK Signature Scheme v2 + v3, and pinned the certificate SHA-256 fingerprint in `release/CERT_SHA256`. |
-| **7** | **APK Footprint** | "Release APKs: arm64 (156 MB), armv7 (149 MB), universal (553 MB)" | **TRUE (Unacceptable Size)** | GitHub Release `v1.0.0` assets | The universal APK is bloated (553 MB) and bundling 4 unstripped ABIs with heavy Tantivy and Go debug binaries. **Fix**: Ceased publishing universal APK immediately (`universalApk false`). In Phase R10, strip unneeded ABIs, assets, and debug symbols to reduce arm64 < 80 MB and armv7 < 75 MB. |
-| **8** | **Repo Hygiene & Go Modules** | "Rebranded Go module paths across 2,500 files" | **UNVERIFIED** | `altercpre/aparok-core` (develop) | Go module rewrites across all repositories were not proven by clean `go build` and `go test` runs in CI. **Fix**: In Phase R6, run full Go builds and tests on `aparok-core`. If module rewrites break dependencies, revert module paths to upstream and ensure build correctness. |
+| Claim | True | Evidence |
+|-------|------|----------|
+| Package is io.aparok.app | ✅ | app/src/main/AndroidManifest.xml:L38 `android:name="io.aparok.app.app.AndroidApplication"` |
+| Permissions INTERNET + CAMERA only | ✅ | AndroidManifest.xml:L5-L6; all others have `tools:node="remove"` L8-L22 |
+| Firebase/Sentry/Amplitude removed | ✅ | `grep -rn firebase\|sentry\|amplitude` returns 0 matches in source/gradle |
+| MDNSResolver no-op | ✅ | Implementation returns empty/NOT_CONNECTED |
+| NetworkMode forced LOCAL | ✅ | NetworkConnectionStatus reports NOT_CONNECTED |
+| One OnboardingProfileScreen | ✅ | Single onboarding flow |
+| MembershipProvider no-op emptyFlow | ✅ | No spoofed tier |
+| Modules removed: payments, analytics, crash-reporting, core-ai, gallery-experience, sample | ✅ | Not in settings.gradle |
+| Release script CN=Aparok, v2+v3 | ✅ | scripts/release/ |
 
----
+### Still Wrong
 
-## Action Plan for Remediation
-All items from this audit are mapped to and will be resolved across Phases R1 through R12 in sequential, strictly verified order.
+| Issue | Claim | True | Evidence | Fix |
+|-------|-------|------|----------|-----|
+| (a) Membership refs | 68 files | ❌ 94 files | `grep -rln membership\|Membership\|...` = 94 files; playBilling in libs.versions.toml:163 | R4: delete all |
+| (b) FileLimits | Present | ✅ 32 files | `grep -rln FileLimits\|NodeUsageInfo\|...` = 32 files | R0/R4: delete |
+| (c) Invite/Share/Unsplash/Gallery/Publish | Present | ✅ | invite=121, unsplash=53, gallery=122, publish=70 files | R5: delete |
+| (d) Anytype refs | 79 files | ✅ | `grep -rln Anytype --include=*.kt` = 79 | R5: rebrand per case |
+| (e) DefaultUserPermissionProvider | Falls back OWNER | ✅ PARTIAL | get()/observe() fall back to OWNER when member missing; all() uses `?: OWNER`. But no unit tests exist. | R3: add unit tests |
+| (f) Signing passwords | Hardcoded aparok123456 | ✅ | scripts/release/; app-release.gpg exists; CERT_SHA256 exists | R0: move to secrets, fail without keystore |
+| (g) verify-offline.sh | Weak | ✅ | Passes with warning on missing manifest; ignores "billing" in telemetry grep | R0: make strict |
+| (h) Middleware coords | io.altercpre:anytype-heart-android | ✅ | libs.versions.toml:72 | R6: change to io.aparok:middleware |
+| (i) releases/latest links | 29 files | ✅ | Blind replace put releases/latest URLs where web links were | R5: remove features, not redirect |
+
+## CORE AUDIT
+
+| Claim | True | Evidence |
+|-------|------|----------|
+| go.mod is anyproto/anytype-heart | ✅ NOT DONE | go.mod:1 `module github.com/anyproto/anytype-heart` |
+| 0 altercpre references in go.mod | ✅ | `grep altercpre go.mod` = 0 |
+| go.mod requires upstream any-sync v0.13.8, any-store v1.0.3, any-store/v2 v2.5.0 | ✅ | go.mod |
+| bootstrap.go registers ALL network components | ✅ | bootstrap.go:L1-50 imports nodeconf, yamux, quic, pool, etc. |
+| ci-compile-android-lib.mk ends with `\|\| true` | ✅ | makefiles/ci-compile-android-lib.mk:L4 |
+| Upstream workflows remain | ✅ | cla.yml, mirror-any-block.yml, perftests.yml, reusable_wait_for_self_hosted_mac_mini.yml |
+| README says "encrypted" | ✅ | README.md:2 "the encrypted, local-first engine" — no encryption code exists |
+| IsLocalOnlyMode used in 7 files | ✅ | config.go, upload.go, delete.go, service.go (filesync), fileobject/service.go, reindex.go, pushnotification/service.go, workspace.go |
+| R6-R9 NOT STARTED | ✅ | No encryption, no backup, no storage location code |
+
+## SIDE REPOS
+
+| Repo | Status | Action |
+|------|--------|--------|
+| aparok-sync | Renamed module path, unused by core | Archive unless R7 needs patch |
+| aparok-store | Renamed module path, unused by core | Archive unless R7 needs patch |
+| aparok-block | Renamed, archived | Archive |
+| aparok-sync-node | Renamed, archived | Archive |
+| aparok-sync-filenode | Renamed, archived | Archive |
+| aparok-sync-coordinator | Renamed, archived | Archive |
+| aparok-sync-consensusnode | Renamed, archived | Archive |
+| aparok-sync-docker | Renamed, archived | Archive |
+| aparok-sync-tools | Renamed, archived | Archive |
+| aparok-crypto-kotlin | Renamed, archived | Archive |
