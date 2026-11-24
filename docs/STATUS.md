@@ -11,7 +11,7 @@
 | R3 | Chat + Media + Files Offline | 14% | PROVEN | CI [45335616724](https://github.com/altercpre/aparok-android/actions/runs/45335616724); UrlBuilderTest, AparokMediaAndChatOfflineTest passed; UrlBuilderImpl.kt:20, gateway.go:459, upload.go:37 | 2026-11-24 |
 | R4 | Real Membership Removal | 6% | PROVEN | CI [45366003147](https://github.com/altercpre/aparok-android/actions/runs/45366003147); AparokMembershipRemovalTest passed; MembershipModels.kt:88, MembershipExt.kt:8, MembershipIncentivesExt.kt:11 | 2026-11-24 |
 | R5 | No Invites, Sharing, Update Checks, Extras | 6% | PROVEN | CI [45393459731](https://github.com/altercpre/aparok-android/actions/runs/45393459731); AparokNoInvitesOrRemoteSharesTest passed; QrScanner removed, deep links sanitized to aparok://, graph.xml cleaned | 2026-11-24 |
-| R6 | Own Core | 8% | NOT STARTED | — | — |
+| R6 | Own Core | 8% | PROVEN | Core CI [45421260261](https://github.com/altercpre/aparok-core/actions/runs/45421260261) (commit fc3469b); gomobile lib.aar built with -javapkg io.aparok.mw; verify-offline.sh passed; lib.aar sha256 8fe49dc3c38b629eaf1d0389d0a862ba2e27a6bb2a63ab2a6e774e5471db32b6 pinned in middleware.lock | 2026-11-24 |
 | R7 | Encrypt Everything | 14% | NOT STARTED | — | — |
 | R8 | Storage Location | 7% | NOT STARTED | — | — |
 | R9 | Backup + Restore .aparok | 9% | NOT STARTED | — | — |
