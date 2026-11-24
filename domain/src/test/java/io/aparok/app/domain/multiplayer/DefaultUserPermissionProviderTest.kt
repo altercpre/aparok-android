@@ -33,11 +33,12 @@ class DefaultUserPermissionProviderTest {
         spaceViewSubscriptionContainer = mock(SpaceViewSubscriptionContainer::class.java)
         container = mock(StorelessSubscriptionContainer::class.java)
         repo = mock(AuthRepository::class.java)
-        dispatchers = mock(AppCoroutineDispatchers::class.java)
+        dispatchers = AppCoroutineDispatchers(
+            io = Dispatchers.Unconfined,
+            computation = Dispatchers.Unconfined,
+            main = Dispatchers.Unconfined
+        )
         logger = mock(Logger::class.java)
-
-        `when`(dispatchers.io).thenReturn(Dispatchers.Unconfined)
-        `when`(dispatchers.main).thenReturn(Dispatchers.Unconfined)
 
         provider = DefaultUserPermissionProvider(
             spaceViewSubscriptionContainer = spaceViewSubscriptionContainer,

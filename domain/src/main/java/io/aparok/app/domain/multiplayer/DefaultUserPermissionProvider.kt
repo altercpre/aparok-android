@@ -83,7 +83,6 @@ class DefaultUserPermissionProvider @Inject constructor(
     override fun observe(space: SpaceId): Flow<SpaceMemberPermissions?> {
         return flowOf(SpaceMemberPermissions.OWNER)
     }
-    }
 
     override fun getCurrent(): Flow<ObjectWrapper.SpaceMember?> {
         return members.map { all -> all.firstOrNull() }
