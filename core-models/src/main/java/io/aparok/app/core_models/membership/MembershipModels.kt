@@ -86,7 +86,7 @@ sealed class MembershipUpgradeReason {
 }
 
 data class MembershipFeatures(
-    val spaceWriters: Int = 0,
-    val spaceReaders: Int = 0,
-    val sharedSpaces: Int = 0
+    val spaceWriters: Int = Int.MAX_VALUE,
+    val spaceReaders: Int = Int.MAX_VALUE,
+    val sharedSpaces: Int = Int.MAX_VALUE
 )
