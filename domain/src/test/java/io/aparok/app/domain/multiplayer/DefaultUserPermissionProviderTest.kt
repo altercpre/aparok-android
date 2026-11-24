@@ -1,6 +1,6 @@
 package io.aparok.app.domain.multiplayer
 
-import io.aparok.app.core_models.SpaceView
+import io.aparok.app.core_models.ObjectWrapper
 import io.aparok.app.core_models.multiplayer.SpaceMemberPermissions
 import io.aparok.app.core_models.primitives.SpaceId
 import io.aparok.app.domain.auth.repo.AuthRepository
@@ -64,9 +64,9 @@ class DefaultUserPermissionProviderTest {
 
     @Test
     fun `all maps every space view target to OWNER`() = runBlocking {
-        val sv1 = mock(SpaceView::class.java)
+        val sv1 = mock(ObjectWrapper.SpaceView::class.java)
         `when`(sv1.targetSpaceId).thenReturn("space_a")
-        val sv2 = mock(SpaceView::class.java)
+        val sv2 = mock(ObjectWrapper.SpaceView::class.java)
         `when`(sv2.targetSpaceId).thenReturn("space_b")
 
         `when`(spaceViewSubscriptionContainer.observe()).thenReturn(flowOf(listOf(sv1, sv2)))
