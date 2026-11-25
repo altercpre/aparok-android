@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="dataview_expand_header">Expand object header</string>
     <string name="dataview_collapse_header">Collapse object header</string>
@@ -9,7 +9,7 @@
     <string name="app_version">App version</string>
     <string name="library">Library</string>
     <string name="user_id">User ID</string>
-    <string name="account_and_data"><![CDATA[Account & Data]]></string>
+    <string name="account_and_data">Account &amp; Data</string>
     <string name="profile">Profile</string>
     <string name="personalization">Personalization</string>
     <string name="appearance">Appearance</string>
@@ -878,7 +878,7 @@
     <string name="delete_irrevocably">These objects will be deleted irrevocably. You can\'t undo this action.</string>
     <string name="delete_irrevocably_one_object">This object will be deleted irrevocably. You can\'t undo this action.</string>
 
-    <!-- Object Type Deletion Confirmation -->
+    
     <string name="move_type_to_bin_title">Move \"%s\" to Bin?</string>
     <string name="move_type_to_bin_description">Some objects use this type. Select the ones you also want to delete. Objects you don\'t select will remain but lose their type.</string>
     <string name="move_type_to_bin_no_objects">There are no objects of this type</string>
@@ -1001,7 +1001,7 @@
     <string name="create_space_chat_name">Chat name</string>
     <string name="create_space_space_name">Space name</string>
 
-    <!-- Homepage Picker -->
+    
     <string name="homepage_picker_title">Add a Channel Home?</string>
     <string name="homepage_picker_description">Members will land here directly instead of browsing navigation.</string>
     <string name="homepage_picker_chat">Chat</string>
@@ -1009,7 +1009,7 @@
     <string name="homepage_picker_collection">Collection</string>
     <string name="homepage_picker_continue">Continue</string>
     <string name="homepage_picker_not_now">Not now</string>
-    <!-- Space Settings / Home -->
+    
     <string name="space_home_row_title">Home</string>
     <string name="space_home_no_home_title">No home</string>
     <string name="space_home_no_home_subtitle">Opens to navigation on entry</string>
@@ -1061,7 +1061,7 @@
     <string name="bin_empty_subtitle">Looks like you’re all tidy and organized!</string>
 
 
-    <!--region SLASH WIDGET -->
+    
 
     <string name="slash_widget_main_style">Style</string>
     <string name="slash_widget_main_media">Media</string>
@@ -1148,11 +1148,11 @@
     <string name="slash_widget_lime_color_title">Green</string>
     <string name="slash_widget_background_item">%1$s background</string>
 
-    <!-- Onboarding: persona selection & use cases (iOS parity) -->
+    
     <string name="onboarding_selection_title">Tell Us About Yourself</string>
     <string name="onboarding_selection_description">Select one role or background that best fits you</string>
 
-    <!-- Persona options -->
+    
     <string name="onboarding_selection_artist">Artist / Content Creator</string>
     <string name="onboarding_selection_consultant">Consultant</string>
     <string name="onboarding_selection_designer">Designer</string>
@@ -1165,7 +1165,7 @@
     <string name="onboarding_selection_writer">Writer / Journalist</string>
     <string name="onboarding_selection_other">Other</string>
 
-    <!-- Use case options -->
+    
     <string name="onboarding_usecase_title">What do you want to use Aparok for?</string>
     <string name="onboarding_usecase_description">Pick one use case that fits you best</string>
     <string name="onboarding_usecase_habit_tracking">Habit tracking</string>
@@ -1176,9 +1176,9 @@
     <string name="onboarding_usecase_projects">Projects &amp; tasks management</string>
     <string name="onboarding_usecase_team_work">Team work &amp; shared docs</string>
     <string name="onboarding_usecase_other">Other</string>
-    <!--endregion-->
+    
 
-    <!--region WIDGETS -->
+    
 
     <string name="create_widget">Create a widget</string>
     <string name="edit_widgets">Edit</string>
@@ -1205,9 +1205,9 @@
     <string name="widget_edit_widgets">Edit Widgets</string>
     <string name="widget_auto_created_toast">Widget %1$s has been added</string>
 
-    <!--endregion-->
+    
 
-    <!--region LIBRARY -->
+    
 
     <string name="library_title_types">Types</string>
     <string name="library_title_relations">Properties</string>
@@ -1234,9 +1234,9 @@
     <string name="type_creation_done">Done</string>
     <string name="type_creation_placeholder">Type name</string>
 
-    <!--endregion-->
+    
 
-    <!--region ONBOARDING -->
+    
 
     <string name="onboarding_auth_title">Encrypted, local,</string>
     <string name="onboarding_auth_subtitle">yours forever</string>
@@ -1284,24 +1284,24 @@
     <string name="onboarding_how_to_save_my_phrase_2">The easiest way to store your Key is to save it in your password manager.</string>
     <string name="onboarding_how_to_save_my_phrase_3">The most secure way is to write it down on paper and keep it offline, in a safe and secure place.</string>
 
-    <!--endregion-->
+    
 
-    <!--region OBJECT ACTIONS -->
+    
 
     <string name="object_action_duplicate">Duplicate</string>
     <string name="object_action_to_widgets">Pin</string>
     <string name="object_action_download">Download</string>
 
-    <!--endregion-->
+    
 
-    <!--region SEARCH -->
+    
     
     <string name="nothing_found">Nothing found</string>
     <string name="nothing_found_object_types">No object type found. Please try changing your request.</string>
 
-    <!--endregion-->
+    
 
-    <!--region CONTENT DESCRIPTIONS FOR ACCESSIBILITY -->
+    
 
     <string name="content_description_add_block" translatable="false">Add block button</string>
     <string name="content_description_hide_keyboard_button" translatable="false">Hide keyboard button</string>
@@ -1345,23 +1345,23 @@
     <string name="content_desc_checkbox_icon">Checkbox icon</string>
     <string name="content_desc_layout_icon">Layout icon</string>
 
-    <!--endregion-->
+    
 
-    <!--region BUTTONS -->
+    
 
     <string name="button_okay">Okay</string>
     <string name="button_close">Close</string>
 
-    <!--endregion-->
+    
 
-    <!--region ALERTS -->
+    
 
     <string name="alert_gallery_unsupported_title">Gallery will be supported soon</string>
     <string name="alert_gallery_unsupported_description">Please use the desktop app for now.</string>
 
-    <!--endregion-->
+    
 
-    <!--region SHARING MENU -->
+    
 
     <string name="sharing_menu_save_as_section_name">Save as</string>
     <string name="sharing_menu_save_as_note_option">Note</string>
@@ -1379,7 +1379,7 @@
     <string name="sharing_menu_btn_add">Add</string>
     <string name="sharing_menu_btn_open">Open</string>
 
-    <!-- Snackbar messages for content added to chat -->
+    
     <string name="sharing_snackbar_image_added">Image added to \'%1$s\'</string>
     <string name="sharing_snackbar_images_added">Images added to \'%1$s\'</string>
     <string name="sharing_snackbar_video_added">Video added to \'%1$s\'</string>
@@ -1391,7 +1391,7 @@
     <string name="sharing_snackbar_link_added">Link added to \'%1$s\'</string>
     <string name="sharing_snackbar_content_added">Content added to \'%1$s\'</string>
 
-    <!-- Snackbar messages for content linked to an object in a space -->
+    
     <string name="sharing_snackbar_image_linked">Image linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_images_linked">Images linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_video_linked">Video linked to \'%1$s\' in \'%2$s\'</string>
@@ -1403,9 +1403,9 @@
     <string name="sharing_snackbar_link_linked">Link linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_content_linked">Content linked to \'%1$s\' in \'%2$s\'</string>
 
-    <!--endregion-->
+    
 
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
 
     <string name="relation_origin_none">None</string>
     <string name="relation_origin_clipboard">Clipboard</string>
@@ -1417,7 +1417,7 @@
     <string name="relation_origin_library_installed">Library installed</string>
     <string name="relation_origin_bookmark">Bookmark</string>
 
-    <!--endregion-->
+    
 
     <plurals name="backlinks_count">
         <item quantity="zero">%d backlinks</item>
@@ -1431,7 +1431,7 @@
         <item quantity="other">%d links</item>
     </plurals>
 
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
 
     <string name="date_type_tomorrow">Tomorrow</string>
     <string name="date_type_today">Today</string>
@@ -1445,7 +1445,7 @@
     <string name="number_days_from">Number of days from now</string>
     <string name="number_days_ago">Number of days ago</string>
     
-    <!-- Date filter quick options -->
+    
     <string name="dates_filter_exact_day">Exact day</string>
     <string name="dates_filter_last_week">Last week</string>
     <string name="dates_filter_current_week">Current week</string>
@@ -1460,12 +1460,12 @@
     <string name="settings_use_yamux">Use QUIC</string>
     <string name="settings_share_local_logs">Share local logs</string>
 
-    <!--endregion-->
+    
 
-    <string name="error_kanban_view_not_supported">Kanban view is not available on mobile yet.\nChange view type (Settings -> View) or create a new one to access your data.</string>
-    <string name="error_calendar_view_not_supported">Calendar view is not available on mobile yet.\nChange view type (Settings -> View) or create a new one to access your data.</string>
-    <string name="error_graph_view_not_supported">Graph view is not available on mobile yet.\nChange view type (Settings -> View) or create a new one to access your data.</string>
-    <string name="error_generic_view_not_supported">This view is not available on mobile yet.\nChange view type (Settings -> View) or create a new one to access your data.</string>
+    <string name="error_kanban_view_not_supported">Kanban view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
+    <string name="error_calendar_view_not_supported">Calendar view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
+    <string name="error_graph_view_not_supported">Graph view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
+    <string name="error_generic_view_not_supported">This view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
 
     <string name="create_object_section_pinned">Pinned</string>
     <string name="any_object_creation_menu_pin_on_top">Pin on top</string>
@@ -1502,7 +1502,7 @@
 
     <string name="msg_query_cannot_be_changed">This query can be changed on desktop only</string>
 
-    <!--region ONBOARDING ERRORS -->
+    
 
     <string name="error_invalid_recovery_phrase">Invalid Key</string>
     <string name="network">Network</string>
@@ -1520,10 +1520,10 @@
     <string name="widget_types_show">Show types</string>
     <string name="widget_types_hide">Hide types</string>
 
-    <!--endregion-->
+    
 
 
-    <!--region MULTIPLAYER -->
+    
 
     <string name="multiplayer_share_invite_link">Share invite link</string>
     <string name="multiplayer_share_invite_link_menu">Share link</string>
@@ -1556,7 +1556,7 @@
     <string name="multiplayer_change_to_viewer_confirmation">Anyone with the link will only be able to view the space content.</string>
     <string name="multiplayer_change_to_request_confirmation">Anyone with the link will need to request access to join the space.</string>
     <string name="multiplayer_invite_link_copied">Invite link copied to clipboard</string>
-    <!-- Invite sharing (GO-7222): owner-held invites, share-within-space toggle, link reset -->
+    
     <string name="multiplayer_invite_share_toggle_title">Everyone in the space can share this invite</string>
     <string name="multiplayer_invite_share_toggle_locked_hint">To make this invite private again, reset the link.</string>
     <string name="multiplayer_invite_share_disabled_reason">Anyone with this link joins as an editor, without approval. Only you can share it.</string>
@@ -1722,9 +1722,9 @@
     <string name="multiplayer_invite_link_request_already_sent">Request sent</string>
 
 
-    <!--endregion-->
+    
 
-    <!--region PAYMENTS -->
+    
     
 
 
@@ -1734,29 +1734,6 @@
 
 
 
-    <!-- Tier details --><item>10 one-to-one spaces</item>
-<item>128 GB of network space</item>
-<item>Priority support</item>
-<item>256 GB of network space</item>
-<item>Chat with the team</item>
-<!-- Payments Code -->
-
-    <!-- Membership Activate Code -->
-    <!-- Membership Activate Code — success -->
-    <!-- Membership Activate Code — errors (CodeGetInfo) -->
-
-
-    <!-- Membership Welcome -->
-
-    <!-- Membership Email -->
-
-
-    <!-- Membership name errors -->
-
-
-
-
-    <!-- Notifications -->
     <string name="notifications_alert_error_unknown">An unknown error has occurred. Please try again later.</string>
     <string name="notifications_alert_error_bad_input">Invalid input detected. Please check your data and try again.</string>
     <string name="notifications_alert_error_internal">An internal error has occurred. Our team has been notified.</string>
@@ -1766,7 +1743,7 @@
     <string name="notifications_alert_error_file_load">There was an error loading the file. Please check the file and try again.</string>
     <string name="notifications_alert_error_insufficient_permissions">You do not have the necessary permissions to perform this action. Please check your permissions and try again.</string>
 
-    <!-- Gallery Experience -->
+    
     <string name="gallery_experience_made">Made by</string>
     <string name="gallery_experience_install">Install</string>
     <string name="gallery_experience_install_new">Install to new space</string>
@@ -1918,7 +1895,7 @@
     <string name="introduce_vault_text_2">You can now easily reorder your Spaces using drag and drop and navigate them more easily.</string>
     <string name="introduce_vault_text_3">By default, we blur the icon of your space as a background. If needed, you can change it in the space-settings.</string>
     <string name="introduce_vault_welcome_to_the_vault">Welcome to the Vault</string>
-    <string name="introduce_vault_simple_flexible"><![CDATA[Simple & Flexible]]></string>
+    <string name="introduce_vault_simple_flexible">Simple &amp; Flexible</string>
 
     <string name="allContent_empty_state_title">It’s empty here.</string>
     <string name="allContent_empty_state_description">Create your first objects to get started.</string>
@@ -2186,7 +2163,7 @@
     <string name="space_properties_screen_menu_move_to_bin">Move to bin</string>
     <string name="onboarding_error_while_creating_account_space_is_missing">Error while creating account: space is missing</string>
     
-    <!-- Account creation error messages -->
+    
     <string name="onboarding_error_network_error">Failed to create account due to network error. Please check your connection.</string>
     <string name="onboarding_error_offline_device">Your device seems to be offline. Please check your connection and try again.</string>
     <string name="onboarding_error_account_created_but_failed_to_start_node">Account was created but failed to start the node. Please try logging in.</string>
@@ -2221,7 +2198,7 @@
     <string name="vault_create_personal">Personal</string>
     <string name="vault_create_group">Group</string>
 
-    <!-- Spaces Introduction Popup -->
+    
     <string name="spaces_introduction_page1_title">Ideas need conversations</string>
     <string name="spaces_introduction_page1_description">Aparok now supports real-time chat in Shared Channels — so your thoughts and dialogues can grow together.</string>
     <string name="spaces_introduction_page2_title">Your Vault just leveled up</string>
@@ -2267,7 +2244,7 @@
     <string name="content_desc_pending_sync">Pending sync</string>
     <string name="failed_to_load_image">Failed to load image</string>
     
-    <!-- Vault Screen - Join via QR -->
+    
     <string name="vault_join_via_qr">Join via QR Code</string>
     <string name="channel_select_members_title">Select members</string>
     <string name="channel_next">Next</string>
@@ -2284,12 +2261,12 @@
     <string name="allow">Allow</string>
     <string name="attachment_image">Attachment image</string>
 
-    <!-- Shared Space Limit (DROID-4388) -->
+    
     <string name="vault_shared_space_limit_title">Shared space limit reached</string>
     <string name="vault_shared_space_limit_description">Your plan allows %1$d shared spaces. Upgrade your membership to create more.</string>
     <string name="vault_manage_channels">Manage Channels</string>
 
-    <!-- Attachment Menu (DROID-4201) -->
+    
     <string name="attachment_menu_photos">Photos</string>
     <string name="attachment_menu_camera">Camera</string>
     <string name="attachment_menu_files">Files</string>
@@ -2302,7 +2279,7 @@
     <string name="create_object_error">Failed to load object types</string>
     <string name="create_object_retry">Retry</string>
 
-    <!-- Share Space Errors -->
+    
     <string name="share_space_error_limit_reached">Limit reached for this space. Please upgrade your membership or contact support for assistance.</string>
     <string name="share_space_error_not_shareable">It looks like the space is no longer shared. Please ensure that your devices are synchronized.</string>
     <string name="share_space_error_request_failed">Oops! The request failed. Please check your Internet connection and try again.</string>
@@ -2378,7 +2355,7 @@
     <string name="any_id_info_description">Become a member to make your ID human-readable, so other members can easily find and connect with you.</string>
     <string name="any_id_info_button">Explore plans</string>
 
-    <!-- Multiplayer actions -->
+    
     <string name="multiplayer_approve">Approve</string>
     <string name="chats_warning_you_can_upload_only_10_files_at_a_time">You can upload only 10 files at a time</string>
     <string name="chat_pinned_as_widget_success">This chat has been pinned to your widgets.</string>
@@ -2399,7 +2376,7 @@
     <string name="toast_restored">Object restored.</string>
     <string name="participant_btn_connect">Connect</string>
 
-    <!-- Sharing Extension Redesign -->
+    
     <string name="sharing_select_destination">Select destination</string>
     <string name="sharing_send_to_chat">Send to chat</string>
     <string name="sharing_select_dest">Select destination</string>
@@ -2416,7 +2393,7 @@
     <string name="you_dont_have_any_spaces_yet">You don\'t have any spaces yet</string>
     <string name="loading_channels">Loading channels</string>
 
-    <!-- OS Widgets -->
+    
     <string name="os_widget_spaces_title">Spaces</string>
     <string name="os_widget_spaces_description">Quick access to your pinned spaces</string>
     <string name="os_widget_create_object_title">New Object</string>
@@ -2434,7 +2411,7 @@
     <string name="os_widget_data_view_title">Data View</string>
     <string name="os_widget_data_view_description">Display items from a Set or Collection</string>
 
-    <!-- DROID-4358 Offline Downloads settings -->
+    
     <string name="offline_downloads_section_title">Offline access</string>
     <string name="offline_downloads_title">Offline Downloads</string>
     <string name="offline_downloads_subtitle">Auto sync files up to a selected size</string>
@@ -2447,7 +2424,7 @@
     <string name="offline_downloads_value_unlimited">Unlimited</string>
     <string name="device_storage_used">Device storage used</string>
 
-    <!-- Search v2 (unified cross-space search) -->
+    
     <string name="search_v2_hint">Search</string>
     <string name="search_v2_chip_in_space">In %1$s</string>
     <string name="search_v2_chip_channels">Channels</string>
@@ -2485,8 +2462,8 @@
     <string name="search_v2_filter_by">Filter by %1$s</string>
 
 
-    <!-- Sovereign Screens N1 - N10 (Spec Section 5.1) -->
-    <!-- N1 Profile -->
+    
+    
     <string name="aparok_profile_title">Create your profile</string>
     <string name="aparok_profile_body">Your profile stays on this device. No account, no email, no server.</string>
     <string name="aparok_profile_name_error">Enter a name</string>
@@ -2496,7 +2473,7 @@
     <string name="aparok_profile_restore_link">Restore from a backup</string>
     <string name="aparok_profile_progress">Creating your encrypted space...</string>
 
-    <!-- N2 Storage Location -->
+    
     <string name="aparok_storage_chooser_title">Where should Aparok keep your data?</string>
     <string name="aparok_storage_this_phone">This phone</string>
     <string name="aparok_storage_phone_folder">Phone storage, app folder</string>
@@ -2508,7 +2485,7 @@
     <string name="aparok_storage_move_title">Move storage location</string>
     <string name="aparok_storage_moving">Moving data to new storage...</string>
 
-    <!-- N3 Restore Backup -->
+    
     <string name="aparok_restore_title">Restore from backup</string>
     <string name="aparok_restore_step_choose">Choose your backup file</string>
     <string name="aparok_restore_step_password">Enter the backup password</string>
@@ -2521,14 +2498,14 @@
     <string name="aparok_restore_error_space">Not enough space on the chosen storage (needs %s, has %s).</string>
     <string name="aparok_restore_warning">This replaces everything on this device. Your current data is kept until the restored data is verified.</string>
 
-    <!-- N4 App Lock -->
+    
     <string name="aparok_lock_title">Protect Aparok</string>
     <string name="aparok_lock_skip_warning">Without a lock, anyone who opens your unlocked phone can read your data.</string>
     <string name="aparok_lock_enter_pin">Enter PIN or passphrase</string>
     <string name="aparok_lock_forgot_pin">Forgot PIN?</string>
     <string name="aparok_lock_forgot_warning">There is no recovery. You can erase this device data and restore from a backup.</string>
 
-    <!-- N5 Create Backup -->
+    
     <string name="aparok_backup_title">Create backup</string>
     <string name="aparok_backup_info">A backup contains everything: chats, notes, images, videos, files and settings. It is encrypted with the password you choose.</string>
     <string name="aparok_backup_pwd_label">Enter backup password</string>
@@ -2537,7 +2514,7 @@
     <string name="aparok_backup_verified">Backup verified</string>
     <string name="aparok_backup_banner">Last backup was %d days ago. Back up now</string>
 
-    <!-- N6 Storage Settings -->
+    
     <string name="aparok_storage_title">Storage</string>
     <string name="aparok_storage_usage_chats">Chats and notes</string>
     <string name="aparok_storage_usage_images">Images</string>
@@ -2549,18 +2526,18 @@
     <string name="aparok_storage_btn_clear_cache">Clear cache</string>
     <string name="aparok_storage_btn_export_log">Export log</string>
 
-    <!-- N7 Storage Unavailable -->
+    
     <string name="aparok_unavailable_title">Storage not available</string>
     <string name="aparok_unavailable_body">Aparok data is on %s, which is not connected. Reconnect it and tap Retry. Your data is safe; nothing was changed.</string>
     <string name="aparok_unavailable_btn_retry">Retry</string>
     <string name="aparok_unavailable_btn_restore">Restore from a backup instead</string>
 
-    <!-- N8 About and Legal -->
+    
     <string name="aparok_about_title">About Aparok</string>
     <string name="aparok_about_license">Free and non-commercial. Based on Anytype by Any Association, licensed under the Any Source Available License 1.0.</string>
     <string name="aparok_about_privacy">Aparok has no accounts, no analytics and no network features.</string>
 
-    <!-- N9 Security Settings -->
+    
     <string name="aparok_security_title">Security settings</string>
     <string name="aparok_security_app_lock">App lock</string>
     <string name="aparok_security_autolock">Auto-lock</string>
@@ -2568,7 +2545,7 @@
     <string name="aparok_security_clipboard_clear">Clear clipboard automatically</string>
     <string name="aparok_security_erase_all">Erase all data on this device</string>
 
-    <!-- N10 Status Indicator -->
+    
     <string name="aparok_status_saved_local">Saved on this device</string>
 
 </resources>

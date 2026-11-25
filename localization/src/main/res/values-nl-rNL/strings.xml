@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="about">Over</string>
     <string name="app_version">App versie</string>
     <string name="library">Bibliotheek</string>
     <string name="user_id">Gebruiker ID</string>
-    <string name="account_and_data"><![CDATA[Account & Gegevens]]></string>
+    <string name="account_and_data">Account &amp; Gegevens</string>
     <string name="profile">Profiel</string>
     <string name="personalization">Personalisatie</string>
     <string name="appearance">Weergave</string>
@@ -763,7 +763,7 @@
     <string name="are_you_sure_delete_n_objects">Weet je zeker dat je  %1$d objecten wilt verwijderen?</string>
     <string name="delete_irrevocably">Deze objecten worden permanent verwijderd. Je kunt deze actie niet ongedaan maken.</string>
     <string name="delete_irrevocably_one_object">Dit object zal permanent worden verwijderd. Je kunt deze actie niet ongedaan maken.</string>
-    <!-- Object Type Deletion Confirmation -->
+    
     <string name="move_type_to_bin_title">Move \"%s\" to Bin?</string>
     <string name="move_type_to_bin_description">Some objects use this type. Select the ones you also want to delete. Objects you don\'t select will remain but lose their type.</string>
     <string name="move_type_to_bin_no_objects">There are no objects of this type</string>
@@ -865,7 +865,7 @@
     <string name="create_space_change_icon">Wijzig icoon</string>
     <string name="create_space_chat_name">Gespreksnaam</string>
     <string name="create_space_space_name">Naam ruimte</string>
-    <!-- Homepage Picker -->
+    
     <string name="homepage_picker_title">Create Home</string>
     <string name="homepage_picker_description">Select what you and channel members see when they open the channel. You can always change it in settings.</string>
     <string name="homepage_picker_chat">Chat</string>
@@ -913,7 +913,7 @@
     <string name="create_object_section_library">Aparok bibliotheek</string>
     <string name="bin_empty_title">Jouw prullenmand is leeg.</string>
     <string name="bin_empty_subtitle">Het lijkt erop dat je alles netjes en georganiseerd hebt!</string>
-    <!--region SLASH WIDGET -->
+    
     <string name="slash_widget_main_style">Stijl</string>
     <string name="slash_widget_main_media">Media</string>
     <string name="slash_widget_main_objects">Objecten</string>
@@ -992,10 +992,10 @@
     <string name="slash_widget_teal_color_title">Groenblauw</string>
     <string name="slash_widget_lime_color_title">Groen</string>
     <string name="slash_widget_background_item">%1$s achtergrond</string>
-    <!-- Onboarding: persona selection & use cases (iOS parity) -->
+    
     <string name="onboarding_selection_title">Vertel ons over jezelf</string>
     <string name="onboarding_selection_description">Selecteer één rol of achtergrond die het beste bij je past</string>
-    <!-- Persona options -->
+    
     <string name="onboarding_selection_artist">Kunstenaar / Inhoudmaker</string>
     <string name="onboarding_selection_consultant">Consultant</string>
     <string name="onboarding_selection_designer">Ontwerper</string>
@@ -1007,7 +1007,7 @@
     <string name="onboarding_selection_student">Student</string>
     <string name="onboarding_selection_writer">Schrijver / Journalist</string>
     <string name="onboarding_selection_other">Andere</string>
-    <!-- Use case options -->
+    
     <string name="onboarding_usecase_title">Waar wil je Aparok voor gebruiken?</string>
     <string name="onboarding_usecase_description">Kies één toepassing die het beste bij jou past</string>
     <string name="onboarding_usecase_habit_tracking">Gewoontentracking</string>
@@ -1018,8 +1018,8 @@
     <string name="onboarding_usecase_projects">Projecten &amp; taakbeheer</string>
     <string name="onboarding_usecase_team_work">Teamwerk &amp; gedeelde documenten</string>
     <string name="onboarding_usecase_other">Andere</string>
-    <!--endregion-->
-    <!--region WIDGETS -->
+    
+    
     <string name="create_widget">Maak een widget aan</string>
     <string name="edit_widgets">Bewerken</string>
     <string name="add_widget">Toevoegen</string>
@@ -1044,8 +1044,8 @@
     <string name="widget_empty_bin">Leeg prullenmand</string>
     <string name="widget_edit_widgets">Bewerk widget</string>
     <string name="widget_auto_created_toast">Widget %1$s is toegevoegd</string>
-    <!--endregion-->
-    <!--region LIBRARY -->
+    
+    
     <string name="library_title_types">Types</string>
     <string name="library_title_relations">Eigenschappen</string>
     <string name="library_description_types">Types zijn als categorieën die je helpen bij het groeperen en beheren van jouw objecten.</string>
@@ -1068,8 +1068,8 @@
     <string name="type_creation_new_type">Nieuw type</string>
     <string name="type_creation_done">Gereed</string>
     <string name="type_creation_placeholder">Naam type</string>
-    <!--endregion-->
-    <!--region ONBOARDING -->
+    
+    
     <string name="onboarding_auth_title">Versleuteld, lokaal,</string>
     <string name="onboarding_auth_subtitle">voor altijd van jou</string>
     <string name="onboarding_auth_description">Versleuteld, lokaal,</string>
@@ -1113,17 +1113,17 @@
     <string name="onboarding_how_to_save_my_phrase">Hoe bewaar ik mijn herstelsleutel?</string>
     <string name="onboarding_how_to_save_my_phrase_2">De gemakkelijkste manier om je herstelsleutel op te slaan, is door het in je wachtwoordmanager te bewaren.</string>
     <string name="onboarding_how_to_save_my_phrase_3">De meest veilige manier is om het op papier te schrijven en het offline, op een veilige en beveiligde plek te bewaren.</string>
-    <!--endregion-->
-    <!--region OBJECT ACTIONS -->
+    
+    
     <string name="object_action_duplicate">Dupliceer</string>
     <string name="object_action_to_widgets">Zet vast</string>
     <string name="object_action_download">Downloaden</string>
-    <!--endregion-->
-    <!--region SEARCH -->
+    
+    
     <string name="nothing_found">Niets gevonden</string>
     <string name="nothing_found_object_types">Geen objecttype gevonden. Probeer alsjeblieft jouw verzoek te wijzigen.</string>
-    <!--endregion-->
-    <!--region CONTENT DESCRIPTIONS FOR ACCESSIBILITY -->
+    
+    
     <string name="content_description_delete_button">Delete button</string>
     <string name="content_description_duplicate_button">Duplicate button</string>
     <string name="content_description_edit_view_button">Edit-view button</string>
@@ -1138,16 +1138,16 @@
     <string name="content_desc_object_icon">Object image or emoji</string>
     <string name="content_desc_checkbox_icon">Checkbox icon</string>
     <string name="content_desc_layout_icon">Layout icon</string>
-    <!--endregion-->
-    <!--region BUTTONS -->
+    
+    
     <string name="button_okay">Okay</string>
     <string name="button_close">Sluiten</string>
-    <!--endregion-->
-    <!--region ALERTS -->
+    
+    
     <string name="alert_gallery_unsupported_title">Gallery wordt binnenkort ondersteund</string>
     <string name="alert_gallery_unsupported_description">Gebruik alsjeblieft voorlopig de desktop app</string>
-    <!--endregion-->
-    <!--region SHARING MENU -->
+    
+    
     <string name="sharing_menu_save_as_section_name">Sla op als</string>
     <string name="sharing_menu_save_as_note_option">Notitie</string>
     <string name="sharing_menu_save_as_bookmark_option">Bladwijzer</string>
@@ -1163,7 +1163,7 @@
     <string name="sharing_menu_toast_object_added">Nieuw object wordt toegevoegd aan de ruimte \'%1$s\'</string>
     <string name="sharing_menu_btn_add">Toevoegen</string>
     <string name="sharing_menu_btn_open">Open</string>
-    <!-- Snackbar messages for content added to chat -->
+    
     <string name="sharing_snackbar_image_added">Image added to \'%1$s\'</string>
     <string name="sharing_snackbar_images_added">Images added to \'%1$s\'</string>
     <string name="sharing_snackbar_video_added">Video added to \'%1$s\'</string>
@@ -1174,7 +1174,7 @@
     <string name="sharing_snackbar_text_added">Text added to \'%1$s\'</string>
     <string name="sharing_snackbar_link_added">Link added to \'%1$s\'</string>
     <string name="sharing_snackbar_content_added">Content added to \'%1$s\'</string>
-    <!-- Snackbar messages for content linked to an object in a space -->
+    
     <string name="sharing_snackbar_image_linked">Image linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_images_linked">Images linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_video_linked">Video linked to \'%1$s\' in \'%2$s\'</string>
@@ -1185,8 +1185,8 @@
     <string name="sharing_snackbar_text_linked">Text linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_link_linked">Link linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_content_linked">Content linked to \'%1$s\' in \'%2$s\'</string>
-    <!--endregion-->
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
+    
     <string name="relation_origin_none">Geen</string>
     <string name="relation_origin_clipboard">Klembord</string>
     <string name="relation_origin_dnd">Drag &amp; Drop</string>
@@ -1196,7 +1196,7 @@
     <string name="relation_origin_use_case">Gebruikerstoepassing</string>
     <string name="relation_origin_library_installed">Bibliotheek geïnstalleerd</string>
     <string name="relation_origin_bookmark">Bladwijzer</string>
-    <!--endregion-->
+    
     <plurals name="backlinks_count">
         <item quantity="one">%d terugkoppeling</item>
         <item quantity="other">%d teruglinks</item>
@@ -1205,7 +1205,7 @@
         <item quantity="one">%d link</item>
         <item quantity="other">%d links</item>
     </plurals>
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
     <string name="date_type_tomorrow">Morgen</string>
     <string name="date_type_today">Vandaag</string>
     <string name="date_type_yesterday">Gisteren</string>
@@ -1216,7 +1216,7 @@
     <string name="dates_days_from">%1$s dagen vanaf nu</string>
     <string name="number_days_from">Aantal dagen vanaf nu</string>
     <string name="number_days_ago">Aantal dagen geleden</string>
-    <!-- Date filter quick options -->
+    
     <string name="dates_filter_exact_day">Exacte dag</string>
     <string name="dates_filter_last_week">Afgelopen week</string>
     <string name="dates_filter_current_week">Deze week</string>
@@ -1229,7 +1229,7 @@
     <string name="dates_filter_next_year">Volgend jaar</string>
     <string name="settings_use_yamux">Gebruik QUIC</string>
     <string name="settings_share_local_logs">Deel lokale logbestanden</string>
-    <!--endregion-->
+    
     <string name="error_kanban_view_not_supported">Kanban weergave is nog niet beschikbaar op mobiele telefoon.\nVerander type weergave (Instellingen -&gt; Weergave) of maak een nieuwe aan om toegang tot jouw gegevens te krijgen.</string>
     <string name="error_calendar_view_not_supported">Agendaweergave is nog niet beschikbaar op mobiele telefoon.\nVerander type weergave (Instellingen -&gt; Weergave) of maak een nieuwe aan om toegang tot jouw gegevens te krijgen.</string>
     <string name="error_graph_view_not_supported">Grafiek weergave is nog niet beschikbaar op mobiele telefoon.\nVerander type weergave (Instellingen -&gt; Weergave) of maak een nieuwe aan om jouw gegevens te benaderen.</string>
@@ -1258,7 +1258,7 @@
     <string name="hint_enter_name">Voer naam in...</string>
     <string name="create_object">Maak object</string>
     <string name="msg_query_cannot_be_changed">Deze zoekopdracht kan alleen op desktop worden gewijzigd</string>
-    <!--region ONBOARDING ERRORS -->
+    
     <string name="error_invalid_recovery_phrase">Ongeldige herstelsleutel</string>
     <string name="network">Netwerk</string>
     <string name="network_with_colon">Netwerk:</string>
@@ -1274,8 +1274,8 @@
     <string name="network_settings_self_host_config">Huidige instellingen: %1$s</string>
     <string name="widget_types_show">Toon types</string>
     <string name="widget_types_hide">Verberg types</string>
-    <!--endregion-->
-    <!--region MULTIPLAYER -->
+    
+    
     <string name="multiplayer_share_invite_link">Deel uitnodigingslink</string>
     <string name="multiplayer_share_invite_link_menu">Deel koppeling</string>
     <string name="multiplayer_qr_invite_link_menu">Toon QR-code</string>
@@ -1437,18 +1437,8 @@
     <string name="multiplayer_invite_link_this_link_does_not_seem_to_work">Deze koppeling lijkt niet te werken</string>
     <string name="multiplayer_invite_link_space_not_found">Deze uitnodigingslink is niet meer geldig omdat de ruimte niet is gevonden.</string>
     <string name="multiplayer_invite_link_request_already_sent">Verzoek verzonden</string>
-    <!--endregion-->
-    <!--region PAYMENTS -->
-    <!-- Tier details --><item>10 één-op-één ruimten</item>
-<item>128 GB aan netwerkruimte</item>
-<item>Prioriteitsondersteuning</item>
-<item>256 GB aan netwerkruimte</item>
-<item>Chat met het team</item>
-<!-- Payments Code -->
-    <!-- Membership Welcome -->
-    <!-- Membership Email -->
-    <!-- Membership name errors -->
-    <!-- Notifications -->
+    
+    
     <string name="notifications_alert_error_unknown">Er heeft zich een onbekende fout voorgedaan. Probeer het later opnieuw.</string>
     <string name="notifications_alert_error_bad_input">Ongeldige invoer gedetecteerd. Controleer jouw gegevens en probeer het opnieuw.</string>
     <string name="notifications_alert_error_internal">Er is een interne fout opgetreden. Ons team is op de hoogte gebracht.</string>
@@ -1457,7 +1447,7 @@
     <string name="notifications_alert_error_limit_exceeded">De importlimiet voor rijen of eigenschappen is overschreden. Verminder het aantal en probeer het opnieuw.</string>
     <string name="notifications_alert_error_file_load">Er is een fout opgetreden bij het laden van het bestand. Controleer het bestand en probeer het opnieuw.</string>
     <string name="notifications_alert_error_insufficient_permissions">Je hebt niet de benodigde rechten om deze actie uit te voeren. Controleer je machtigingen en probeer het opnieuw.</string>
-    <!-- Gallery Experience -->
+    
     <string name="gallery_experience_made">Gemaakt door</string>
     <string name="gallery_experience_install">Installeer</string>
     <string name="gallery_experience_install_new">Installeer in nieuwe ruimte</string>
@@ -1583,7 +1573,7 @@
     <string name="introduce_vault_text_2">Je kunt nu eenvoudig je ruimtes herschikken met slepen en neerzetten en ze makkelijker navigeren.</string>
     <string name="introduce_vault_text_3">Standaard vervagen we het pictogram van je ruimte als achtergrond. Indien nodig kun je dit wijzigen in de ruimte-instellingen.</string>
     <string name="introduce_vault_welcome_to_the_vault">Welkom in de kluis</string>
-    <string name="introduce_vault_simple_flexible"><![CDATA[Eenvoudig & flexibel]]></string>
+    <string name="introduce_vault_simple_flexible">Eenvoudig &amp; flexibel</string>
     <string name="allContent_empty_state_title">Het is hier leeg.</string>
     <string name="allContent_empty_state_description">Maak je eerste objecten om te beginnen.</string>
     <string name="all_content_no_results_title">Geen resultaten gevonden.</string>
@@ -1818,7 +1808,7 @@
     <string name="space_properties_screen_section_system_types">Systeemeigenschappen</string>
     <string name="space_properties_screen_menu_move_to_bin">Verplaats naar prullenbak</string>
     <string name="onboarding_error_while_creating_account_space_is_missing">Fout bij het maken van account: ruimte ontbreekt</string>
-    <!-- Account creation error messages -->
+    
     <string name="onboarding_error_network_error">Account maken mislukt door netwerkfout. Controleer alsjeblieft jouw verbinding.</string>
     <string name="onboarding_error_offline_device">Jouw apparaat lijkt offline te zijn. Maak alsjeblieft verbinding met het internet en probeer het opnieuw.</string>
     <string name="onboarding_error_account_created_but_failed_to_start_node">Account is gemaakt, maar kon de node niet starten. Probeer alsjeblieft aan te melden.</string>
@@ -1849,7 +1839,7 @@
     <string name="vault_create_space_description">For organized content and data</string>
     <string name="vault_create_personal">Personal</string>
     <string name="vault_create_group">Group</string>
-    <!-- Spaces Introduction Popup -->
+    
     <string name="spaces_introduction_page1_title">Ideeën vereisen gesprekken</string>
     <string name="spaces_introduction_page1_description">Aparok ondersteunt nu realtime gesprekken in gedeelde kanalen - zodat jullie gedachten en dialogen samen kunnen groeien.</string>
     <string name="spaces_introduction_page2_title">Jouw kluis is net een stap omhoog gegaan</string>
@@ -1887,7 +1877,7 @@
     <string name="content_desc_muted">Gedempt</string>
     <string name="content_desc_pending_sync">Pending sync</string>
     <string name="failed_to_load_image">Laden afbeelding mislukt</string>
-    <!-- Vault Screen - Join via QR -->
+    
     <string name="vault_join_via_qr">Neem deel via QR-code</string>
     <string name="channel_select_members_title">Select members</string>
     <string name="channel_next">Volgende</string>
@@ -1903,11 +1893,11 @@
     <string name="open_settings">Open instellingen</string>
     <string name="allow">Sta toe</string>
     <string name="attachment_image">Bijlage afbeelding</string>
-    <!-- Shared Space Limit (DROID-4388) -->
+    
     <string name="vault_shared_space_limit_title">Shared space limit reached</string>
     <string name="vault_shared_space_limit_description">Your plan allows %1$d shared spaces. Upgrade your membership to create more.</string>
     <string name="vault_manage_channels">Manage Channels</string>
-    <!-- Attachment Menu (DROID-4201) -->
+    
     <string name="attachment_menu_photos">Foto\'s</string>
     <string name="attachment_menu_camera">Camera</string>
     <string name="attachment_menu_files">Bestanden</string>
@@ -1919,7 +1909,7 @@
     <string name="create_object_search_types">Search object types</string>
     <string name="create_object_error">Failed to load object types</string>
     <string name="create_object_retry">Probeer opnieuw</string>
-    <!-- Share Space Errors -->
+    
     <string name="share_space_error_limit_reached">Limiet bereikt voor deze ruimte. Upgrade alsjeblieft je lidmaatschap of neem contact op met ondersteuning voor hulp.</string>
     <string name="share_space_error_not_shareable">Het lijkt erop dat de ruimte niet meer wordt gedeeld. Zorg er alsjeblieft voor dat je apparaten zijn gesynchroniseerd.</string>
     <string name="share_space_error_request_failed">Oeps! De aanvraag is mislukt. Controleer jouw internetverbinding en probeer het opnieuw.</string>
@@ -1980,7 +1970,7 @@
     <string name="any_id_info_title">This is your ANY ID</string>
     <string name="any_id_info_description">Become a member to make your ID human-readable, so other members can easily find and connect with you.</string>
     <string name="any_id_info_button">Explore plans</string>
-    <!-- Multiplayer actions -->
+    
     <string name="multiplayer_approve">Keur goed</string>
     <string name="chats_warning_you_can_upload_only_10_files_at_a_time">You can upload only 10 files at a time</string>
     <string name="chat_pinned_as_widget_success">This chat has been pinned to your widgets.</string>
@@ -1999,7 +1989,7 @@
     <string name="media_object_in_bin">This object is in the bin. Restore it?</string>
     <string name="toast_restored">Object restored.</string>
     <string name="participant_btn_connect">Connect</string>
-    <!-- Sharing Extension Redesign -->
+    
     <string name="sharing_select_destination">Selecteer bestemming</string>
     <string name="sharing_send_to_chat">Verzend naar gesprek</string>
     <string name="sharing_select_dest">Selecteer bestemming</string>
@@ -2015,7 +2005,7 @@
     <string name="save">Sla op</string>
     <string name="you_dont_have_any_spaces_yet">You don\'t have any spaces yet</string>
     <string name="loading_channels">Loading channels</string>
-    <!-- OS Widgets -->
+    
     <string name="os_widget_spaces_title">Spaces</string>
     <string name="os_widget_spaces_description">Quick access to your pinned spaces</string>
     <string name="os_widget_create_object_title">Nieuw object</string>
@@ -2032,7 +2022,7 @@
     <string name="select_view">Select view</string>
     <string name="os_widget_data_view_title">Data View</string>
     <string name="os_widget_data_view_description">Display items from a Set or Collection</string>
-    <!-- DROID-4358 Offline Downloads settings -->
+    
     <string name="offline_downloads_section_title">Offline access</string>
     <string name="offline_downloads_title">Offline Downloads</string>
     <string name="offline_downloads_subtitle">Auto sync files up to a selected size</string>

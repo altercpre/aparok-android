@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="about">Tentang</string>
     <string name="app_version">Versi aplikasi</string>
     <string name="library">Pustaka</string>
     <string name="user_id">ID Pengguna</string>
-    <string name="account_and_data"><![CDATA[Akun dan Data]]></string>
+    <string name="account_and_data">Akun dan Data</string>
     <string name="profile">Profil</string>
     <string name="personalization">Personalisasi</string>
     <string name="appearance">Penampilan</string>
@@ -762,7 +762,7 @@
     <string name="are_you_sure_delete_n_objects">Are you sure you want to delete %1$d objects?</string>
     <string name="delete_irrevocably">These objects will be deleted irrevocably. You can\'t undo this action.</string>
     <string name="delete_irrevocably_one_object">This object will be deleted irrevocably. You can\'t undo this action.</string>
-    <!-- Object Type Deletion Confirmation -->
+    
     <string name="move_type_to_bin_title">Buang \"%s\" ke bak sampah?</string>
     <string name="move_type_to_bin_description">Beberapa objek menggunakan tipe ini. Pilih yang ingin kamu hapus juga. Objek yang tidak kamu pilih akan tetap ada, namun akan kehilangan tipenya.</string>
     <string name="move_type_to_bin_no_objects">Tidak ada objek dengan tipe ini</string>
@@ -863,7 +863,7 @@
     <string name="create_space_change_icon">Ubah ikon</string>
     <string name="create_space_chat_name">Nama obrolan</string>
     <string name="create_space_space_name">Nama Ruang</string>
-    <!-- Homepage Picker -->
+    
     <string name="homepage_picker_title">Create Home</string>
     <string name="homepage_picker_description">Pilih hal yang dilihat anggota ruang ketika mereka membuka kanal. Ini bisa diubah lagi di setelan.</string>
     <string name="homepage_picker_chat">Obrolan</string>
@@ -911,7 +911,7 @@
     <string name="create_object_section_library">Pustaka Aparok</string>
     <string name="bin_empty_title">Bak sampah kosong.</string>
     <string name="bin_empty_subtitle">Kamu orangnya rapi dan tertata, ya?</string>
-    <!--region SLASH WIDGET -->
+    
     <string name="slash_widget_main_style">Gaya</string>
     <string name="slash_widget_main_media">Media</string>
     <string name="slash_widget_main_objects">Objek</string>
@@ -990,10 +990,10 @@
     <string name="slash_widget_teal_color_title">Biru-hijau</string>
     <string name="slash_widget_lime_color_title">Hijau</string>
     <string name="slash_widget_background_item">Latar belakang %1$s</string>
-    <!-- Onboarding: persona selection & use cases (iOS parity) -->
+    
     <string name="onboarding_selection_title">Perkenalkan Dirimu</string>
     <string name="onboarding_selection_description">Pilih satu latar belakang yang paling cocok denganmu</string>
-    <!-- Persona options -->
+    
     <string name="onboarding_selection_artist">Seniman/Kreator Konten</string>
     <string name="onboarding_selection_consultant">Konsultan</string>
     <string name="onboarding_selection_designer">Desainer</string>
@@ -1005,7 +1005,7 @@
     <string name="onboarding_selection_student">Pelajar</string>
     <string name="onboarding_selection_writer">Penulis/Wartawan</string>
     <string name="onboarding_selection_other">Lainnya</string>
-    <!-- Use case options -->
+    
     <string name="onboarding_usecase_title">Untuk apa kamu ingin menggunakan Aparok?</string>
     <string name="onboarding_usecase_description">Pilih satu penerapan yang paling cocok denganmu</string>
     <string name="onboarding_usecase_habit_tracking">Mencatat kebiasaan</string>
@@ -1016,8 +1016,8 @@
     <string name="onboarding_usecase_projects">Manajemen proyek dan tugas</string>
     <string name="onboarding_usecase_team_work">Kerja tim dan dokumen terbagi</string>
     <string name="onboarding_usecase_other">Lainnya</string>
-    <!--endregion-->
-    <!--region WIDGETS -->
+    
+    
     <string name="create_widget">Create a widget</string>
     <string name="edit_widgets">Sunting</string>
     <string name="add_widget">Tambah</string>
@@ -1042,8 +1042,8 @@
     <string name="widget_empty_bin">Tempat sampah kosong</string>
     <string name="widget_edit_widgets">Sunting widget</string>
     <string name="widget_auto_created_toast">Gawit %1$s telah ditambahkan</string>
-    <!--endregion-->
-    <!--region LIBRARY -->
+    
+    
     <string name="library_title_types">Tipe</string>
     <string name="library_title_relations">Properti</string>
     <string name="library_description_types">Types are like categories that help you group and manage your objects.</string>
@@ -1066,8 +1066,8 @@
     <string name="type_creation_new_type">New type</string>
     <string name="type_creation_done">Selesai</string>
     <string name="type_creation_placeholder">Type name</string>
-    <!--endregion-->
-    <!--region ONBOARDING -->
+    
+    
     <string name="onboarding_auth_title">Terenkripsi, lokal,</string>
     <string name="onboarding_auth_subtitle">milikmu selamanya</string>
     <string name="onboarding_auth_description">Terenkripsi, lokal,</string>
@@ -1111,17 +1111,17 @@
     <string name="onboarding_how_to_save_my_phrase">Bagaimana cara menyimpan kunciku?</string>
     <string name="onboarding_how_to_save_my_phrase_2">Cara termudah untuk menyimpan kuncimu adalah dengan menyimpannya di aplikasi pengelola sandi.</string>
     <string name="onboarding_how_to_save_my_phrase_3">Sedangkan, cara yang paling aman adalah dengan menuliskannya pada secarik kertas dan menyimpan kertas itu di tempat yang aman.</string>
-    <!--endregion-->
-    <!--region OBJECT ACTIONS -->
+    
+    
     <string name="object_action_duplicate">Gandakan</string>
     <string name="object_action_to_widgets">Pin</string>
     <string name="object_action_download">Unduh</string>
-    <!--endregion-->
-    <!--region SEARCH -->
+    
+    
     <string name="nothing_found">Tidak ada yang ditemukan</string>
     <string name="nothing_found_object_types">No object type found. Please try changing your request.</string>
-    <!--endregion-->
-    <!--region CONTENT DESCRIPTIONS FOR ACCESSIBILITY -->
+    
+    
     <string name="content_description_delete_button">Delete button</string>
     <string name="content_description_duplicate_button">Duplicate button</string>
     <string name="content_description_edit_view_button">Edit-view button</string>
@@ -1136,16 +1136,16 @@
     <string name="content_desc_object_icon">Object image or emoji</string>
     <string name="content_desc_checkbox_icon">Checkbox icon</string>
     <string name="content_desc_layout_icon">Layout icon</string>
-    <!--endregion-->
-    <!--region BUTTONS -->
+    
+    
     <string name="button_okay">Oke</string>
     <string name="button_close">Tutup</string>
-    <!--endregion-->
-    <!--region ALERTS -->
+    
+    
     <string name="alert_gallery_unsupported_title">Galeri sedang dalam pengembangan</string>
     <string name="alert_gallery_unsupported_description">Fitur ini hanya tersedia di desktop untuk saat ini.</string>
-    <!--endregion-->
-    <!--region SHARING MENU -->
+    
+    
     <string name="sharing_menu_save_as_section_name">Simpan sebagai</string>
     <string name="sharing_menu_save_as_note_option">Catatan</string>
     <string name="sharing_menu_save_as_bookmark_option">Markah</string>
@@ -1161,7 +1161,7 @@
     <string name="sharing_menu_toast_object_added">Objek baru ditambahkan ke ruang \'%1$s\'</string>
     <string name="sharing_menu_btn_add">Tambah</string>
     <string name="sharing_menu_btn_open">Buka</string>
-    <!-- Snackbar messages for content added to chat -->
+    
     <string name="sharing_snackbar_image_added">Gambar ditambahkan ke \'%1$s\'</string>
     <string name="sharing_snackbar_images_added">Gambar ditambahkan ke \'%1$s\'</string>
     <string name="sharing_snackbar_video_added">Video ditambahkan ke \'%1$s\'</string>
@@ -1172,7 +1172,7 @@
     <string name="sharing_snackbar_text_added">Teks ditambahkan ke \'%1$s\'</string>
     <string name="sharing_snackbar_link_added">Tautan ditambahkan ke \'%1$s\'</string>
     <string name="sharing_snackbar_content_added">Konten ditambahkan ke \'%1$s\'</string>
-    <!-- Snackbar messages for content linked to an object in a space -->
+    
     <string name="sharing_snackbar_image_linked">Gambar ditautkan ke \'%1$s\' di \'%2$s\'</string>
     <string name="sharing_snackbar_images_linked">Gambar ditautkan ke \'%1$s\' di \'%2$s\'</string>
     <string name="sharing_snackbar_video_linked">Video ditautkan ke \'%1$s\' di \'%2$s\'</string>
@@ -1183,8 +1183,8 @@
     <string name="sharing_snackbar_text_linked">Teks ditautkan ke \'%1$s\' di \'%2$s\'</string>
     <string name="sharing_snackbar_link_linked">Tautan ditautkan ke \'%1$s\' di \'%2$s\'</string>
     <string name="sharing_snackbar_content_linked">Konten ditautkan ke \'%1$s\' di \'%2$s\'</string>
-    <!--endregion-->
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
+    
     <string name="relation_origin_none">Tidak ada</string>
     <string name="relation_origin_clipboard">Papan kerani</string>
     <string name="relation_origin_dnd">Drag &amp; Drop</string>
@@ -1194,14 +1194,14 @@
     <string name="relation_origin_use_case">Penggunaan</string>
     <string name="relation_origin_library_installed">Pustaka terpasang</string>
     <string name="relation_origin_bookmark">Markah</string>
-    <!--endregion-->
+    
     <plurals name="backlinks_count">
         <item quantity="other">%d taut balik</item>
     </plurals>
     <plurals name="links_from_count">
         <item quantity="other">%d tautan</item>
     </plurals>
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
     <string name="date_type_tomorrow">Besok</string>
     <string name="date_type_today">Hari ini</string>
     <string name="date_type_yesterday">Kemarin</string>
@@ -1212,7 +1212,7 @@
     <string name="dates_days_from">%1$s hari dari sekarang</string>
     <string name="number_days_from">Sekian hari ke depan</string>
     <string name="number_days_ago">Sekian hari yang lalu</string>
-    <!-- Date filter quick options -->
+    
     <string name="dates_filter_exact_day">Hari yang pasti</string>
     <string name="dates_filter_last_week">Minggu lalu</string>
     <string name="dates_filter_current_week">Minggu ini</string>
@@ -1225,7 +1225,7 @@
     <string name="dates_filter_next_year">Tahun depan</string>
     <string name="settings_use_yamux">Gunakan QUIC</string>
     <string name="settings_share_local_logs">Bagikan log lokal</string>
-    <!--endregion-->
+    
     <string name="error_kanban_view_not_supported">Kanban view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
     <string name="error_calendar_view_not_supported">Calendar view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
     <string name="error_graph_view_not_supported">Tampilan grafik belum tersedia di versi ponsel.\nGantilah mode tampilan (Pengaturan -&gt; Tampilan) atau buat tampilan baru untuk mengakses datamu.</string>
@@ -1254,7 +1254,7 @@
     <string name="hint_enter_name">Masukkan nama...</string>
     <string name="create_object">Buat objek</string>
     <string name="msg_query_cannot_be_changed">Kueri ini bisa berubah hanya pada tampilan komputer</string>
-    <!--region ONBOARDING ERRORS -->
+    
     <string name="error_invalid_recovery_phrase">Kunci tidak valid</string>
     <string name="network">Jaringan</string>
     <string name="network_with_colon">Jaringan:</string>
@@ -1270,8 +1270,8 @@
     <string name="network_settings_self_host_config">Konfigurasi saat ini: %1$s</string>
     <string name="widget_types_show">Tampilkan tipe</string>
     <string name="widget_types_hide">Sembunyikan tipe</string>
-    <!--endregion-->
-    <!--region MULTIPLAYER -->
+    
+    
     <string name="multiplayer_share_invite_link">Bagikan tautan undangan</string>
     <string name="multiplayer_share_invite_link_menu">Bagikan tautan</string>
     <string name="multiplayer_qr_invite_link_menu">Tampilkan kode QR</string>
@@ -1431,18 +1431,8 @@
     <string name="multiplayer_invite_link_this_link_does_not_seem_to_work">Sepertinya tautan ini tidak bisa digunakan</string>
     <string name="multiplayer_invite_link_space_not_found">Tautan undangan ini tidak berlaku karena ruangnya tidak ditemukan.</string>
     <string name="multiplayer_invite_link_request_already_sent">Permintaan terkirim</string>
-    <!--endregion-->
-    <!--region PAYMENTS -->
-    <!-- Tier details --><item>10 ruang satu ke satu</item>
-<item>Ruang jaringan 128 GB</item>
-<item>Layanan prioritas</item>
-<item>Ruang jaringan 256 GB</item>
-<item>Mengobrol dengan tim</item>
-<!-- Payments Code -->
-    <!-- Membership Welcome -->
-    <!-- Membership Email -->
-    <!-- Membership name errors -->
-    <!-- Notifications -->
+    
+    
     <string name="notifications_alert_error_unknown">Terjadi galat yang tidak diketahui. Silakan coba lagi nanti.</string>
     <string name="notifications_alert_error_bad_input">Terdeteksi input yang tidak valid. Silakan cek datamu dan coba lagi.</string>
     <string name="notifications_alert_error_internal">Terjadi galat internal. Tim kami telah diberitahukan.</string>
@@ -1451,7 +1441,7 @@
     <string name="notifications_alert_error_limit_exceeded">Batas impor baris atau properti telah tercapai. Silakan kurangi jumlah yang ingin diimpor lalu coba lagi.</string>
     <string name="notifications_alert_error_file_load">Terjadi galat memuat berkas. Silakan cek ulang berkas lalu coba lagi.</string>
     <string name="notifications_alert_error_insufficient_permissions">Kamu tidak memiliki izin yang sesuai untuk melakukan tindakan ini. Silakan cek perizinanmu lalu coba lagi.</string>
-    <!-- Gallery Experience -->
+    
     <string name="gallery_experience_made">Dibuat oleh</string>
     <string name="gallery_experience_install">Pasang</string>
     <string name="gallery_experience_install_new">Pasang ke ruang baru</string>
@@ -1570,7 +1560,7 @@
     <string name="introduce_vault_text_2">Sekarang Anda dapat dengan mudah menyusun ulang Ruang dengan menyeret dan melepaskan serta menavigasinya dengan lebih mudah.</string>
     <string name="introduce_vault_text_3">Secara standar, kami memburamkan ikon ruang Anda sebagai latar belakang. Jika perlu, Anda dapat mengubahnya di pengaturan ruang.</string>
     <string name="introduce_vault_welcome_to_the_vault">Selamat datang di Brankas</string>
-    <string name="introduce_vault_simple_flexible"><![CDATA[Sederhana dan Fleksibel]]></string>
+    <string name="introduce_vault_simple_flexible">Sederhana dan Fleksibel</string>
     <string name="allContent_empty_state_title">Di sini kosong.</string>
     <string name="allContent_empty_state_description">Buat objek pertamamu untuk memulai.</string>
     <string name="all_content_no_results_title">Tidak ada hasil yang ditemukan.</string>
@@ -1805,7 +1795,7 @@
     <string name="space_properties_screen_section_system_types">Properti Sistem</string>
     <string name="space_properties_screen_menu_move_to_bin">Pindah ke bak sampah</string>
     <string name="onboarding_error_while_creating_account_space_is_missing">Terjadi kesalahan saat membuat akun: tidak ada ruang</string>
-    <!-- Account creation error messages -->
+    
     <string name="onboarding_error_network_error">Gagal membuat akun karena galat jaringan. Silakan cek koneksimu.</string>
     <string name="onboarding_error_offline_device">Perangkatmu sepertinya di luar jaringan. Silakan cek sambunganmu lalu coba lagi.</string>
     <string name="onboarding_error_account_created_but_failed_to_start_node">Akun dibuat tetapi gagal memulai simpul. Silakan coba masuk lagi.</string>
@@ -1836,7 +1826,7 @@
     <string name="vault_create_space_description">Untuk konten dan data tertata</string>
     <string name="vault_create_personal">Pribadi</string>
     <string name="vault_create_group">Grup</string>
-    <!-- Spaces Introduction Popup -->
+    
     <string name="spaces_introduction_page1_title">Ide perlu konversasi</string>
     <string name="spaces_introduction_page1_description">Aparok kini mendukung obrolan langsung di Saluran Bersama — sehingga pemikiran dan percakapan Anda dapat berkembang bersama.</string>
     <string name="spaces_introduction_page2_title">Brankasmu naik tingkat</string>
@@ -1874,7 +1864,7 @@
     <string name="content_desc_muted">Disenyapkan</string>
     <string name="content_desc_pending_sync">Sinkronisasi tertunda</string>
     <string name="failed_to_load_image">Gagal memuat gambar</string>
-    <!-- Vault Screen - Join via QR -->
+    
     <string name="vault_join_via_qr">Gabung via kode QR</string>
     <string name="channel_select_members_title">Pilih anggota</string>
     <string name="channel_next">Lanjut</string>
@@ -1890,11 +1880,11 @@
     <string name="open_settings">Buka Setelan</string>
     <string name="allow">Izinkan</string>
     <string name="attachment_image">Lampiran gambar</string>
-    <!-- Shared Space Limit (DROID-4388) -->
+    
     <string name="vault_shared_space_limit_title">Batas ruang terbagi tercapai</string>
     <string name="vault_shared_space_limit_description">Your plan allows %1$d shared spaces. Upgrade your membership to create more.</string>
     <string name="vault_manage_channels">Kelola Kanal</string>
-    <!-- Attachment Menu (DROID-4201) -->
+    
     <string name="attachment_menu_photos">Foto</string>
     <string name="attachment_menu_camera">Kamera</string>
     <string name="attachment_menu_files">Berkas</string>
@@ -1906,7 +1896,7 @@
     <string name="create_object_search_types">Telusuri tipe objek</string>
     <string name="create_object_error">Gagal memuat tipe objek</string>
     <string name="create_object_retry">Coba lagi</string>
-    <!-- Share Space Errors -->
+    
     <string name="share_space_error_limit_reached">Batas sudah tercapai untuk ruang ini. Harap tingkatkan keanggotaan Anda atau hubungi dukungan untuk mendapatkan bantuan.</string>
     <string name="share_space_error_not_shareable">Kelihatannya ruang ini tidak dibagikan lagi. Tolong pastikan bahwa perangkatmu tersinkron dengan baik.</string>
     <string name="share_space_error_request_failed">Ups! Permintaan gagal. Tolong periksa koneksi internetmu lalu coba lagi.</string>
@@ -1965,7 +1955,7 @@
     <string name="any_id_info_title">Ini ANY ID-mu</string>
     <string name="any_id_info_description">Menjadi anggota agar ID Anda dapat mudah dibaca oleh orang lain, sehingga anggota lain dapat dengan mudah menemukan dan terhubung dengan Anda.</string>
     <string name="any_id_info_button">Jelajahi paket-paket</string>
-    <!-- Multiplayer actions -->
+    
     <string name="multiplayer_approve">Setujui</string>
     <string name="chats_warning_you_can_upload_only_10_files_at_a_time">Kamu hanya bisa mengunggah 10 berkas dalam satu waktu</string>
     <string name="chat_pinned_as_widget_success">Obrolan ini telah disematkan ke gawitmu.</string>
@@ -1984,7 +1974,7 @@
     <string name="media_object_in_bin">Objek ini di bak sampah. Pulihkan?</string>
     <string name="toast_restored">Objek dipulihkan.</string>
     <string name="participant_btn_connect">Hubungkan</string>
-    <!-- Sharing Extension Redesign -->
+    
     <string name="sharing_select_destination">Pilih tujuan</string>
     <string name="sharing_send_to_chat">Kirim ke obrolan</string>
     <string name="sharing_select_dest">Pilih tujuan</string>
@@ -2000,7 +1990,7 @@
     <string name="save">Simpan</string>
     <string name="you_dont_have_any_spaces_yet">Kamu belum punya ruang</string>
     <string name="loading_channels">Memuat saluran</string>
-    <!-- OS Widgets -->
+    
     <string name="os_widget_spaces_title">Ruang</string>
     <string name="os_widget_spaces_description">Akses cepat ke ruang sematanmu</string>
     <string name="os_widget_create_object_title">Objek Baru</string>
@@ -2017,7 +2007,7 @@
     <string name="select_view">Pilih tampilan</string>
     <string name="os_widget_data_view_title">Tampilan Data</string>
     <string name="os_widget_data_view_description">Tampilkan item dari Set atau Koleksi</string>
-    <!-- DROID-4358 Offline Downloads settings -->
+    
     <string name="offline_downloads_section_title">Akses luring</string>
     <string name="offline_downloads_title">Unduhan Luring</string>
     <string name="offline_downloads_subtitle">Sinkron otomatis hingga ukuran tertentu</string>

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="about">关于</string>
     <string name="app_version">应用版本</string>
     <string name="library">文库</string>
     <string name="user_id">用户 ID</string>
-    <string name="account_and_data"><![CDATA[账号与数据]]></string>
+    <string name="account_and_data">账号与数据</string>
     <string name="profile">个人资料</string>
     <string name="personalization">个性化</string>
     <string name="appearance">外观</string>
@@ -762,7 +762,7 @@
     <string name="are_you_sure_delete_n_objects">您确定要删除 %1$d 个对象吗？</string>
     <string name="delete_irrevocably">这些对象的数据将被永久删除，此操作不可撤销！</string>
     <string name="delete_irrevocably_one_object">这个对象将被永久删除，此操作不可撤销！</string>
-    <!-- Object Type Deletion Confirmation -->
+    
     <string name="move_type_to_bin_title">将“%s”移至回收站？</string>
     <string name="move_type_to_bin_description">部分对象正在使用此类型。请选择您希望一并删除的对象。未选择的对象将保留，但会失去其类型。</string>
     <string name="move_type_to_bin_no_objects">此类型下暂无对象</string>
@@ -863,7 +863,7 @@
     <string name="create_space_change_icon">更改图标</string>
     <string name="create_space_chat_name">聊天名称</string>
     <string name="create_space_space_name">空间名称</string>
-    <!-- Homepage Picker -->
+    
     <string name="homepage_picker_title">创建主页</string>
     <string name="homepage_picker_description">选择您和频道成员在打开频道时看到的内容。您可以随时在设置中进行更改。</string>
     <string name="homepage_picker_chat">聊天</string>
@@ -911,7 +911,7 @@
     <string name="create_object_section_library">Aparok 库</string>
     <string name="bin_empty_title">您的回收站是空的。</string>
     <string name="bin_empty_subtitle">看起来您已经整理得井井有条了！</string>
-    <!--region SLASH WIDGET -->
+    
     <string name="slash_widget_main_style">样式</string>
     <string name="slash_widget_main_media">媒体</string>
     <string name="slash_widget_main_objects">对象</string>
@@ -990,10 +990,10 @@
     <string name="slash_widget_teal_color_title">松柏绿</string>
     <string name="slash_widget_lime_color_title">绿色</string>
     <string name="slash_widget_background_item">%1$s 背景</string>
-    <!-- Onboarding: persona selection & use cases (iOS parity) -->
+    
     <string name="onboarding_selection_title">介绍一下自己</string>
     <string name="onboarding_selection_description">选择一个最适合您的角色或背景</string>
-    <!-- Persona options -->
+    
     <string name="onboarding_selection_artist">艺术家 / 内容创作者</string>
     <string name="onboarding_selection_consultant">顾问</string>
     <string name="onboarding_selection_designer">设计师</string>
@@ -1005,7 +1005,7 @@
     <string name="onboarding_selection_student">学生</string>
     <string name="onboarding_selection_writer">作家 / 记者</string>
     <string name="onboarding_selection_other">其他</string>
-    <!-- Use case options -->
+    
     <string name="onboarding_usecase_title">您想用 Aparok 做什么？</string>
     <string name="onboarding_usecase_description">挑选一个最适合你的使用场景</string>
     <string name="onboarding_usecase_habit_tracking">习惯跟踪</string>
@@ -1016,8 +1016,8 @@
     <string name="onboarding_usecase_projects">项目 &amp; 任务管理</string>
     <string name="onboarding_usecase_team_work">团队协作 &amp; 文档共享</string>
     <string name="onboarding_usecase_other">其他</string>
-    <!--endregion-->
-    <!--region WIDGETS -->
+    
+    
     <string name="create_widget">创建一个小部件</string>
     <string name="edit_widgets">编辑</string>
     <string name="add_widget">添加</string>
@@ -1042,8 +1042,8 @@
     <string name="widget_empty_bin">清空回收站</string>
     <string name="widget_edit_widgets">编辑小部件</string>
     <string name="widget_auto_created_toast">已添加小部件 %1$s</string>
-    <!--endregion-->
-    <!--region LIBRARY -->
+    
+    
     <string name="library_title_types">类型</string>
     <string name="library_title_relations">属性</string>
     <string name="library_description_types">类型就像是帮助你对对象进行分组和管理的分类。</string>
@@ -1066,8 +1066,8 @@
     <string name="type_creation_new_type">新建类型</string>
     <string name="type_creation_done">完成</string>
     <string name="type_creation_placeholder">类型名称</string>
-    <!--endregion-->
-    <!--region ONBOARDING -->
+    
+    
     <string name="onboarding_auth_title">已加密，本地，</string>
     <string name="onboarding_auth_subtitle">永远属于您</string>
     <string name="onboarding_auth_description">已加密，本地，</string>
@@ -1111,17 +1111,17 @@
     <string name="onboarding_how_to_save_my_phrase">怎么储存我的密钥？</string>
     <string name="onboarding_how_to_save_my_phrase_2">保存恢复短语的最简单方法是将其保存在您的密码管理器中。</string>
     <string name="onboarding_how_to_save_my_phrase_3">最可靠的方法是现实中在纸面上写下，并放在一个安全可靠的地方。</string>
-    <!--endregion-->
-    <!--region OBJECT ACTIONS -->
+    
+    
     <string name="object_action_duplicate">生成副本</string>
     <string name="object_action_to_widgets">置顶</string>
     <string name="object_action_download">下载</string>
-    <!--endregion-->
-    <!--region SEARCH -->
+    
+    
     <string name="nothing_found">未找到任何内容</string>
     <string name="nothing_found_object_types">未找到对象类型。请尝试更改您的请求。</string>
-    <!--endregion-->
-    <!--region CONTENT DESCRIPTIONS FOR ACCESSIBILITY -->
+    
+    
     <string name="content_description_delete_button">Delete button</string>
     <string name="content_description_duplicate_button">Duplicate button</string>
     <string name="content_description_edit_view_button">Edit-view button</string>
@@ -1136,16 +1136,16 @@
     <string name="content_desc_object_icon">对象图像或表情</string>
     <string name="content_desc_checkbox_icon">复选框图标</string>
     <string name="content_desc_layout_icon">布局图标</string>
-    <!--endregion-->
-    <!--region BUTTONS -->
+    
+    
     <string name="button_okay">好的</string>
     <string name="button_close">关闭</string>
-    <!--endregion-->
-    <!--region ALERTS -->
+    
+    
     <string name="alert_gallery_unsupported_title">即将支持画廊</string>
     <string name="alert_gallery_unsupported_description">目前请使用桌面应用。</string>
-    <!--endregion-->
-    <!--region SHARING MENU -->
+    
+    
     <string name="sharing_menu_save_as_section_name">另存为</string>
     <string name="sharing_menu_save_as_note_option">笔记</string>
     <string name="sharing_menu_save_as_bookmark_option">书签</string>
@@ -1161,7 +1161,7 @@
     <string name="sharing_menu_toast_object_added">新对象已添加到空间 ”%1$s“</string>
     <string name="sharing_menu_btn_add">添加</string>
     <string name="sharing_menu_btn_open">打开</string>
-    <!-- Snackbar messages for content added to chat -->
+    
     <string name="sharing_snackbar_image_added">图片已添加到“%1$s”</string>
     <string name="sharing_snackbar_images_added">图片已添加到“%1$s”</string>
     <string name="sharing_snackbar_video_added">视频已添加到“%1$s”</string>
@@ -1172,7 +1172,7 @@
     <string name="sharing_snackbar_text_added">文本已添加到“%1$s”</string>
     <string name="sharing_snackbar_link_added">链接已添加到“%1$s”</string>
     <string name="sharing_snackbar_content_added">内容已添加到“%1$s”</string>
-    <!-- Snackbar messages for content linked to an object in a space -->
+    
     <string name="sharing_snackbar_image_linked">图片已链接到“%1$s”中的“%2$s”</string>
     <string name="sharing_snackbar_images_linked">图片已链接到“%1$s”中的“%2$s”</string>
     <string name="sharing_snackbar_video_linked">视频已链接到“%1$s”中的“%2$s”</string>
@@ -1183,8 +1183,8 @@
     <string name="sharing_snackbar_text_linked">文本已链接到“%1$s”中的 \'%2$s\'</string>
     <string name="sharing_snackbar_link_linked">链接已链接到\'%1$s\' 在 \'%2$s\'</string>
     <string name="sharing_snackbar_content_linked">内容已链接到\'%1$s\'中的\'%2$s\'</string>
-    <!--endregion-->
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
+    
     <string name="relation_origin_none">无</string>
     <string name="relation_origin_clipboard">剪贴板</string>
     <string name="relation_origin_dnd">拖拽</string>
@@ -1194,14 +1194,14 @@
     <string name="relation_origin_use_case">使用案例</string>
     <string name="relation_origin_library_installed">库已安装</string>
     <string name="relation_origin_bookmark">书签</string>
-    <!--endregion-->
+    
     <plurals name="backlinks_count">
         <item quantity="other">%d 个反向链接</item>
     </plurals>
     <plurals name="links_from_count">
         <item quantity="other">%d 个链接</item>
     </plurals>
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
     <string name="date_type_tomorrow">明天</string>
     <string name="date_type_today">今天</string>
     <string name="date_type_yesterday">昨天</string>
@@ -1212,7 +1212,7 @@
     <string name="dates_days_from">%1$s 天后</string>
     <string name="number_days_from">从现在起的天数</string>
     <string name="number_days_ago">前几天</string>
-    <!-- Date filter quick options -->
+    
     <string name="dates_filter_exact_day">确切日期</string>
     <string name="dates_filter_last_week">上个星期</string>
     <string name="dates_filter_current_week">本周</string>
@@ -1225,7 +1225,7 @@
     <string name="dates_filter_next_year">下一年</string>
     <string name="settings_use_yamux">使用 QUIC</string>
     <string name="settings_share_local_logs">分享本地日志</string>
-    <!--endregion-->
+    
     <string name="error_kanban_view_not_supported">看板视图暂时在手机上不可用。\n更改类型（设置 -&gt; 视图）或创建新视图访问您的数据。</string>
     <string name="error_calendar_view_not_supported">日历视图暂时在手机上不可用。\n更改类型（设置 -&gt; 视图）或创建新视图访问您的数据。</string>
     <string name="error_graph_view_not_supported">图表视图暂时不能在手机上使用。\n更改视图类型（设置 -&gt; 视图）或创建新视图以访问您的数据。</string>
@@ -1254,7 +1254,7 @@
     <string name="hint_enter_name">输入名称...</string>
     <string name="create_object">创建对象</string>
     <string name="msg_query_cannot_be_changed">只能在桌面端更改此查询</string>
-    <!--region ONBOARDING ERRORS -->
+    
     <string name="error_invalid_recovery_phrase">无效密钥</string>
     <string name="network">网络</string>
     <string name="network_with_colon">网络:</string>
@@ -1270,8 +1270,8 @@
     <string name="network_settings_self_host_config">当前配置：%1$s</string>
     <string name="widget_types_show">显示类型</string>
     <string name="widget_types_hide">隐藏类型</string>
-    <!--endregion-->
-    <!--region MULTIPLAYER -->
+    
+    
     <string name="multiplayer_share_invite_link">分享邀请链接</string>
     <string name="multiplayer_share_invite_link_menu">分享链接</string>
     <string name="multiplayer_qr_invite_link_menu">显示二维码</string>
@@ -1431,18 +1431,8 @@
     <string name="multiplayer_invite_link_this_link_does_not_seem_to_work">这个链接似乎无法工作</string>
     <string name="multiplayer_invite_link_space_not_found">这个邀请链接不再有效，因为找不到空间。</string>
     <string name="multiplayer_invite_link_request_already_sent">已发送申请</string>
-    <!--endregion-->
-    <!--region PAYMENTS -->
-    <!-- Tier details --><item>10 个单人空间</item>
-<item>128 GB 网络空间</item>
-<item>优先支持</item>
-<item>256 GB 网络空间</item>
-<item>与团队聊天</item>
-<!-- Payments Code -->
-    <!-- Membership Welcome -->
-    <!-- Membership Email -->
-    <!-- Membership name errors -->
-    <!-- Notifications -->
+    
+    
     <string name="notifications_alert_error_unknown">发生了未知错误。请稍后再试。</string>
     <string name="notifications_alert_error_bad_input">检测到无效的输入。请检查您的数据，然后重试。</string>
     <string name="notifications_alert_error_internal">出现内部错误。已经通知了我们团队。</string>
@@ -1451,7 +1441,7 @@
     <string name="notifications_alert_error_limit_exceeded">导入的行数或属性数量已超出限制。请减少数量后重试。</string>
     <string name="notifications_alert_error_file_load">加载文件时出现了一点问题。请检查文件后重试。</string>
     <string name="notifications_alert_error_insufficient_permissions">您没有执行此操作的必要权限。请检查您的权限并重试。</string>
-    <!-- Gallery Experience -->
+    
     <string name="gallery_experience_made">作者：</string>
     <string name="gallery_experience_install">安装</string>
     <string name="gallery_experience_install_new">安装至新的空间</string>
@@ -1570,7 +1560,7 @@
     <string name="introduce_vault_text_2">您现在可以轻松地通过拖放和导航来重新排序您的空间。</string>
     <string name="introduce_vault_text_3">默认情况下，我们会将您空间的图标作为背景模糊。如果需要，您可以在空间设置中更改它。</string>
     <string name="introduce_vault_welcome_to_the_vault">欢迎来到库！</string>
-    <string name="introduce_vault_simple_flexible"><![CDATA[简单&灵活的]]></string>
+    <string name="introduce_vault_simple_flexible">简单&amp;灵活的</string>
     <string name="allContent_empty_state_title">这里是空的</string>
     <string name="allContent_empty_state_description">创建您的第一个对象以开始操作。</string>
     <string name="all_content_no_results_title">未找到结果。</string>
@@ -1805,7 +1795,7 @@
     <string name="space_properties_screen_section_system_types">系统属性</string>
     <string name="space_properties_screen_menu_move_to_bin">移到回收站</string>
     <string name="onboarding_error_while_creating_account_space_is_missing">创建账户出错：缺少空间</string>
-    <!-- Account creation error messages -->
+    
     <string name="onboarding_error_network_error">由于网络错误创建帐户失败。请检查您的连接。</string>
     <string name="onboarding_error_offline_device">您的设备似乎处于离线状态。请检查您的连接，然后重试。</string>
     <string name="onboarding_error_account_created_but_failed_to_start_node">帐户已创建，但无法启动节点。请尝试登录。</string>
@@ -1836,7 +1826,7 @@
     <string name="vault_create_space_description">用于结构化内容和数据</string>
     <string name="vault_create_personal">个人</string>
     <string name="vault_create_group">分组</string>
-    <!-- Spaces Introduction Popup -->
+    
     <string name="spaces_introduction_page1_title">想法需要对话</string>
     <string name="spaces_introduction_page1_description">Aparok 现已支持共享空间的实时聊天——让每一次所思所言，共同生长。</string>
     <string name="spaces_introduction_page2_title">您的保险库刚刚升级了</string>
@@ -1874,7 +1864,7 @@
     <string name="content_desc_muted">已静音</string>
     <string name="content_desc_pending_sync">正在等待同步</string>
     <string name="failed_to_load_image">加载图片失败</string>
-    <!-- Vault Screen - Join via QR -->
+    
     <string name="vault_join_via_qr">通过二维码加入</string>
     <string name="channel_select_members_title">选择成员</string>
     <string name="channel_next">下一步</string>
@@ -1890,11 +1880,11 @@
     <string name="open_settings">打开设置</string>
     <string name="allow">允许</string>
     <string name="attachment_image">附件图片</string>
-    <!-- Shared Space Limit (DROID-4388) -->
+    
     <string name="vault_shared_space_limit_title">已达到共享空间上限</string>
     <string name="vault_shared_space_limit_description">您的计划允许创建 %1$d 个共享空间。升级会员以解锁更多。</string>
     <string name="vault_manage_channels">管理频道</string>
-    <!-- Attachment Menu (DROID-4201) -->
+    
     <string name="attachment_menu_photos">照片</string>
     <string name="attachment_menu_camera">相机</string>
     <string name="attachment_menu_files">文件</string>
@@ -1906,7 +1896,7 @@
     <string name="create_object_search_types">搜索对象类型</string>
     <string name="create_object_error">加载对象类型失败</string>
     <string name="create_object_retry">重试</string>
-    <!-- Share Space Errors -->
+    
     <string name="share_space_error_limit_reached">此空间人数已到达上限。请升级您的会员资格或联系客服以获取帮助。</string>
     <string name="share_space_error_not_shareable">看起来此空间已不再共享。请确保您的设备已经同步。</string>
     <string name="share_space_error_request_failed">哎呀！请求失败。请检查您的互联网连接，然后重试。</string>
@@ -1964,7 +1954,7 @@
     <string name="any_id_info_title">这是您的 ANY ID</string>
     <string name="any_id_info_description">成为会员，使您的ID更易于人类阅读，以便其他会员轻松找到并与您联系。</string>
     <string name="any_id_info_button">浏览计划</string>
-    <!-- Multiplayer actions -->
+    
     <string name="multiplayer_approve">同意</string>
     <string name="chats_warning_you_can_upload_only_10_files_at_a_time">您一次只能上传10个文件</string>
     <string name="chat_pinned_as_widget_success">这个聊天已经固定在您的小部件上。</string>
@@ -1983,7 +1973,7 @@
     <string name="media_object_in_bin">此对象已在回收站中。是否恢复？</string>
     <string name="toast_restored">对象已恢复。</string>
     <string name="participant_btn_connect">连接</string>
-    <!-- Sharing Extension Redesign -->
+    
     <string name="sharing_select_destination">选择目的地</string>
     <string name="sharing_send_to_chat">发送到聊天</string>
     <string name="sharing_select_dest">选择目的地</string>
@@ -1999,7 +1989,7 @@
     <string name="save">保存</string>
     <string name="you_dont_have_any_spaces_yet">您还没有任何空间</string>
     <string name="loading_channels">正在加载频道…</string>
-    <!-- OS Widgets -->
+    
     <string name="os_widget_spaces_title">空间</string>
     <string name="os_widget_spaces_description">快速访问您置顶的空间</string>
     <string name="os_widget_create_object_title">新建对象</string>
@@ -2016,7 +2006,7 @@
     <string name="select_view">选择视图</string>
     <string name="os_widget_data_view_title">数据视图</string>
     <string name="os_widget_data_view_description">从动态集或合集中显示项目</string>
-    <!-- DROID-4358 Offline Downloads settings -->
+    
     <string name="offline_downloads_section_title">离线访问</string>
     <string name="offline_downloads_title">离线下载</string>
     <string name="offline_downloads_subtitle">自动同步大小在限制范围内的文件</string>

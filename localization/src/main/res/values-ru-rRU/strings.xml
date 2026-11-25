@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="about">О нас</string>
     <string name="app_version">Версия приложения</string>
     <string name="library">Библиотека</string>
     <string name="user_id">ID пользователя</string>
-    <string name="account_and_data"><![CDATA[Учетная запись и данные]]></string>
+    <string name="account_and_data">Учетная запись и данные</string>
     <string name="profile">Профиль</string>
     <string name="personalization">Персонализация</string>
     <string name="appearance">Внешний вид</string>
@@ -765,7 +765,7 @@
     <string name="are_you_sure_delete_n_objects">Вы уверены, что хотите удалить %1$d объектов?</string>
     <string name="delete_irrevocably">Элементы будут безвозвратно удалены. Вы не сможете отменить это действие.</string>
     <string name="delete_irrevocably_one_object">Элементы будут безвозвратно удалены. Вы не сможете отменить это действие.</string>
-    <!-- Object Type Deletion Confirmation -->
+    
     <string name="move_type_to_bin_title">Move \"%s\" to Bin?</string>
     <string name="move_type_to_bin_description">Some objects use this type. Select the ones you also want to delete. Objects you don\'t select will remain but lose their type.</string>
     <string name="move_type_to_bin_no_objects">There are no objects of this type</string>
@@ -869,7 +869,7 @@
     <string name="create_space_change_icon">Изменить иконку</string>
     <string name="create_space_chat_name">Имя чата</string>
     <string name="create_space_space_name">Название пространства</string>
-    <!-- Homepage Picker -->
+    
     <string name="homepage_picker_title">Create Home</string>
     <string name="homepage_picker_description">Select what you and channel members see when they open the channel. You can always change it in settings.</string>
     <string name="homepage_picker_chat">Чат</string>
@@ -917,7 +917,7 @@
     <string name="create_object_section_library">Библиотека Aparok</string>
     <string name="bin_empty_title">Ваша корзина пуста.</string>
     <string name="bin_empty_subtitle">Похоже, у вас всё аккуратно и организовано!</string>
-    <!--region SLASH WIDGET -->
+    
     <string name="slash_widget_main_style">Внешний вид</string>
     <string name="slash_widget_main_media">Медиа-файлы</string>
     <string name="slash_widget_main_objects">Объекты</string>
@@ -996,10 +996,10 @@
     <string name="slash_widget_teal_color_title">Бирюзовый</string>
     <string name="slash_widget_lime_color_title">Зелёный</string>
     <string name="slash_widget_background_item">фон %1$s</string>
-    <!-- Onboarding: persona selection & use cases (iOS parity) -->
+    
     <string name="onboarding_selection_title">Расскажите нам о себе</string>
     <string name="onboarding_selection_description">Выберите одну роль или фон, которые лучше всего подходят вам</string>
-    <!-- Persona options -->
+    
     <string name="onboarding_selection_artist">Артист</string>
     <string name="onboarding_selection_consultant">Консультант</string>
     <string name="onboarding_selection_designer">Дизайнер</string>
@@ -1011,7 +1011,7 @@
     <string name="onboarding_selection_student">Студент</string>
     <string name="onboarding_selection_writer">Писатель / Журналист</string>
     <string name="onboarding_selection_other">Прочее</string>
-    <!-- Use case options -->
+    
     <string name="onboarding_usecase_title">Для чего вы хотите использовать Aparok?</string>
     <string name="onboarding_usecase_description">Выберите один вариант использования, который подходит вам лучше всего</string>
     <string name="onboarding_usecase_habit_tracking">Отслеживание привычек</string>
@@ -1022,8 +1022,8 @@
     <string name="onboarding_usecase_projects">Управление проектами и задачами</string>
     <string name="onboarding_usecase_team_work">Работа в команде и общие документы</string>
     <string name="onboarding_usecase_other">Прочее</string>
-    <!--endregion-->
-    <!--region WIDGETS -->
+    
+    
     <string name="create_widget">Создать виджет</string>
     <string name="edit_widgets">Изменить</string>
     <string name="add_widget">Добавить</string>
@@ -1048,8 +1048,8 @@
     <string name="widget_empty_bin">Очистить корзину</string>
     <string name="widget_edit_widgets">Редактировать виджеты</string>
     <string name="widget_auto_created_toast">Виджет %1$s добавлен</string>
-    <!--endregion-->
-    <!--region LIBRARY -->
+    
+    
     <string name="library_title_types">Типы</string>
     <string name="library_title_relations">Свойства</string>
     <string name="library_description_types">Типы похожи на категории,которые помогают группировать и управлятьвашими объектами.</string>
@@ -1072,8 +1072,8 @@
     <string name="type_creation_new_type">Новое свойство</string>
     <string name="type_creation_done">Готово</string>
     <string name="type_creation_placeholder">Название свойства</string>
-    <!--endregion-->
-    <!--region ONBOARDING -->
+    
+    
     <string name="onboarding_auth_title">Зашифрованный, локальный,</string>
     <string name="onboarding_auth_subtitle">ваш навсегда</string>
     <string name="onboarding_auth_description">Зашифрованный, локальный,</string>
@@ -1117,17 +1117,17 @@
     <string name="onboarding_how_to_save_my_phrase">Как хранить мой Ключ?</string>
     <string name="onboarding_how_to_save_my_phrase_2">Самый простой способ хранить Ключ — сохранить его в менеджере паролей.</string>
     <string name="onboarding_how_to_save_my_phrase_3">Самый безопасный способ — записать его на бумаге и спрятать бумагу в укромном безопасном месте.</string>
-    <!--endregion-->
-    <!--region OBJECT ACTIONS -->
+    
+    
     <string name="object_action_duplicate">Дублировать</string>
     <string name="object_action_to_widgets">Закрепить</string>
     <string name="object_action_download">Скачать</string>
-    <!--endregion-->
-    <!--region SEARCH -->
+    
+    
     <string name="nothing_found">Ничего не найдено</string>
     <string name="nothing_found_object_types">No object type found. Please try changing your request.</string>
-    <!--endregion-->
-    <!--region CONTENT DESCRIPTIONS FOR ACCESSIBILITY -->
+    
+    
     <string name="content_description_delete_button">Delete button</string>
     <string name="content_description_duplicate_button">Duplicate button</string>
     <string name="content_description_edit_view_button">Edit-view button</string>
@@ -1142,16 +1142,16 @@
     <string name="content_desc_object_icon">Object image or emoji</string>
     <string name="content_desc_checkbox_icon">Checkbox icon</string>
     <string name="content_desc_layout_icon">Layout icon</string>
-    <!--endregion-->
-    <!--region BUTTONS -->
+    
+    
     <string name="button_okay">Окей</string>
     <string name="button_close">Закрыть</string>
-    <!--endregion-->
-    <!--region ALERTS -->
+    
+    
     <string name="alert_gallery_unsupported_title">Вскоре будет поддерживаться галерея</string>
     <string name="alert_gallery_unsupported_description">Пожалуйста, используйте приложение для компьютера.</string>
-    <!--endregion-->
-    <!--region SHARING MENU -->
+    
+    
     <string name="sharing_menu_save_as_section_name">Сохранить как</string>
     <string name="sharing_menu_save_as_note_option">Заметка</string>
     <string name="sharing_menu_save_as_bookmark_option">Закладка</string>
@@ -1167,7 +1167,7 @@
     <string name="sharing_menu_toast_object_added">New object is added to the space \'%1$s\'</string>
     <string name="sharing_menu_btn_add">Добавить</string>
     <string name="sharing_menu_btn_open">Открыть</string>
-    <!-- Snackbar messages for content added to chat -->
+    
     <string name="sharing_snackbar_image_added">Изображение добавлено в \'%1$s\'</string>
     <string name="sharing_snackbar_images_added">Изображения добавлены в \'%1$s\'</string>
     <string name="sharing_snackbar_video_added">Видео добавлено в \'%1$s\'</string>
@@ -1178,7 +1178,7 @@
     <string name="sharing_snackbar_text_added">Текст добавлен в \'%1$s\'</string>
     <string name="sharing_snackbar_link_added">Ссылка добавлена в \'%1$s\'</string>
     <string name="sharing_snackbar_content_added">Контент добавлен в \'%1$s\'</string>
-    <!-- Snackbar messages for content linked to an object in a space -->
+    
     <string name="sharing_snackbar_image_linked">Изображение связано с \'%1$s\' в \'%2$s\'</string>
     <string name="sharing_snackbar_images_linked">Изображения, связанные с \'%1$s\' в \'%2$s\'</string>
     <string name="sharing_snackbar_video_linked">Видео связано с \'%1$s\' в \'%2$s\'</string>
@@ -1189,8 +1189,8 @@
     <string name="sharing_snackbar_text_linked">Текст, связанный с \'%1$s\' в \'%2$s\'</string>
     <string name="sharing_snackbar_link_linked">Ссылка связана с \'%1$s\' в \'%2$s\'</string>
     <string name="sharing_snackbar_content_linked">Контент связан с \'%1$s\' в \'%2$s\'</string>
-    <!--endregion-->
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
+    
     <string name="relation_origin_none">Нет</string>
     <string name="relation_origin_clipboard">Буфер обмена</string>
     <string name="relation_origin_dnd">Drag &amp; Drop</string>
@@ -1200,7 +1200,7 @@
     <string name="relation_origin_use_case">Вариант использования</string>
     <string name="relation_origin_library_installed">Библиотеки установлены.</string>
     <string name="relation_origin_bookmark">Закладка</string>
-    <!--endregion-->
+    
     <plurals name="backlinks_count">
         <item quantity="one">%d обратная ссылка</item>
         <item quantity="few">%d обратная ссылки</item>
@@ -1213,7 +1213,7 @@
         <item quantity="many">%d ссылок</item>
         <item quantity="other">%d ссылки</item>
     </plurals>
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
     <string name="date_type_tomorrow">Завтра</string>
     <string name="date_type_today">Сегодня</string>
     <string name="date_type_yesterday">Вчера</string>
@@ -1224,7 +1224,7 @@
     <string name="dates_days_from">%1$s дней спустя</string>
     <string name="number_days_from">Количество дней с этого момента</string>
     <string name="number_days_ago">Количество дней назад</string>
-    <!-- Date filter quick options -->
+    
     <string name="dates_filter_exact_day">Точная дата</string>
     <string name="dates_filter_last_week">Прошлая неделя</string>
     <string name="dates_filter_current_week">Текущая неделя</string>
@@ -1237,7 +1237,7 @@
     <string name="dates_filter_next_year">Следующий год</string>
     <string name="settings_use_yamux">Использовать QUIC</string>
     <string name="settings_share_local_logs">Поделиться локальными журналами</string>
-    <!--endregion-->
+    
     <string name="error_kanban_view_not_supported">Kanban view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
     <string name="error_calendar_view_not_supported">Calendar view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
     <string name="error_graph_view_not_supported">Представление графа пока недоступно на мобильном телефоне.\nИзменить тип просмотра (Настройки - &gt; Вид) или создайте новый вид для доступа к вашим данным.</string>
@@ -1266,7 +1266,7 @@
     <string name="hint_enter_name">Введите название...</string>
     <string name="create_object">Создать объект</string>
     <string name="msg_query_cannot_be_changed">Этот запрос может быть изменен только на компьютере</string>
-    <!--region ONBOARDING ERRORS -->
+    
     <string name="error_invalid_recovery_phrase">Неправильный Ключ</string>
     <string name="network">Сеть</string>
     <string name="network_with_colon">Сеть:</string>
@@ -1282,8 +1282,8 @@
     <string name="network_settings_self_host_config">Current config: %1$s</string>
     <string name="widget_types_show">Показать типы</string>
     <string name="widget_types_hide">Скрыть типы</string>
-    <!--endregion-->
-    <!--region MULTIPLAYER -->
+    
+    
     <string name="multiplayer_share_invite_link">Поделится ссылкой на приглашение </string>
     <string name="multiplayer_share_invite_link_menu">Поделиться ссылкой</string>
     <string name="multiplayer_qr_invite_link_menu">Показать QR-код</string>
@@ -1449,18 +1449,8 @@
     <string name="multiplayer_invite_link_this_link_does_not_seem_to_work">Эта ссылка, похоже, не работает</string>
     <string name="multiplayer_invite_link_space_not_found">Эта ссылка на приглашение больше не действительна, так как пространство не найдено.</string>
     <string name="multiplayer_invite_link_request_already_sent">Запрос отправлен</string>
-    <!--endregion-->
-    <!--region PAYMENTS -->
-    <!-- Tier details --><item>10 индивидуальных пространств</item>
-<item>128 ГБ сетевого пространства</item>
-<item>Приоритетная поддержка</item>
-<item>256 ГБ сетевого пространства</item>
-<item>Общение с командой</item>
-<!-- Payments Code -->
-    <!-- Membership Welcome -->
-    <!-- Membership Email -->
-    <!-- Membership name errors -->
-    <!-- Notifications -->
+    
+    
     <string name="notifications_alert_error_unknown">Произошла неизвестная ошибка. Пожалуйста, попробуйте снова позже.</string>
     <string name="notifications_alert_error_bad_input">Обнаружены недопустимые данные. Пожалуйста, проверьте свои данные и попробуйте снова.</string>
     <string name="notifications_alert_error_internal">Произошла внутренняя ошибка. Наша команда была уведомлена.</string>
@@ -1469,7 +1459,7 @@
     <string name="notifications_alert_error_limit_exceeded">Превышен лимит на количество строк или связей для импорта. Пожалуйста, уменьшите количество и попробуйте снова.</string>
     <string name="notifications_alert_error_file_load">Произошла ошибка при загрузке файла. Пожалуйста, проверьте файл и попробуйте снова.</string>
     <string name="notifications_alert_error_insufficient_permissions">У вас нет необходимых прав для выполнения этого действия. Пожалуйста, проверьте ваши разрешения и повторите попытку.</string>
-    <!-- Gallery Experience -->
+    
     <string name="gallery_experience_made">Создано</string>
     <string name="gallery_experience_install">Установить</string>
     <string name="gallery_experience_install_new">Установить в новое пространство</string>
@@ -1609,7 +1599,7 @@
     <string name="introduce_vault_text_2">Теперь вы можете легко изменять порядок ваших пространств, перетаскивая их и перемещаясь по ним легче.</string>
     <string name="introduce_vault_text_3">По умолчанию мы размываем иконку вашего пространства в фоновом режиме. При необходимости вы можете изменить ее в настройках пространства.</string>
     <string name="introduce_vault_welcome_to_the_vault">Добро пожаловать в Хранилище</string>
-    <string name="introduce_vault_simple_flexible"><![CDATA[Просто и гибко]]></string>
+    <string name="introduce_vault_simple_flexible">Просто и гибко</string>
     <string name="allContent_empty_state_title">Здесь пусто.</string>
     <string name="allContent_empty_state_description">Здесь пусто. Создайте свои первые объекты, чтобы начать работу.</string>
     <string name="all_content_no_results_title">Результаты не найдены.</string>
@@ -1844,7 +1834,7 @@
     <string name="space_properties_screen_section_system_types">Системные свойства</string>
     <string name="space_properties_screen_menu_move_to_bin">Переместить в корзину</string>
     <string name="onboarding_error_while_creating_account_space_is_missing">Ошибка при создании аккаунта: не найдено ни одного пространства</string>
-    <!-- Account creation error messages -->
+    
     <string name="onboarding_error_network_error">Не удалось создать аккаунт из-за ошибки сети. Пожалуйста, проверьте соединение.</string>
     <string name="onboarding_error_offline_device">Кажется, Ваше устройство не в сети. Проверьте подключение и повторите попытку.</string>
     <string name="onboarding_error_account_created_but_failed_to_start_node">Аккаунт создан, но не удалось запустить ячейку сервера. Пожалуйста, попробуйте войти снова.</string>
@@ -1875,7 +1865,7 @@
     <string name="vault_create_space_description">Для организованного содержания и данных</string>
     <string name="vault_create_personal">Personal</string>
     <string name="vault_create_group">Group</string>
-    <!-- Spaces Introduction Popup -->
+    
     <string name="spaces_introduction_page1_title">Идеи рождаются в диалоге.</string>
     <string name="spaces_introduction_page1_description">Aparok теперь поддерживает чат в режиме реального времени в общих каналах — поэтому ваши мысли и диалоги могут расти вместе.</string>
     <string name="spaces_introduction_page2_title">Ваш Хранилище только что повысилось</string>
@@ -1913,7 +1903,7 @@
     <string name="content_desc_muted">Заглушен</string>
     <string name="content_desc_pending_sync">Ожидание синхронизации</string>
     <string name="failed_to_load_image">Не удалось загрузить изображение</string>
-    <!-- Vault Screen - Join via QR -->
+    
     <string name="vault_join_via_qr">Присоединиться через QR-код</string>
     <string name="channel_select_members_title">Select members</string>
     <string name="channel_next">Далее</string>
@@ -1929,15 +1919,15 @@
     <string name="open_settings">Открыть настройки</string>
     <string name="allow">Разрешить</string>
     <string name="attachment_image">Изображение вложения</string>
-    <!-- Shared Space Limit (DROID-4388) -->
+    
     <string name="vault_shared_space_limit_title">Shared space limit reached</string>
     <string name="vault_shared_space_limit_description">Your plan allows %1$d shared spaces. Upgrade your membership to create more.</string>
     <string name="vault_manage_channels">Manage Channels</string>
-    <!-- Attachment Menu (DROID-4201) -->
+    
     <string name="attachment_menu_photos">Фото</string>
     <string name="attachment_menu_camera">Камера</string>
     <string name="attachment_menu_files">Files</string>
-    <string name="attachment_menu_attach_object"></string>
+    <string name="attachment_menu_attach_object" />
     <string name="attachment_menu_see_all">Просмотреть все</string>
     <string name="attachment_menu_search_placeholder">Поиск</string>
     <string name="create_object_empty_state">No object types available</string>
@@ -1945,7 +1935,7 @@
     <string name="create_object_search_types">Search object types</string>
     <string name="create_object_error">Failed to load object types</string>
     <string name="create_object_retry">Повторить</string>
-    <!-- Share Space Errors -->
+    
     <string name="share_space_error_limit_reached">Достигнут лимит для этого пространства. Пожалуйста, обновите ваше членство или обратитесь в службу поддержки.</string>
     <string name="share_space_error_not_shareable">Похоже, доступ к пространству был закрыт. Пожалуйста, убедитесь, что ваши устройства синхронизированы.</string>
     <string name="share_space_error_request_failed">Упс! Ошибка запроса. Пожалуйста, проверьте подключение к Интернету и повторите попытку.</string>
@@ -2007,7 +1997,7 @@
     <string name="any_id_info_title">Это Ваш ANY ID</string>
     <string name="any_id_info_description">Станьте участником, чтобы сделать свой ID читаемым для людей — так другие участники смогут легко найти вас и связаться.</string>
     <string name="any_id_info_button">Изучить планы</string>
-    <!-- Multiplayer actions -->
+    
     <string name="multiplayer_approve">Подтвердить</string>
     <string name="chats_warning_you_can_upload_only_10_files_at_a_time">Вы можете загрузить только 10 файлов за раз</string>
     <string name="chat_pinned_as_widget_success">Этот чат был прикреплен к вашим виджетам.</string>
@@ -2026,7 +2016,7 @@
     <string name="media_object_in_bin">Этот объект в корзине. Восстановить его?</string>
     <string name="toast_restored">Объект восстановлен.</string>
     <string name="participant_btn_connect">Подключиться</string>
-    <!-- Sharing Extension Redesign -->
+    
     <string name="sharing_select_destination">Выберите пункт назначения</string>
     <string name="sharing_send_to_chat">Отправить в чат</string>
     <string name="sharing_select_dest">Выберите пункт назначения</string>
@@ -2042,7 +2032,7 @@
     <string name="save">Сохранить</string>
     <string name="you_dont_have_any_spaces_yet">У вас пока нет мест</string>
     <string name="loading_channels">Загрузка каналов</string>
-    <!-- OS Widgets -->
+    
     <string name="os_widget_spaces_title">Spaces</string>
     <string name="os_widget_spaces_description">Quick access to your pinned spaces</string>
     <string name="os_widget_create_object_title">Создать новый объект</string>
@@ -2059,7 +2049,7 @@
     <string name="select_view">Select view</string>
     <string name="os_widget_data_view_title">Data View</string>
     <string name="os_widget_data_view_description">Display items from a Set or Collection</string>
-    <!-- DROID-4358 Offline Downloads settings -->
+    
     <string name="offline_downloads_section_title">Offline access</string>
     <string name="offline_downloads_title">Offline Downloads</string>
     <string name="offline_downloads_subtitle">Auto sync files up to a selected size</string>

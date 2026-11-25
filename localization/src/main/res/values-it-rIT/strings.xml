@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="about">Informazioni </string>
     <string name="app_version">Versione applicazione</string>
     <string name="library">Libreria</string>
     <string name="user_id">ID Utente</string>
-    <string name="account_and_data"><![CDATA[Account & Dati]]></string>
+    <string name="account_and_data">Account &amp; Dati</string>
     <string name="profile">Profilo</string>
     <string name="personalization">Personalizzazione</string>
     <string name="appearance">Aspetto</string>
@@ -763,7 +763,7 @@
     <string name="are_you_sure_delete_n_objects">Are you sure you want to delete %1$d objects?</string>
     <string name="delete_irrevocably">These objects will be deleted irrevocably. You can\'t undo this action.</string>
     <string name="delete_irrevocably_one_object">This object will be deleted irrevocably. You can\'t undo this action.</string>
-    <!-- Object Type Deletion Confirmation -->
+    
     <string name="move_type_to_bin_title">Spostare \"%s\" nel Cestino?</string>
     <string name="move_type_to_bin_description">Alcuni oggetti usano questo tipo. Seleziona quelli che vuoi anche eliminare. Gli oggetti che non selezioni rimarranno ma perderanno il loro tipo.</string>
     <string name="move_type_to_bin_no_objects">Non ci sono oggetti di questo tipo</string>
@@ -865,7 +865,7 @@
     <string name="create_space_change_icon">Cambia icona</string>
     <string name="create_space_chat_name">Nome chat</string>
     <string name="create_space_space_name">Nome dello Spazio</string>
-    <!-- Homepage Picker -->
+    
     <string name="homepage_picker_title">Create Home</string>
     <string name="homepage_picker_description">Select what you and channel members see when they open the channel. You can always change it in settings.</string>
     <string name="homepage_picker_chat">Chat</string>
@@ -913,7 +913,7 @@
     <string name="create_object_section_library">Libreria di Aparok</string>
     <string name="bin_empty_title">Il tuo cestino è vuoto.</string>
     <string name="bin_empty_subtitle">Sembra che tu sia tutto in ordine e organizzato!</string>
-    <!--region SLASH WIDGET -->
+    
     <string name="slash_widget_main_style">Stile</string>
     <string name="slash_widget_main_media">Multimedia</string>
     <string name="slash_widget_main_objects">Oggetti</string>
@@ -992,10 +992,10 @@
     <string name="slash_widget_teal_color_title">Ottanio</string>
     <string name="slash_widget_lime_color_title">Verde</string>
     <string name="slash_widget_background_item">%1$s background</string>
-    <!-- Onboarding: persona selection & use cases (iOS parity) -->
+    
     <string name="onboarding_selection_title">Raccontaci di te</string>
     <string name="onboarding_selection_description">Seleziona un ruolo o uno sfondo più adatto a te</string>
-    <!-- Persona options -->
+    
     <string name="onboarding_selection_artist">Artista / Creatore di contenuti</string>
     <string name="onboarding_selection_consultant">Consulente</string>
     <string name="onboarding_selection_designer">Designer</string>
@@ -1007,7 +1007,7 @@
     <string name="onboarding_selection_student">Studente</string>
     <string name="onboarding_selection_writer">Scrittore / Giornalista</string>
     <string name="onboarding_selection_other">Altro</string>
-    <!-- Use case options -->
+    
     <string name="onboarding_usecase_title">Per cosa vuoi utilizzare Aparok?</string>
     <string name="onboarding_usecase_description">Scegli il caso d\'uso più adatto alle tue esigenze</string>
     <string name="onboarding_usecase_habit_tracking">Monitoraggio delle abitudini</string>
@@ -1018,8 +1018,8 @@
     <string name="onboarding_usecase_projects">Gestione dei progetti &amp; delle attività</string>
     <string name="onboarding_usecase_team_work">Lavoro di squadra &amp; documenti condivisi</string>
     <string name="onboarding_usecase_other">Altro</string>
-    <!--endregion-->
-    <!--region WIDGETS -->
+    
+    
     <string name="create_widget">Create a widget</string>
     <string name="edit_widgets">Modifica</string>
     <string name="add_widget">Aggiungi</string>
@@ -1044,8 +1044,8 @@
     <string name="widget_empty_bin">Svuota Cestino</string>
     <string name="widget_edit_widgets">Modifica Widgets</string>
     <string name="widget_auto_created_toast">Widget %1$s has been added</string>
-    <!--endregion-->
-    <!--region LIBRARY -->
+    
+    
     <string name="library_title_types">Types</string>
     <string name="library_title_relations">Proprietà</string>
     <string name="library_description_types">Types are like categories that help you group and manage your objects.</string>
@@ -1068,8 +1068,8 @@
     <string name="type_creation_new_type">New type</string>
     <string name="type_creation_done">Fatto</string>
     <string name="type_creation_placeholder">Type name</string>
-    <!--endregion-->
-    <!--region ONBOARDING -->
+    
+    
     <string name="onboarding_auth_title">Crittografato, locale,</string>
     <string name="onboarding_auth_subtitle">tuo per sempre</string>
     <string name="onboarding_auth_description">Crittografato, locale,</string>
@@ -1113,17 +1113,17 @@
     <string name="onboarding_how_to_save_my_phrase">Come salvare la mia Chiave?</string>
     <string name="onboarding_how_to_save_my_phrase_2">Il modo più semplice per conservare la tua Chiave è salvarla nel tuo gestore di password.</string>
     <string name="onboarding_how_to_save_my_phrase_3">Il modo più sicuro è scriverlo su carta e tenerlo offline, in un luogo sicuro.</string>
-    <!--endregion-->
-    <!--region OBJECT ACTIONS -->
+    
+    
     <string name="object_action_duplicate">Duplica</string>
     <string name="object_action_to_widgets">Pin</string>
     <string name="object_action_download">Scarica</string>
-    <!--endregion-->
-    <!--region SEARCH -->
+    
+    
     <string name="nothing_found">Nessun risultato trovato</string>
     <string name="nothing_found_object_types">Nessun tipo di oggetto trovato. Si prega di provare a cambiare la richiesta.</string>
-    <!--endregion-->
-    <!--region CONTENT DESCRIPTIONS FOR ACCESSIBILITY -->
+    
+    
     <string name="content_description_delete_button">Delete button</string>
     <string name="content_description_duplicate_button">Duplicate button</string>
     <string name="content_description_edit_view_button">Edit-view button</string>
@@ -1138,16 +1138,16 @@
     <string name="content_desc_object_icon">Object image or emoji</string>
     <string name="content_desc_checkbox_icon">Checkbox icon</string>
     <string name="content_desc_layout_icon">Layout icon</string>
-    <!--endregion-->
-    <!--region BUTTONS -->
+    
+    
     <string name="button_okay">Okay</string>
     <string name="button_close">Chiudi</string>
-    <!--endregion-->
-    <!--region ALERTS -->
+    
+    
     <string name="alert_gallery_unsupported_title">La galleria sarà supportata presto</string>
     <string name="alert_gallery_unsupported_description">Per favore usa l\'applicazione desktop per ora.</string>
-    <!--endregion-->
-    <!--region SHARING MENU -->
+    
+    
     <string name="sharing_menu_save_as_section_name">Salva come</string>
     <string name="sharing_menu_save_as_note_option">Nota</string>
     <string name="sharing_menu_save_as_bookmark_option">Segnalibro</string>
@@ -1163,7 +1163,7 @@
     <string name="sharing_menu_toast_object_added">Nuovo oggetto aggiunto allo spazio \'%1$s\'</string>
     <string name="sharing_menu_btn_add">Aggiungi</string>
     <string name="sharing_menu_btn_open">Apri</string>
-    <!-- Snackbar messages for content added to chat -->
+    
     <string name="sharing_snackbar_image_added">Image added to \'%1$s\'</string>
     <string name="sharing_snackbar_images_added">Images added to \'%1$s\'</string>
     <string name="sharing_snackbar_video_added">Video added to \'%1$s\'</string>
@@ -1174,7 +1174,7 @@
     <string name="sharing_snackbar_text_added">Text added to \'%1$s\'</string>
     <string name="sharing_snackbar_link_added">Link added to \'%1$s\'</string>
     <string name="sharing_snackbar_content_added">Content added to \'%1$s\'</string>
-    <!-- Snackbar messages for content linked to an object in a space -->
+    
     <string name="sharing_snackbar_image_linked">Image linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_images_linked">Images linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_video_linked">Video linked to \'%1$s\' in \'%2$s\'</string>
@@ -1185,8 +1185,8 @@
     <string name="sharing_snackbar_text_linked">Text linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_link_linked">Link linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_content_linked">Content linked to \'%1$s\' in \'%2$s\'</string>
-    <!--endregion-->
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
+    
     <string name="relation_origin_none">Nessuno</string>
     <string name="relation_origin_clipboard">Appunti</string>
     <string name="relation_origin_dnd">Trascina &amp; Rilascia</string>
@@ -1196,7 +1196,7 @@
     <string name="relation_origin_use_case">Caso d\'uso</string>
     <string name="relation_origin_library_installed">Libreria installata</string>
     <string name="relation_origin_bookmark">Segnalibro</string>
-    <!--endregion-->
+    
     <plurals name="backlinks_count">
         <item quantity="one">%d backlink</item>
         <item quantity="other">%d backlinks</item>
@@ -1205,7 +1205,7 @@
         <item quantity="one">%d collegamento</item>
         <item quantity="other">%d collegamenti</item>
     </plurals>
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
     <string name="date_type_tomorrow">Domani</string>
     <string name="date_type_today">Oggi</string>
     <string name="date_type_yesterday">Ieri</string>
@@ -1216,7 +1216,7 @@
     <string name="dates_days_from">%1$s giorni da adesso</string>
     <string name="number_days_from">Numero di giorni da adesso</string>
     <string name="number_days_ago">Numero di giorni fa</string>
-    <!-- Date filter quick options -->
+    
     <string name="dates_filter_exact_day">Giorno esatto</string>
     <string name="dates_filter_last_week">Settimana scorsa</string>
     <string name="dates_filter_current_week">Settimana corrente</string>
@@ -1229,7 +1229,7 @@
     <string name="dates_filter_next_year">L\'anno prossimo</string>
     <string name="settings_use_yamux">Usa QUIC</string>
     <string name="settings_share_local_logs">Condividi i log locali</string>
-    <!--endregion-->
+    
     <string name="error_kanban_view_not_supported">La vista Kanban non è ancora disponibile su mobile.\nCambia tipo di visualizzazione (Impostazioni -&gt; Vista) o crea una nuova per accedere ai tuoi dati.</string>
     <string name="error_calendar_view_not_supported">La vista Calendario non è ancora disponibile su mobile.\nCambia tipo di visualizzazione (Impostazioni -&gt; Vista) o crea una nuova per accedere ai tuoi dati.\"</string>
     <string name="error_graph_view_not_supported">La vista grafo non è ancora disponibile su mobile.\nCambia il tipo di vista (Impostazioni -&gt; Vista) o creane una nuova per accedere ai tuoi dati.</string>
@@ -1259,7 +1259,7 @@
     <string name="hint_enter_name">Inserisci nome...</string>
     <string name="create_object">Crea oggetto</string>
     <string name="msg_query_cannot_be_changed">Questa query può essere modificata solo su desktop</string>
-    <!--region ONBOARDING ERRORS -->
+    
     <string name="error_invalid_recovery_phrase">Chiave non valida</string>
     <string name="network">Rete</string>
     <string name="network_with_colon">Rete:</string>
@@ -1275,8 +1275,8 @@
     <string name="network_settings_self_host_config">Configurazione attuale: %1$s</string>
     <string name="widget_types_show">Mostra tipi</string>
     <string name="widget_types_hide">Nascondi tipi</string>
-    <!--endregion-->
-    <!--region MULTIPLAYER -->
+    
+    
     <string name="multiplayer_share_invite_link">Condividi il link di invito</string>
     <string name="multiplayer_share_invite_link_menu">Condividi link</string>
     <string name="multiplayer_qr_invite_link_menu">Mostra codice QR</string>
@@ -1438,18 +1438,8 @@
     <string name="multiplayer_invite_link_this_link_does_not_seem_to_work">Questo link sembra non funzionare</string>
     <string name="multiplayer_invite_link_space_not_found">Questo link di invito non è più valido perché lo spazio non è stato trovato.</string>
     <string name="multiplayer_invite_link_request_already_sent">Richiesta inviata</string>
-    <!--endregion-->
-    <!--region PAYMENTS -->
-    <!-- Tier details --><item>10 spazi uno-a-uno</item>
-<item>128 GB di spazio nella rete</item>
-<item>Supporto prioritario</item>
-<item>256 GB di spazio nella rete</item>
-<item>Chatta con il team</item>
-<!-- Payments Code -->
-    <!-- Membership Welcome -->
-    <!-- Membership Email -->
-    <!-- Membership name errors -->
-    <!-- Notifications -->
+    
+    
     <string name="notifications_alert_error_unknown">Si è verificato un errore sconosciuto. Ti preghiamo di riprovare più tardi.</string>
     <string name="notifications_alert_error_bad_input">Rilevato un inserimento non valido. Per favore controlla i tuoi dati e riprova.</string>
     <string name="notifications_alert_error_internal">Si è verificato un errore interno. Il nostro team è stato notificato.</string>
@@ -1458,7 +1448,7 @@
     <string name="notifications_alert_error_limit_exceeded">The import limit for rows or properties has been exceeded. Please reduce the amount and try again.</string>
     <string name="notifications_alert_error_file_load">Si è verificato un errore durante il caricamento del file. Controlla il file e riprova.</string>
     <string name="notifications_alert_error_insufficient_permissions">Non hai i permessi necessari per eseguire questa azione. Controlla le tue autorizzazioni e riprova.</string>
-    <!-- Gallery Experience -->
+    
     <string name="gallery_experience_made">Realizzato da</string>
     <string name="gallery_experience_install">Installa</string>
     <string name="gallery_experience_install_new">Installa in un nuovo spazio</string>
@@ -1584,7 +1574,7 @@
     <string name="introduce_vault_text_2">Ora puoi facilmente riordinare i tuoi Spazi usando il drag and drop e navigarli più facilmente.</string>
     <string name="introduce_vault_text_3">Per impostazione predefinita, sfumiamo l\'icona del tuo spazio come sfondo. Se necessario, puoi modificarla nelle impostazioni dello spazio.</string>
     <string name="introduce_vault_welcome_to_the_vault">Benvenuto nella Cassaforte</string>
-    <string name="introduce_vault_simple_flexible"><![CDATA[Semplice & Flessibile]]></string>
+    <string name="introduce_vault_simple_flexible">Semplice &amp; Flessibile</string>
     <string name="allContent_empty_state_title">È vuoto qui.</string>
     <string name="allContent_empty_state_description">Crea i tuoi primi oggetti per iniziare.</string>
     <string name="all_content_no_results_title">Nessun risultato trovato.</string>
@@ -1819,7 +1809,7 @@
     <string name="space_properties_screen_section_system_types">Proprietà Di Sistema</string>
     <string name="space_properties_screen_menu_move_to_bin">Sposta nel cestino</string>
     <string name="onboarding_error_while_creating_account_space_is_missing">Errore durante la creazione dell\'account: manca lo spazio</string>
-    <!-- Account creation error messages -->
+    
     <string name="onboarding_error_network_error">Impossibile creare un account a causa di un errore di rete. Controllare la connessione.</string>
     <string name="onboarding_error_offline_device">Il dispositivo sembra essere offline. Controllare la connessione e riprovare.</string>
     <string name="onboarding_error_account_created_but_failed_to_start_node">L\'account è stato creato ma non è riuscito ad avviare il nodo. Prova ad accedere.</string>
@@ -1850,7 +1840,7 @@
     <string name="vault_create_space_description">Per contenuti e dati organizzati</string>
     <string name="vault_create_personal">Personal</string>
     <string name="vault_create_group">Group</string>
-    <!-- Spaces Introduction Popup -->
+    
     <string name="spaces_introduction_page1_title">Le idee hanno bisogno di conversazioni</string>
     <string name="spaces_introduction_page1_description">Aparok ora supporta la chat in tempo reale nei Canali Condivisi — in modo che i tuoi pensieri e dialoghi possano crescere insieme.</string>
     <string name="spaces_introduction_page2_title">La tua Cassaforte è appena salita di livello</string>
@@ -1888,7 +1878,7 @@
     <string name="content_desc_muted">Silenziato</string>
     <string name="content_desc_pending_sync">Pending sync</string>
     <string name="failed_to_load_image">Impossibile caricare l\'immagine</string>
-    <!-- Vault Screen - Join via QR -->
+    
     <string name="vault_join_via_qr">Unisciti tramite QR Code</string>
     <string name="channel_select_members_title">Select members</string>
     <string name="channel_next">Avanti</string>
@@ -1904,11 +1894,11 @@
     <string name="open_settings">Apri Impostazioni</string>
     <string name="allow">Allow</string>
     <string name="attachment_image">Immagine allegata</string>
-    <!-- Shared Space Limit (DROID-4388) -->
+    
     <string name="vault_shared_space_limit_title">Shared space limit reached</string>
     <string name="vault_shared_space_limit_description">Your plan allows %1$d shared spaces. Upgrade your membership to create more.</string>
     <string name="vault_manage_channels">Manage Channels</string>
-    <!-- Attachment Menu (DROID-4201) -->
+    
     <string name="attachment_menu_photos">Foto</string>
     <string name="attachment_menu_camera">Fotocamera</string>
     <string name="attachment_menu_files">File</string>
@@ -1920,7 +1910,7 @@
     <string name="create_object_search_types">Search object types</string>
     <string name="create_object_error">Failed to load object types</string>
     <string name="create_object_retry">Retry</string>
-    <!-- Share Space Errors -->
+    
     <string name="share_space_error_limit_reached">Limite raggiunto per questo spazio. Aggiorna il tuo abbonamento o contatta il supporto per assistenza.</string>
     <string name="share_space_error_not_shareable">Sembra che lo spazio non sia più condiviso. Assicurati che i tuoi dispositivi siano sincronizzati.</string>
     <string name="share_space_error_request_failed">Ops! La richiesta è fallita. Controlla la tua connessione Internet e prova di nuovo.</string>
@@ -1981,7 +1971,7 @@
     <string name="any_id_info_title">This is your ANY ID</string>
     <string name="any_id_info_description">Become a member to make your ID human-readable, so other members can easily find and connect with you.</string>
     <string name="any_id_info_button">Explore plans</string>
-    <!-- Multiplayer actions -->
+    
     <string name="multiplayer_approve">Approva</string>
     <string name="chats_warning_you_can_upload_only_10_files_at_a_time">È possibile caricare solo 10 file alla volta</string>
     <string name="chat_pinned_as_widget_success">Questa chat è stata fissata ai tuoi widget.</string>
@@ -2000,7 +1990,7 @@
     <string name="media_object_in_bin">Questo oggetto è nel cestino. Vuoi ripristinarlo?</string>
     <string name="toast_restored">Oggetto ripristinato.</string>
     <string name="participant_btn_connect">Connetti</string>
-    <!-- Sharing Extension Redesign -->
+    
     <string name="sharing_select_destination">Seleziona destinazione</string>
     <string name="sharing_send_to_chat">Invia in chat</string>
     <string name="sharing_select_dest">Seleziona destinazione</string>
@@ -2016,7 +2006,7 @@
     <string name="save">Salva</string>
     <string name="you_dont_have_any_spaces_yet">You don\'t have any spaces yet</string>
     <string name="loading_channels">Loading channels</string>
-    <!-- OS Widgets -->
+    
     <string name="os_widget_spaces_title">Spazi</string>
     <string name="os_widget_spaces_description">Accesso rapido ai tuoi spazi fissati</string>
     <string name="os_widget_create_object_title">Nuovo Oggetto</string>
@@ -2033,7 +2023,7 @@
     <string name="select_view">Seleziona vista</string>
     <string name="os_widget_data_view_title">Visualizzazione dati</string>
     <string name="os_widget_data_view_description">Visualizza gli elementi di un Insieme o di una Collezione</string>
-    <!-- DROID-4358 Offline Downloads settings -->
+    
     <string name="offline_downloads_section_title">Offline access</string>
     <string name="offline_downloads_title">Offline Downloads</string>
     <string name="offline_downloads_subtitle">Auto sync files up to a selected size</string>

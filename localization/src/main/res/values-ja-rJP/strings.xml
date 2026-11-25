@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="about">このアプリについて</string>
     <string name="app_version">アプリバージョン</string>
     <string name="library">ライブラリ</string>
     <string name="user_id">ユーザーID</string>
-    <string name="account_and_data"><![CDATA[アカウントとデータ]]></string>
+    <string name="account_and_data">アカウントとデータ</string>
     <string name="profile">プロフィール</string>
     <string name="personalization">パーソナライズ</string>
     <string name="appearance">外観</string>
@@ -762,7 +762,7 @@
     <string name="are_you_sure_delete_n_objects">本当に%1$d個のオブジェクトを削除してもよろしいですか？</string>
     <string name="delete_irrevocably">これらのオブジェクトは完全に削除されます。この操作は取り消せません。</string>
     <string name="delete_irrevocably_one_object">このオブジェクトは完全に削除されます。この操作は取り消せません。</string>
-    <!-- Object Type Deletion Confirmation -->
+    
     <string name="move_type_to_bin_title">Move \"%s\" to Bin?</string>
     <string name="move_type_to_bin_description">Some objects use this type. Select the ones you also want to delete. Objects you don\'t select will remain but lose their type.</string>
     <string name="move_type_to_bin_no_objects">There are no objects of this type</string>
@@ -863,7 +863,7 @@
     <string name="create_space_change_icon">アイコンを変更</string>
     <string name="create_space_chat_name">Chat name</string>
     <string name="create_space_space_name">スペース名</string>
-    <!-- Homepage Picker -->
+    
     <string name="homepage_picker_title">Create Home</string>
     <string name="homepage_picker_description">Select what you and channel members see when they open the channel. You can always change it in settings.</string>
     <string name="homepage_picker_chat">チャット</string>
@@ -911,7 +911,7 @@
     <string name="create_object_section_library">Aparokライブラリ</string>
     <string name="bin_empty_title">ごみ箱が空です。</string>
     <string name="bin_empty_subtitle">きれいに片付いていますね！</string>
-    <!--region SLASH WIDGET -->
+    
     <string name="slash_widget_main_style">スタイル</string>
     <string name="slash_widget_main_media">メディア</string>
     <string name="slash_widget_main_objects">オブジェクト</string>
@@ -990,10 +990,10 @@
     <string name="slash_widget_teal_color_title">青緑色</string>
     <string name="slash_widget_lime_color_title">緑色</string>
     <string name="slash_widget_background_item">%1$sの背景</string>
-    <!-- Onboarding: persona selection & use cases (iOS parity) -->
+    
     <string name="onboarding_selection_title">Tell Us About Yourself</string>
     <string name="onboarding_selection_description">Select one role or background that best fits you</string>
-    <!-- Persona options -->
+    
     <string name="onboarding_selection_artist">Artist / Content Creator</string>
     <string name="onboarding_selection_consultant">Consultant</string>
     <string name="onboarding_selection_designer">Designer</string>
@@ -1005,7 +1005,7 @@
     <string name="onboarding_selection_student">Student</string>
     <string name="onboarding_selection_writer">Writer / Journalist</string>
     <string name="onboarding_selection_other">その他</string>
-    <!-- Use case options -->
+    
     <string name="onboarding_usecase_title">What do you want to use Aparok for?</string>
     <string name="onboarding_usecase_description">Pick one use case that fits you best</string>
     <string name="onboarding_usecase_habit_tracking">Habit tracking</string>
@@ -1016,8 +1016,8 @@
     <string name="onboarding_usecase_projects">Projects &amp; tasks management</string>
     <string name="onboarding_usecase_team_work">Team work &amp; shared docs</string>
     <string name="onboarding_usecase_other">その他</string>
-    <!--endregion-->
-    <!--region WIDGETS -->
+    
+    
     <string name="create_widget">ウィジェットを作成</string>
     <string name="edit_widgets">編集</string>
     <string name="add_widget">追加</string>
@@ -1042,8 +1042,8 @@
     <string name="widget_empty_bin">空のごみ箱</string>
     <string name="widget_edit_widgets">ウィジェットを編集</string>
     <string name="widget_auto_created_toast">ウィジェット %1$sが追加されました</string>
-    <!--endregion-->
-    <!--region LIBRARY -->
+    
+    
     <string name="library_title_types">タイプ</string>
     <string name="library_title_relations">プロパティ</string>
     <string name="library_description_types">オブジェクトを整理するための分類がタイプです。</string>
@@ -1066,8 +1066,8 @@
     <string name="type_creation_new_type">新しいタイプ</string>
     <string name="type_creation_done">完了</string>
     <string name="type_creation_placeholder">タイプ名</string>
-    <!--endregion-->
-    <!--region ONBOARDING -->
+    
+    
     <string name="onboarding_auth_title">Encrypted, local,</string>
     <string name="onboarding_auth_subtitle">yours forever</string>
     <string name="onboarding_auth_description">Encrypted, local,</string>
@@ -1111,17 +1111,17 @@
     <string name="onboarding_how_to_save_my_phrase">おすすめの保管方法は？</string>
     <string name="onboarding_how_to_save_my_phrase_2">最も簡単な方法は、パスワードマネージャーを使うことです。</string>
     <string name="onboarding_how_to_save_my_phrase_3">最も安全な方法は、紙に書いて、ネットから切り離した安全な場所に保管することです。</string>
-    <!--endregion-->
-    <!--region OBJECT ACTIONS -->
+    
+    
     <string name="object_action_duplicate">複製</string>
     <string name="object_action_to_widgets">ピン留め</string>
     <string name="object_action_download">ダウンロード</string>
-    <!--endregion-->
-    <!--region SEARCH -->
+    
+    
     <string name="nothing_found">何も見つかりませんでした</string>
     <string name="nothing_found_object_types">オブジェクトタイプが見つかりませんでした。リクエストを変更してみてください。</string>
-    <!--endregion-->
-    <!--region CONTENT DESCRIPTIONS FOR ACCESSIBILITY -->
+    
+    
     <string name="content_description_delete_button">削除ボタン</string>
     <string name="content_description_duplicate_button">複製ボタン</string>
     <string name="content_description_edit_view_button">ビュー編集ボタン</string>
@@ -1136,16 +1136,16 @@
     <string name="content_desc_object_icon">オブジェクト画像または絵文字</string>
     <string name="content_desc_checkbox_icon">チェックボックスアイコン</string>
     <string name="content_desc_layout_icon">レイアウトアイコン</string>
-    <!--endregion-->
-    <!--region BUTTONS -->
+    
+    
     <string name="button_okay">了解</string>
     <string name="button_close">閉じる</string>
-    <!--endregion-->
-    <!--region ALERTS -->
+    
+    
     <string name="alert_gallery_unsupported_title">ギャラリーはまもなくサポートされます</string>
     <string name="alert_gallery_unsupported_description">現時点ではデスクトップ版をご利用ください</string>
-    <!--endregion-->
-    <!--region SHARING MENU -->
+    
+    
     <string name="sharing_menu_save_as_section_name">名前を付けて保存</string>
     <string name="sharing_menu_save_as_note_option">ノート</string>
     <string name="sharing_menu_save_as_bookmark_option">ブックマーク</string>
@@ -1161,7 +1161,7 @@
     <string name="sharing_menu_toast_object_added">新しいオブジェクトがスペース「%1$s」に追加されました</string>
     <string name="sharing_menu_btn_add">追加</string>
     <string name="sharing_menu_btn_open">開く</string>
-    <!-- Snackbar messages for content added to chat -->
+    
     <string name="sharing_snackbar_image_added">Image added to \'%1$s\'</string>
     <string name="sharing_snackbar_images_added">Images added to \'%1$s\'</string>
     <string name="sharing_snackbar_video_added">Video added to \'%1$s\'</string>
@@ -1172,7 +1172,7 @@
     <string name="sharing_snackbar_text_added">Text added to \'%1$s\'</string>
     <string name="sharing_snackbar_link_added">Link added to \'%1$s\'</string>
     <string name="sharing_snackbar_content_added">Content added to \'%1$s\'</string>
-    <!-- Snackbar messages for content linked to an object in a space -->
+    
     <string name="sharing_snackbar_image_linked">Image linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_images_linked">Images linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_video_linked">Video linked to \'%1$s\' in \'%2$s\'</string>
@@ -1183,8 +1183,8 @@
     <string name="sharing_snackbar_text_linked">Text linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_link_linked">Link linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_content_linked">Content linked to \'%1$s\' in \'%2$s\'</string>
-    <!--endregion-->
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
+    
     <string name="relation_origin_none">なし</string>
     <string name="relation_origin_clipboard">クリップボード</string>
     <string name="relation_origin_dnd">ドラッグ &amp; ドロップ</string>
@@ -1194,14 +1194,14 @@
     <string name="relation_origin_use_case">活用例</string>
     <string name="relation_origin_library_installed">インストールされました</string>
     <string name="relation_origin_bookmark">ブックマーク</string>
-    <!--endregion-->
+    
     <plurals name="backlinks_count">
         <item quantity="other">%d個のバックリンク</item>
     </plurals>
     <plurals name="links_from_count">
         <item quantity="other">%d件のリンク</item>
     </plurals>
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
     <string name="date_type_tomorrow">明日</string>
     <string name="date_type_today">今日</string>
     <string name="date_type_yesterday">昨日</string>
@@ -1212,7 +1212,7 @@
     <string name="dates_days_from">%1$s日後</string>
     <string name="number_days_from">今日からの何日後</string>
     <string name="number_days_ago">今日からの何日前</string>
-    <!-- Date filter quick options -->
+    
     <string name="dates_filter_exact_day">特定の日付</string>
     <string name="dates_filter_last_week">先週</string>
     <string name="dates_filter_current_week">今週</string>
@@ -1225,7 +1225,7 @@
     <string name="dates_filter_next_year">来年</string>
     <string name="settings_use_yamux">QUICを使用</string>
     <string name="settings_share_local_logs">ローカルログを共有</string>
-    <!--endregion-->
+    
     <string name="error_kanban_view_not_supported">モバイル版では、まだボードビューに対応していません。\nビューの種類を変更するか（設定 -&gt; ビュー）、新しく作成してください。</string>
     <string name="error_calendar_view_not_supported">モバイル版では、まだカレンダービューに対応していません。\nビューの種類を変更するか（設定 -&gt; ビュー）、新しく作成してください。</string>
     <string name="error_graph_view_not_supported">モバイル版では、まだグラフビューに対応していません。\nビューの種類を変更するか（設定 -&gt; ビュー）、新しく作成してください。</string>
@@ -1254,7 +1254,7 @@
     <string name="hint_enter_name">名前を入力…</string>
     <string name="create_object">オブジェクトを作成</string>
     <string name="msg_query_cannot_be_changed">このクエリはデスクトップ版でのみ変更できます</string>
-    <!--region ONBOARDING ERRORS -->
+    
     <string name="error_invalid_recovery_phrase">鍵が正しくありません</string>
     <string name="network">ネットワーク</string>
     <string name="network_with_colon">ネットワーク：</string>
@@ -1270,8 +1270,8 @@
     <string name="network_settings_self_host_config">現在の設定：%1$s</string>
     <string name="widget_types_show">種類を表示</string>
     <string name="widget_types_hide">種類を非表示</string>
-    <!--endregion-->
-    <!--region MULTIPLAYER -->
+    
+    
     <string name="multiplayer_share_invite_link">招待リンクを共有</string>
     <string name="multiplayer_share_invite_link_menu">招待リンク</string>
     <string name="multiplayer_qr_invite_link_menu">QRコードを表示</string>
@@ -1431,18 +1431,8 @@
     <string name="multiplayer_invite_link_this_link_does_not_seem_to_work">このリンクは利用できません</string>
     <string name="multiplayer_invite_link_space_not_found">この招待リンクは無効です。スペースが見つかりませんでした。</string>
     <string name="multiplayer_invite_link_request_already_sent">リクエストを送信しました</string>
-    <!--endregion-->
-    <!--region PAYMENTS -->
-    <!-- Tier details --><item>10個までの1対1のスペース</item>
-<item>128 GBのネットワークストレージ</item>
-<item>優先サポート</item>
-<item>256GBのネットワークストレージ</item>
-<item>チームとのチャット</item>
-<!-- Payments Code -->
-    <!-- Membership Welcome -->
-    <!-- Membership Email -->
-    <!-- Membership name errors -->
-    <!-- Notifications -->
+    
+    
     <string name="notifications_alert_error_unknown">不明なエラーが発生しました。あとでもう一度お試しください。</string>
     <string name="notifications_alert_error_bad_input">無効な入力が検出されました。データを確認して、もう一度やり直してください。</string>
     <string name="notifications_alert_error_internal">内部エラーが発生しました。開発チームに報告されました。</string>
@@ -1451,7 +1441,7 @@
     <string name="notifications_alert_error_limit_exceeded">行またはプロパティのインポート件数が上限を超えています。量を減らしてやり直してください。</string>
     <string name="notifications_alert_error_file_load">ファイルの読み込み中にエラーが発生しました。ファイルを確認してもう一度お試しください。</string>
     <string name="notifications_alert_error_insufficient_permissions">このアクションを実行するために必要な権限がありません。権限を確認して、もう一度やり直してください。</string>
-    <!-- Gallery Experience -->
+    
     <string name="gallery_experience_made">作成者</string>
     <string name="gallery_experience_install">インポート</string>
     <string name="gallery_experience_install_new">新しいスペースにインポート</string>
@@ -1570,7 +1560,7 @@
     <string name="introduce_vault_text_2">ドラッグ＆ドロップで、スペースの並び順を変えられるようになりました。これにより、スペース間の移動がさらに楽になります。</string>
     <string name="introduce_vault_text_3">スペースの背景には、ぼかしたアイコンが表示されるようになりました。スペースの設定画面から変更することができます。</string>
     <string name="introduce_vault_welcome_to_the_vault">保管庫へようこそ</string>
-    <string name="introduce_vault_simple_flexible"><![CDATA[シンプルかつ柔軟]]></string>
+    <string name="introduce_vault_simple_flexible">シンプルかつ柔軟</string>
     <string name="allContent_empty_state_title">何もありません。</string>
     <string name="allContent_empty_state_description">最初のプロジェクトを作成して、使い始めましょう。</string>
     <string name="all_content_no_results_title">該当する結果が見つかりませんでした。</string>
@@ -1805,7 +1795,7 @@
     <string name="space_properties_screen_section_system_types">標準プロパティ</string>
     <string name="space_properties_screen_menu_move_to_bin">ゴミ箱に移動</string>
     <string name="onboarding_error_while_creating_account_space_is_missing">アカウント作成中にエラーが発生しました：スペースがありません</string>
-    <!-- Account creation error messages -->
+    
     <string name="onboarding_error_network_error">ネットワークエラーのためアカウントを作成できませんでした。接続を確認してください。</string>
     <string name="onboarding_error_offline_device">デバイスがオフラインのようです。接続を確認して、もう一度お試しください。</string>
     <string name="onboarding_error_account_created_but_failed_to_start_node">アカウントが作成されましたが、ノードを開始できませんでした。ログインしてみてください。</string>
@@ -1836,7 +1826,7 @@
     <string name="vault_create_space_description">For organized content and data</string>
     <string name="vault_create_personal">Personal</string>
     <string name="vault_create_group">Group</string>
-    <!-- Spaces Introduction Popup -->
+    
     <string name="spaces_introduction_page1_title">Ideas need conversations</string>
     <string name="spaces_introduction_page1_description">Aparok now supports real-time chat in Shared Channels — so your thoughts and dialogues can grow together.</string>
     <string name="spaces_introduction_page2_title">Your Vault just leveled up</string>
@@ -1874,7 +1864,7 @@
     <string name="content_desc_muted">ミュート</string>
     <string name="content_desc_pending_sync">Pending sync</string>
     <string name="failed_to_load_image">画像を読み込めませんでした</string>
-    <!-- Vault Screen - Join via QR -->
+    
     <string name="vault_join_via_qr">QRコードで参加</string>
     <string name="channel_select_members_title">Select members</string>
     <string name="channel_next">次へ</string>
@@ -1890,11 +1880,11 @@
     <string name="open_settings">設定を開く</string>
     <string name="allow">許可</string>
     <string name="attachment_image">添付画像</string>
-    <!-- Shared Space Limit (DROID-4388) -->
+    
     <string name="vault_shared_space_limit_title">Shared space limit reached</string>
     <string name="vault_shared_space_limit_description">Your plan allows %1$d shared spaces. Upgrade your membership to create more.</string>
     <string name="vault_manage_channels">Manage Channels</string>
-    <!-- Attachment Menu (DROID-4201) -->
+    
     <string name="attachment_menu_photos">画像</string>
     <string name="attachment_menu_camera">カメラ</string>
     <string name="attachment_menu_files">ファイル</string>
@@ -1906,7 +1896,7 @@
     <string name="create_object_search_types">Search object types</string>
     <string name="create_object_error">Failed to load object types</string>
     <string name="create_object_retry">再試行</string>
-    <!-- Share Space Errors -->
+    
     <string name="share_space_error_limit_reached">このスペースの上限に達しました。メンバーシップをアップグレードするか、担当者にお問い合わせください。</string>
     <string name="share_space_error_not_shareable">スペース共有が停止されたようです。デバイスの同期状況をご確認ください。</string>
     <string name="share_space_error_request_failed">申し訳ありません。リクエストの送信に失敗しました。インターネット接続を確認し、もう一度お試しください。</string>
@@ -1966,7 +1956,7 @@
     <string name="any_id_info_title">This is your ANY ID</string>
     <string name="any_id_info_description">Become a member to make your ID human-readable, so other members can easily find and connect with you.</string>
     <string name="any_id_info_button">Explore plans</string>
-    <!-- Multiplayer actions -->
+    
     <string name="multiplayer_approve">Approve</string>
     <string name="chats_warning_you_can_upload_only_10_files_at_a_time">You can upload only 10 files at a time</string>
     <string name="chat_pinned_as_widget_success">This chat has been pinned to your widgets.</string>
@@ -1985,7 +1975,7 @@
     <string name="media_object_in_bin">This object is in the bin. Restore it?</string>
     <string name="toast_restored">Object restored.</string>
     <string name="participant_btn_connect">Connect</string>
-    <!-- Sharing Extension Redesign -->
+    
     <string name="sharing_select_destination">Select destination</string>
     <string name="sharing_send_to_chat">チャットに送信</string>
     <string name="sharing_select_dest">Select destination</string>
@@ -2001,7 +1991,7 @@
     <string name="save">保存</string>
     <string name="you_dont_have_any_spaces_yet">You don\'t have any spaces yet</string>
     <string name="loading_channels">Loading channels</string>
-    <!-- OS Widgets -->
+    
     <string name="os_widget_spaces_title">Spaces</string>
     <string name="os_widget_spaces_description">Quick access to your pinned spaces</string>
     <string name="os_widget_create_object_title">新しいオブジェクト</string>
@@ -2018,7 +2008,7 @@
     <string name="select_view">Select view</string>
     <string name="os_widget_data_view_title">Data View</string>
     <string name="os_widget_data_view_description">Display items from a Set or Collection</string>
-    <!-- DROID-4358 Offline Downloads settings -->
+    
     <string name="offline_downloads_section_title">Offline access</string>
     <string name="offline_downloads_title">Offline Downloads</string>
     <string name="offline_downloads_subtitle">Auto sync files up to a selected size</string>

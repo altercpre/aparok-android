@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="about">Про застосунок</string>
     <string name="app_version">App version</string>
     <string name="library">Library</string>
     <string name="user_id">User ID</string>
-    <string name="account_and_data"><![CDATA[Account & Data]]></string>
+    <string name="account_and_data">Account &amp; Data</string>
     <string name="profile">Обліковий запис</string>
     <string name="personalization">Персоналізація</string>
     <string name="appearance">Оформлення</string>
@@ -765,7 +765,7 @@
     <string name="are_you_sure_delete_n_objects">Are you sure you want to delete %1$d objects?</string>
     <string name="delete_irrevocably">These objects will be deleted irrevocably. You can\'t undo this action.</string>
     <string name="delete_irrevocably_one_object">This object will be deleted irrevocably. You can\'t undo this action.</string>
-    <!-- Object Type Deletion Confirmation -->
+    
     <string name="move_type_to_bin_title">Move \"%s\" to Bin?</string>
     <string name="move_type_to_bin_description">Some objects use this type. Select the ones you also want to delete. Objects you don\'t select will remain but lose their type.</string>
     <string name="move_type_to_bin_no_objects">There are no objects of this type</string>
@@ -869,7 +869,7 @@
     <string name="create_space_change_icon">Змінити іконку</string>
     <string name="create_space_chat_name">Chat name</string>
     <string name="create_space_space_name">Назва простору</string>
-    <!-- Homepage Picker -->
+    
     <string name="homepage_picker_title">Create Home</string>
     <string name="homepage_picker_description">Select what you and channel members see when they open the channel. You can always change it in settings.</string>
     <string name="homepage_picker_chat">Chat</string>
@@ -917,7 +917,7 @@
     <string name="create_object_section_library">Бібліотека Aparok</string>
     <string name="bin_empty_title">Your bin is empty.</string>
     <string name="bin_empty_subtitle">Looks like you’re all tidy and organized!</string>
-    <!--region SLASH WIDGET -->
+    
     <string name="slash_widget_main_style">Стиль</string>
     <string name="slash_widget_main_media">Медіа</string>
     <string name="slash_widget_main_objects">Об\'єкти</string>
@@ -996,10 +996,10 @@
     <string name="slash_widget_teal_color_title">Бірюзовий</string>
     <string name="slash_widget_lime_color_title">Зелений</string>
     <string name="slash_widget_background_item">%1$s background</string>
-    <!-- Onboarding: persona selection & use cases (iOS parity) -->
+    
     <string name="onboarding_selection_title">Tell Us About Yourself</string>
     <string name="onboarding_selection_description">Select one role or background that best fits you</string>
-    <!-- Persona options -->
+    
     <string name="onboarding_selection_artist">Artist / Content Creator</string>
     <string name="onboarding_selection_consultant">Consultant</string>
     <string name="onboarding_selection_designer">Designer</string>
@@ -1011,7 +1011,7 @@
     <string name="onboarding_selection_student">Student</string>
     <string name="onboarding_selection_writer">Writer / Journalist</string>
     <string name="onboarding_selection_other">Інше</string>
-    <!-- Use case options -->
+    
     <string name="onboarding_usecase_title">What do you want to use Aparok for?</string>
     <string name="onboarding_usecase_description">Pick one use case that fits you best</string>
     <string name="onboarding_usecase_habit_tracking">Habit tracking</string>
@@ -1022,8 +1022,8 @@
     <string name="onboarding_usecase_projects">Projects &amp; tasks management</string>
     <string name="onboarding_usecase_team_work">Team work &amp; shared docs</string>
     <string name="onboarding_usecase_other">Інше</string>
-    <!--endregion-->
-    <!--region WIDGETS -->
+    
+    
     <string name="create_widget">Create a widget</string>
     <string name="edit_widgets">Редагувати</string>
     <string name="add_widget">Додати</string>
@@ -1048,8 +1048,8 @@
     <string name="widget_empty_bin">Очистити кошик</string>
     <string name="widget_edit_widgets">Редагувати Віджети</string>
     <string name="widget_auto_created_toast">Widget %1$s has been added</string>
-    <!--endregion-->
-    <!--region LIBRARY -->
+    
+    
     <string name="library_title_types">Types</string>
     <string name="library_title_relations">Properties</string>
     <string name="library_description_types">Types are like categories that help you group and manage your objects.</string>
@@ -1072,8 +1072,8 @@
     <string name="type_creation_new_type">New type</string>
     <string name="type_creation_done">Готово</string>
     <string name="type_creation_placeholder">Type name</string>
-    <!--endregion-->
-    <!--region ONBOARDING -->
+    
+    
     <string name="onboarding_auth_title">Encrypted, local,</string>
     <string name="onboarding_auth_subtitle">yours forever</string>
     <string name="onboarding_auth_description">Encrypted, local,</string>
@@ -1117,17 +1117,17 @@
     <string name="onboarding_how_to_save_my_phrase">How to save my Key?</string>
     <string name="onboarding_how_to_save_my_phrase_2">The easiest way to store your Key is to save it in your password manager.</string>
     <string name="onboarding_how_to_save_my_phrase_3">Найнадійніший спосіб - записати його на папері й зберігати в надійному і безпечному місці.</string>
-    <!--endregion-->
-    <!--region OBJECT ACTIONS -->
+    
+    
     <string name="object_action_duplicate">Дублювати</string>
     <string name="object_action_to_widgets">Pin</string>
     <string name="object_action_download">Завантажити</string>
-    <!--endregion-->
-    <!--region SEARCH -->
+    
+    
     <string name="nothing_found">Nothing found</string>
     <string name="nothing_found_object_types">No object type found. Please try changing your request.</string>
-    <!--endregion-->
-    <!--region CONTENT DESCRIPTIONS FOR ACCESSIBILITY -->
+    
+    
     <string name="content_description_delete_button">Delete button</string>
     <string name="content_description_duplicate_button">Duplicate button</string>
     <string name="content_description_edit_view_button">Edit-view button</string>
@@ -1142,16 +1142,16 @@
     <string name="content_desc_object_icon">Object image or emoji</string>
     <string name="content_desc_checkbox_icon">Checkbox icon</string>
     <string name="content_desc_layout_icon">Layout icon</string>
-    <!--endregion-->
-    <!--region BUTTONS -->
+    
+    
     <string name="button_okay">Okay</string>
     <string name="button_close">Close</string>
-    <!--endregion-->
-    <!--region ALERTS -->
+    
+    
     <string name="alert_gallery_unsupported_title">Gallery will be supported soon</string>
     <string name="alert_gallery_unsupported_description">Please use the desktop app for now.</string>
-    <!--endregion-->
-    <!--region SHARING MENU -->
+    
+    
     <string name="sharing_menu_save_as_section_name">Save as</string>
     <string name="sharing_menu_save_as_note_option">Нотатка</string>
     <string name="sharing_menu_save_as_bookmark_option">Закладка</string>
@@ -1167,7 +1167,7 @@
     <string name="sharing_menu_toast_object_added">New object is added to the space \'%1$s\'</string>
     <string name="sharing_menu_btn_add">Додати</string>
     <string name="sharing_menu_btn_open">Open</string>
-    <!-- Snackbar messages for content added to chat -->
+    
     <string name="sharing_snackbar_image_added">Image added to \'%1$s\'</string>
     <string name="sharing_snackbar_images_added">Images added to \'%1$s\'</string>
     <string name="sharing_snackbar_video_added">Video added to \'%1$s\'</string>
@@ -1178,7 +1178,7 @@
     <string name="sharing_snackbar_text_added">Text added to \'%1$s\'</string>
     <string name="sharing_snackbar_link_added">Link added to \'%1$s\'</string>
     <string name="sharing_snackbar_content_added">Content added to \'%1$s\'</string>
-    <!-- Snackbar messages for content linked to an object in a space -->
+    
     <string name="sharing_snackbar_image_linked">Image linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_images_linked">Images linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_video_linked">Video linked to \'%1$s\' in \'%2$s\'</string>
@@ -1189,8 +1189,8 @@
     <string name="sharing_snackbar_text_linked">Text linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_link_linked">Link linked to \'%1$s\' in \'%2$s\'</string>
     <string name="sharing_snackbar_content_linked">Content linked to \'%1$s\' in \'%2$s\'</string>
-    <!--endregion-->
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
+    
     <string name="relation_origin_none">Нічого</string>
     <string name="relation_origin_clipboard">Clipboard</string>
     <string name="relation_origin_dnd">Drag &amp; Drop</string>
@@ -1200,7 +1200,7 @@
     <string name="relation_origin_use_case">Use case</string>
     <string name="relation_origin_library_installed">Library installed</string>
     <string name="relation_origin_bookmark">Закладка</string>
-    <!--endregion-->
+    
     <plurals name="backlinks_count">
         <item quantity="one">%d backlink</item>
         <item quantity="few">%d backlinks</item>
@@ -1213,7 +1213,7 @@
         <item quantity="many">%d links</item>
         <item quantity="other">%d links</item>
     </plurals>
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
     <string name="date_type_tomorrow">Завтра</string>
     <string name="date_type_today">Сьогодні</string>
     <string name="date_type_yesterday">Вчора</string>
@@ -1224,7 +1224,7 @@
     <string name="dates_days_from">%1$s days from now</string>
     <string name="number_days_from">Кількість днів з цього моменту</string>
     <string name="number_days_ago">Кількість днів тому</string>
-    <!-- Date filter quick options -->
+    
     <string name="dates_filter_exact_day">Точний день</string>
     <string name="dates_filter_last_week">Минулого тижня</string>
     <string name="dates_filter_current_week">Поточного тижня</string>
@@ -1237,7 +1237,7 @@
     <string name="dates_filter_next_year">Next year</string>
     <string name="settings_use_yamux">Use QUIC</string>
     <string name="settings_share_local_logs">Share local logs</string>
-    <!--endregion-->
+    
     <string name="error_kanban_view_not_supported">Kanban view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
     <string name="error_calendar_view_not_supported">Calendar view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
     <string name="error_graph_view_not_supported">Graph view is not available on mobile yet.\nChange view type (Settings -&gt; View) or create a new one to access your data.</string>
@@ -1266,7 +1266,7 @@
     <string name="hint_enter_name">Enter name...</string>
     <string name="create_object">Створити об\'єкт</string>
     <string name="msg_query_cannot_be_changed">Цей запит може бути змінений лише на комп\'ютері</string>
-    <!--region ONBOARDING ERRORS -->
+    
     <string name="error_invalid_recovery_phrase">Invalid Key</string>
     <string name="network">Network</string>
     <string name="network_with_colon">Network:</string>
@@ -1282,8 +1282,8 @@
     <string name="network_settings_self_host_config">Current config: %1$s</string>
     <string name="widget_types_show">Show types</string>
     <string name="widget_types_hide">Hide types</string>
-    <!--endregion-->
-    <!--region MULTIPLAYER -->
+    
+    
     <string name="multiplayer_share_invite_link">Share invite link</string>
     <string name="multiplayer_share_invite_link_menu">Share link</string>
     <string name="multiplayer_qr_invite_link_menu">Show QR code</string>
@@ -1449,18 +1449,8 @@
     <string name="multiplayer_invite_link_this_link_does_not_seem_to_work">This link does not seem to work</string>
     <string name="multiplayer_invite_link_space_not_found">This invite link is no longer valid because the space was not found.</string>
     <string name="multiplayer_invite_link_request_already_sent">Request sent</string>
-    <!--endregion-->
-    <!--region PAYMENTS -->
-    <!-- Tier details --><item>10 one-to-one spaces</item>
-<item>128 GB of network space</item>
-<item>Priority support</item>
-<item>256 GB of network space</item>
-<item>Chat with the team</item>
-<!-- Payments Code -->
-    <!-- Membership Welcome -->
-    <!-- Membership Email -->
-    <!-- Membership name errors -->
-    <!-- Notifications -->
+    
+    
     <string name="notifications_alert_error_unknown">An unknown error has occurred. Please try again later.</string>
     <string name="notifications_alert_error_bad_input">Invalid input detected. Please check your data and try again.</string>
     <string name="notifications_alert_error_internal">An internal error has occurred. Our team has been notified.</string>
@@ -1469,7 +1459,7 @@
     <string name="notifications_alert_error_limit_exceeded">The import limit for rows or properties has been exceeded. Please reduce the amount and try again.</string>
     <string name="notifications_alert_error_file_load">There was an error loading the file. Please check the file and try again.</string>
     <string name="notifications_alert_error_insufficient_permissions">You do not have the necessary permissions to perform this action. Please check your permissions and try again.</string>
-    <!-- Gallery Experience -->
+    
     <string name="gallery_experience_made">Made by</string>
     <string name="gallery_experience_install">Install</string>
     <string name="gallery_experience_install_new">Install to new space</string>
@@ -1609,7 +1599,7 @@
     <string name="introduce_vault_text_2">You can now easily reorder your Spaces using drag and drop and navigate them more easily.</string>
     <string name="introduce_vault_text_3">By default, we blur the icon of your space as a background. If needed, you can change it in the space-settings.</string>
     <string name="introduce_vault_welcome_to_the_vault">Welcome to the Vault</string>
-    <string name="introduce_vault_simple_flexible"><![CDATA[Simple & Flexible]]></string>
+    <string name="introduce_vault_simple_flexible">Simple &amp; Flexible</string>
     <string name="allContent_empty_state_title">It’s empty here.</string>
     <string name="allContent_empty_state_description">Create your first objects to get started.</string>
     <string name="all_content_no_results_title">No results found.</string>
@@ -1844,7 +1834,7 @@
     <string name="space_properties_screen_section_system_types">System Properties</string>
     <string name="space_properties_screen_menu_move_to_bin">Move to bin</string>
     <string name="onboarding_error_while_creating_account_space_is_missing">Error while creating account: space is missing</string>
-    <!-- Account creation error messages -->
+    
     <string name="onboarding_error_network_error">Failed to create account due to network error. Please check your connection.</string>
     <string name="onboarding_error_offline_device">Your device seems to be offline. Please check your connection and try again.</string>
     <string name="onboarding_error_account_created_but_failed_to_start_node">Account was created but failed to start the node. Please try logging in.</string>
@@ -1875,7 +1865,7 @@
     <string name="vault_create_space_description">For organized content and data</string>
     <string name="vault_create_personal">Personal</string>
     <string name="vault_create_group">Group</string>
-    <!-- Spaces Introduction Popup -->
+    
     <string name="spaces_introduction_page1_title">Ideas need conversations</string>
     <string name="spaces_introduction_page1_description">Aparok now supports real-time chat in Shared Channels — so your thoughts and dialogues can grow together.</string>
     <string name="spaces_introduction_page2_title">Your Vault just leveled up</string>
@@ -1913,7 +1903,7 @@
     <string name="content_desc_muted">Muted</string>
     <string name="content_desc_pending_sync">Pending sync</string>
     <string name="failed_to_load_image">Failed to load image</string>
-    <!-- Vault Screen - Join via QR -->
+    
     <string name="vault_join_via_qr">Join via QR Code</string>
     <string name="channel_select_members_title">Select members</string>
     <string name="channel_next">Далі</string>
@@ -1929,11 +1919,11 @@
     <string name="open_settings">Open Settings</string>
     <string name="allow">Allow</string>
     <string name="attachment_image">Attachment image</string>
-    <!-- Shared Space Limit (DROID-4388) -->
+    
     <string name="vault_shared_space_limit_title">Shared space limit reached</string>
     <string name="vault_shared_space_limit_description">Your plan allows %1$d shared spaces. Upgrade your membership to create more.</string>
     <string name="vault_manage_channels">Manage Channels</string>
-    <!-- Attachment Menu (DROID-4201) -->
+    
     <string name="attachment_menu_photos">Photos</string>
     <string name="attachment_menu_camera">Camera</string>
     <string name="attachment_menu_files">Files</string>
@@ -1945,7 +1935,7 @@
     <string name="create_object_search_types">Search object types</string>
     <string name="create_object_error">Failed to load object types</string>
     <string name="create_object_retry">Retry</string>
-    <!-- Share Space Errors -->
+    
     <string name="share_space_error_limit_reached">Досягнута межа для цього простору. Будь ласка, оновіть ваш членство або зверніться до служби підтримки за допомогою.</string>
     <string name="share_space_error_not_shareable">Схоже, що простір більше не спільний. Переконайтеся, що ваші пристрої синхронізовані.</string>
     <string name="share_space_error_request_failed">Упс! Запит не вдалося виконати. Будь ласка, перевірте підключення до Інтернету і спробуйте ще раз.</string>
@@ -2008,7 +1998,7 @@
     <string name="any_id_info_title">This is your ANY ID</string>
     <string name="any_id_info_description">Become a member to make your ID human-readable, so other members can easily find and connect with you.</string>
     <string name="any_id_info_button">Explore plans</string>
-    <!-- Multiplayer actions -->
+    
     <string name="multiplayer_approve">Approve</string>
     <string name="chats_warning_you_can_upload_only_10_files_at_a_time">You can upload only 10 files at a time</string>
     <string name="chat_pinned_as_widget_success">This chat has been pinned to your widgets.</string>
@@ -2027,7 +2017,7 @@
     <string name="media_object_in_bin">This object is in the bin. Restore it?</string>
     <string name="toast_restored">Object restored.</string>
     <string name="participant_btn_connect">Connect</string>
-    <!-- Sharing Extension Redesign -->
+    
     <string name="sharing_select_destination">Select destination</string>
     <string name="sharing_send_to_chat">Send to chat</string>
     <string name="sharing_select_dest">Select destination</string>
@@ -2043,7 +2033,7 @@
     <string name="save">Save</string>
     <string name="you_dont_have_any_spaces_yet">You don\'t have any spaces yet</string>
     <string name="loading_channels">Loading channels</string>
-    <!-- OS Widgets -->
+    
     <string name="os_widget_spaces_title">Spaces</string>
     <string name="os_widget_spaces_description">Quick access to your pinned spaces</string>
     <string name="os_widget_create_object_title">New Object</string>
@@ -2060,7 +2050,7 @@
     <string name="select_view">Select view</string>
     <string name="os_widget_data_view_title">Data View</string>
     <string name="os_widget_data_view_description">Display items from a Set or Collection</string>
-    <!-- DROID-4358 Offline Downloads settings -->
+    
     <string name="offline_downloads_section_title">Offline access</string>
     <string name="offline_downloads_title">Offline Downloads</string>
     <string name="offline_downloads_subtitle">Auto sync files up to a selected size</string>

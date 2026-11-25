@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="about">Hakkında</string>
     <string name="app_version">Uygulama sürümü</string>
     <string name="library">Kitaplık</string>
     <string name="user_id">Kullanıcı kimliği</string>
-    <string name="account_and_data"><![CDATA[Hesap & Veri]]></string>
+    <string name="account_and_data">Hesap &amp; Veri</string>
     <string name="profile">Profil</string>
     <string name="personalization">Kişiselleştirme</string>
     <string name="appearance">Görünüm</string>
@@ -763,7 +763,7 @@
     <string name="are_you_sure_delete_n_objects">%1$d nesneyi silmek istediğinden emin misin?</string>
     <string name="delete_irrevocably">Bu nesneler geri alınamaz şekilde silinecektir. Bu işlemi geri alamazsın.</string>
     <string name="delete_irrevocably_one_object">Bu nesne geri alınamaz şekilde silinecektir. Bu işlemi geri alamazsın.</string>
-    <!-- Object Type Deletion Confirmation -->
+    
     <string name="move_type_to_bin_title">\"%s\" Çöp Kutusuna taşınsın mı?</string>
     <string name="move_type_to_bin_description">Bazı nesneler bu türü kullanıyor. Silinmesini istediğin nesneleri de seç. Seçmediğin nesneler kalacak ancak türleri kaybolacak.</string>
     <string name="move_type_to_bin_no_objects">Bu türe ait nesne yok</string>
@@ -865,7 +865,7 @@
     <string name="create_space_change_icon">Simgeyi değiştir</string>
     <string name="create_space_chat_name">Sohbet adı</string>
     <string name="create_space_space_name">Alan ismi</string>
-    <!-- Homepage Picker -->
+    
     <string name="homepage_picker_title">Ana Sayfa Oluştur</string>
     <string name="homepage_picker_description">Sen ve kanal üyelerinin kanalı açtıklarında görecekleri içeriği seç. Bunu istediğin zaman ayarlardan değiştirebilirsin.</string>
     <string name="homepage_picker_chat">Sohbet</string>
@@ -913,7 +913,7 @@
     <string name="create_object_section_library">Aparok Kitaplığı</string>
     <string name="bin_empty_title">Çöp kutun boş.</string>
     <string name="bin_empty_subtitle">Görünüşe göre her şey düzenli ve organize!</string>
-    <!--region SLASH WIDGET -->
+    
     <string name="slash_widget_main_style">Stil</string>
     <string name="slash_widget_main_media">Medya</string>
     <string name="slash_widget_main_objects">Nesneler</string>
@@ -992,10 +992,10 @@
     <string name="slash_widget_teal_color_title">Camgöbeği</string>
     <string name="slash_widget_lime_color_title">Yeşil</string>
     <string name="slash_widget_background_item">%1$s arkaplan</string>
-    <!-- Onboarding: persona selection & use cases (iOS parity) -->
+    
     <string name="onboarding_selection_title">Bize Kendinizden Bahsedin</string>
     <string name="onboarding_selection_description">Size en uygun rolü veya arka planı seçin</string>
-    <!-- Persona options -->
+    
     <string name="onboarding_selection_artist">Sanatçı / İçerik Üreticisi</string>
     <string name="onboarding_selection_consultant">Danışman</string>
     <string name="onboarding_selection_designer">Tasarımcı</string>
@@ -1007,7 +1007,7 @@
     <string name="onboarding_selection_student">Öğrenci</string>
     <string name="onboarding_selection_writer">Yazar / Gazeteci</string>
     <string name="onboarding_selection_other">Diğer</string>
-    <!-- Use case options -->
+    
     <string name="onboarding_usecase_title">Aparok\'ı ne için kullanmak istiyorsunuz?</string>
     <string name="onboarding_usecase_description">Size en uygun kullanım durumunu seçin</string>
     <string name="onboarding_usecase_habit_tracking">Alışkanlık takibi</string>
@@ -1018,8 +1018,8 @@
     <string name="onboarding_usecase_projects">Projeler &amp; görev yönetimi</string>
     <string name="onboarding_usecase_team_work">Takım çalışması &amp; paylaşılan belgeler</string>
     <string name="onboarding_usecase_other">Diğer</string>
-    <!--endregion-->
-    <!--region WIDGETS -->
+    
+    
     <string name="create_widget">Bir widget oluştur</string>
     <string name="edit_widgets">Düzenle</string>
     <string name="add_widget">Ekle</string>
@@ -1044,8 +1044,8 @@
     <string name="widget_empty_bin">Çöp kutusu boş</string>
     <string name="widget_edit_widgets">Widget\'ları düzenle</string>
     <string name="widget_auto_created_toast">%1$s widget\'ı eklendi</string>
-    <!--endregion-->
-    <!--region LIBRARY -->
+    
+    
     <string name="library_title_types">Türler</string>
     <string name="library_title_relations">Özellikler</string>
     <string name="library_description_types">Türler nesnelerinizi gruplandırmanıza ve yönetmenize yardımcı olan kategoriler gibidir.</string>
@@ -1068,8 +1068,8 @@
     <string name="type_creation_new_type">Yeni tür</string>
     <string name="type_creation_done">Bitti</string>
     <string name="type_creation_placeholder">Tür ismi</string>
-    <!--endregion-->
-    <!--region ONBOARDING -->
+    
+    
     <string name="onboarding_auth_title">Şifreli, yerel,</string>
     <string name="onboarding_auth_subtitle">sonsuza kadar sizin</string>
     <string name="onboarding_auth_description">Şifreli, yerel,</string>
@@ -1113,17 +1113,17 @@
     <string name="onboarding_how_to_save_my_phrase">Anahtarımı nasıl kaydedebilirim?</string>
     <string name="onboarding_how_to_save_my_phrase_2">Anahtarınızı saklamanın en kolay yolu onu şifre yöneticinize kaydetmektir.</string>
     <string name="onboarding_how_to_save_my_phrase_3">En güvenli yol bunu bir kağıda yazmak ve çevrimdışı olarak güvenli bir yerde saklamaktır.</string>
-    <!--endregion-->
-    <!--region OBJECT ACTIONS -->
+    
+    
     <string name="object_action_duplicate">Çoğalt</string>
     <string name="object_action_to_widgets">Sabitle</string>
     <string name="object_action_download">İndir</string>
-    <!--endregion-->
-    <!--region SEARCH -->
+    
+    
     <string name="nothing_found">Hiçbir şey bulunamadı</string>
     <string name="nothing_found_object_types">Nesne türü bulunamadı. Lütfen isteğinizi değiştirmeyi deneyin.</string>
-    <!--endregion-->
-    <!--region CONTENT DESCRIPTIONS FOR ACCESSIBILITY -->
+    
+    
     <string name="content_description_delete_button">Sil düğmesi</string>
     <string name="content_description_duplicate_button">Çoğalt düğmesi</string>
     <string name="content_description_edit_view_button">Düzenle-görünüm düğmesi</string>
@@ -1138,16 +1138,16 @@
     <string name="content_desc_object_icon">Nesne görseli veya emoji</string>
     <string name="content_desc_checkbox_icon">Onay kutusu simgesi</string>
     <string name="content_desc_layout_icon">Düzen simgesi</string>
-    <!--endregion-->
-    <!--region BUTTONS -->
+    
+    
     <string name="button_okay">Tamam</string>
     <string name="button_close">Kapat</string>
-    <!--endregion-->
-    <!--region ALERTS -->
+    
+    
     <string name="alert_gallery_unsupported_title">Galeri yakında desteklenecek</string>
     <string name="alert_gallery_unsupported_description">Lütfen şimdilik masaüstü uygulamasını kullanın.</string>
-    <!--endregion-->
-    <!--region SHARING MENU -->
+    
+    
     <string name="sharing_menu_save_as_section_name">Farklı kaydet</string>
     <string name="sharing_menu_save_as_note_option">Not</string>
     <string name="sharing_menu_save_as_bookmark_option">Yer imi</string>
@@ -1163,7 +1163,7 @@
     <string name="sharing_menu_toast_object_added">\'%1$s\' alanına yeni nesne eklendi.</string>
     <string name="sharing_menu_btn_add">Ekle</string>
     <string name="sharing_menu_btn_open">Aç</string>
-    <!-- Snackbar messages for content added to chat -->
+    
     <string name="sharing_snackbar_image_added">Görüntü \'%1$s\' içine eklendi</string>
     <string name="sharing_snackbar_images_added">Görüntüler \'%1$s\' içine eklendi</string>
     <string name="sharing_snackbar_video_added">Video \'%1$s\' içine eklendi</string>
@@ -1174,7 +1174,7 @@
     <string name="sharing_snackbar_text_added">Metin \'%1$s\' içine eklendi</string>
     <string name="sharing_snackbar_link_added">Bağlantı \'%1$s\' içine eklendi</string>
     <string name="sharing_snackbar_content_added">İçerik \'%1$s\' içine eklendi</string>
-    <!-- Snackbar messages for content linked to an object in a space -->
+    
     <string name="sharing_snackbar_image_linked">Görüntü, \'%2$s\' içindeki \'%1$s\' ile bağlandı</string>
     <string name="sharing_snackbar_images_linked">Görüntüler, \'%2$s\' içindeki \'%1$s\' ile bağlandı</string>
     <string name="sharing_snackbar_video_linked">Video, \'%2$s\' içindeki \'%1$s\' ile bağlandı</string>
@@ -1185,8 +1185,8 @@
     <string name="sharing_snackbar_text_linked">Metin, \'%2$s\' içindeki \'%1$s\' ile bağlandı</string>
     <string name="sharing_snackbar_link_linked">Bağlantı, \'%2$s\' içindeki \'%1$s\' ile bağlandı</string>
     <string name="sharing_snackbar_content_linked">İçerik, \'%2$s\' içindeki \'%1$s\' ile bağlandı</string>
-    <!--endregion-->
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
+    
     <string name="relation_origin_none">Hiçbiri</string>
     <string name="relation_origin_clipboard">Pano</string>
     <string name="relation_origin_dnd">Sürükle &amp; Bırak</string>
@@ -1196,7 +1196,7 @@
     <string name="relation_origin_use_case">Kullanım alanları</string>
     <string name="relation_origin_library_installed">Kitaplık kuruldu</string>
     <string name="relation_origin_bookmark">Yer imi</string>
-    <!--endregion-->
+    
     <plurals name="backlinks_count">
         <item quantity="one">%d geri bağlantı</item>
         <item quantity="other">%d geri bağlantı</item>
@@ -1205,7 +1205,7 @@
         <item quantity="one">%d bağlantı</item>
         <item quantity="other">%d bağlantı</item>
     </plurals>
-    <!--region ORIGIN PROPERTIES VALUES -->
+    
     <string name="date_type_tomorrow">Yarın</string>
     <string name="date_type_today">Bugün</string>
     <string name="date_type_yesterday">Dün</string>
@@ -1216,7 +1216,7 @@
     <string name="dates_days_from">Şu andan itibaren %1$s gün</string>
     <string name="number_days_from">gün sonra</string>
     <string name="number_days_ago">gün önce</string>
-    <!-- Date filter quick options -->
+    
     <string name="dates_filter_exact_day">Tam tarih</string>
     <string name="dates_filter_last_week">Geçen hafta</string>
     <string name="dates_filter_current_week">Bu hafta</string>
@@ -1229,7 +1229,7 @@
     <string name="dates_filter_next_year">Gelecek yıl</string>
     <string name="settings_use_yamux">QUIC kullan</string>
     <string name="settings_share_local_logs">Yerel günlükleri paylaş</string>
-    <!--endregion-->
+    
     <string name="error_kanban_view_not_supported">Kanban görünümü henüz mobil cihazlarda mevcut değil.\nVerilerinize erişmek için görünümü değiştirin (Ayarlar -&gt; Görünüm) veya yeni bir görünüm oluşturun.</string>
     <string name="error_calendar_view_not_supported">Takvim görünümü henüz mobil cihazlarda mevcut değil.\nVerilerinize erişmek için görünümü değiştirin (Ayarlar -&gt; Görünüm) veya yeni bir görünüm oluşturun.</string>
     <string name="error_graph_view_not_supported">Grafik görünümü henüz mobil cihazlarda mevcut değil.\nVerilerinize erişmek için görünümü değiştirin (Ayarlar -&gt; Görünüm) veya yeni bir görünüm oluşturun.</string>
@@ -1258,7 +1258,7 @@
     <string name="hint_enter_name">İsim girin...</string>
     <string name="create_object">Nesne oluştur</string>
     <string name="msg_query_cannot_be_changed">Bu sorgu sadece masaüstünde değiştirilebilir</string>
-    <!--region ONBOARDING ERRORS -->
+    
     <string name="error_invalid_recovery_phrase">Geçersiz Anahtar</string>
     <string name="network">Ağ</string>
     <string name="network_with_colon">Ağ:</string>
@@ -1274,8 +1274,8 @@
     <string name="network_settings_self_host_config">Geçerli yapılandırma: %1$s</string>
     <string name="widget_types_show">Türleri göster</string>
     <string name="widget_types_hide">Türleri gizle</string>
-    <!--endregion-->
-    <!--region MULTIPLAYER -->
+    
+    
     <string name="multiplayer_share_invite_link">Davet bağlantısını paylaş</string>
     <string name="multiplayer_share_invite_link_menu">Bağlantıyı paylaş</string>
     <string name="multiplayer_qr_invite_link_menu">Kare kodu göster</string>
@@ -1437,18 +1437,8 @@
     <string name="multiplayer_invite_link_this_link_does_not_seem_to_work">Bu bağlantı çalışmıyor gibi görünüyor.</string>
     <string name="multiplayer_invite_link_space_not_found">Alan bulunamadığı için bu davet bağlantısı artık geçerli değil.</string>
     <string name="multiplayer_invite_link_request_already_sent">İstek gönderildi</string>
-    <!--endregion-->
-    <!--region PAYMENTS -->
-    <!-- Tier details --><item>10 bire bir alan</item>
-<item>128 GB ağ alanı</item>
-<item>Öncelikli destek</item>
-<item>256 GB ağ alanı</item>
-<item>Ekiple sohbet edin</item>
-<!-- Payments Code -->
-    <!-- Membership Welcome -->
-    <!-- Membership Email -->
-    <!-- Membership name errors -->
-    <!-- Notifications -->
+    
+    
     <string name="notifications_alert_error_unknown">Bilinmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyin.</string>
     <string name="notifications_alert_error_bad_input">Geçersiz girdi algılandı. Lütfen verilerinizi kontrol edin ve tekrar deneyin.</string>
     <string name="notifications_alert_error_internal">Bizden kaynaklı bir hata meydana geldi. Ekibimiz bilgilendirildi.</string>
@@ -1457,7 +1447,7 @@
     <string name="notifications_alert_error_limit_exceeded">Satırlar veya özellikler için içe aktarma sınırı aşıldı. Lütfen miktarı azaltın ve tekrar deneyin.</string>
     <string name="notifications_alert_error_file_load">Dosya yüklenirken bir hata oluştu. Lütfen dosyayı kontrol edin ve tekrar deneyin.</string>
     <string name="notifications_alert_error_insufficient_permissions">Bu eylemi gerçekleştirmek için gerekli izinlere sahip değilsin. Lütfen izinlerini kontrol et ve tekrar dene.</string>
-    <!-- Gallery Experience -->
+    
     <string name="gallery_experience_made">Yaratan</string>
     <string name="gallery_experience_install">Kur</string>
     <string name="gallery_experience_install_new">Yeni alana kurun</string>
@@ -1583,7 +1573,7 @@
     <string name="introduce_vault_text_2">Artık sürükle ve bırak özelliğini kullanarak Alanlarını kolayca yeniden sıralayabilir ve daha kolay gezinebilirsin.</string>
     <string name="introduce_vault_text_3">Alanının simgesini arka plan şeklinde varsayılan olarak bulanıklaştırırız. Gerekirse bunu alan ayarlarından değiştirebilirsin.</string>
     <string name="introduce_vault_welcome_to_the_vault">Kasaya Hoşgeldiniz</string>
-    <string name="introduce_vault_simple_flexible"><![CDATA[Basit & Esnek]]></string>
+    <string name="introduce_vault_simple_flexible">Basit &amp; Esnek</string>
     <string name="allContent_empty_state_title">Burası boş.</string>
     <string name="allContent_empty_state_description">Başlamak için ilk nesnelerinizi oluşturun.</string>
     <string name="all_content_no_results_title">Hiçbir sonuç bulunamadı.</string>
@@ -1818,7 +1808,7 @@
     <string name="space_properties_screen_section_system_types">Sistem Özellikleri</string>
     <string name="space_properties_screen_menu_move_to_bin">Çöpe taşı</string>
     <string name="onboarding_error_while_creating_account_space_is_missing">Hesap oluşturulurken hata oluştu: alan eksik</string>
-    <!-- Account creation error messages -->
+    
     <string name="onboarding_error_network_error">Ağ hatası nedeniyle hesap oluşturulamadı. Lütfen bağlantınızı kontrol edin.</string>
     <string name="onboarding_error_offline_device">Cihazınız çevrimdışı görünüyor. Lütfen bağlantınızı kontrol edin ve tekrar deneyin.</string>
     <string name="onboarding_error_account_created_but_failed_to_start_node">Hesap oluşturuldu ancak düğüm başlatılamadı. Lütfen tekrar giriş yapmayı deneyin.</string>
@@ -1849,7 +1839,7 @@
     <string name="vault_create_space_description">Düzenli içerik ve veriler için</string>
     <string name="vault_create_personal">Kişisel</string>
     <string name="vault_create_group">Grup</string>
-    <!-- Spaces Introduction Popup -->
+    
     <string name="spaces_introduction_page1_title">Fikirler konuşulmaya ihtiyaç duyar</string>
     <string name="spaces_introduction_page1_description">Aparok artık Paylaşılan Kanallarda gerçek zamanlı sohbeti destekliyor — böylece düşünceleriniz ve diyaloglarınız birlikte gelişebilir.</string>
     <string name="spaces_introduction_page2_title">Kasanız seviye atladı</string>
@@ -1887,7 +1877,7 @@
     <string name="content_desc_muted">Sessiz</string>
     <string name="content_desc_pending_sync">Senkro. bekleniyor</string>
     <string name="failed_to_load_image">Görüntü yüklenemedi</string>
-    <!-- Vault Screen - Join via QR -->
+    
     <string name="vault_join_via_qr">Karekod ile katıl</string>
     <string name="channel_select_members_title">Üyeleri seç</string>
     <string name="channel_next">Sonraki</string>
@@ -1903,11 +1893,11 @@
     <string name="open_settings">Ayarlar\'ı Aç</string>
     <string name="allow">İzin ver</string>
     <string name="attachment_image">Ekli görüntü</string>
-    <!-- Shared Space Limit (DROID-4388) -->
+    
     <string name="vault_shared_space_limit_title">Paylaşılan alan sınırına ulaşıldı</string>
     <string name="vault_shared_space_limit_description">Planın %1$d ortak alana izin veriyor. Daha fazlasını oluşturmak için üyeliğini yükselt.</string>
     <string name="vault_manage_channels">Kanalları Yönet</string>
-    <!-- Attachment Menu (DROID-4201) -->
+    
     <string name="attachment_menu_photos">Fotoğraflar</string>
     <string name="attachment_menu_camera">Kamera</string>
     <string name="attachment_menu_files">Dosyalar</string>
@@ -1919,7 +1909,7 @@
     <string name="create_object_search_types">Nesne türlerini ara</string>
     <string name="create_object_error">Nesne türleri yüklenemedi</string>
     <string name="create_object_retry">Tekrar dene</string>
-    <!-- Share Space Errors -->
+    
     <string name="share_space_error_limit_reached">Bu alan için sınıra ulaşıldı. Lütfen üyeliğinizi yükseltin veya yardım için destek ekibiyle iletişime geçin.</string>
     <string name="share_space_error_not_shareable">Alan artık paylaşılmıyor gibi görünüyor. Lütfen cihazlarınızın senkronize olduğundan emin olun.</string>
     <string name="share_space_error_request_failed">Hay aksi! İstek başarısız oldu. Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.</string>
@@ -1980,7 +1970,7 @@
     <string name="any_id_info_title">Bu senin ANY ID\'ndir</string>
     <string name="any_id_info_description">Üye olup kimliğini insanlar tarafından okunabilir hale getirebilirsin. Böylece diğer üyeler seni kolayca bulup seninle bağlantı kurabilir.</string>
     <string name="any_id_info_button">Planları keşfet</string>
-    <!-- Multiplayer actions -->
+    
     <string name="multiplayer_approve">Onayla</string>
     <string name="chats_warning_you_can_upload_only_10_files_at_a_time">Bir seferde yalnızca 10 dosya yükleyebilirsin</string>
     <string name="chat_pinned_as_widget_success">Bu sohbet widget\'larınıza sabitlendi.</string>
@@ -1999,7 +1989,7 @@
     <string name="media_object_in_bin">Bu nesne çöp kutusunda. Geri yüklemek ister misin?</string>
     <string name="toast_restored">Nesne geri yüklendi.</string>
     <string name="participant_btn_connect">Bağlan</string>
-    <!-- Sharing Extension Redesign -->
+    
     <string name="sharing_select_destination">Hedef seçin</string>
     <string name="sharing_send_to_chat">Sohbete gönder</string>
     <string name="sharing_select_dest">Hedef seçin</string>
@@ -2015,7 +2005,7 @@
     <string name="save">Kaydet</string>
     <string name="you_dont_have_any_spaces_yet">Henüz hiçbir alana sahip değilsin</string>
     <string name="loading_channels">Kanallar yükleniyor</string>
-    <!-- OS Widgets -->
+    
     <string name="os_widget_spaces_title">Alanlar</string>
     <string name="os_widget_spaces_description">Sabitlenmiş alanlarına hızlı erişim</string>
     <string name="os_widget_create_object_title">Yeni Nesne</string>
@@ -2032,7 +2022,7 @@
     <string name="select_view">Görünüm seç</string>
     <string name="os_widget_data_view_title">Veri Görünümü</string>
     <string name="os_widget_data_view_description">Bir Set veya Koleksiyondaki öğeleri görüntüle</string>
-    <!-- DROID-4358 Offline Downloads settings -->
+    
     <string name="offline_downloads_section_title">Çevrimdışı erişim</string>
     <string name="offline_downloads_title">Çevrimdışı İndirmeler</string>
     <string name="offline_downloads_subtitle">Dosyaları seçilen boyuta kadar otomatik senkronize et</string>
