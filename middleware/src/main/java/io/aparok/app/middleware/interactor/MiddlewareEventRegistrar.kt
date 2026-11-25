@@ -1,6 +1,6 @@
 package io.aparok.app.middleware.interactor
 
-import io.aparok.mw.io.aparok.mw.io.aparok.mw.service.Service.setEventHandlerMobile
+import io.aparok.mw.service.Service.setEventHandlerMobile
 
 /**
  * Seam over the gomobile event-handler registration. Keeping the native

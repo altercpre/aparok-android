@@ -1,7 +1,7 @@
 package io.aparok.app.middleware.discovery
 
 import javax.inject.Inject
-import io.aparok.mw.io.aparok.mw.io.aparok.mw.service.Service.setDiscoveryProxy
+import io.aparok.mw.service.Service.setDiscoveryProxy
 
 class MDNSProvider @Inject constructor(
     private val delegate: MDNSDelegate

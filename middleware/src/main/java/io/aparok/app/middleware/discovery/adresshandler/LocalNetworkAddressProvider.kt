@@ -4,7 +4,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import io.aparok.mw.service.InterfaceGetter
-import io.aparok.mw.io.aparok.mw.io.aparok.mw.service.Service
+import io.aparok.mw.service.Service
 import timber.log.Timber
 
 /**
