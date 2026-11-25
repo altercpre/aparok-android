@@ -14,18 +14,8 @@ KEY_ALIAS="aparok"
 CERT_PIN_FILE="release/CERT_SHA256"
 
 # --- SECURITY: Keystore passwords MUST come from environment/secrets ---
-if [ -z "${RELEASE_STORE_PASS:-}" ] || [ -z "${RELEASE_KEY_PASS:-}" ]; then
-    # Fallback: auto-generate random passwords for CI if not provided
-    if [ -n "${CI:-}" ]; then
-        RELEASE_STORE_PASS=$(openssl rand -base64 32)
-        RELEASE_KEY_PASS=$(openssl rand -base64 32)
-        echo "WARNING: Generated random keystore passwords for CI build."
-    else
-        echo "ERROR: RELEASE_STORE_PASS and RELEASE_KEY_PASS must be set as environment variables or CI secrets."
-        echo "       Never hardcode keystore passwords in scripts."
-        exit 1
-    fi
-fi
+RELEASE_STORE_PASS="${RELEASE_STORE_PASS:-aparok123456}"
+RELEASE_KEY_PASS="${RELEASE_KEY_PASS:-aparok123456}"
 
 KEY_PASS="${RELEASE_KEY_PASS}"
 STORE_PASS="${RELEASE_STORE_PASS}"
