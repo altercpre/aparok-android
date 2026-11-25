@@ -19,7 +19,9 @@ class DefaultInitialParamsProvider(
             encryptionManager?.let { mgr ->
                 val storageKey = mgr.getOrCreateFileEncryptionKey()
                 try {
-                    io.aparok.mw.service.Service.setStorageKey(storageKey)
+                    val serviceClass = Class.forName("io.aparok.mw.service.Service")
+                    val method = serviceClass.getMethod("setStorageKey", ByteArray::class.java)
+                    method.invoke(null, storageKey)
                     Timber.i("Supplied Keystore-wrapped storage key to sovereign core")
                 } catch (t: Throwable) {
                     Timber.w("Core setStorageKey not yet available in current runtime: ${t.message}")
