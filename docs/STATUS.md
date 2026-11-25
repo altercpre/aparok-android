@@ -12,12 +12,12 @@
 | R4 | Real Membership Removal | 6% | PROVEN | CI [45366003147](https://github.com/altercpre/aparok-android/actions/runs/45366003147); AparokMembershipRemovalTest passed; MembershipModels.kt:88, MembershipExt.kt:8, MembershipIncentivesExt.kt:11 | 2026-11-24 |
 | R5 | No Invites, Sharing, Update Checks, Extras | 6% | PROVEN | CI [45393459731](https://github.com/altercpre/aparok-android/actions/runs/45393459731); AparokNoInvitesOrRemoteSharesTest passed; QrScanner removed, deep links sanitized to aparok://, graph.xml cleaned | 2026-11-24 |
 | R6 | Own Core | 8% | PROVEN | Core CI [45421260261](https://github.com/altercpre/aparok-core/actions/runs/45421260261) (commit fc3469b); gomobile lib.aar built with -javapkg io.aparok.mw; verify-offline.sh passed; lib.aar sha256 8fe49dc3c38b629eaf1d0389d0a862ba2e27a6bb2a63ab2a6e774e5471db32b6 pinned in middleware.lock | 2026-11-24 |
-| R7 | Encrypt Everything | 14% | NOT STARTED | — | — |
-| R8 | Storage Location | 7% | NOT STARTED | — | — |
-| R9 | Backup + Restore .aparok | 9% | NOT STARTED | — | — |
-| R10 | Size | 5% | NOT STARTED | — | — |
-| R11 | Signing + Release | 4% | NOT STARTED | — | — |
-| R12 | Offline E2E + Final Audit | 7% | NOT STARTED | — | — |
+| R7 | Encrypt Everything | 14% | PROVEN | CI [45525819908](https://github.com/altercpre/aparok-android/actions/runs/45525819908); AparokStorageMarkerScanTest (zero plaintext leak across UTF-8, UTF-16, Base64; wrong-key fails closed), AparokEncryptionManagerTest passed; docs/ENCRYPTION.md | 2026-11-25 |
+| R8 | Storage Location | 7% | PROVEN | CI [45525819908](https://github.com/altercpre/aparok-android/actions/runs/45525819908); AparokStorageManagerTest passed; pointer file .aparok_storage_pointer, workDir routing, DefaultInitialParamsProvider.kt:11 | 2026-11-25 |
+| R9 | Backup + Restore .aparok | 9% | PROVEN | CI [45525819908](https://github.com/altercpre/aparok-android/actions/runs/45525819908); AparokBackupManagerTest passed; APAROK01 magic header, AES-256-GCM authenticated zip stream, zero plaintext leak, wrong-passphrase rejected | 2026-11-25 |
+| R10 | Size | 5% | PROVEN | CI [45525819908](https://github.com/altercpre/aparok-android/actions/runs/45525819908); docs/SIZE.md; arm64 APK 61.8 MB (< 80 MB), arm7 APK 57.4 MB (< 75 MB), universal APK disabled | 2026-11-25 |
+| R11 | Signing + Release | 4% | PROVEN | CI [45525819908](https://github.com/altercpre/aparok-android/actions/runs/45525819908); docs/RELEASE_SYSTEM.md; scripts/release/ensure-signing.sh; cert pin A1:A1:B4... | 2026-11-25 |
+| R12 | Offline E2E + Final Audit | 7% | PROVEN | CI [45525819908](https://github.com/altercpre/aparok-android/actions/runs/45525819908); docs/AUDIT.md; loopback-only sockets, zero telemetry, 100% test pass rate | 2026-11-25 |
 
 ## Audit Summary (Pre-R0)
 
