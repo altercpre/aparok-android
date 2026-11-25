@@ -25,6 +25,6 @@ Phase R6 solves the core dependency sovereignty requirement. Instead of relying 
   - Packages and uploads `lib.aar` as a workflow artifact and publishes it to GitHub Release `v0.51.6-aparok`.
 
 ### 4. Android App Middleware Integration
-- Pinned `middleware.lock` to release `v0.51.6-aparok` with SHA-256 `8fe49dc3c38b629eaf1d0389d0a862ba2e27a6bb2a63ab2a6e774e5471db32b6`.
+- Pinned `middleware.lock` to release `v0.51.6-aparok` with SHA-256 `99f40c64d2430309299e7f27afff51368f730d68e073247fcd8db996394c4e1c`.
 - Updated `scripts/setup-middleware.sh` to enforce hash verification against `middleware.lock`.
 - Verified core CI run [45421260261](https://github.com/altercpre/aparok-core/actions/runs/45421260261) passed with 100% green: `scripts/verify-offline.sh` passed, `TestGetFile_RangeSeeking` passed, and `lib.aar` published with targets `android/arm64,android/arm`.

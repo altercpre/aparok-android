@@ -3,7 +3,7 @@ set -euo pipefail
 
 echo "=== Setting up Aparok Core Middleware (lib.aar) ==="
 
-EXPECTED_SHA="8fe49dc3c38b629eaf1d0389d0a862ba2e27a6bb2a63ab2a6e774e5471db32b6"
+EXPECTED_SHA="99f40c64d2430309299e7f27afff51368f730d68e073247fcd8db996394c4e1c"
 DOWNLOAD_URL="https://github.com/altercpre/aparok-core/releases/download/v0.51.6-aparok/lib.aar"
 
 mkdir -p libs
