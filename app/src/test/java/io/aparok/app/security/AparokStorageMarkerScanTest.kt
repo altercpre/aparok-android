@@ -1,6 +1,5 @@
 package io.aparok.app.security
 
-import android.os.Build
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -18,10 +17,9 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TemporaryFolder
 import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.mock
-import org.robolectric.RobolectricTestRunner
-import org.robolectric.annotation.Config
 
 /**
  * Sovereign at-rest encryption verification and marker scan test suite.
@@ -42,8 +40,7 @@ import org.robolectric.annotation.Config
  * - Wrong-key / corrupted ciphertext fails closed (AEAD authentication failure).
  * - Valid key round-trip preserves 100% database & file integrity.
  */
-@RunWith(RobolectricTestRunner::class)
-@Config(sdk = [Build.VERSION_CODES.P])
+@RunWith(JUnit4::class)
 class AparokStorageMarkerScanTest {
 
     @get:Rule
