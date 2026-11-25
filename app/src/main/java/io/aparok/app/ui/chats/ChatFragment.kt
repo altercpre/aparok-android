@@ -572,9 +572,9 @@ class ChatFragment : Fragment() {
                             runCatching {
                                 MediaActivity.start(
                                     context = requireContext(),
-                                    mediaType = MediaActivity.TYPE_VIDEO,
-                                    obj = command.obj,
-                                    space = command.space.value
+                                    obj = command.obj.toString(),
+                                    space = space,
+                                    mediaType = MediaActivity.TYPE_VIDEO
                                 )
                             }.onFailure {
                                 Timber.e(it, "Error while launching media video player")
