@@ -3,22 +3,14 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-  <!-- Outer Shield Geometry -->
-  <path
-      android:pathData="M54,24 L78,34 L78,56 C78,71 68,82 54,86 C40,82 30,71 30,56 L30,34 Z"
-      android:fillColor="#0D9488"
-      android:strokeWidth="2"
-      android:strokeColor="#14B8A6"/>
-  <!-- Inner Shield Core -->
-  <path
-      android:pathData="M54,28 L74,36.5 L74,55 C74,68 65.5,78 54,81.5 C42.5,78 34,68 34,55 L34,36.5 Z"
-      android:fillColor="#0F172A"/>
-  <!-- Stylized Geometric "A" -->
-  <path
-      android:pathData="M54,36 L66,66 L59.5,66 L56.5,58 L51.5,58 L48.5,66 L42,66 Z M54,44 L52.5,53 L55.5,53 Z"
-      android:fillColor="#FFFFFF"/>
-  <!-- Sovereign Keyhole Accent in the "A" bridge -->
-  <path
-      android:pathData="M54,51 C55.1,51 56,50.1 56,49 C56,47.9 55.1,47 54,47 C52.9,47 52,47.9 52,49 C52,50.1 52.9,51 54,51 Z M53,52 L55,52 L55.5,56 L52.5,56 Z"
-      android:fillColor="#14B8A6"/>
+  <!-- Sovereign Aparok Mark: White emblem on solid black adaptive background -->
+  <group
+      android:scaleX="0.0635"
+      android:scaleY="0.0635"
+      android:translateX="29.3"
+      android:translateY="35.27">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M277.07 46.362 A158.293 158.293 0 0 1 500.93 46.362 L766.95 312.382 A605.876 605.876 0 0 1 670.608 375.297 A398.211 398.211 0 0 0 107.392 375.297 A605.876 605.876 0 0 1 11.05 312.382 Z M107.392 375.297 A605.876 605.876 0 0 0 670.608 375.297 L777.999 482.688 L670.686 590.001 A606.38 606.38 0 0 0 107.314 590.001 L0.001 482.688 Z"/>
+  </group>
 </vector>
