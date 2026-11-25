@@ -1433,90 +1433,24 @@
     <string name="multiplayer_invite_link_request_already_sent">Permintaan terkirim</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <string name="payments_header">Langganan</string>
-    <string name="payments_subheader">Bergabung dengan jaringan Aparok berarti turut berkontribusi pada kisahnya</string>
-    <string name="payments_card_text_1">Bersama Menciptakan Visi</string>
-    <string name="payments_card_description_1">Sebagai pelanggan terhormat, suara Anda sangat berarti! Terlibat dalam acara eksklusif, menentukan pilihan strategis, dan memengaruhi peta jalan kami.</string>
-    <string name="payments_card_text_2">Dapatkan Keuntungan sebagai Anggota</string>
-    <string name="payments_card_description_2">Pelanggan dapat menikmati penyimpanan cadangan &amp; batas sinkronisasi yang lebih tinggi, undangan bagi banyak pengguna untuk berkolaborasi di ruang bersama, dan identitas unik di Jaringan Aparok.</string>
-    <string name="payments_card_text_3">Dukung Kemerdekaan Digital</string>
-    <string name="payments_card_description_3">Kontribusi Anda mendukung tim kami dan mendukung visi kami atas jaringan digital yang sepenuhnya dimiliki pengguna, aman, dan kolaboratif.</string>
-    <string name="payments_card_text_4">Berinvestasilah pada Konektivitas</string>
-    <string name="payments_card_description_4">Nilai jaringan kami melampaui jumlah bagian-bagiannya. Keanggotaan Anda menjaga infrastruktur untuk terus berkembang dan menopang jaringan ini.</string>
-    <string name="payments_tier_explorer">Penjelajah</string>
-    <string name="payments_tier_explorer_description">Masuki dalam jaringan dan nikmati keseruan kolaborasi one-on-one</string>
-    <string name="payments_tier_builder">Pembangun</string>
-    <string name="payments_tier_builder_description">Dapatkan keajaiban kolaborasi multi-party dan nikmati dukungan tertinggi</string>
-    <string name="payments_tier_cocreator">Pencipta Bersama</string>
-    <string name="payments_tier_cocreator_description">Dukung petualangan kami dan dapatkan akses dan manfaat eksklusif</string>
-    <string name="payments_tier_custom">Sesuaikan</string>
-    <string name="payments_tier_custom_description">Keanggotaan yang disesuaikan dengan kebutuhan dan selera Anda</string>
-    <string name="payments_button_learn">Pelajari lebih lanjut</string>
-    <string name="payments_button_manage">Kelola pembayaran</string>
-    <string name="payments_button_contact">Kontak</string>
-    <string name="payments_button_info">Lebih lanjut</string>
-    <string name="payments_button_submit">Kirim</string>
-    <string name="payments_button_pay">Bayar dengan kartu</string>
-    <string name="payments_button_change_email">Ganti surel</string>
-    <string name="payments_member_link">Detail level langganan</string>
-    <string name="payments_privacy_link">Kebijakan privasi</string>
-    <string name="payments_terms_link">Syarat dan ketentuan</string>
-    <string name="payments_current_label">Saat ini</string>
     <!-- Tier details -->
-    <string name="payments_tier_details_name_title">Pilih nama unikmu</string>
-    <string name="payments_tier_details_name_subtitle">Ini adalah nama unik Anda di jaringan Aparok, yang mengonfirmasi Keanggotaan Anda. Nama ini berfungsi sebagai domain pribadi Anda dan tidak dapat diubah.</string>
-    <string name="payments_tier_details_name_hint">Aku sendiri</string>
-    <string name="payments_tier_details_name_min">Minimal 7 karakter</string>
-    <string name="payments_tier_details_name_error">Nama ini sudah dipakai!</string>
-    <string name="payments_tier_details_name_validated">Nama [%1$s] ini dapat Anda ambil!</string>
-    <string name="payments_tier_details_name_validating">Memvalidasi nama</string>
-    <string name="payments_tier_details_free_forever">Selamanya</string>
-    <string name="payments_tier_details_valid_until">Berlaku hingga %1$s</string>
-    <string name="payments_tier_details_info_explorer">Masuki dalam jaringan dan nikmati keseruan kolaborasi one-on-one</string>
-    <string-array name="payments_benefits_explorer">
         <item>Ruang jaringan 1 GB</item>
         <item>10 ruang satu ke satu</item>
         <item>Sampai dengan 10 ruang terbagi dalam mode hanya baca</item>
     </string-array>
-    <string name="payments_tier_details_info_builder">Dapatkan keajaiban kolaborasi multi-party dan nikmati dukungan tertinggi</string>
-    <string-array name="payments_benefits_builder">
         <item>Nama unik (dari 7 karakter)</item>
         <item>Ruang jaringan 128 GB</item>
         <item>Tempat duduk kolaborator untuk 10 Tamu</item>
         <item>Layanan prioritas</item>
     </string-array>
-    <string name="payments_tier_details_info_cocreator">Dukung petualangan kami dan dapatkan akses dan manfaat eksklusif</string>
-    <string-array name="payments_benefits_cocreator">
         <item>Nama unik (dari 5 karakter)</item>
         <item>Ruang jaringan 256 GB</item>
         <item>Tempat duduk kolaborator untuk 25 Tamu</item>
         <item>Mengobrol dengan tim</item>
         <item>Koleksi yang unik</item>
     </string-array>
-    <string name="payments_detials_button_pay">Bayar via kartu</string>
-    <string name="payments_detials_button_submit">Kirim</string>
-    <string name="payments_details_whats_included">Apa saja yang termasuk</string>
-    <string name="payments_email_title">Dapatkan pembaruan dan nikmati beragam keuntungan gratis!</string>
-    <string name="payments_email_subtitle">Ini tidak ditautkan ke akun Anda dengan cara apa pun.</string>
-    <string name="payments_email_checkbox_text">Saya ingin mendapatkan pembaruan pada produk-produk dan menikmati manfaat gratis!</string>
-    <string name="payments_email_hint">Surel</string>
-    <string name="payments_tier_current_title">Statusmu saat ini:</string>
-    <string name="payments_tier_current_valid">Berlaku hingga</string>
-    <string name="payments_tier_current_paid_by">Dibayar oleh</string>
-    <string name="payments_tier_current_paid_by_card">Stripe</string>
-    <string name="payments_tier_current_paid_by_crypto">Kripto</string>
-    <string name="payments_tier_current_paid_by_apple">Langganan Apple</string>
-    <string name="payments_tier_current_paid_by_google">Langganan Google</string>
-    <string name="payments_tier_current_button">Kelola pembayaran</string>
-    <string name="payments_tier_current_change_email_button">Ganti surel</string>
     <!-- Payments Code -->
-    <string name="payments_code_title">Masukkan kode yang dikirim ke surelmu</string>
-    <string name="payments_code_resend">Kirim ulang</string>
-    <string name="payments_code_resend_in">Kirim ulang dalam %1$d detik</string>
     <!-- Membership Welcome -->
-    <string name="payments_welcome_title">Selamat datang di jaringan,\n%1$s</string>
-    <string name="payments_welcome_subtitle">Tepuk tangan yang meriah untuk rasa ingin tahu Anda!</string>
-    <string name="payments_welcome_button">Lanjutkan</string>
     <!-- Membership Email -->
     <!-- Membership name errors -->
     <!-- Notifications -->

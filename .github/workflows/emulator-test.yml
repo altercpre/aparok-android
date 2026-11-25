@@ -1,0 +1,87 @@
+name: Sovereign Offline Emulator E2E (R12)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  emulator-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: 17
+
+      - name: Setup Gradle Cache
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Setup middleware dependency
+        run: |
+          chmod +x ./scripts/setup-middleware.sh
+          ./scripts/setup-middleware.sh
+
+      - name: Enable KVM for Android Emulator
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Run Emulator Offline E2E Tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 30
+          target: default
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+          script: |
+            echo "1. Enforcing Airplane mode ON..."
+            adb shell cmd connectivity airplane-mode enable
+            AIRPLANE=$(adb shell settings get global airplane_mode_on | tr -d '\r\n')
+            echo "Airplane mode status: $AIRPLANE"
+            if [ "$AIRPLANE" != "1" ]; then
+              echo "FAIL: Airplane mode could not be enabled!"
+              exit 1
+            fi
+
+            echo "2. Installing Aparok Sovereign APK..."
+            ./gradlew :app:assembleDebug --no-daemon
+            adb install -r app/build/outputs/apk/debug/app-debug.apk
+
+            echo "3. Launching Aparok Application..."
+            adb logcat -c
+            adb shell am start -n io.aparok.app/.ui.main.MainActivity
+            sleep 10
+
+            echo "4. Auditing /proc/net/tcp & /proc/net/tcp6 for socket isolation..."
+            APP_PID=$(adb shell pidof io.aparok.app | tr -d '\r\n' || true)
+            echo "App PID: $APP_PID"
+
+            TCP_OUTPUT=$(adb shell cat /proc/net/tcp || true)
+            echo "$TCP_OUTPUT"
+            
+            # Check established non-loopback connections (0100007F is 127.0.0.1, 00000000 is 0.0.0.0)
+            NON_LOOPBACK=$(echo "$TCP_OUTPUT" | awk 'NR>1 {print $2, $3, $4}' | grep " 01$" | grep -v " 0100007F:" | grep -v " 00000000:" || true)
+            if [ -n "$NON_LOOPBACK" ]; then
+              echo "FAIL: Disallowed non-loopback TCP connection detected in /proc/net/tcp:"
+              echo "$NON_LOOPBACK"
+              exit 1
+            fi
+            echo "PASS: /proc/net/tcp non-loopback socket audit verified zero external connections!"
+
+            echo "5. Auditing logcat for network timeouts or DNS resolutions..."
+            LOGCAT_ERRORS=$(adb logcat -d | grep -i -E "UnknownHostException|ConnectTimeoutException" || true)
+            if [ -n "$LOGCAT_ERRORS" ]; then
+              echo "FAIL: Network resolution error logged:"
+              echo "$LOGCAT_ERRORS"
+              exit 1
+            fi
+            echo "PASS: Zero network DNS resolution or timeout errors logged."

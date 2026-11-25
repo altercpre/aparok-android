@@ -1439,90 +1439,24 @@
     <string name="multiplayer_invite_link_request_already_sent">Solicitação enviada</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <string name="payments_header">Associação</string>
-    <string name="payments_subheader">Juntar-se a rede Aparok representa contribuir para essa história</string>
-    <string name="payments_card_text_1">Co-criar a Visão</string>
-    <string name="payments_card_description_1">Como um membro valioso sua voz importa! Envolva-se em eventos exclusivos, forme escolhas estratégicas e influencie nosso roteiro.</string>
-    <string name="payments_card_text_2">Desbloquear benefícios para membros</string>
-    <string name="payments_card_description_2">Membros desfrutam de maiores limites de backup e sincronização, convites para vários convidados para colaborar em espaços compartilhados e uma identidade única na rede do Aparok.</string>
-    <string name="payments_card_text_3">Apoie a Independência Digital</string>
-    <string name="payments_card_description_3">Sua contribuição apoia nossa equipe independente e reforça nossa visão de um ambiente digital voltado ao usuário, seguro e colaborativo.</string>
-    <string name="payments_card_text_4">Investir em Conectividade</string>
-    <string name="payments_card_description_4">O valor da nossa rede excede a soma de suas partes. Sua participação como membro mantém a infraestrutura para seu crescimento, que está na base dessa rede.</string>
-    <string name="payments_tier_explorer">Navegador</string>
-    <string name="payments_tier_explorer_description">Mergulhe na rede e aproveite a emoção da colaboração individual</string>
-    <string name="payments_tier_builder">Criador</string>
-    <string name="payments_tier_builder_description">Desbloqueie a magia da colaboração entre várias partes e aproveite o suporte de alto nível</string>
-    <string name="payments_tier_cocreator">Co-Criador</string>
-    <string name="payments_tier_cocreator_description">Apoie nossa aventura e desbloqueie vantagens e acessos exclusivos</string>
-    <string name="payments_tier_custom">Personalizado</string>
-    <string name="payments_tier_custom_description">Associação feita para suas necessidades e preferências</string>
-    <string name="payments_button_learn">Saiba mais</string>
-    <string name="payments_button_manage">Gerenciar pagamento</string>
-    <string name="payments_button_contact">Contato</string>
-    <string name="payments_button_info">Mais informações</string>
-    <string name="payments_button_submit">Enviar</string>
-    <string name="payments_button_pay">Pagar com cartão</string>
-    <string name="payments_button_change_email">Mudar e-mail</string>
-    <string name="payments_member_link">Detalhes dos níveis de Associação</string>
-    <string name="payments_privacy_link">Política de Privacidade</string>
-    <string name="payments_terms_link">Termos e Condições</string>
-    <string name="payments_current_label">Atual</string>
     <!-- Tier details -->
-    <string name="payments_tier_details_name_title">Escolha seu nome único</string>
-    <string name="payments_tier_details_name_subtitle">Este é o seu nome exclusivo na rede Aparok, confirmando a sua Associação. Ele atua como seu domínio pessoal e não pode ser alterado.</string>
-    <string name="payments_tier_details_name_hint">Eu mesmo</string>
-    <string name="payments_tier_details_name_min">Mínimo de 3 caracteres</string>
-    <string name="payments_tier_details_name_error">Este nome já está sendo usado.</string>
-    <string name="payments_tier_details_name_validated">Esse nome [%1$s] está disponível para uso!</string>
-    <string name="payments_tier_details_name_validating">Validando nome</string>
-    <string name="payments_tier_details_free_forever">Para sempre</string>
-    <string name="payments_tier_details_valid_until">Válido até %1$s</string>
-    <string name="payments_tier_details_info_explorer">Mergulhe na rede e aproveite a emoção da colaboração individual</string>
-    <string-array name="payments_benefits_explorer">
         <item>1 GB de espaço de rede</item>
         <item>10 Espaços individuais</item>
         <item>Até 10 Espaços compartilhados em modo somente leitura</item>
     </string-array>
-    <string name="payments_tier_details_info_builder">Desbloqueie a magia da colaboração entre várias partes e aproveite o suporte de alto nível</string>
-    <string-array name="payments_benefits_builder">
         <item>Nome único (a partir de 7 caracteres)</item>
         <item>128 GB de espaço de rede</item>
         <item>10 Assentos de Colaboradores Convidados</item>
         <item>Suporte prioritário</item>
     </string-array>
-    <string name="payments_tier_details_info_cocreator">Apoie nossa aventura e desbloqueie vantagens e acessos exclusivos</string>
-    <string-array name="payments_benefits_cocreator">
         <item>Nome único (a partir de 5 caracteres)</item>
         <item>256 GB de espaço de rede</item>
         <item>25 Assentos de Colaboradores Convidados</item>
         <item>Conversas com o time</item>
         <item>Colecionável único</item>
     </string-array>
-    <string name="payments_detials_button_pay">Pagar com Cartão</string>
-    <string name="payments_detials_button_submit">Enviar</string>
-    <string name="payments_details_whats_included">O que está incluído</string>
-    <string name="payments_email_title">Receba atualizações e aproveite vantagens gratuitas!</string>
-    <string name="payments_email_subtitle">Não está vinculado ao seu cofre de forma alguma.</string>
-    <string name="payments_email_checkbox_text">Gostaria de receber atualizações sobre produtos e desfrutar de vantagens gratuitas!</string>
-    <string name="payments_email_hint">E-mail</string>
-    <string name="payments_tier_current_title">Seu status atual:</string>
-    <string name="payments_tier_current_valid">Válido até</string>
-    <string name="payments_tier_current_paid_by">Pago por</string>
-    <string name="payments_tier_current_paid_by_card">Faixa</string>
-    <string name="payments_tier_current_paid_by_crypto">Crypto</string>
-    <string name="payments_tier_current_paid_by_apple">Assinatura Apple</string>
-    <string name="payments_tier_current_paid_by_google">Assinatura Google</string>
-    <string name="payments_tier_current_button">Gerenciar pagamento</string>
-    <string name="payments_tier_current_change_email_button">Mudar e-mail</string>
     <!-- Payments Code -->
-    <string name="payments_code_title">Digite o código enviado para seu email</string>
-    <string name="payments_code_resend">Reenviar</string>
-    <string name="payments_code_resend_in">Reenviar em %1$d seg</string>
     <!-- Membership Welcome -->
-    <string name="payments_welcome_title">Bem-vindo à rede,\n%1$s</string>
-    <string name="payments_welcome_subtitle">Um grande aplauso por sua curiosidade!</string>
-    <string name="payments_welcome_button">Continuar</string>
     <!-- Membership Email -->
     <!-- Membership name errors -->
     <!-- Notifications -->

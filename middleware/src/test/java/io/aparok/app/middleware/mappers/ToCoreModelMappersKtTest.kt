@@ -35,7 +35,7 @@ class ToCoreModelMappersKtTest {
     @Test
     fun `should set param as string when param_ is empty`() {
 
-        val param = "github.com/altercpre/aparok-android/releases/latest"
+        val param = "example.com"
 
         val mark = MBMark(
             type = MBMarkType.Mention,

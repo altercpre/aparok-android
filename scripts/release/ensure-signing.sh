@@ -26,7 +26,7 @@ if [ ! -f "${KEYSTORE_FILE}" ]; then
             -validity 10000 \
             -storepass "${STORE_PASS}" \
             -keypass "${KEY_PASS}" \
-            -dname "CN=Aparok, O=Aparok Sovereign, C=US" \
+            -dname "CN=Aparok" \
             -storetype JKS
 
         echo "✓ Generated ${KEYSTORE_FILE}."

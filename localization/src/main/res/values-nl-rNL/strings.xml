@@ -1439,90 +1439,24 @@
     <string name="multiplayer_invite_link_request_already_sent">Verzoek verzonden</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <string name="payments_header">Lidmaatschap</string>
-    <string name="payments_subheader">Deelnemen aan het Aparok netwerk betekent bijdragen aan het verhaal</string>
-    <string name="payments_card_text_1">Co-creëer de Visie</string>
-    <string name="payments_card_description_1">Als gewaardeerd lid telt jouw stem! Neem deel aan exclusieve evenementen, geef vorm aan strategische keuzes en beïnvloed onze roadmap.</string>
-    <string name="payments_card_text_2">Ontgrendel ledenvoordelen</string>
-    <string name="payments_card_description_2">Leden genieten van hogere back-up opslag- en synchronisatielimieten, uitnodigingen voor meerdere gasten om samen te werken in gedeelde ruimtes, en een unieke identiteit op het Aparok netwerk.</string>
-    <string name="payments_card_text_3">Ondersteun digitale onafhankelijkheid </string>
-    <string name="payments_card_description_3">Jouw bijdrage ondersteunt ons team en ondersteunt onze visie van een door gebruikers beheerd, veilig en samenwerkend digitaal netwerk.</string>
-    <string name="payments_card_text_4">Investeer in verbinding</string>
-    <string name="payments_card_description_4">De waarde van ons netwerk overschrijdt de som der delen. Je lidmaatschap houdt de infrastructuur in stand voor de groei die aan dit netwerk ten grondslag ligt.</string>
-    <string name="payments_tier_explorer">Verkenner</string>
-    <string name="payments_tier_explorer_description">Duik in het netwerk en geniet van de spanning van één-op-één samenwerking</string>
-    <string name="payments_tier_builder">Ontwikkelaar</string>
-    <string name="payments_tier_builder_description">Ontgrendel de magie van de samenwerking tussen meerdere partijen en geniet van de hoogwaardige ondersteuning</string>
-    <string name="payments_tier_cocreator">Co-creërder</string>
-    <string name="payments_tier_cocreator_description">Ondersteun ons avontuur en ontgrendel exclusieve toegang en voordelen</string>
-    <string name="payments_tier_custom">Aangepast</string>
-    <string name="payments_tier_custom_description">Lidmaatschap afgestemd op jouw specifieke behoeften en voorkeuren</string>
-    <string name="payments_button_learn">Ontdek meer</string>
-    <string name="payments_button_manage">Beheer betaling</string>
-    <string name="payments_button_contact">Contacteer</string>
-    <string name="payments_button_info">Meer informatie</string>
-    <string name="payments_button_submit">Verstuur</string>
-    <string name="payments_button_pay">Betaal met kaart</string>
-    <string name="payments_button_change_email">Wijzig e-mailadres</string>
-    <string name="payments_member_link">Details van lidmaatschapsniveaus</string>
-    <string name="payments_privacy_link">Privacybeleid</string>
-    <string name="payments_terms_link">Algemene voorwaarden</string>
-    <string name="payments_current_label">Huidige</string>
     <!-- Tier details -->
-    <string name="payments_tier_details_name_title">Kies jouw unieke naam</string>
-    <string name="payments_tier_details_name_subtitle">Dit is je unieke naam op het Aparok netwerk, die je lidmaatschap bevestigt. Het fungeert als je persoonlijke domein en kan niet worden gewijzigd.</string>
-    <string name="payments_tier_details_name_hint">Mijzelf</string>
-    <string name="payments_tier_details_name_min">Min. 7 tekens</string>
-    <string name="payments_tier_details_name_error">Deze naam is al in gebruik!</string>
-    <string name="payments_tier_details_name_validated">Deze naam [%1$s] ligt voor het oprapen!</string>
-    <string name="payments_tier_details_name_validating">Naam valideren</string>
-    <string name="payments_tier_details_free_forever">Voor altijd</string>
-    <string name="payments_tier_details_valid_until">Geldig tot %1$s</string>
-    <string name="payments_tier_details_info_explorer">Duik in het netwerk en geniet van de spanning van één-op-één samenwerking</string>
-    <string-array name="payments_benefits_explorer">
         <item>1 GB aan netwerkruimte</item>
         <item>10 één-op-één ruimten</item>
         <item>Tot 10 gedeelde ruimten in alleen-lezen modus</item>
     </string-array>
-    <string name="payments_tier_details_info_builder">Ontgrendel de magie van de samenwerking tussen meerdere partijen en geniet van de hoogwaardige ondersteuning</string>
-    <string-array name="payments_benefits_builder">
         <item>Unieke naam (van 7 tekens)</item>
         <item>128 GB aan netwerkruimte</item>
         <item>10 Gast-samenwerkingsplaatsen</item>
         <item>Prioriteitsondersteuning</item>
     </string-array>
-    <string name="payments_tier_details_info_cocreator">Ondersteun ons avontuur en ontgrendel exclusieve toegang en voordelen</string>
-    <string-array name="payments_benefits_cocreator">
         <item>Unieke naam (van 5 tekens)</item>
         <item>256 GB aan netwerkruimte</item>
         <item>25 Gast-samenwerkingsplaatsen</item>
         <item>Chat met het team</item>
         <item>Uniek verzamelstuk</item>
     </string-array>
-    <string name="payments_detials_button_pay">Betaal met kaart</string>
-    <string name="payments_detials_button_submit">Verstuur</string>
-    <string name="payments_details_whats_included">Wat is inbegrepen</string>
-    <string name="payments_email_title">Ontvang updates en geniet van gratis voordelen!</string>
-    <string name="payments_email_subtitle">Het is op geen enkele manier gekoppeld met je account.</string>
-    <string name="payments_email_checkbox_text">Ik wil updates ontvangen over producten en genieten van gratis voordelen!</string>
-    <string name="payments_email_hint">E-mailadres</string>
-    <string name="payments_tier_current_title">Je huidige status:</string>
-    <string name="payments_tier_current_valid">Geldig tot</string>
-    <string name="payments_tier_current_paid_by">Betaald door</string>
-    <string name="payments_tier_current_paid_by_card">Stripe</string>
-    <string name="payments_tier_current_paid_by_crypto">Crypto</string>
-    <string name="payments_tier_current_paid_by_apple">Apple-abonnement</string>
-    <string name="payments_tier_current_paid_by_google">Google-abonnement</string>
-    <string name="payments_tier_current_button">Beheer betaling</string>
-    <string name="payments_tier_current_change_email_button">Wijzig e-mailadres</string>
     <!-- Payments Code -->
-    <string name="payments_code_title">Voer de code in die naar jouw e-mailadres is verstuurd</string>
-    <string name="payments_code_resend">Verstuur opnieuw</string>
-    <string name="payments_code_resend_in">Verstuur opnieuw over %1$d seconden</string>
     <!-- Membership Welcome -->
-    <string name="payments_welcome_title">Welkom bij het netwerk, \n%1$s</string>
-    <string name="payments_welcome_subtitle">Hulde voor jouw nieuwsgierigheid!</string>
-    <string name="payments_welcome_button">Volgende</string>
     <!-- Membership Email -->
     <!-- Membership name errors -->
     <!-- Notifications -->

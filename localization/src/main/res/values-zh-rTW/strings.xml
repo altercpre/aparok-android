@@ -1433,90 +1433,24 @@
     <string name="multiplayer_invite_link_request_already_sent">已送出請求</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <string name="payments_header">會員</string>
-    <string name="payments_subheader">成為 Aparok 網絡的一員，您就是它故事的一部分。</string>
-    <string name="payments_card_text_1">共同創造願景</string>
-    <string name="payments_card_description_1">作為尊貴的會員，您的聲音至關重要！ 參與獨家活動、制定策略選擇，並影響我們的路線圖。</string>
-    <string name="payments_card_text_2">解鎖會員權益</string>
-    <string name="payments_card_description_2">會員可享有更高的備份儲存空間 &amp; 同步限制、在共享空間中邀請多位訪客協作，並在 Aparok 網路上擁有獨一無二的身份。</string>
-    <string name="payments_card_text_3">支持數位獨立</string>
-    <string name="payments_card_description_3">您的貢獻支持我們的團隊，並認可我們對於用戶擁有、安全以及協作的數位網路願景。</string>
-    <string name="payments_card_text_4">為互聯互通投資</string>
-    <string name="payments_card_description_4">我們網絡的價值超過其各部分的總和。 作為會員，您的加入為網絡的發展奠定了基礎。</string>
-    <string name="payments_tier_explorer">探險家</string>
-    <string name="payments_tier_explorer_description">沉浸在網路中，體驗一對一協作的樂趣。</string>
-    <string name="payments_tier_builder">建設者</string>
-    <string name="payments_tier_builder_description">解鎖多方協作的魔力，以及享受頂級的支持。</string>
-    <string name="payments_tier_cocreator">共同創作者</string>
-    <string name="payments_tier_cocreator_description">協助我們的冒險，解鎖特權和福利。</string>
-    <string name="payments_tier_custom">自定義</string>
-    <string name="payments_tier_custom_description">根據您的具體需求和偏好量身訂製的會員資格</string>
-    <string name="payments_button_learn">了解更多</string>
-    <string name="payments_button_manage">管理付款方式</string>
-    <string name="payments_button_contact">聯絡</string>
-    <string name="payments_button_info">更多資訊</string>
-    <string name="payments_button_submit">提交</string>
-    <string name="payments_button_pay">刷卡付款</string>
-    <string name="payments_button_change_email">變更 e-mail</string>
-    <string name="payments_member_link">會員方案詳情</string>
-    <string name="payments_privacy_link">隱私政策</string>
-    <string name="payments_terms_link">條款和細則</string>
-    <string name="payments_current_label">當前</string>
     <!-- Tier details -->
-    <string name="payments_tier_details_name_title">取一個獨特的名字</string>
-    <string name="payments_tier_details_name_subtitle">這是您在Aparok網絡的專屬用戶名，以確認您的會員身份。它是您的個人域名，不可更改。</string>
-    <string name="payments_tier_details_name_hint">個人使用</string>
-    <string name="payments_tier_details_name_min">最少 7 個字元</string>
-    <string name="payments_tier_details_name_error">此名稱已被使用。</string>
-    <string name="payments_tier_details_name_validated">%1$s 可以被使用！</string>
-    <string name="payments_tier_details_name_validating">姓名驗證</string>
-    <string name="payments_tier_details_free_forever">永久</string>
-    <string name="payments_tier_details_valid_until">有效期至 %1$s</string>
-    <string name="payments_tier_details_info_explorer">沉浸在網路中，體驗一對一協作的樂趣。</string>
-    <string-array name="payments_benefits_explorer">
         <item>1 GB 的網路空間</item>
         <item>10 個一對一空間</item>
         <item>最多 10 個唯獨模式共享空間</item>
     </string-array>
-    <string name="payments_tier_details_info_builder">解鎖多方協作的魔力，以及享受頂級的支持。</string>
-    <string-array name="payments_benefits_builder">
         <item>專屬用戶名(7個字元以上)</item>
         <item>128 GB 的網路空間</item>
         <item>10 個訪客協作位置</item>
         <item>優先客服</item>
     </string-array>
-    <string name="payments_tier_details_info_cocreator">協助我們的冒險，解鎖特權和福利。</string>
-    <string-array name="payments_benefits_cocreator">
         <item>專屬用戶名(5個字元以上)</item>
         <item>256 GB 的網路空間</item>
         <item>25 個訪客協作位置</item>
         <item>與團隊溝通</item>
         <item>獨特的集錦</item>
     </string-array>
-    <string name="payments_detials_button_pay">刷卡付款</string>
-    <string name="payments_detials_button_submit">提交</string>
-    <string name="payments_details_whats_included">包含的內容</string>
-    <string name="payments_email_title">獲得升級並享有免費福利！</string>
-    <string name="payments_email_subtitle">這與您的帳戶沒有任何關聯。</string>
-    <string name="payments_email_checkbox_text">我想獲得最新產品更新並享受免費福利！</string>
-    <string name="payments_email_hint">電子郵件</string>
-    <string name="payments_tier_current_title">您當前的狀態：</string>
-    <string name="payments_tier_current_valid">有效期限至</string>
-    <string name="payments_tier_current_paid_by">付款者</string>
-    <string name="payments_tier_current_paid_by_card">Stripe</string>
-    <string name="payments_tier_current_paid_by_crypto">加密貨幣</string>
-    <string name="payments_tier_current_paid_by_apple">Apple 訂閱</string>
-    <string name="payments_tier_current_paid_by_google">Google 訂閱</string>
-    <string name="payments_tier_current_button">管理付款方式</string>
-    <string name="payments_tier_current_change_email_button">變更 e-mail</string>
     <!-- Payments Code -->
-    <string name="payments_code_title">請輸入發送到您 email 的兌換代碼</string>
-    <string name="payments_code_resend">重新傳送</string>
-    <string name="payments_code_resend_in">在 %1$d 秒內重新傳送</string>
     <!-- Membership Welcome -->
-    <string name="payments_welcome_title">歡迎來到 Aparok 網絡，\n%1$s</string>
-    <string name="payments_welcome_subtitle">為你的好奇心喝彩！</string>
-    <string name="payments_welcome_button">繼續</string>
     <!-- Membership Email -->
     <!-- Membership name errors -->
     <!-- Notifications -->

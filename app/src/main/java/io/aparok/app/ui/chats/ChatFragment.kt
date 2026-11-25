@@ -568,6 +568,19 @@ class ChatFragment : Fragment() {
                             }
                         }
 
+                        is ChatViewModel.ViewModelCommand.OpenVideo -> {
+                            runCatching {
+                                MediaActivity.start(
+                                    context = requireContext(),
+                                    mediaType = MediaActivity.TYPE_VIDEO,
+                                    obj = command.obj,
+                                    space = command.space
+                                )
+                            }.onFailure {
+                                Timber.e(it, "Error while launching media video player")
+                            }
+                        }
+
                         is ChatViewModel.ViewModelCommand.SelectChatReaction -> {
                             runCatching {
                                 findNavController().navigate(

@@ -1433,90 +1433,24 @@
     <string name="multiplayer_invite_link_request_already_sent">リクエストを送信しました</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <string name="payments_header">メンバーシップ</string>
-    <string name="payments_subheader">Aparok Networkに参加して、共に未来を創りましょう</string>
-    <string name="payments_card_text_1">未来を共に創造する</string>
-    <string name="payments_card_description_1">大切なメンバーであるあなたの声を反映させましょう。限定イベントや重要な方針決定へのご参加を通じて、私たちと共に目指すべき未来を創り上げましょう。</string>
-    <string name="payments_card_text_2">メンバーシップ特典</string>
-    <string name="payments_card_description_2">より多くのバックアップ容量、同期上限の緩和、共有スペースへの招待数増加、Aparok Networkでの独自IDをご利用いただけます。</string>
-    <string name="payments_card_text_3">デジタルの自由を共に守る</string>
-    <string name="payments_card_description_3">あなたの支援が私たちの活動を支え、ユーザー主導の安全で共に発展するデジタルネットワークという私たちの理念の実現を後押しします。</string>
-    <string name="payments_card_text_4">つながりに、もっと力を</string>
-    <string name="payments_card_description_4">一人ひとりのつながりが、個々の力だけでは成し得ない価値を生み出します。あなたのメンバーシップが、私たちのネットワークの持続的な成長を支える基盤となります。</string>
-    <string name="payments_tier_explorer">Explorer</string>
-    <string name="payments_tier_explorer_description">同期や自動バックアップ、複数人での共同編集ができます</string>
-    <string name="payments_tier_builder">Builder</string>
-    <string name="payments_tier_builder_description">複数人での共同作業とストレージ容量を増加させましょう</string>
-    <string name="payments_tier_cocreator">Co-Creator</string>
-    <string name="payments_tier_cocreator_description">私たちの活動を応援し、限定コンテンツや特別な特典を入手しましょう</string>
-    <string name="payments_tier_custom">カスタム</string>
-    <string name="payments_tier_custom_description">ご希望に沿ったプランをご提供します</string>
-    <string name="payments_button_learn">さらに詳しく</string>
-    <string name="payments_button_manage">支払いの管理</string>
-    <string name="payments_button_contact">連絡先</string>
-    <string name="payments_button_info">詳しく見る</string>
-    <string name="payments_button_submit">送信</string>
-    <string name="payments_button_pay">クレジットカードで支払う</string>
-    <string name="payments_button_change_email">メールアドレスの変更</string>
-    <string name="payments_member_link">メンバーシッププランの詳細</string>
-    <string name="payments_privacy_link">プライバシーポリシー</string>
-    <string name="payments_terms_link">利用規約</string>
-    <string name="payments_current_label">現在</string>
     <!-- Tier details -->
-    <string name="payments_tier_details_name_title">自分だけの名前を決めましょう</string>
-    <string name="payments_tier_details_name_subtitle">これはAparok Network内で使えるあなただけの名前です。メンバーシップの加入認証にも使われます。自分専用のドメイン名として使うことができ、変更できません。</string>
-    <string name="payments_tier_details_name_hint">あなた自身</string>
-    <string name="payments_tier_details_name_min">最低7文字</string>
-    <string name="payments_tier_details_name_error">この名前は既に使用されています。</string>
-    <string name="payments_tier_details_name_validated">「%1$s」は利用可能です！</string>
-    <string name="payments_tier_details_name_validating">名前を検証中</string>
-    <string name="payments_tier_details_free_forever">無期限</string>
-    <string name="payments_tier_details_valid_until">%1$sまで有効</string>
-    <string name="payments_tier_details_info_explorer">同期や自動バックアップ、複数人での共同編集ができます</string>
-    <string-array name="payments_benefits_explorer">
         <item>1 GBのネットワークストレージ</item>
         <item>10個までの1対1のスペース</item>
         <item>最大10個の閲覧限定の共有スペース</item>
     </string-array>
-    <string name="payments_tier_details_info_builder">複数人での共同作業とストレージ容量を増加させましょう</string>
-    <string-array name="payments_benefits_builder">
         <item>ANY名（7文字以上）</item>
         <item>128 GBのネットワークストレージ</item>
         <item>25名の編集メンバー</item>
         <item>優先サポート</item>
     </string-array>
-    <string name="payments_tier_details_info_cocreator">私たちの活動を応援し、限定コンテンツや特別な特典を入手しましょう</string>
-    <string-array name="payments_benefits_cocreator">
         <item>ANY名（5文字以上）</item>
         <item>256GBのネットワークストレージ</item>
         <item>25名の編集メンバー</item>
         <item>チームとのチャット</item>
         <item>限定コレクション</item>
     </string-array>
-    <string name="payments_detials_button_pay">クレジットカードでの支払い</string>
-    <string name="payments_detials_button_submit">送信</string>
-    <string name="payments_details_whats_included">特典内容</string>
-    <string name="payments_email_title">最新情報や無料特典を受け取りましょう！</string>
-    <string name="payments_email_subtitle">あなたの保管庫と結びつけられることは一切ありません。</string>
-    <string name="payments_email_checkbox_text">最新情報や無料特典を受け取る！</string>
-    <string name="payments_email_hint">メールアドレス</string>
-    <string name="payments_tier_current_title">加入状況：</string>
-    <string name="payments_tier_current_valid">有効期限</string>
-    <string name="payments_tier_current_paid_by">支払方法</string>
-    <string name="payments_tier_current_paid_by_card">Stripe</string>
-    <string name="payments_tier_current_paid_by_crypto">暗号資産</string>
-    <string name="payments_tier_current_paid_by_apple">Appleサブスクリプション</string>
-    <string name="payments_tier_current_paid_by_google">Google Playでの定期購入</string>
-    <string name="payments_tier_current_button">支払いの管理</string>
-    <string name="payments_tier_current_change_email_button">メールアドレスの変更</string>
     <!-- Payments Code -->
-    <string name="payments_code_title">メールアドレスに送信されたコードを入力</string>
-    <string name="payments_code_resend">再送信</string>
-    <string name="payments_code_resend_in">%1$d秒後に再送信</string>
     <!-- Membership Welcome -->
-    <string name="payments_welcome_title">ネットワーク %1$sへようこそ</string>
-    <string name="payments_welcome_subtitle">ご興味をお持ちいただき、ありがとうございます！</string>
-    <string name="payments_welcome_button">続行</string>
     <!-- Membership Email -->
     <!-- Membership name errors -->
     <!-- Notifications -->

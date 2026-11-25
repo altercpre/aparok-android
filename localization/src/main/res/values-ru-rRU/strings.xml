@@ -1451,90 +1451,24 @@
     <string name="multiplayer_invite_link_request_already_sent">Запрос отправлен</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <string name="payments_header">Членство</string>
-    <string name="payments_subheader">Присоединение к сети Aparok означает внесение вклада в её историю</string>
-    <string name="payments_card_text_1">Совместно создавайте Видение</string>
-    <string name="payments_card_description_1">Как ценному участнику, ваше мнение имеет значение! Участвуйте в эксклюзивных мероприятиях, определяйте стратегические решения и влияйте на наше развитие.</string>
-    <string name="payments_card_text_2">Разблокируйте преимущества для участников</string>
-    <string name="payments_card_description_2">Члены получают увеличенные лимиты резервного хранения и синхронизации, приглашения для нескольких гостей для совместной работы в общих пространствах и уникальную идентичность в сети Aparok.</string>
-    <string name="payments_card_text_3">Поддержка Цифровой Независимости</string>
-    <string name="payments_card_description_3">Ваш вклад поддерживает нашу независимую команду и одобряет нашу перспективу, ориентированной на пользователя и безопасной совместной цифровой среды.</string>
-    <string name="payments_card_text_4">Инвестировать в Соединение</string>
-    <string name="payments_card_description_4">Ценность нашей сети превышает сумму её частей. Ваше членство поддерживает инфраструктуру для её роста, которая лежит в основе этой сети.</string>
-    <string name="payments_tier_explorer">Исследователь</string>
-    <string name="payments_tier_explorer_description">Исследуйте сеть и наслаждайтесь захватывающим индивидуальным сотрудничеством.</string>
-    <string name="payments_tier_builder">Создатель</string>
-    <string name="payments_tier_builder_description">Разблокируйте возможности многопользовательского сотрудничества и получите первоклассную поддержку.</string>
-    <string name="payments_tier_cocreator">Соавтор</string>
-    <string name="payments_tier_cocreator_description">Поддержите наше приключение и получите эксклюзивный доступ и привилегии</string>
-    <string name="payments_tier_custom">Пользовательский</string>
-    <string name="payments_tier_custom_description">Членство в соответствии с вашими конкретными потребностями и предпочтениями</string>
-    <string name="payments_button_learn">Узнать больше</string>
-    <string name="payments_button_manage">Управление платежами</string>
-    <string name="payments_button_contact">Контакт</string>
-    <string name="payments_button_info">Подробнее</string>
-    <string name="payments_button_submit">Отправить</string>
-    <string name="payments_button_pay">Оплатить картой</string>
-    <string name="payments_button_change_email">Изменить E-mail</string>
-    <string name="payments_member_link">Детали уровней членства </string>
-    <string name="payments_privacy_link">Политика конфиденциальности</string>
-    <string name="payments_terms_link">Условия и положения</string>
-    <string name="payments_current_label">Текущий</string>
     <!-- Tier details -->
-    <string name="payments_tier_details_name_title">Выберите ваше уникальное имя</string>
-    <string name="payments_tier_details_name_subtitle">Это ваше уникальное имя в сети Aparok, подтверждающее ваше членство. Оно служит вашим личным доменом и не может быть изменено.</string>
-    <string name="payments_tier_details_name_hint">Меня</string>
-    <string name="payments_tier_details_name_min">Минимум 7 символов</string>
-    <string name="payments_tier_details_name_error">Это имя уже занято!</string>
-    <string name="payments_tier_details_name_validated">Это имя [%1$s] доступно!</string>
-    <string name="payments_tier_details_name_validating">Проверка имени</string>
-    <string name="payments_tier_details_free_forever">Навсегда</string>
-    <string name="payments_tier_details_valid_until">Действительно до %1$s</string>
-    <string name="payments_tier_details_info_explorer">Исследуйте сеть и наслаждайтесь захватывающим индивидуальным сотрудничеством.</string>
-    <string-array name="payments_benefits_explorer">
         <item>1 ГБ сетевого пространства</item>
         <item>10 индивидуальных пространств</item>
         <item>До 10 общих пространств в режиме только для чтения</item>
     </string-array>
-    <string name="payments_tier_details_info_builder">Разблокируйте возможности многопользовательского сотрудничества и получите первоклассную поддержку.</string>
-    <string-array name="payments_benefits_builder">
         <item>Уникальное имя (от 7 символов)</item>
         <item>128 ГБ сетевого пространства</item>
         <item>10 мест для гостевых соавторов</item>
         <item>Приоритетная поддержка</item>
     </string-array>
-    <string name="payments_tier_details_info_cocreator">Поддержите наше приключение и получите эксклюзивный доступ и привилегии</string>
-    <string-array name="payments_benefits_cocreator">
         <item>Уникальное имя (от 5 символов)</item>
         <item>256 ГБ сетевого пространства</item>
         <item>25 мест для гостей-сотрудников</item>
         <item>Общение с командой</item>
         <item>Уникальный коллекционный</item>
     </string-array>
-    <string name="payments_detials_button_pay">Оплатить картой</string>
-    <string name="payments_detials_button_submit">Отправить</string>
-    <string name="payments_details_whats_included">Что включено</string>
-    <string name="payments_email_title">Получайте обновления и пользуйтесь бесплатными преимуществами!</string>
-    <string name="payments_email_subtitle">Он никак не связан с вашим аккаунтом.</string>
-    <string name="payments_email_checkbox_text">Я бы хотел получать новости о продуктах и пользоваться бесплатными преимуществами!</string>
-    <string name="payments_email_hint">E-mail</string>
-    <string name="payments_tier_current_title">Ваш текущий статус:</string>
-    <string name="payments_tier_current_valid">Действительно до</string>
-    <string name="payments_tier_current_paid_by">Оплачено</string>
-    <string name="payments_tier_current_paid_by_card">Stripe</string>
-    <string name="payments_tier_current_paid_by_crypto">Криптовалюта</string>
-    <string name="payments_tier_current_paid_by_apple">Подписка Apple</string>
-    <string name="payments_tier_current_paid_by_google">Подписка Google</string>
-    <string name="payments_tier_current_button">Управление платежами</string>
-    <string name="payments_tier_current_change_email_button">Изменить E-mail</string>
     <!-- Payments Code -->
-    <string name="payments_code_title">Введите код, отправленный на вашу электронную почту</string>
-    <string name="payments_code_resend">Отправить ещё раз</string>
-    <string name="payments_code_resend_in">Повторить через %1$d сек</string>
     <!-- Membership Welcome -->
-    <string name="payments_welcome_title">Добро пожаловать в сеть,\n%1$s</string>
-    <string name="payments_welcome_subtitle">Большое спасибо за Ваше любопытство!</string>
-    <string name="payments_welcome_button">Продолжить</string>
     <!-- Membership Email -->
     <!-- Membership name errors -->
     <!-- Notifications -->

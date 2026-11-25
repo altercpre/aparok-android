@@ -64,7 +64,7 @@ class MarkupExtTest {
             Mark(range = IntRange(0, 5), type = Mark.Type.BOLD),
             Mark(range = IntRange(23, 31), type = Mark.Type.STRIKETHROUGH),
             Mark(range = IntRange(23, 31), type = Mark.Type.ITALIC),
-            Mark(range = IntRange(32, 43), type = Mark.Type.LINK, param = "https://github.com/altercpre/aparok-android/releases/latest")
+            Mark(range = IntRange(32, 43), type = Mark.Type.LINK, param = "https://example.com")
         )
 
         val from = 6
@@ -79,7 +79,7 @@ class MarkupExtTest {
             Mark(range = IntRange(0, 5), type = Mark.Type.BOLD),
             Mark(range = IntRange(36, 44), type = Mark.Type.STRIKETHROUGH),
             Mark(range = IntRange(36, 44), type = Mark.Type.ITALIC),
-            Mark(range = IntRange(45, 56), type = Mark.Type.LINK, param = "https://github.com/altercpre/aparok-android/releases/latest")
+            Mark(range = IntRange(45, 56), type = Mark.Type.LINK, param = "https://example.com")
         )
 
         assertEquals(
@@ -94,7 +94,7 @@ class MarkupExtTest {
             Mark(range = IntRange(0, 10), type = Mark.Type.BOLD),
             Mark(range = IntRange(3, 8), type = Mark.Type.ITALIC),
             Mark(range = IntRange(23, 31), type = Mark.Type.STRIKETHROUGH),
-            Mark(range = IntRange(32, 43), type = Mark.Type.LINK, param = "https://github.com/altercpre/aparok-android/releases/latest")
+            Mark(range = IntRange(32, 43), type = Mark.Type.LINK, param = "https://example.com")
         )
 
         val from = 4
@@ -109,7 +109,7 @@ class MarkupExtTest {
             Mark(range = IntRange(0, 15), type = Mark.Type.BOLD),
             Mark(range = IntRange(3, 13), type = Mark.Type.ITALIC),
             Mark(range = IntRange(28, 36), type = Mark.Type.STRIKETHROUGH),
-            Mark(range = IntRange(37, 48), type = Mark.Type.LINK, param = "https://github.com/altercpre/aparok-android/releases/latest")
+            Mark(range = IntRange(37, 48), type = Mark.Type.LINK, param = "https://example.com")
         )
 
         assertEquals(
@@ -123,7 +123,7 @@ class MarkupExtTest {
         val given = listOf(
             Mark(range = IntRange(0, 4), type = Mark.Type.BOLD),
             Mark(range = IntRange(5, 15), type = Mark.Type.ITALIC),
-            Mark(range = IntRange(16, 20), type = Mark.Type.LINK, param = "www.github.com/altercpre/aparok-android/releases/latest")
+            Mark(range = IntRange(16, 20), type = Mark.Type.LINK, param = "www.example.com")
         )
 
         val from = 5
@@ -137,7 +137,7 @@ class MarkupExtTest {
         val expected = listOf(
             Mark(range = IntRange(0, 4), type = Mark.Type.BOLD),
             Mark(range = IntRange(5, 11), type = Mark.Type.ITALIC),
-            Mark(range = IntRange(12, 16), type = Mark.Type.LINK, param = "www.github.com/altercpre/aparok-android/releases/latest")
+            Mark(range = IntRange(12, 16), type = Mark.Type.LINK, param = "www.example.com")
         )
 
         assertEquals(

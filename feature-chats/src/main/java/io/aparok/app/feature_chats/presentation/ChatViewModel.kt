@@ -1223,7 +1223,7 @@ class ChatViewModel @Inject constructor(
                                 text = msg.trim(),
                                 attachments = attachments,
                                 marks = normalizedMarkup,
-                                synced = false
+                                synced = true
                             )
                         )
                     ).onSuccess {
@@ -1722,7 +1722,7 @@ class ChatViewModel @Inject constructor(
                 }
 
                 is ChatView.Message.Attachment.Video -> {
-                    // TODO
+                    commands.emit(ViewModelCommand.OpenVideo(attachment.obj, vmParams.space))
                 }
 
                 is ChatView.Message.Attachment.Gallery -> {
@@ -2725,6 +2725,7 @@ class ChatViewModel @Inject constructor(
         data object OpenWidgets : ViewModelCommand()
         data class OpenSpaceMembers(val space: SpaceId) : ViewModelCommand()
         data class MediaPreview(val index: Int, val objects: List<Id>) : ViewModelCommand()
+        data class OpenVideo(val obj: Id, val space: SpaceId) : ViewModelCommand()
         data class Browse(val url: String) : ViewModelCommand()
         data class PlayAudio(val obj: Id, val name: String) : ViewModelCommand()
         data class SelectChatReaction(val msg: Id) : ViewModelCommand()

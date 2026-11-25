@@ -88,8 +88,8 @@ class ObjectSetGridPrimitiveRelationTest : TestObjectSetSetup() {
         val object1value1 = "Operating environment for the new Internet"
         val object1value2 = "2021"
         val object1value3 = "+00000000000"
-        val object1value4 = "https://github.com/altercpre/aparok-android/releases/latest"
-        val object1value5 = "team@github.com/altercpre/aparok-android/releases/latest"
+        val object1value4 = "https://example.com"
+        val object1value5 = "team@example.com"
 
         val object2value1 = "A peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open."
         val object2value2 = "2021"

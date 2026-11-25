@@ -406,7 +406,7 @@ class EditorIdentityForkTest : EditorPresentationTestSetup() {
         // SETUP
 
         val empty = StubParagraph(text = "")
-        val url = "https://github.com/altercpre/aparok-android/releases/latest"
+        val url = "https://example.com"
         val forked = StubParagraph(text = url)
 
         stubInterceptEvents()

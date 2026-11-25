@@ -834,7 +834,7 @@ class BlockAdapterMovementMethodTest : BlockAdapterTestSetup() {
                 Markup.Mark.Link(
                     from = 10,
                     to = 15,
-                    param = "github.com/altercpre/aparok-android/releases/latest"
+                    param = "example.com"
                 )
             )
         )
@@ -867,7 +867,7 @@ class BlockAdapterMovementMethodTest : BlockAdapterTestSetup() {
                 Markup.Mark.Link(
                     from = 10,
                     to = 15,
-                    param = "www.github.com/altercpre/aparok-android/releases/latest"
+                    param = "www.example.com"
                 )
             ),
             id = MockDataFactory.randomUuid(),

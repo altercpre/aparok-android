@@ -1726,72 +1726,27 @@
 
     <!--region PAYMENTS -->
     
-    <string name="payments_header">Membership</string>
-    <string name="payments_subheader">Joining Aparok network means contributing to its story</string>
 
-    <string name="payments_card_text_1">Co-create the Vision</string>
-    <string name="payments_card_description_1">As a valued member your voice matters! Engage in exclusive events, shape strategic choices, and influence our roadmap.</string>
 
-    <string name="payments_card_text_2">Unlock Member Benefits</string>
-    <string name="payments_card_description_2">Members enjoy higher backup storage &amp; sync limits, invitations for multiple guests to collaborate in shared spaces, and a unique identity on the Aparok Network.</string>
 
-    <string name="payments_card_text_3">Support Digital Independence</string>
-    <string name="payments_card_description_3">Your contribution supports our team and endorses our vision of a user-owned, secure, and collaborative digital network.</string>
 
-    <string name="payments_card_text_4">Invest in Connectivity</string>
-    <string name="payments_card_description_4">Our network\'s value exceeds the sum of its parts. Your membership sustains the infrastructure for its growth which underpins this network.</string>
     
-    <string name="payments_tier_explorer">Explorer</string>
-    <string name="payments_tier_explorer_description">Dive into the network and enjoy the thrill of one-on-one collaboration</string>
-    <string name="payments_tier_builder">Builder</string>
-    <string name="payments_tier_builder_description">Unlock the magic of multi-party collaboration and enjoy top-notch support</string>
-    <string name="payments_tier_cocreator">Co-Creator</string>
-    <string name="payments_tier_cocreator_description">Support our adventure and unlock exclusive access and perks</string>
-    <string name="payments_tier_custom">Custom</string>
-    <string name="payments_tier_custom_description">Membership tailored to your specific needs and preferences</string>
 
-    <string name="payments_button_learn">Learn more</string>
-    <string name="payments_button_manage">Manage payment</string>
-    <string name="payments_button_contact">Contact</string>
-    <string name="payments_button_info">More info</string>
-    <string name="payments_button_submit">Submit</string>
-    <string name="payments_button_pay">Pay by card</string>
-    <string name="payments_button_change_email">Change e-mail</string>
 
-    <string name="payments_member_link">Membership levels details</string>
-    <string name="payments_privacy_link">Privacy policy</string>
-    <string name="payments_terms_link">Terms and conditions</string>
-    <string name="payments_current_label">Current</string>
 
     <!-- Tier details -->
-    <string name="payments_tier_details_name_title">Pick your unique name</string>
-    <string name="payments_tier_details_name_subtitle">This is your unique name on the Aparok network, confirming your Membership. It acts as your personal domain and cannot be changed.</string>
-    <string name="payments_tier_details_name_hint">Myself</string>
-    <string name="payments_tier_details_name_domain_not_translatable" translatable="false">.any</string>
-    <string name="payments_tier_details_name_min">Min 7 characters</string>
-    <string name="payments_tier_details_name_error">This name is already taken!</string>
-    <string name="payments_tier_details_name_validated">This name [%1$s] is up for grabs!</string>
-    <string name="payments_tier_details_name_validating">Validating name</string>
-    <string name="payments_tier_details_free_forever">Forever</string>
-    <string name="payments_tier_details_valid_until">Valid until %1$s</string>
 
-    <string name="payments_tier_details_info_explorer">Dive into the network and enjoy the thrill of one-on-one collaboration</string>
-    <string-array name="payments_benefits_explorer">
         <item>1 GB of network space</item>
         <item>10 one-to-one spaces</item>
         <item>Up to 10 shared spaces in read-only mode</item>
     </string-array>
 
-    <string name="payments_tier_details_info_builder">Unlock the magic of multi-party collaboration and enjoy top-notch support</string>
-    <string-array name="payments_benefits_builder">
         <item>Unique name (from 7 characters)</item>
         <item>128 GB of network space</item>
         <item>10 Guest collaborator seats</item>
         <item>Priority support</item>
     </string-array>
 
-    <string name="payments_tier_details_info_cocreator">Support our adventure and unlock exclusive access and perks</string>
-    <string-array name="payments_benefits_cocreator">
         <item>Unique name (from 5 characters)</item>
         <item>256 GB of network space</item>
         <item>25 Guest collaborator seats</item>
@@ -1799,49 +1754,19 @@
         <item>Unique collectible</item>
     </string-array>
 
-    <string name="payments_detials_button_pay">Pay by Card</string>
-    <string name="payments_detials_button_submit">Submit</string>
-    <string name="payments_details_whats_included">What’s included</string>
-    <string name="payments_email_title">Get updates and enjoy free perks!</string>
-    <string name="payments_email_subtitle">It is not linked to your account in any way.</string>
-    <string name="payments_email_checkbox_text">I\'d like to get updates on products and enjoy free perks!</string>
-    <string name="payments_email_hint">E-mail</string>
-
-    <string name="payments_tier_current_title">Your current status:</string>
-    <string name="payments_tier_current_valid">Valid until</string>
-    <string name="payments_tier_current_paid_by">Paid by</string>
-    <string name="payments_tier_current_paid_by_card">Stripe</string>
-    <string name="payments_tier_current_paid_by_crypto">Crypto</string>
-    <string name="payments_tier_current_paid_by_apple">Apple subscription</string>
-    <string name="payments_tier_current_paid_by_google">Google subscription</string>
-
-    <string name="payments_tier_current_button">Manage payment</string>
 
 
-    <string name="payments_tier_current_change_email_button">Change e-mail</string>
+
+
 
     <!-- Payments Code -->
-    <string name="payments_code_title">Enter the code sent to your email</string>
-    <string name="payments_code_resend">Resend</string>
-    <string name="payments_code_resend_in">Resend in %1$d sec</string>
 
     <!-- Membership Activate Code -->
-    <string name="payments_activate_code_entry">Have a code?</string>
-    <string name="payments_activate_code_title">Activate Your Code</string>
-    <string name="payments_activate_code_subtitle">Enter the code you received after purchase or from an invitation. Your membership will be activated instantly.</string>
-    <string name="payments_activate_code_hint">Paste activation code…</string>
-    <string name="payments_activate_code_button">Activate</string>
     <!-- Membership Activate Code — success -->
-    <string name="payments_activate_code_success_title">You\'re all set</string>
-    <string name="payments_activate_code_success_subtitle">Your %1$s membership is now active</string>
-    <string name="payments_activate_code_success_subtitle_generic">Your membership is now active</string>
     <!-- Membership Activate Code — errors (CodeGetInfo) -->
 
 
     <!-- Membership Welcome -->
-    <string name="payments_welcome_title">Welcome to the network,\n%1$s</string>
-    <string name="payments_welcome_subtitle">Big cheers for your curiosity!</string>
-    <string name="payments_welcome_button">Continue</string>
 
     <!-- Membership Email -->
 

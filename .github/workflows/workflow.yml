@@ -2,7 +2,8 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'mutation/**']
+  workflow_dispatch:
 
 jobs:
   build-and-test:
@@ -42,4 +43,4 @@ jobs:
       - name: Run Sovereign Unit Tests
         run: |
           ./gradlew :domain:test --tests "io.aparok.app.domain.multiplayer.DefaultUserPermissionProviderTest" --tests "io.aparok.app.domain.misc.UrlBuilderTest" --no-daemon
-          ./gradlew :app:testDebugUnitTest --tests "io.aparok.app.AparokNoInvitesOrRemoteSharesTest" --tests "io.aparok.app.membership.AparokMembershipRemovalTest" --tests "io.aparok.app.offline.AparokMediaAndChatOfflineTest" --tests "io.aparok.app.ui.onboarding.OnboardingProfileTest" --tests "io.aparok.app.offline.SovereignOfflineMatrixTest" --tests "io.aparok.app.security.AparokEncryptionManagerTest" --tests "io.aparok.app.security.AparokStorageMarkerScanTest" --tests "io.aparok.app.storage.AparokStorageManagerTest" --tests "io.aparok.app.backup.AparokBackupManagerTest" --no-daemon
+          ./gradlew :app:testDebugUnitTest --tests "io.aparok.app.offline.AparokSovereignProductionOfflineTest" --tests "io.aparok.app.AparokNoInvitesOrRemoteSharesTest" --tests "io.aparok.app.membership.AparokMembershipRemovalTest" --tests "io.aparok.app.security.AparokEncryptionManagerTest" --tests "io.aparok.app.security.AparokStorageMarkerScanTest" --tests "io.aparok.app.storage.AparokStorageManagerTest" --tests "io.aparok.app.backup.AparokBackupManagerTest" --no-daemon

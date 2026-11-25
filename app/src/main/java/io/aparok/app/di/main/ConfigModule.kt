@@ -39,9 +39,11 @@ object ConfigModule {
     @Provides
     @Singleton
     fun provideUrlBuilder(
-        getGateway: Gateway
+        getGateway: Gateway,
+        configStorage: ConfigStorage
     ): UrlBuilder = UrlBuilderImpl(
-        gateway = getGateway
+        gateway = getGateway,
+        tokenProvider = { configStorage.getOrNull()?.sessionToken.orEmpty() }
     )
 
     @JvmStatic

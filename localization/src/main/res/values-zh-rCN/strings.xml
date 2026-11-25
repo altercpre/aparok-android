@@ -1433,90 +1433,24 @@
     <string name="multiplayer_invite_link_request_already_sent">已发送申请</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <string name="payments_header">会员</string>
-    <string name="payments_subheader">加入 Aparok 网络，书写它的故事</string>
-    <string name="payments_card_text_1">共创愿景</string>
-    <string name="payments_card_description_1">作为尊贵的会员，你的声音很重要！参与独家活动，制定战略选择，并影响我们的路线图。</string>
-    <string name="payments_card_text_2">解锁会员福利</string>
-    <string name="payments_card_description_2">会员可以享受更高的备份存储和同步空间，可以邀请多位访客协作共享空间，并拥有 Aparok 网络上的独特身份。</string>
-    <string name="payments_card_text_3">支持数字独立性</string>
-    <string name="payments_card_description_3">感谢您的贡献。这不仅是对团队的支持，更是对我们“构建安全、协作、由用户所有之数字网络”愿景的同行与认可。</string>
-    <string name="payments_card_text_4">对连接的投资</string>
-    <string name="payments_card_description_4">我们的网络的价值超过了其各部分的总和。您的会员资格维持了用于支撑这个网络增长的基础设施。</string>
-    <string name="payments_tier_explorer">探索者</string>
-    <string name="payments_tier_explorer_description">潜入网络并享受一对一协作的提示</string>
-    <string name="payments_tier_builder">建造者</string>
-    <string name="payments_tier_builder_description">解锁多方协作的魔法以及享受顶级支持</string>
-    <string name="payments_tier_cocreator">共创者</string>
-    <string name="payments_tier_cocreator_description">支持我们的探险并解锁专属访问权限和好处</string>
-    <string name="payments_tier_custom">自定义</string>
-    <string name="payments_tier_custom_description">适合您的具体需要和偏好的会员资格</string>
-    <string name="payments_button_learn">了解详情</string>
-    <string name="payments_button_manage">管理付款</string>
-    <string name="payments_button_contact">联络</string>
-    <string name="payments_button_info">更多信息</string>
-    <string name="payments_button_submit">提交</string>
-    <string name="payments_button_pay">银行卡支付</string>
-    <string name="payments_button_change_email">更改电子邮件</string>
-    <string name="payments_member_link">会员等级详情</string>
-    <string name="payments_privacy_link">隐私政策</string>
-    <string name="payments_terms_link">条款与条件</string>
-    <string name="payments_current_label">当前</string>
     <!-- Tier details -->
-    <string name="payments_tier_details_name_title">选择您独有的名字</string>
-    <string name="payments_tier_details_name_subtitle">这是您在 Aparok 网络上的独特名称，用于确认您的会员身份。它是您的个人域名，且无法更改。</string>
-    <string name="payments_tier_details_name_hint">我自己</string>
-    <string name="payments_tier_details_name_min">最少 7 个字符</string>
-    <string name="payments_tier_details_name_error">此名称已被占用</string>
-    <string name="payments_tier_details_name_validated">[%1$s] 这个名称是可获得的！</string>
-    <string name="payments_tier_details_name_validating">正在验证名字</string>
-    <string name="payments_tier_details_free_forever">无限期</string>
-    <string name="payments_tier_details_valid_until">有效期至 %1$s</string>
-    <string name="payments_tier_details_info_explorer">潜入网络并享受一对一协作的提示</string>
-    <string-array name="payments_benefits_explorer">
         <item>1 GB 网络空间</item>
         <item>10 个单人空间</item>
         <item>最多 10 个在只读模式下的共享空间</item>
     </string-array>
-    <string name="payments_tier_details_info_builder">解锁多方协作的魔法以及享受顶级支持</string>
-    <string-array name="payments_benefits_builder">
         <item>唯一名字（大于 7 个字）</item>
         <item>128 GB 网络空间</item>
         <item>10 个访客协作位置</item>
         <item>优先支持</item>
     </string-array>
-    <string name="payments_tier_details_info_cocreator">支持我们的探险并解锁专属访问权限和好处</string>
-    <string-array name="payments_benefits_cocreator">
         <item>唯一名字（大于 5 个字）</item>
         <item>256 GB 网络空间</item>
         <item>25 个访客协作位置</item>
         <item>与团队聊天</item>
         <item>独特的可收藏的</item>
     </string-array>
-    <string name="payments_detials_button_pay">使用信用卡</string>
-    <string name="payments_detials_button_submit">提交</string>
-    <string name="payments_details_whats_included">包含的内容</string>
-    <string name="payments_email_title">获得升级并享受免费优惠！</string>
-    <string name="payments_email_subtitle">它没有以任何方式链接到您的帐户。</string>
-    <string name="payments_email_checkbox_text">我想获得产品的更新并享受免费优惠！</string>
-    <string name="payments_email_hint">电子邮件</string>
-    <string name="payments_tier_current_title">您目前的状态：</string>
-    <string name="payments_tier_current_valid">有效期至</string>
-    <string name="payments_tier_current_paid_by">支付方式：</string>
-    <string name="payments_tier_current_paid_by_card">Stripe</string>
-    <string name="payments_tier_current_paid_by_crypto">加密货币</string>
-    <string name="payments_tier_current_paid_by_apple">Apple 订阅</string>
-    <string name="payments_tier_current_paid_by_google">Google 订阅</string>
-    <string name="payments_tier_current_button">管理付款</string>
-    <string name="payments_tier_current_change_email_button">更改电子邮件</string>
     <!-- Payments Code -->
-    <string name="payments_code_title">输入发送到您邮箱的代码</string>
-    <string name="payments_code_resend">重新发送</string>
-    <string name="payments_code_resend_in">在 %1$d 秒内重新发送</string>
     <!-- Membership Welcome -->
-    <string name="payments_welcome_title">欢迎来到网络，\n%1$s</string>
-    <string name="payments_welcome_subtitle">为你的好奇心干一杯大的！</string>
-    <string name="payments_welcome_button">继续</string>
     <!-- Membership Email -->
     <!-- Membership name errors -->
     <!-- Notifications -->

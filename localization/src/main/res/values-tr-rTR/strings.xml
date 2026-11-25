@@ -1439,90 +1439,24 @@
     <string name="multiplayer_invite_link_request_already_sent">İstek gönderildi</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <string name="payments_header">Üyelik</string>
-    <string name="payments_subheader">Aparok ağına katılmak, hikayesine katkıda bulunmak anlamına gelir</string>
-    <string name="payments_card_text_1">Vizyonu Birlikte Yaratın</string>
-    <string name="payments_card_description_1">Değerli bir üye olarak sesin önemli! Özel etkinliklere katıl, stratejik seçimleri şekillendir ve yol haritamızı şekillendir.</string>
-    <string name="payments_card_text_2">Üye Avantajlarının Kilidini Açın</string>
-    <string name="payments_card_description_2">Üyeler daha yüksek yedekleme depolama &amp; eşitleme limitlerine, birden fazla misafirin paylaşılan alanlarda işbirliği yapması için davetlere ve Aparok Ağı\'nda benzersiz bir kimliğe sahiptir.</string>
-    <string name="payments_card_text_3">Dijital Bağımsızlığı Destekleyin</string>
-    <string name="payments_card_description_3">Katkınız ekibimizi destekliyor ve kullanıcıya ait güvenli ve işbirliğine dayalı bir dijital ağ vizyonumuzu onaylıyor.</string>
-    <string name="payments_card_text_4">Bağlanabilirliğe yatırım yapın</string>
-    <string name="payments_card_description_4">Ağımızın değeri parçalarının toplamından daha fazladır. Üyeliğiniz bu ağın temelini oluşturan büyüme altyapısını sürdürmektedir.</string>
-    <string name="payments_tier_explorer">Kaşif</string>
-    <string name="payments_tier_explorer_description">Ağın içine dalın ve bire bir işbirliğinin heyecanını yaşayın.</string>
-    <string name="payments_tier_builder">Kurucu</string>
-    <string name="payments_tier_builder_description">Çok taraflı işbirliğinin büyüsünü ortaya çıkarın ve birinci sınıf desteğin keyfini çıkarın.</string>
-    <string name="payments_tier_cocreator">Ortak Yaratıcı</string>
-    <string name="payments_tier_cocreator_description">Maceramızı destekleyin, özel erişim ve avantajların kilidini açın.</string>
-    <string name="payments_tier_custom">Özel</string>
-    <string name="payments_tier_custom_description">Özel ihtiyaç ve tercihlerinize göre uyarlanmış üyelik.</string>
-    <string name="payments_button_learn">Daha fazla bilgi edinin</string>
-    <string name="payments_button_manage">Ödemeyi yönet</string>
-    <string name="payments_button_contact">İletişim</string>
-    <string name="payments_button_info">Daha fazla bilgi</string>
-    <string name="payments_button_submit">Gönder</string>
-    <string name="payments_button_pay">Kartla ödeyin</string>
-    <string name="payments_button_change_email">E-postayı değiştir</string>
-    <string name="payments_member_link">Üyelik plan detayları</string>
-    <string name="payments_privacy_link">Gizlilik politikası</string>
-    <string name="payments_terms_link">Şartlar ve koşullar</string>
-    <string name="payments_current_label">Şu anki</string>
     <!-- Tier details -->
-    <string name="payments_tier_details_name_title">Benzersiz isminizi seçin</string>
-    <string name="payments_tier_details_name_subtitle">Bu, Aparok ağında üyeliğinizi onaylayan benzersiz adınızdır. Kişisel alan adınız olarak işlev görür ve değiştirilemez.</string>
-    <string name="payments_tier_details_name_hint">Kendim</string>
-    <string name="payments_tier_details_name_min">Minimum 7 karakter</string>
-    <string name="payments_tier_details_name_error">Bu isim çoktan alınmış!</string>
-    <string name="payments_tier_details_name_validated">[%1$s] ismi kullanılmak için hazır!</string>
-    <string name="payments_tier_details_name_validating">İsim doğrulama</string>
-    <string name="payments_tier_details_free_forever">Ömür boyu</string>
-    <string name="payments_tier_details_valid_until">%1$s tarihine kadar geçerlidir</string>
-    <string name="payments_tier_details_info_explorer">Ağın içine dalın ve bire bir işbirliğinin heyecanını yaşayın.</string>
-    <string-array name="payments_benefits_explorer">
         <item>1 GB ağ alanı</item>
         <item>10 bire bir alan</item>
         <item>Salt okunur modda 10 adede kadar paylaşılan alan</item>
     </string-array>
-    <string name="payments_tier_details_info_builder">Çok taraflı işbirliğinin büyüsünü ortaya çıkarın ve birinci sınıf desteğin keyfini çıkarın.</string>
-    <string-array name="payments_benefits_builder">
         <item>Benzersiz isim (en az 7 karakter)</item>
         <item>128 GB ağ alanı</item>
         <item>10 misafir işbirlikçi alanı</item>
         <item>Öncelikli destek</item>
     </string-array>
-    <string name="payments_tier_details_info_cocreator">Maceramızı destekleyin, özel erişim ve avantajların kilidini açın.</string>
-    <string-array name="payments_benefits_cocreator">
         <item>Benzersiz isim (en az 5 karakter)</item>
         <item>256 GB ağ alanı</item>
         <item>25 misafir işbirlikçi alanı</item>
         <item>Ekiple sohbet edin</item>
         <item>Eşsiz koleksiyon ürünü</item>
     </string-array>
-    <string name="payments_detials_button_pay">Kartla ödeyin</string>
-    <string name="payments_detials_button_submit">Gönder</string>
-    <string name="payments_details_whats_included">Neler dahil</string>
-    <string name="payments_email_title">Güncellemeleri alın ve ücretsiz avantajlardan yararlanın!</string>
-    <string name="payments_email_subtitle">Hesabınızla hiçbir şekilde bağlantılı değildir.</string>
-    <string name="payments_email_checkbox_text">Ürünler hakkında güncellemeler almak ve ücretsiz avantajlardan yararlanmak istiyorum!</string>
-    <string name="payments_email_hint">E-Posta</string>
-    <string name="payments_tier_current_title">Mevcut durumunuz:</string>
-    <string name="payments_tier_current_valid">Geçerlilik tarihi</string>
-    <string name="payments_tier_current_paid_by">Ödeme yapan</string>
-    <string name="payments_tier_current_paid_by_card">Stripe</string>
-    <string name="payments_tier_current_paid_by_crypto">Kripto</string>
-    <string name="payments_tier_current_paid_by_apple">Apple aboneliği</string>
-    <string name="payments_tier_current_paid_by_google">Google aboneliği</string>
-    <string name="payments_tier_current_button">Ödemeyi yönet</string>
-    <string name="payments_tier_current_change_email_button">E-postayı değiştir</string>
     <!-- Payments Code -->
-    <string name="payments_code_title">E-posta adresine gönderilen kodu gir</string>
-    <string name="payments_code_resend">Tekrar Gönder</string>
-    <string name="payments_code_resend_in">%1$d saniye içinde yeniden gönderebilirsin</string>
     <!-- Membership Welcome -->
-    <string name="payments_welcome_title">%1$s\nAğa hoş geldiniz</string>
-    <string name="payments_welcome_subtitle">Merakınız için kocaman bir alkış!</string>
-    <string name="payments_welcome_button">Devam et</string>
     <!-- Membership Email -->
     <!-- Membership name errors -->
     <!-- Notifications -->

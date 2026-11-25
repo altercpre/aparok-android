@@ -22,5 +22,6 @@ data class Config(
     val workspaceObjectId: Id,
     val ethereumAddress: String = "",
     val spaceChatId: Id?,
-    val metaDataKey: String = ""
+    val metaDataKey: String = "",
+    val sessionToken: String = ""
 )

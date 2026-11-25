@@ -42,7 +42,7 @@ class LinkSpanBoundaryTest {
 
     @Test
     fun `should not extend a link span over text typed at its end`() {
-        val url = "https://github.com/altercpre/aparok-android/releases/latest"
+        val url = "https://example.com"
         val markup = object : Markup {
             override val body: String = url
             override var marks: List<Markup.Mark> = listOf(
