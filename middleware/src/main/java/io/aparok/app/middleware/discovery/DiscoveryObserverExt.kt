@@ -1,7 +1,7 @@
 package io.aparok.app.middleware.discovery
 
 import android.net.nsd.NsdManager
-import service.DiscoveryObserver
+import io.aparok.mw.service.DiscoveryObserver
 
 internal fun DiscoveryObserver.observeNsdError(errorCode: Int, message: String) {
     // Heart reserves 0 for a healthy registration, but NSD uses it for internal errors.

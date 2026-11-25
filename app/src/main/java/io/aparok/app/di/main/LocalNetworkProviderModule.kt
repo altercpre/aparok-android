@@ -15,7 +15,7 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 import kotlinx.coroutines.GlobalScope
-import service.InterfaceGetter
+import io.aparok.mw.service.InterfaceGetter
 
 @Module(includes = [LocalNetworkProviderModule.Bindings::class])
 class LocalNetworkProviderModule {

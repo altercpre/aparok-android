@@ -2,8 +2,8 @@ package io.aparok.app.middleware.discovery.adresshandler
 
 import java.net.NetworkInterface
 import javax.inject.Inject
-import service.InterfaceGetter
-import service.InterfaceIterator
+import io.aparok.mw.service.InterfaceGetter
+import io.aparok.mw.service.InterfaceIterator
 import timber.log.Timber
 
 class DefaultInterfaceProvider @Inject constructor() : InterfaceGetter {

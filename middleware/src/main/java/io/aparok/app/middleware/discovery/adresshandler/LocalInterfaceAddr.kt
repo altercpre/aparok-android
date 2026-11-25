@@ -1,7 +1,7 @@
 package io.aparok.app.middleware.discovery.adresshandler
 
 import java.net.InterfaceAddress
-import service.InterfaceAddr
+import io.aparok.mw.service.InterfaceAddr
 
 class LocalInterfaceAddr(private val interfaceAddress: InterfaceAddress?) : InterfaceAddr {
 

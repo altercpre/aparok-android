@@ -3,8 +3,8 @@ package io.aparok.app.middleware.discovery
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import service.DiscoveryObserver
-import service.DiscoveryProxy
+import io.aparok.mw.service.DiscoveryObserver
+import io.aparok.mw.service.DiscoveryProxy
 import timber.log.Timber
 
 class MDNSDelegate(

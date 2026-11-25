@@ -2,8 +2,8 @@ package io.aparok.app.middleware.discovery.adresshandler
 
 import java.net.NetworkInterface
 import java.net.SocketException
-import service.InterfaceAddrIterator
-import service.NetInterface
+import io.aparok.mw.service.InterfaceAddrIterator
+import io.aparok.mw.service.NetInterface
 
 class LocalInterface(private val netInterface: NetworkInterface) : NetInterface {
     override fun flags(): Long {

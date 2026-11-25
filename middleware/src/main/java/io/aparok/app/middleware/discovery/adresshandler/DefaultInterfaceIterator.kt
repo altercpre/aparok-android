@@ -1,7 +1,7 @@
 package io.aparok.app.middleware.discovery.adresshandler
 
 import java.net.NetworkInterface
-import service.InterfaceIterator
+import io.aparok.mw.service.InterfaceIterator
 
 class DefaultInterfaceIterator(
     private val iter: Iterator<NetworkInterface>

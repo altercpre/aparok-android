@@ -3,7 +3,7 @@ package io.aparok.app.middleware.discovery
 import android.net.nsd.NsdManager
 import android.net.nsd.NsdServiceInfo
 import javax.inject.Inject
-import service.DiscoveryObserver
+import io.aparok.mw.service.DiscoveryObserver
 import timber.log.Timber
 
 class NsdRegistrationListener @Inject constructor() : NsdManager.RegistrationListener {

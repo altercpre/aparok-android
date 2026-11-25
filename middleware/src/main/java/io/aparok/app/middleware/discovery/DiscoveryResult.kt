@@ -1,6 +1,6 @@
 package io.aparok.app.middleware.discovery
 
-import service.ObservationResult
+import io.aparok.mw.service.ObservationResult
 
 data class DiscoveryResult(val ip: String, val peerId: String, val port: Int) : ObservationResult {
     override fun ip(): String {

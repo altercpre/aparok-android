@@ -15,7 +15,7 @@ import io.aparok.app.data.auth.exception.NotFoundObjectException
 import io.aparok.app.data.auth.exception.UndoRedoExhaustedException
 import io.aparok.app.middleware.mappers.toCore
 import javax.inject.Inject
-import service.Service
+import io.aparok.mw.io.aparok.mw.io.aparok.mw.service.Service
 
 class MiddlewareServiceImplementation @Inject constructor(
     featureToggles: FeatureToggles

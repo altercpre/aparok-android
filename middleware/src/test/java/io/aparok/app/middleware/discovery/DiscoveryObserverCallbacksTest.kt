@@ -23,7 +23,7 @@ import org.mockito.kotlin.verify
 import org.mockito.kotlin.verifyNoInteractions
 import org.mockito.kotlin.verifyNoMoreInteractions
 import org.mockito.kotlin.whenever
-import service.DiscoveryObserver
+import io.aparok.mw.service.DiscoveryObserver
 
 class DiscoveryObserverCallbacksTest {
 

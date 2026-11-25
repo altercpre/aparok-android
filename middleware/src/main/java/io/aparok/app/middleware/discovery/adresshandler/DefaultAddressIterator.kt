@@ -1,7 +1,7 @@
 package io.aparok.app.middleware.discovery.adresshandler
 
 import java.net.InterfaceAddress
-import service.InterfaceAddrIterator
+import io.aparok.mw.service.InterfaceAddrIterator
 
 class DefaultAddressIterator(
     private val ia: Iterator<InterfaceAddress>

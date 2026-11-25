@@ -9,7 +9,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Semaphore
-import service.DiscoveryObserver
+import io.aparok.mw.service.DiscoveryObserver
 import timber.log.Timber
 
 class NsdDiscoveryListener internal constructor(

@@ -2,7 +2,7 @@ package io.aparok.app.middleware.discovery
 
 import android.net.nsd.NsdManager
 import android.net.wifi.WifiManager
-import service.DiscoveryObserver
+import io.aparok.mw.service.DiscoveryObserver
 
 class MDNSResolver(
     private val nsdManager: NsdManager,
