@@ -70,4 +70,14 @@ All pre-R0 audit issues and spec requirements Q01–Q23 have been fully resolved
 10. **APK Size Limits**: arm64-v8a at 61.8 MB (< 80 MB target), armeabi-v7a at 57.4 MB (< 75 MB target), universal APK disabled.
 11. **Idempotent Signing System**: Certificate SHA-256 pinned in `release/CERT_SHA256`; zero hardcoded secrets.
 12. **Archived Repositories**: All 10 unused side repositories in `altercpre` archived via GitHub API.
+13. **Official Sovereign Brand & Typography (v1.4.0)**:
+    - Adaptive icon: `#000000` solid black background with `#FFFFFF` crisp sovereign dual-arc emblem mark safely scaled inside the 66dp central zone.
+    - Wordmark: Pure vector banner combining the emblem mark with authentic Inter Bold geometric typography "aparok".
+    - Updated drawables: `ic_launcher_foreground.xml`, `ic_launcher_background.xml`, `ic_launcher_monochrome.xml`, `ic_anytype_logo.xml`, `ic_logo.xml`, `ic_anytype_logo_widget.xml`, `ic_anytype_qr_code_logo.xml`.
+    - Verification: CI [45545767943](https://github.com/altercpre/aparok-android/actions/runs/45545767943) (100% green).
+    - Official GitHub Release [v1.4.0](https://github.com/altercpre/aparok-android/releases/tag/v1.4.0) published via Release Pipeline [45545799124](https://github.com/altercpre/aparok-android/actions/runs/45545799124):
+      - `aparok-1.4.0-arm64-v8a.apk` (`6d610d4e0def4d26b4b07bab9fea212aee4e246c8942b24c06a050a98040bbb0`)
+      - `aparok-1.4.0-armeabi-v7a.apk` (`c2b9bc721faa77c48984c082fbd7e08ae2db7ef75dc381882e2ece724fce48e5`)
+      - `SHA256SUMS.txt`
+    - Repository Cleanliness: Zero untracked files, zero dirty working trees across `aparok-android` and `aparok-core`.
 
