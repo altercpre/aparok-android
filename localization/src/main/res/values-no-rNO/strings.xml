@@ -1439,23 +1439,12 @@
     <string name="multiplayer_invite_link_request_already_sent">Forespørsel sendt</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <!-- Tier details -->
-        <item>1 GB of network space</item>
-        <item>10 en-til-en rom</item>
-        <item>Up to 10 shared spaces in read-only mode</item>
-    </string-array>
-        <item>Unikt navn (fra 7 tegn)</item>
-        <item>128 GB of network space</item>
-        <item>10 Guest collaborator seats</item>
-        <item>Prioritert support</item>
-    </string-array>
-        <item>Unique name (from 5 characters)</item>
-        <item>256 GB of network space</item>
-        <item>25 Guest collaborator seats</item>
-        <item>Chat med teamet</item>
-        <item>Unique collectible</item>
-    </string-array>
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10 en-til-en rom</item>
+<item>128 GB of network space</item>
+<item>Prioritert support</item>
+<item>256 GB of network space</item>
+<item>Chat med teamet</item>
+<!-- Payments Code -->
     <!-- Membership Welcome -->
     <!-- Membership Email -->
     <!-- Membership name errors -->

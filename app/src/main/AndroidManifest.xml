@@ -125,6 +125,13 @@
         </provider>
 
 
+        <activity android:name="io.aparok.app.ui.sovereign.AppLockActivity" android:exported="false" />
+        <activity android:name="io.aparok.app.ui.sovereign.StorageChooserActivity" android:exported="false" />
+        <activity android:name="io.aparok.app.ui.sovereign.CreateBackupActivity" android:exported="false" />
+        <activity android:name="io.aparok.app.ui.sovereign.RestoreBackupActivity" android:exported="false" />
+        <activity android:name="io.aparok.app.ui.sovereign.StorageUnavailableActivity" android:exported="false" />
+        <activity android:name="io.aparok.app.ui.sovereign.SecuritySettingsActivity" android:exported="false" />
+
     </application>
 
 </manifest>

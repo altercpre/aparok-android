@@ -1433,23 +1433,12 @@
     <string name="multiplayer_invite_link_request_already_sent">Permintaan terkirim</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <!-- Tier details -->
-        <item>Ruang jaringan 1 GB</item>
-        <item>10 ruang satu ke satu</item>
-        <item>Sampai dengan 10 ruang terbagi dalam mode hanya baca</item>
-    </string-array>
-        <item>Nama unik (dari 7 karakter)</item>
-        <item>Ruang jaringan 128 GB</item>
-        <item>Tempat duduk kolaborator untuk 10 Tamu</item>
-        <item>Layanan prioritas</item>
-    </string-array>
-        <item>Nama unik (dari 5 karakter)</item>
-        <item>Ruang jaringan 256 GB</item>
-        <item>Tempat duduk kolaborator untuk 25 Tamu</item>
-        <item>Mengobrol dengan tim</item>
-        <item>Koleksi yang unik</item>
-    </string-array>
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10 ruang satu ke satu</item>
+<item>Ruang jaringan 128 GB</item>
+<item>Layanan prioritas</item>
+<item>Ruang jaringan 256 GB</item>
+<item>Mengobrol dengan tim</item>
+<!-- Payments Code -->
     <!-- Membership Welcome -->
     <!-- Membership Email -->
     <!-- Membership name errors -->

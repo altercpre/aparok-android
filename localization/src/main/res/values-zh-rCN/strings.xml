@@ -1433,23 +1433,12 @@
     <string name="multiplayer_invite_link_request_already_sent">已发送申请</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <!-- Tier details -->
-        <item>1 GB 网络空间</item>
-        <item>10 个单人空间</item>
-        <item>最多 10 个在只读模式下的共享空间</item>
-    </string-array>
-        <item>唯一名字（大于 7 个字）</item>
-        <item>128 GB 网络空间</item>
-        <item>10 个访客协作位置</item>
-        <item>优先支持</item>
-    </string-array>
-        <item>唯一名字（大于 5 个字）</item>
-        <item>256 GB 网络空间</item>
-        <item>25 个访客协作位置</item>
-        <item>与团队聊天</item>
-        <item>独特的可收藏的</item>
-    </string-array>
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10 个单人空间</item>
+<item>128 GB 网络空间</item>
+<item>优先支持</item>
+<item>256 GB 网络空间</item>
+<item>与团队聊天</item>
+<!-- Payments Code -->
     <!-- Membership Welcome -->
     <!-- Membership Email -->
     <!-- Membership name errors -->

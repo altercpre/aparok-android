@@ -1433,23 +1433,12 @@
     <string name="multiplayer_invite_link_request_already_sent">リクエストを送信しました</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <!-- Tier details -->
-        <item>1 GBのネットワークストレージ</item>
-        <item>10個までの1対1のスペース</item>
-        <item>最大10個の閲覧限定の共有スペース</item>
-    </string-array>
-        <item>ANY名（7文字以上）</item>
-        <item>128 GBのネットワークストレージ</item>
-        <item>25名の編集メンバー</item>
-        <item>優先サポート</item>
-    </string-array>
-        <item>ANY名（5文字以上）</item>
-        <item>256GBのネットワークストレージ</item>
-        <item>25名の編集メンバー</item>
-        <item>チームとのチャット</item>
-        <item>限定コレクション</item>
-    </string-array>
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10個までの1対1のスペース</item>
+<item>128 GBのネットワークストレージ</item>
+<item>優先サポート</item>
+<item>256GBのネットワークストレージ</item>
+<item>チームとのチャット</item>
+<!-- Payments Code -->
     <!-- Membership Welcome -->
     <!-- Membership Email -->
     <!-- Membership name errors -->

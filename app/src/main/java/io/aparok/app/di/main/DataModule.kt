@@ -361,8 +361,10 @@ object DataModule {
     @JvmStatic
     @Provides
     @Singleton
-    fun provideMetricsProvider(context: Context): InitialParamsProvider =
-        DefaultInitialParamsProvider(context)
+    fun provideMetricsProvider(
+        context: Context,
+        encryptionManager: io.aparok.app.security.AparokEncryptionManager
+    ): InitialParamsProvider = DefaultInitialParamsProvider(context, encryptionManager)
 
     @JvmStatic
     @Provides

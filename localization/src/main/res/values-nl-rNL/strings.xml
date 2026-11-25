@@ -1439,23 +1439,12 @@
     <string name="multiplayer_invite_link_request_already_sent">Verzoek verzonden</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <!-- Tier details -->
-        <item>1 GB aan netwerkruimte</item>
-        <item>10 één-op-één ruimten</item>
-        <item>Tot 10 gedeelde ruimten in alleen-lezen modus</item>
-    </string-array>
-        <item>Unieke naam (van 7 tekens)</item>
-        <item>128 GB aan netwerkruimte</item>
-        <item>10 Gast-samenwerkingsplaatsen</item>
-        <item>Prioriteitsondersteuning</item>
-    </string-array>
-        <item>Unieke naam (van 5 tekens)</item>
-        <item>256 GB aan netwerkruimte</item>
-        <item>25 Gast-samenwerkingsplaatsen</item>
-        <item>Chat met het team</item>
-        <item>Uniek verzamelstuk</item>
-    </string-array>
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10 één-op-één ruimten</item>
+<item>128 GB aan netwerkruimte</item>
+<item>Prioriteitsondersteuning</item>
+<item>256 GB aan netwerkruimte</item>
+<item>Chat met het team</item>
+<!-- Payments Code -->
     <!-- Membership Welcome -->
     <!-- Membership Email -->
     <!-- Membership name errors -->

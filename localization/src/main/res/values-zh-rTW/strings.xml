@@ -1433,23 +1433,12 @@
     <string name="multiplayer_invite_link_request_already_sent">已送出請求</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <!-- Tier details -->
-        <item>1 GB 的網路空間</item>
-        <item>10 個一對一空間</item>
-        <item>最多 10 個唯獨模式共享空間</item>
-    </string-array>
-        <item>專屬用戶名(7個字元以上)</item>
-        <item>128 GB 的網路空間</item>
-        <item>10 個訪客協作位置</item>
-        <item>優先客服</item>
-    </string-array>
-        <item>專屬用戶名(5個字元以上)</item>
-        <item>256 GB 的網路空間</item>
-        <item>25 個訪客協作位置</item>
-        <item>與團隊溝通</item>
-        <item>獨特的集錦</item>
-    </string-array>
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10 個一對一空間</item>
+<item>128 GB 的網路空間</item>
+<item>優先客服</item>
+<item>256 GB 的網路空間</item>
+<item>與團隊溝通</item>
+<!-- Payments Code -->
     <!-- Membership Welcome -->
     <!-- Membership Email -->
     <!-- Membership name errors -->

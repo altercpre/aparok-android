@@ -1439,23 +1439,12 @@
     <string name="multiplayer_invite_link_request_already_sent">Anfrage gesendet</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <!-- Tier details -->
-        <item>1 GB Netzwerkspeicher</item>
-        <item>10 Eins-zu-Eins Spaces</item>
-        <item>Bis zu 10 geteilte Spaces im schreibgeschützten Modus</item>
-    </string-array>
-        <item>Eindeutiger Name (ab 7 Zeichen)</item>
-        <item>128 GB Netzwerkspeicher</item>
-        <item>10 Plätze für Gastmitarbeiter</item>
-        <item>Vorrangige Unterstützung</item>
-    </string-array>
-        <item>Eindeutiger Name (ab 5 Zeichen)</item>
-        <item>256 GB Netzwerkspeicher</item>
-        <item>25 Plätze für Gastmitarbeiter</item>
-        <item>Mit dem Team chatten</item>
-        <item>Einzigartiges Sammlerstück</item>
-    </string-array>
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10 Eins-zu-Eins Spaces</item>
+<item>128 GB Netzwerkspeicher</item>
+<item>Vorrangige Unterstützung</item>
+<item>256 GB Netzwerkspeicher</item>
+<item>Mit dem Team chatten</item>
+<!-- Payments Code -->
     <!-- Membership Welcome -->
     <!-- Membership Email -->
     <!-- Membership name errors -->

@@ -1734,32 +1734,12 @@
 
 
 
-    <!-- Tier details -->
-
-        <item>1 GB of network space</item>
-        <item>10 one-to-one spaces</item>
-        <item>Up to 10 shared spaces in read-only mode</item>
-    </string-array>
-
-        <item>Unique name (from 7 characters)</item>
-        <item>128 GB of network space</item>
-        <item>10 Guest collaborator seats</item>
-        <item>Priority support</item>
-    </string-array>
-
-        <item>Unique name (from 5 characters)</item>
-        <item>256 GB of network space</item>
-        <item>25 Guest collaborator seats</item>
-        <item>Chat with the team</item>
-        <item>Unique collectible</item>
-    </string-array>
-
-
-
-
-
-
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10 one-to-one spaces</item>
+<item>128 GB of network space</item>
+<item>Priority support</item>
+<item>256 GB of network space</item>
+<item>Chat with the team</item>
+<!-- Payments Code -->
 
     <!-- Membership Activate Code -->
     <!-- Membership Activate Code — success -->
@@ -2503,5 +2483,92 @@
     <string name="search_v2_recently_edited">Recently edited</string>
     <string name="search_v2_recently_created">Recently created</string>
     <string name="search_v2_filter_by">Filter by %1$s</string>
+
+
+    <!-- Sovereign Screens N1 - N10 (Spec Section 5.1) -->
+    <!-- N1 Profile -->
+    <string name="aparok_profile_title">Create your profile</string>
+    <string name="aparok_profile_body">Your profile stays on this device. No account, no email, no server.</string>
+    <string name="aparok_profile_name_error">Enter a name</string>
+    <string name="aparok_profile_choose_photo">Choose photo</string>
+    <string name="aparok_profile_remove_photo">Remove photo</string>
+    <string name="aparok_profile_continue">Continue</string>
+    <string name="aparok_profile_restore_link">Restore from a backup</string>
+    <string name="aparok_profile_progress">Creating your encrypted space...</string>
+
+    <!-- N2 Storage Location -->
+    <string name="aparok_storage_chooser_title">Where should Aparok keep your data?</string>
+    <string name="aparok_storage_this_phone">This phone</string>
+    <string name="aparok_storage_phone_folder">Phone storage, app folder</string>
+    <string name="aparok_storage_sd_card">SD card / USB drive</string>
+    <string name="aparok_storage_sd_warning">SD cards can be slower. If you remove the card, Aparok locks until you put it back.</string>
+    <string name="aparok_storage_uninstall_warning">Uninstalling Aparok deletes data stored in its app folders. Make a backup first.</string>
+    <string name="aparok_storage_btn_use">Use this location</string>
+    <string name="aparok_storage_error_probe">This storage cannot be used for the database: %s</string>
+    <string name="aparok_storage_move_title">Move storage location</string>
+    <string name="aparok_storage_moving">Moving data to new storage...</string>
+
+    <!-- N3 Restore Backup -->
+    <string name="aparok_restore_title">Restore from backup</string>
+    <string name="aparok_restore_step_choose">Choose your backup file</string>
+    <string name="aparok_restore_step_password">Enter the backup password</string>
+    <string name="aparok_restore_stage_decrypting">Decrypting</string>
+    <string name="aparok_restore_stage_verifying">Verifying</string>
+    <string name="aparok_restore_stage_restoring">Restoring files</string>
+    <string name="aparok_restore_stage_opening">Opening</string>
+    <string name="aparok_restore_error_auth">Wrong password or damaged file.</string>
+    <string name="aparok_restore_error_version">This backup was made by a newer version of Aparok.</string>
+    <string name="aparok_restore_error_space">Not enough space on the chosen storage (needs %s, has %s).</string>
+    <string name="aparok_restore_warning">This replaces everything on this device. Your current data is kept until the restored data is verified.</string>
+
+    <!-- N4 App Lock -->
+    <string name="aparok_lock_title">Protect Aparok</string>
+    <string name="aparok_lock_skip_warning">Without a lock, anyone who opens your unlocked phone can read your data.</string>
+    <string name="aparok_lock_enter_pin">Enter PIN or passphrase</string>
+    <string name="aparok_lock_forgot_pin">Forgot PIN?</string>
+    <string name="aparok_lock_forgot_warning">There is no recovery. You can erase this device data and restore from a backup.</string>
+
+    <!-- N5 Create Backup -->
+    <string name="aparok_backup_title">Create backup</string>
+    <string name="aparok_backup_info">A backup contains everything: chats, notes, images, videos, files and settings. It is encrypted with the password you choose.</string>
+    <string name="aparok_backup_pwd_label">Enter backup password</string>
+    <string name="aparok_backup_confirm_label">Confirm backup password</string>
+    <string name="aparok_backup_recovery_warn">I understand the password cannot be recovered</string>
+    <string name="aparok_backup_verified">Backup verified</string>
+    <string name="aparok_backup_banner">Last backup was %d days ago. Back up now</string>
+
+    <!-- N6 Storage Settings -->
+    <string name="aparok_storage_title">Storage</string>
+    <string name="aparok_storage_usage_chats">Chats and notes</string>
+    <string name="aparok_storage_usage_images">Images</string>
+    <string name="aparok_storage_usage_videos">Videos</string>
+    <string name="aparok_storage_usage_files">Files</string>
+    <string name="aparok_storage_usage_index">Search index</string>
+    <string name="aparok_storage_usage_cache">Cache</string>
+    <string name="aparok_storage_btn_change">Change location</string>
+    <string name="aparok_storage_btn_clear_cache">Clear cache</string>
+    <string name="aparok_storage_btn_export_log">Export log</string>
+
+    <!-- N7 Storage Unavailable -->
+    <string name="aparok_unavailable_title">Storage not available</string>
+    <string name="aparok_unavailable_body">Aparok data is on %s, which is not connected. Reconnect it and tap Retry. Your data is safe; nothing was changed.</string>
+    <string name="aparok_unavailable_btn_retry">Retry</string>
+    <string name="aparok_unavailable_btn_restore">Restore from a backup instead</string>
+
+    <!-- N8 About and Legal -->
+    <string name="aparok_about_title">About Aparok</string>
+    <string name="aparok_about_license">Free and non-commercial. Based on Anytype by Any Association, licensed under the Any Source Available License 1.0.</string>
+    <string name="aparok_about_privacy">Aparok has no accounts, no analytics and no network features.</string>
+
+    <!-- N9 Security Settings -->
+    <string name="aparok_security_title">Security settings</string>
+    <string name="aparok_security_app_lock">App lock</string>
+    <string name="aparok_security_autolock">Auto-lock</string>
+    <string name="aparok_security_block_screenshots">Block screenshots and recents preview</string>
+    <string name="aparok_security_clipboard_clear">Clear clipboard automatically</string>
+    <string name="aparok_security_erase_all">Erase all data on this device</string>
+
+    <!-- N10 Status Indicator -->
+    <string name="aparok_status_saved_local">Saved on this device</string>
 
 </resources>

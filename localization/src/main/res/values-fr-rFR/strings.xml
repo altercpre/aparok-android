@@ -1439,23 +1439,12 @@
     <string name="multiplayer_invite_link_request_already_sent">Demande envoyée</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <!-- Tier details -->
-        <item>1 Go d\'espace réseau</item>
-        <item>10 espaces un-à-un</item>
-        <item>Jusqu\'à 10 espaces partagés en mode lecture seule</item>
-    </string-array>
-        <item>Nom unique (à partir de 7 caractères)</item>
-        <item>128 Go d\'espace réseau</item>
-        <item>10 places de collaborateurs invités</item>
-        <item>Support prioritaire</item>
-    </string-array>
-        <item>Nom unique (à partir de 5 caractères)</item>
-        <item>256 Go d\'espace réseau</item>
-        <item>25 places de collaborateurs invités</item>
-        <item>Discutez avec l\'équipe.</item>
-        <item>Collection unique</item>
-    </string-array>
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10 espaces un-à-un</item>
+<item>128 Go d\'espace réseau</item>
+<item>Support prioritaire</item>
+<item>256 Go d\'espace réseau</item>
+<item>Discutez avec l\'équipe.</item>
+<!-- Payments Code -->
     <!-- Membership Welcome -->
     <!-- Membership Email -->
     <!-- Membership name errors -->

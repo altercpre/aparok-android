@@ -1451,23 +1451,12 @@
     <string name="multiplayer_invite_link_request_already_sent">Запрос отправлен</string>
     <!--endregion-->
     <!--region PAYMENTS -->
-    <!-- Tier details -->
-        <item>1 ГБ сетевого пространства</item>
-        <item>10 индивидуальных пространств</item>
-        <item>До 10 общих пространств в режиме только для чтения</item>
-    </string-array>
-        <item>Уникальное имя (от 7 символов)</item>
-        <item>128 ГБ сетевого пространства</item>
-        <item>10 мест для гостевых соавторов</item>
-        <item>Приоритетная поддержка</item>
-    </string-array>
-        <item>Уникальное имя (от 5 символов)</item>
-        <item>256 ГБ сетевого пространства</item>
-        <item>25 мест для гостей-сотрудников</item>
-        <item>Общение с командой</item>
-        <item>Уникальный коллекционный</item>
-    </string-array>
-    <!-- Payments Code -->
+    <!-- Tier details --><item>10 индивидуальных пространств</item>
+<item>128 ГБ сетевого пространства</item>
+<item>Приоритетная поддержка</item>
+<item>256 ГБ сетевого пространства</item>
+<item>Общение с командой</item>
+<!-- Payments Code -->
     <!-- Membership Welcome -->
     <!-- Membership Email -->
     <!-- Membership name errors -->

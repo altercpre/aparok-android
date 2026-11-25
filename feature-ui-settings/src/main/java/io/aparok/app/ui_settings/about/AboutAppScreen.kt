@@ -60,34 +60,25 @@ fun AboutAppScreen(
                 color = colorResource(R.color.text_primary)
             )
         }
-        Section(title = stringResource(id = R.string.about_help_and_community))
-        Option(title = stringResource(id = R.string.about_what_is_new)) {
-            onExternalLinkClicked(AboutAppViewModel.ExternalLink.WhatIsNew)
+        Section(title = "About & Legal")
+        Box(modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp)) {
+            Text(
+                text = "Free and non-commercial. Based on Anytype by Any Association, licensed under the Any Source Available License 1.0.",
+                style = UXBody,
+                color = colorResource(R.color.text_primary)
+            )
         }
         Divider()
-        Option(title = stringResource(id = R.string.about_anytype_community)) {
-            onExternalLinkClicked(AboutAppViewModel.ExternalLink.AnytypeCommunity)
-        }
-        Divider()
-        Option(title = stringResource(id = R.string.about_help_and_tutorials)) {
-            onExternalLinkClicked(AboutAppViewModel.ExternalLink.HelpAndTutorials)
-        }
-        Divider()
-        Option(title = stringResource(id = R.string.contact_us)) {
-            onContactUsClicked()
-        }
-        Divider()
-        Section(title = stringResource(id = R.string.about_legal))
-        Option(title = stringResource(id = R.string.about_terms_of_use)) {
-            onExternalLinkClicked(AboutAppViewModel.ExternalLink.TermsOfUse)
-        }
-        Divider()
-        Option(title = stringResource(id = R.string.about_privacy_policy)) {
-            onExternalLinkClicked(AboutAppViewModel.ExternalLink.PrivacyPolicy)
+        Box(modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp)) {
+            Text(
+                text = "Aparok has no accounts, no analytics and no network features.",
+                style = UXBody,
+                color = colorResource(R.color.text_secondary)
+            )
         }
         Divider()
         Text(
-            text = stringResource(R.string.tech_info),
+            text = "System Information",
             style = Caption1Regular,
             color = colorResource(R.color.text_secondary),
             modifier = Modifier.padding(
@@ -108,16 +99,7 @@ fun AboutAppScreen(
                 )
         ) {
             Text(
-                text = stringResource(
-                    id = R.string.about_meta_info_new,
-                    version,
-                    buildNumber,
-                    libraryVersion,
-                    accountId,
-                    deviceId,
-                    analyticsId,
-                    ethereumKey
-                ),
+                text = "Aparok v$version ($buildNumber)\nCore: $libraryVersion\nSovereign Local Mode (Zero Telemetry, Zero Cloud)",
                 style = Caption2Regular.copy(
                     color = colorResource(id = R.color.text_secondary)
                 )
