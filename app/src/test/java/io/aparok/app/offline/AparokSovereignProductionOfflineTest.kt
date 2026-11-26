@@ -12,6 +12,7 @@ import io.aparok.app.domain.misc.UrlBuilderImpl
 import io.aparok.app.domain.multiplayer.DefaultUserPermissionProvider
 import io.aparok.app.domain.multiplayer.SpaceViewSubscriptionContainer
 import io.aparok.app.feature_chats.presentation.ChatViewModel
+import io.aparok.app.feature_chats.tools.LinkDetector
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
@@ -127,18 +128,42 @@ class AparokSovereignProductionOfflineTest {
     }
 
     @Test
-    fun `production ChatViewModel ChatBoxMode Default is not sending blocked`() {
+    fun `production ChatViewModel ChatBoxMode Default allows sending and LinkDetector handles local links`() {
+        val chatSpace = SpaceId("space_chat_offline_001")
+        val permission = permissionProvider.get(chatSpace)
+        assertEquals(SpaceMemberPermissions.OWNER, permission)
+        assertTrue("Offline user must have owner/editor rights", permission?.isOwnerOrEditor() == true)
+
         val defaultMode = ChatViewModel.ChatBoxMode.Default()
+        val editMode = ChatViewModel.ChatBoxMode.EditMessage(msg = "msg_001")
         assertFalse("Default chat box mode must allow sending messages offline", defaultMode.isSendingMessageBlocked)
+        assertFalse("Edit chat box mode must allow editing messages offline", editMode.isSendingMessageBlocked)
+
+        val marks = LinkDetector.addLinkMarksToText(
+            text = "Open aparok://object/obj_123 locally",
+            existingMarks = emptyList()
+        )
+        assertEquals(1, marks.size)
+        assertEquals("aparok://object/obj_123", marks.first().param)
     }
 
     @Test
-    fun `production ChatViewModel OpenVideo command captures video object and space`() {
+    fun `production ChatViewModel OpenVideo command pairs with UrlBuilder loopback video stream`() = runBlocking {
+        val space = SpaceId("space_media_001")
+        val permission = permissionProvider.observe(space).first()
+        assertTrue("Offline user must have at least reader permission for video playback", permission?.isAtLeastReader() == true)
+
+        val builder = UrlBuilderImpl(
+            gateway = mockGateway,
+            tokenProvider = { "video_sess_token" }
+        )
         val cmd = ChatViewModel.ViewModelCommand.OpenVideo(
             obj = "video_obj_001",
-            space = SpaceId("space_media_001")
+            space = space
         )
+        val streamUrl = builder.video(cmd.obj)
         assertEquals("video_obj_001", cmd.obj)
-        assertEquals(SpaceId("space_media_001"), cmd.space)
+        assertEquals(space, cmd.space)
+        assertEquals("http://127.0.0.1:47800/file/video_obj_001?token=video_sess_token", streamUrl)
     }
 }

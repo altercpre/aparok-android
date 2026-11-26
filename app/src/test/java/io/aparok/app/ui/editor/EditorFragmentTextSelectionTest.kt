@@ -1,135 +1,106 @@
 package io.aparok.app.ui.editor
 
-import org.mockito.kotlin.*
+import android.content.Context
+import android.os.Build
+import android.text.Selection
+import android.view.ActionMode
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.EditText
+import android.widget.FrameLayout
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.test.core.app.ApplicationProvider
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
 import org.junit.Test
-import org.junit.Before
-import kotlin.test.assertEquals
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
-/**
- * Test demonstrating successful migration from MockK to Mockito-Kotlin
- * for EditorFragment text selection functionality testing.
- * 
- * This simplified test focuses on validating the mockito-kotlin migration
- * rather than complex Android UI interactions.
- */
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [Build.VERSION_CODES.P])
 class EditorFragmentTextSelectionTest {
 
-    interface TextSelectionClearable {
-        fun clearFocus()
-        fun clearComposingText()
-        fun hasSelection(): Boolean
-    }
+    private val context: Context = ApplicationProvider.getApplicationContext()
 
-    interface TextProcessor {
-        fun setSelection(start: Int, end: Int)
-    }
-
-    interface SelectionManager {
-        fun setSelection(start: Int, end: Int)
-    }
-
-    @Before
-    fun setup() {
-        // Test setup with mockito-kotlin
+    private fun dummyActionModeCallback(): ActionMode.Callback = object : ActionMode.Callback {
+        override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean = false
+        override fun onPrepareActionMode(mode: ActionMode?, menu: Menu?): Boolean = false
+        override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean = false
+        override fun onDestroyActionMode(mode: ActionMode?) = Unit
     }
 
     @Test
-    fun `mockito-kotlin basic mocking works`() {
-        // Given
-        val mockClearable = mock<TextSelectionClearable>()
-        whenever(mockClearable.hasSelection()).thenReturn(true)
+    fun `clearEditorTextSelections clears selection focus and action mode callbacks across nested views`() {
+        val root = FrameLayout(context)
+        val nested = LinearLayout(context)
 
-        // When
-        val hasSelection = mockClearable.hasSelection()
-        mockClearable.clearFocus()
-
-        // Then
-        assertEquals(true, hasSelection)
-        verify(mockClearable).clearFocus()
-    }
-
-    @Test
-    fun `mockito-kotlin spy functionality works`() {
-        // Given
-        val realClearable = object : TextSelectionClearable {
-            private var focused = true
-            private var hasText = true
-            
-            override fun clearFocus() { focused = false }
-            override fun clearComposingText() { hasText = false }
-            override fun hasSelection(): Boolean = hasText && focused
+        val selectedEditText = EditText(context).apply {
+            setText("Sovereign offline text")
+            Selection.setSelection(text, 2, 10)
+            customSelectionActionModeCallback = dummyActionModeCallback()
+            customInsertionActionModeCallback = dummyActionModeCallback()
+            isFocusableInTouchMode = true
+            requestFocus()
         }
-        
-        val spyClearable = spy(realClearable)
 
-        // When
-        spyClearable.clearFocus()
-
-        // Then
-        verify(spyClearable).clearFocus()
-    }
-
-    @Test
-    fun `mockito-kotlin doReturn functionality works`() {
-        // Given
-        val mockClearable = mock<TextSelectionClearable>()
-        doReturn(false).whenever(mockClearable).hasSelection()
-
-        // When
-        val result = mockClearable.hasSelection()
-
-        // Then
-        assertEquals(false, result)
-        verify(mockClearable).hasSelection()
-    }
-
-    @Test
-    fun `mockito-kotlin argument matchers work`() {
-        // Given
-        val mockProcessor = mock<TextProcessor>()
-
-        // When
-        mockProcessor.setSelection(0, 0)
-
-        // Then
-        verify(mockProcessor).setSelection(eq(0), eq(0))
-        verify(mockProcessor).setSelection(any(), any())
-    }
-
-    @Test
-    fun `mockito-kotlin exception throwing works`() {
-        // Given
-        val mockClearable = mock<TextSelectionClearable>()
-        doThrow(RuntimeException("Test exception")).whenever(mockClearable).clearFocus()
-
-        // When/Then
-        try {
-            mockClearable.clearFocus()
-            assert(false) { "Should have thrown exception" }
-        } catch (e: RuntimeException) {
-            assertEquals("Test exception", e.message)
+        val emptyEditText = EditText(context).apply {
+            setText("")
+            customSelectionActionModeCallback = dummyActionModeCallback()
+            customInsertionActionModeCallback = dummyActionModeCallback()
         }
-        
-        verify(mockClearable).clearFocus()
+
+        val labelTextView = TextView(context).apply {
+            text = "Read-only label"
+            customSelectionActionModeCallback = dummyActionModeCallback()
+            customInsertionActionModeCallback = dummyActionModeCallback()
+            isFocusableInTouchMode = true
+            requestFocus()
+        }
+
+        val divider = View(context)
+
+        nested.addView(selectedEditText)
+        nested.addView(emptyEditText)
+        nested.addView(labelTextView)
+        nested.addView(divider)
+        root.addView(nested)
+
+        clearEditorTextSelections(root)
+
+        assertFalse(selectedEditText.hasSelection())
+        assertEquals(0, selectedEditText.selectionStart)
+        assertEquals(0, selectedEditText.selectionEnd)
+        assertFalse(selectedEditText.hasFocus())
+        assertNull(selectedEditText.customSelectionActionModeCallback)
+        assertNull(selectedEditText.customInsertionActionModeCallback)
+
+        assertEquals(0, emptyEditText.selectionStart)
+        assertEquals(0, emptyEditText.selectionEnd)
+        assertNull(emptyEditText.customSelectionActionModeCallback)
+        assertNull(emptyEditText.customInsertionActionModeCallback)
+
+        assertFalse(labelTextView.hasFocus())
+        assertNull(labelTextView.customSelectionActionModeCallback)
+        assertNull(labelTextView.customInsertionActionModeCallback)
     }
 
     @Test
-    fun `mockito-kotlin never verification works`() {
-        // Given
-        val mockManager = mock<SelectionManager>()
+    fun `clearEditorTextSelections handles direct EditText root cleanly`() {
+        val editText = EditText(context).apply {
+            setText("Direct root editor")
+            Selection.setSelection(text, 0, 6)
+            customSelectionActionModeCallback = dummyActionModeCallback()
+        }
 
-        // When - don't call setSelection
+        clearEditorTextSelections(editText)
 
-        // Then
-        verify(mockManager, never()).setSelection(any(), any())
-    }
-
-    @Test
-    fun `EditorFragment class exists and has expected method`() {
-        // Verify the actual class exists and our target method is present
-        val methods = EditorFragment::class.java.declaredMethods
-        val clearActiveTextSelectionsMethod = methods.find { it.name == "clearActiveTextSelections" }
-        
-        assert(clearActiveTextSelectionsMethod != null) { "clearActiveTextSelections method should exist in EditorFragment" }
+        assertFalse(editText.hasSelection())
+        assertEquals(0, editText.selectionStart)
+        assertEquals(0, editText.selectionEnd)
+        assertNull(editText.customSelectionActionModeCallback)
     }
 }

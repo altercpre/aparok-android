@@ -13,9 +13,15 @@ KEYSTORE_FILE="scripts/release/app-release.jks"
 KEY_ALIAS="aparok"
 CERT_PIN_FILE="release/CERT_SHA256"
 
-# --- SECURITY: Keystore passwords MUST come from environment/secrets ---
-RELEASE_STORE_PASS="${RELEASE_STORE_PASS:-aparok123456}"
-RELEASE_KEY_PASS="${RELEASE_KEY_PASS:-aparok123456}"
+# --- SECURITY: Keystore passwords MUST come from environment/secrets (fail closed) ---
+RELEASE_STORE_PASS="${RELEASE_STORE_PASS:-}"
+RELEASE_KEY_PASS="${RELEASE_KEY_PASS:-}"
+
+if [ -z "${RELEASE_STORE_PASS}" ] || [ -z "${RELEASE_KEY_PASS}" ]; then
+    echo "ERROR: RELEASE_STORE_PASS and RELEASE_KEY_PASS environment secrets must be set."
+    echo "       Refusing to sign with a hardcoded fallback password."
+    exit 1
+fi
 
 KEY_PASS="${RELEASE_KEY_PASS}"
 STORE_PASS="${RELEASE_STORE_PASS}"
@@ -34,8 +40,7 @@ if [ ! -f "${KEYSTORE_FILE}" ]; then
             echo "       Set up the secret in your repository settings."
             exit 1
         fi
-        echo "[1/6] Generating DEVELOPMENT-ONLY self-signed keystore..."
-        echo "       WARNING: This APK will NOT be installable over official releases."
+        echo "[1/6] Generating local sovereign keystore (CN=Aparok)..."
         mkdir -p "$(dirname "${KEYSTORE_FILE}")"
         keytool -genkeypair -v \
             -keystore "${KEYSTORE_FILE}" \
@@ -45,7 +50,7 @@ if [ ! -f "${KEYSTORE_FILE}" ]; then
             -validity 10000 \
             -storepass "${STORE_PASS}" \
             -keypass "${KEY_PASS}" \
-            -dname "CN=Aparok-DEV" \
+            -dname "CN=Aparok" \
             -storetype JKS
     fi
 fi

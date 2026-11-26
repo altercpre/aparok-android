@@ -55,7 +55,13 @@ import io.aparok.app.core_ui.views.ButtonSize
 import io.aparok.app.core_ui.views.Caption1Regular
 import io.aparok.app.ui.onboarding.ProfileImageHelper
 
-private const val MAX_NAME_LENGTH = 32
+internal object OnboardingProfileValidator {
+    const val MAX_NAME_LENGTH = 32
+
+    fun isInputWithinLimit(input: String): Boolean = input.length <= MAX_NAME_LENGTH
+
+    fun normalizeForSubmit(name: String): String? = name.trim().takeIf { it.isNotEmpty() }
+}
 
 @Composable
 fun OnboardingProfileScreen(
@@ -81,8 +87,8 @@ fun OnboardingProfileScreen(
     }
 
     fun submit() {
-        val trimmed = name.trim()
-        if (trimmed.isEmpty()) {
+        val trimmed = OnboardingProfileValidator.normalizeForSubmit(name)
+        if (trimmed == null) {
             isError = true
             return
         }
@@ -184,7 +190,7 @@ fun OnboardingProfileScreen(
             OutlinedTextField(
                 value = name,
                 onValueChange = { input ->
-                    if (input.length <= MAX_NAME_LENGTH) {
+                    if (OnboardingProfileValidator.isInputWithinLimit(input)) {
                         name = input
                         isError = false
                     }
@@ -232,7 +238,7 @@ fun OnboardingProfileScreen(
             ButtonOnboardingPrimaryLarge(
                 text = "Create profile",
                 onClick = { submit() },
-                enabled = !isLoading && name.trim().isNotBlank(),
+                enabled = !isLoading && OnboardingProfileValidator.normalizeForSubmit(name) != null,
                 loading = isLoading,
                 size = ButtonSize.Large,
                 modifierBox = Modifier.fillMaxWidth()

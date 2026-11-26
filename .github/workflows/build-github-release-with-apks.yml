@@ -52,8 +52,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
-          RELEASE_STORE_PASS: ${{ secrets.RELEASE_STORE_PASS || 'aparok123456' }}
-          RELEASE_KEY_PASS: ${{ secrets.RELEASE_KEY_PASS || 'aparok123456' }}
+          RELEASE_STORE_PASS: ${{ secrets.RELEASE_STORE_PASS }}
+          RELEASE_KEY_PASS: ${{ secrets.RELEASE_KEY_PASS }}
 
       - name: Upload Release Artefacts to GitHub Release
         uses: softprops/action-gh-release@v2

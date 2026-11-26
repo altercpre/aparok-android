@@ -1317,44 +1317,11 @@ open class EditorFragment : NavigationFragment<FragmentEditorBinding>(R.layout.f
 
     private fun clearActiveTextSelections() {
         try {
-            // Lose focus on any currently focused child
-            binding.recycler.clearFocus()
-            binding.recycler.findFocus()?.clearFocus()
-            // Walk the tree
-            clearTextViewsRecursively(binding.recycler)
+            clearEditorTextSelections(binding.recycler)
         } catch (e: Exception) {
             // Catch only expected exceptions
             Timber.w(e, "Error clearing text selections")
         }
-    }
-
-    private fun clearTextViewsRecursively(view: View) {
-        when (view) {
-            is EditText -> {
-                // Remove focus and any selection
-                view.clearFocus()
-                if (view.hasSelection() && view.text.isNotEmpty()) {
-                    view.setSelection(0, 0)
-                }
-                clearActionModeCallbacks(view)
-            }
-            is TextView -> {
-                // Other TextViews: just clear any lingering callbacks
-                view.clearFocus()
-                clearActionModeCallbacks(view)
-            }
-            is ViewGroup -> {
-                for (i in 0 until view.childCount) {
-                    clearTextViewsRecursively(view.getChildAt(i))
-                }
-            }
-            else -> Unit
-        }
-    }
-
-    private fun clearActionModeCallbacks(view: TextView) {
-        view.customSelectionActionModeCallback = null
-        view.customInsertionActionModeCallback = null
     }
 
     override fun onSetRelationKeyClicked(blockId: Id, key: Id) {

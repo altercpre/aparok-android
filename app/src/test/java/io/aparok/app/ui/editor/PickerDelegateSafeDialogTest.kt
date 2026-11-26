@@ -1,100 +1,115 @@
 package io.aparok.app.ui.editor
 
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import kotlin.test.assertNotNull
+import io.aparok.app.R
+import io.aparok.app.core_utils.const.FileConstants
+import io.aparok.app.presentation.editor.model.CopyFileStatus
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNotSame
+import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mockito.Mock
-import org.mockito.junit.MockitoJUnitRunner
+import org.robolectric.Robolectric
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
+import org.robolectric.shadows.ShadowDialog
 
-/**
- * Test for the safe dialog showing fix to prevent WindowManager$BadTokenException
- * when showing dialogs from PickerDelegate with invalid activity/fragment state
- */
-@RunWith(MockitoJUnitRunner::class)
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [Build.VERSION_CODES.P])
 class PickerDelegateSafeDialogTest {
 
-    @Mock
-    lateinit var fragment: Fragment
-
-    @Mock 
-    lateinit var activity: FragmentActivity
-
     @Test
-    fun `PickerDelegate should exist and be accessible`() {
-        // Basic test to ensure the PickerDelegate class is accessible
-        val pickerDelegateClass = PickerDelegate::class.java
-        assertNotNull(pickerDelegateClass)
+    fun `PickerDelegate suppresses dialogs when fragment is detached`() {
+        ShadowDialog.reset()
+        val detachedFragment = Fragment()
+        val delegate = PickerDelegate.Impl(detachedFragment) {}
+
+        delegate.PickiTonUriReturned()
+        assertNull("Detached fragment must not show PickiT progress dialog", ShadowDialog.getLatestDialog())
+
+        delegate.PickiTonStartListener()
+        assertNull("Detached fragment must not show PickiT alert dialog", ShadowDialog.getLatestDialog())
     }
 
     @Test
-    fun `PickerDelegate Impl should have canShowDialog method for safety`() {
-        // Verify the implementation has the safety method
-        val implClass = PickerDelegate.Impl::class.java
-        val methods = implClass.declaredMethods
-        val canShowDialogMethod = methods.find { it.name == "canShowDialog" }
-        
-        assert(canShowDialogMethod != null) { 
-            "canShowDialog method should exist for safe dialog showing" 
-        }
-        assert(java.lang.reflect.Modifier.isPrivate(canShowDialogMethod!!.modifiers)) {
-            "canShowDialog should be private method"
-        }
+    fun `PickerDelegate suppresses dialogs when host activity is finishing`() {
+        ShadowDialog.reset()
+        val activity = Robolectric.buildActivity(AppCompatActivity::class.java).setup().get()
+        activity.setTheme(R.style.AppTheme)
+        val fragment = Fragment()
+        activity.supportFragmentManager.beginTransaction().add(fragment, "picker").commitNow()
+        activity.finish()
+
+        val delegate = PickerDelegate.Impl(fragment) {}
+
+        delegate.PickiTonUriReturned()
+        assertNull("Finishing activity must not show PickiT progress dialog", ShadowDialog.getLatestDialog())
+
+        delegate.PickiTonStartListener()
+        assertNull("Finishing activity must not show PickiT alert dialog", ShadowDialog.getLatestDialog())
     }
 
     @Test
-    fun `PickerDelegate should have proper structure for safe operation`() {
-        // Verify the PickerDelegate has the expected structure for safe dialog handling
-        val implClass = PickerDelegate.Impl::class.java
-        
-        // Check if the class has the expected methods for dialog lifecycle management
-        val methods = implClass.declaredMethods
-        val hasOnUriReturnedMethod = methods.any { it.name.contains("PickiTonUriReturned") }
-        val hasOnStartListenerMethod = methods.any { it.name.contains("PickiTonStartListener") }
-        val hasClearPickitMethod = methods.any { it.name.contains("clearPickit") }
-        
-        assert(hasOnUriReturnedMethod) {
-            "PickerDelegate should have PickiTonUriReturned method"
-        }
-        assert(hasOnStartListenerMethod) {
-            "PickerDelegate should have PickiTonStartListener method"
-        }
-        assert(hasClearPickitMethod) {
-            "PickerDelegate should have clearPickit method for cleanup"
-        }
+    fun `PickerDelegate shows and cleans up dialogs safely when fragment and activity are active`() {
+        ShadowDialog.reset()
+        val activity = Robolectric.buildActivity(AppCompatActivity::class.java).setup().get()
+        activity.setTheme(R.style.AppTheme)
+        val fragment = Fragment()
+        activity.supportFragmentManager.beginTransaction().add(fragment, "picker").commitNow()
+
+        val delegate = PickerDelegate.Impl(fragment) {}
+
+        delegate.PickiTonUriReturned()
+        val progressDialog = ShadowDialog.getLatestDialog()
+        assertNotNull("Active fragment must show progress dialog", progressDialog)
+        assertTrue(progressDialog!!.isShowing)
+
+        delegate.PickiTonStartListener()
+        val alertDialog = ShadowDialog.getLatestDialog()
+        assertNotNull("Active fragment must show alert dialog", alertDialog)
+        assertNotSame(progressDialog, alertDialog)
+        assertTrue(alertDialog!!.isShowing)
+        assertFalse(progressDialog.isShowing)
+
+        delegate.cleanupDialogsAndResources()
+        assertFalse("cleanupDialogsAndResources must dismiss alert dialog", alertDialog.isShowing)
     }
 
     @Test
-    fun `PickerDelegate should handle edge cases safely`() {
-        // This test validates that the PickerDelegate structure supports safe error handling
-        // The actual crash prevention is verified by the fact that:
-        // 1. canShowDialog() checks fragment.isAdded, !isDetached, !isRemoving, !isStateSaved
-        // 2. canShowDialog() checks activity != null, !isFinishing, !isDestroyed
-        // 3. Proper try-catch blocks are in place for safety
-        
-        val implClass = PickerDelegate.Impl::class.java
-        val methods = implClass.declaredMethods
-        val canShowDialogMethod = methods.find { it.name == "canShowDialog" }
+    fun `PickerDelegate dispatches SAF copy and completion actions`() {
+        val activity = Robolectric.buildActivity(AppCompatActivity::class.java).setup().get()
+        val fragment = Fragment()
+        activity.supportFragmentManager.beginTransaction().add(fragment, "picker").commitNow()
 
-        assert(canShowDialogMethod != null) {
-            "PickerDelegate.Impl should have canShowDialog method for safe operation"
+        val emittedActions = mutableListOf<PickerDelegate.Actions>()
+        val delegate = PickerDelegate.Impl(fragment) { action ->
+            emittedActions.add(action)
         }
-    }
 
-    @Test
-    fun `PickerDelegate should have proper exception handling structure`() {
-        // Verify the PickerDelegate has the expected structure for exception handling
-        val implClass = PickerDelegate.Impl::class.java
-        
-        // Check if the class has expected callback methods that need safe dialog handling
-        val methods = implClass.declaredMethods
-        val callbackMethods = methods.filter { 
-            it.name.startsWith("PickiT") && it.name.contains("Listener") 
-        }
-        
-        assert(callbackMethods.isNotEmpty()) {
-            "PickerDelegate should have PickiT callback methods that require safe dialog handling"
-        }
+        val testUri = Uri.parse("content://io.aparok.app.provider/cache/report.pdf")
+        delegate.resolveActivityResult(
+            requestCode = FileConstants.REQUEST_FILE_SAF_CODE,
+            resultCode = Activity.RESULT_OK,
+            data = Intent().setData(testUri)
+        )
+        delegate.onCopyFileCommand(CopyFileStatus.Completed("/cache/report.pdf"))
+        delegate.clearOnCopyFile()
+
+        assertEquals(
+            listOf(
+                PickerDelegate.Actions.OnStartCopyFileToCacheDir(testUri),
+                PickerDelegate.Actions.OnProceedWithFilePath("/cache/report.pdf"),
+                PickerDelegate.Actions.OnCancelCopyFileToCacheDir
+            ),
+            emittedActions
+        )
     }
 }
